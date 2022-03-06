@@ -382,7 +382,6 @@ img{
 	}
 }
 
-
 .usps{
   padding:$md;
   .row{
@@ -481,6 +480,7 @@ img{
       padding-top: 0;
       .row{
         .testimonial{
+          display: flex;
           h3{
             font-family:$other-font;
             margin-bottom:20px;
@@ -563,7 +563,7 @@ img{
       .row:last-of-type{
         .bg-img:first-of-type{
           figure{
-            @include bg-img(url("../img/product-03.png"));
+            @include bg-img(url("../img/product-03.png"),75% 70%, cover);
           }
         }
         .bg-img:last-of-type{

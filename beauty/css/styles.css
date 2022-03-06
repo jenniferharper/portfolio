@@ -393,29 +393,31 @@ img {
   position: relative; }
   .testimonials .container-fluid .row {
     padding-top: 0; }
-    .testimonials .container-fluid .row .row .testimonial h3 {
-      font-family: "Pacifico-Regular", cursive;
-      margin-bottom: 20px; }
-    .testimonials .container-fluid .row .row .testimonial p {
-      color: #fff; }
-    .testimonials .container-fluid .row .row .testimonial div {
-      padding: 8%;
-      text-align: center;
-      background-color: #c31e22;
-      min-height: 50vh;
-      justify-content: center;
-      display: flex;
-      flex-direction: column; }
-      @media (min-width: 992px) {
-        .testimonials .container-fluid .row .row .testimonial div {
-          margin: 0 10px; } }
-      @media (min-width: 1240px) {
-        .testimonials .container-fluid .row .row .testimonial div {
-          min-height: 70vh; } }
-    .testimonials .container-fluid .row .row .testimonial figure svg {
-      max-width: 50px;
-      margin-bottom: 20px;
-      fill: #f8c4d0; }
+    .testimonials .container-fluid .row .row .testimonial {
+      display: flex; }
+      .testimonials .container-fluid .row .row .testimonial h3 {
+        font-family: "Pacifico-Regular", cursive;
+        margin-bottom: 20px; }
+      .testimonials .container-fluid .row .row .testimonial p {
+        color: #fff; }
+      .testimonials .container-fluid .row .row .testimonial div {
+        padding: 8%;
+        text-align: center;
+        background-color: #c31e22;
+        min-height: 50vh;
+        justify-content: center;
+        display: flex;
+        flex-direction: column; }
+        @media (min-width: 992px) {
+          .testimonials .container-fluid .row .row .testimonial div {
+            margin: 0 10px; } }
+        @media (min-width: 1240px) {
+          .testimonials .container-fluid .row .row .testimonial div {
+            min-height: 70vh; } }
+      .testimonials .container-fluid .row .row .testimonial figure svg {
+        max-width: 50px;
+        margin-bottom: 20px;
+        fill: #f8c4d0; }
     .testimonials .container-fluid .row .row .bg-img figure {
       width: 100%;
       height: 100%;
@@ -462,7 +464,7 @@ img {
     .testimonials .container-fluid .row .row:last-of-type .bg-img:first-of-type figure {
       background-image: url("../img/product-03.png");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
+      background-position: 75% 70%;
       background-size: cover; }
     .testimonials .container-fluid .row .row:last-of-type .bg-img:last-of-type figure {
       background-image: url("../img/model-05.jpg");
