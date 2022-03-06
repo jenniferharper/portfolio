@@ -1,0 +1,19 @@
+
+//background-images
+
+@mixin bg-img($image, $x: 50%, $y: 50%) {
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: $x $y;
+    size:cover;
+  }
+}
+// .bg-one .responsive-img{@include bg-img(url("../img/f-01.jpg"), 0); } 
+
+
+@mixin transition($property:all, $duration:0.5s, $function: ease-in-out){
+  transition-property:$property;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+}
