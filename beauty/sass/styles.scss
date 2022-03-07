@@ -20,16 +20,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
+  width: 0px;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
-}
-
-.overflow-wrapper{
-	overflow-x: hidden;
-	overflow-y:hidden;
-  @media (max-width:992px){
-    margin-top:100px;
-  }
 }
 
 .container-fluid,
@@ -353,7 +345,7 @@ img{
 		overflow:hidden;
 		h4{
 			line-height: 50px;
-			font-weight: bold;
+			// font-weight: bold;
 			font-size:1em;
 			span{
 				border:1.5px solid $main-dark;
@@ -582,7 +574,7 @@ img{
 
 .cta{
   .row{
-    padding: $md $sm;
+    padding: $md $sm 0;
     div{
       flex-direction: column;
       display: flex;
@@ -619,3 +611,5 @@ img{
     }
 	}
 }
+
+

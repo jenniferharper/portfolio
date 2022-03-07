@@ -12,17 +12,10 @@ body {
   overflow-x: hidden; }
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 0px;
   /* Remove scrollbar space */
   background: transparent;
   /* Optional: just make scrollbar invisible */ }
-
-.overflow-wrapper {
-  overflow-x: hidden;
-  overflow-y: hidden; }
-  @media (max-width: 992px) {
-    .overflow-wrapper {
-      margin-top: 100px; } }
 
 .container-fluid,
 .container {
@@ -281,7 +274,6 @@ img {
     overflow: hidden; }
     .products a h4 {
       line-height: 50px;
-      font-weight: bold;
       font-size: 1em; }
       .products a h4 span {
         border: 1.5px solid #5F0017;
@@ -476,7 +468,7 @@ img {
         margin-top: 10px; } }
 
 .cta .row {
-  padding: 8% 4%; }
+  padding: 8% 4% 0; }
   .cta .row div {
     flex-direction: column;
     display: flex;
