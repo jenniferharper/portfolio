@@ -47,10 +47,12 @@ a, p, li{
   line-height:1.7em;
   font-size:18px;
   margin-bottom:0;
+  transition:all 0.3s ease-in-out;
 }
 a:hover{
   color:$dark;
   text-decoration: none;
+  transition:all 0.3s ease-in-out;
 }
 
 p, p span,p a,a{  color:$dark;}
@@ -126,17 +128,17 @@ img{
 } 
 
 
-// .before::before{
-//   content:'';
-//   position: absolute;
-//   width:100%;
-//   height:100vh;
-//   top:0;
-//   left:0;
-//   z-index: 0;
-// }
+.before::before{
+  content:'';
+  position: absolute;
+  width:100%;
+  height:100vh;
+  top:0;
+  left:0;
+  z-index: 0;
+}
 
-.after::before{
+.after::after{
   content:'';
   position: absolute;
   width:100%;
@@ -160,6 +162,39 @@ img{
     }
   }
 }
+
+a.ctc{
+  margin-top: 20px;
+  display: flex;
+  justify-content:center;
+  i{
+    padding: 0 0 0 20px ;
+    svg{
+      width: 30px;
+      transform-origin: 50% 50%;
+    }
+    animation-duration: 0.5s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:ease-in;
+  }
+
+  @media (min-width:992px){
+    justify-content:flex-start;
+  }
+
+  &:hover{
+    color:$secondary;
+    fill:$secondary;
+  }
+}
+
+@keyframes changewidth {
+  0%   { transform: scale(1)}
+  100% { transform: scale(1.1)}
+}
+
 //////////////general///////////////
 .hero{
 	position: relative;
@@ -218,6 +253,16 @@ img{
       max-width: 50%;
       margin: 0 auto;
     }
+    figure{
+      position: relative;
+      svg{
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        fill:$secondary;
+      }
+    }
   }  
   .media-box{
     @media (min-width:992px){
@@ -225,16 +270,7 @@ img{
       height:100%;
     }
   }
-  .ctc{
-    margin-top: 20px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    i{padding: 0 0 0 20px ;}
-    @media (min-width:992px){
-      justify-content:flex-start;
-    }
-  }
+
 }
 //////////////////////////////////////////
 .pods{

@@ -36,11 +36,13 @@ a, p, li {
   z-index: 1;
   line-height: 1.7em;
   font-size: 18px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  transition: all 0.3s ease-in-out; }
 
 a:hover {
   color: #2d2929;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
 
 p, p span, p a, a {
   color: #2d2929; }
@@ -105,7 +107,16 @@ img {
   -o-object-position: 50% 50%;
   object-position: 50% 50%; }
 
-.after::before {
+.before::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+
+.after::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -123,6 +134,32 @@ img {
     .styled .container-fluid .row .row {
       padding: 0; }
 
+a.ctc {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; }
+  a.ctc i {
+    padding: 0 0 0 20px;
+    animation-duration: 0.5s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in; }
+    a.ctc i svg {
+      width: 30px;
+      transform-origin: 50% 50%; }
+  @media (min-width: 992px) {
+    a.ctc {
+      justify-content: flex-start; } }
+  a.ctc:hover {
+    color: #f1353d;
+    fill: #f1353d; }
+
+@keyframes changewidth {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.1); } }
 .hero {
   position: relative; }
   .hero .row {
@@ -171,20 +208,18 @@ img {
       .hero .bottle {
         max-width: 50%;
         margin: 0 auto; } }
+    .hero .bottle figure {
+      position: relative; }
+      .hero .bottle figure svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        fill: #f1353d; }
   @media (min-width: 992px) {
     .hero .media-box {
       min-height: 80vh;
       height: 100%; } }
-  .hero .ctc {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .hero .ctc i {
-      padding: 0 0 0 20px; }
-    @media (min-width: 992px) {
-      .hero .ctc {
-        justify-content: flex-start; } }
 
 .pods {
   margin-bottom: 8%; }
