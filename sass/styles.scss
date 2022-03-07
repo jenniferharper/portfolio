@@ -97,7 +97,7 @@ h2{
 
 .media-box{
   position: relative; 
-  height:50vh;
+  height:60vh;
   width: 100%;
   overflow: hidden;
   @media (min-width:992px){
@@ -148,7 +148,10 @@ section{
 
 // ----- universal end
 
-
+figure{
+  padding:0;
+  margin: 0;
+}
 
 
 
@@ -180,6 +183,9 @@ section{
 
 
 .educapps{
+  .bg-color{
+    background-color: #4A5BCF;
+  }
   .resp-box{
     background-color:#4A5BCF;
   }

@@ -78,7 +78,7 @@ h2 {
 
 .media-box {
   position: relative;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden; }
   @media (min-width: 992px) {
@@ -120,6 +120,10 @@ h2 {
 section {
   margin: 40px 0; }
 
+figure {
+  padding: 0;
+  margin: 0; }
+
 .jh .my-logo img {
   max-width: 50px; }
 .jh .me {
@@ -140,6 +144,8 @@ section {
 .ear {
   transform: translateX(2px); }
 
+.educapps .bg-color {
+  background-color: #4A5BCF; }
 .educapps .resp-box {
   background-color: #4A5BCF; }
 .educapps #audio {
