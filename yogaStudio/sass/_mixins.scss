@@ -1,0 +1,30 @@
+
+
+//background-images
+@mixin bg-img($image, $background-position:50% 50%, $background-size:cover) {
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: $background-position;
+    size: $background-size;
+  }
+}
+
+// @include bg-img(url("../img/mesh2.png"), right, cover);
+
+@mixin transition($property:all, $duration:.3s, $function: ease-in){
+  transition-property:$property;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+}
+
+// @include transition();
+
+@mixin bg-mask($image, $background-position:center center, $background-size:contain) {
+-webkit-mask: $image;
+-webkit-mask-position: $background-position;
+-webkit-mask-size: $background-size;
+-webkit-mask-repeat: no-repeat;
+}
+
+
