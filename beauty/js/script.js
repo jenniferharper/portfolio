@@ -3,8 +3,41 @@ gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 ScrollTrigger.matchMedia({	
   // desktop
-  "(min-width: 1024px)": function() { 
-   
+  "(min-width: 992px)": function() {
+    // class for all drop down wrapper items
+    let revealContainers = document.querySelectorAll(".reveal");
+    // creates stagger for the 3 columns in the row
+    let cols = 3;
+    for (let i = 0; i < revealContainers.length; i += cols) {
+      let containers = []
+      for (let j = 0; j < cols; j++) {
+        containers.push(revealContainers[i + j]);
+      }    
+      createTrigger(containers);
+    }
+
+    function createTrigger(containers) {     
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containers[0],
+          start: "top center",
+          markers: true,
+          toggleActions: 'play none none reverse',
+        }
+      })        
+      containers.forEach((container, i) => {
+        let image = container.querySelector(".reveal div");
+        
+        let subTl = gsap.timeline()
+          .from(image, {
+            yPercent: -100,
+            opacity:0,
+            height:0
+          });
+        
+        tl.add(subTl, i * 0.1);
+      });    
+    }   
   },
 	
   // all 

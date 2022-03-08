@@ -214,8 +214,7 @@ a.ctc {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        fill: #f1353d; }
+        width: 100%; }
   @media (min-width: 992px) {
     .hero .media-box {
       min-height: 80vh;
@@ -462,18 +461,17 @@ a.ctc {
     .testimonials .container-fluid .row .row:nth-last-of-type(2) div {
       order: 1; }
     .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial {
-      display: flex;
-      background-color: #fff; }
+      display: flex; }
       .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial div {
         margin: 0;
-        background-color: transparent; }
+        background-color: #fff; }
         .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial div p {
           color: #2d2929; }
-      .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type {
+      .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type div {
         background-color: #f8c4d0; }
-        @media (max-width: 992px) {
-          .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type {
-            order: 3; } }
+      @media (max-width: 992px) {
+        .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type {
+          order: 3; } }
       .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial svg {
         fill: #c31e22; }
     .testimonials .container-fluid .row .row:nth-last-of-type(2) .bg-img figure {
@@ -501,6 +499,12 @@ a.ctc {
     @media (min-width: 992px) {
       .testimonials .container-fluid .row .row:last-of-type {
         margin-top: 10px; } }
+
+.reveal-wrapper {
+  height: 100%; }
+
+.reveal {
+  overflow: hidden; }
 
 .cta .row {
   padding: 8% 4% 0; }

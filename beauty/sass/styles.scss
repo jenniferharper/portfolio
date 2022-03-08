@@ -501,11 +501,12 @@ a.ctc{
   }  
 }
 .testimonials{
+  // &.styled .row{background-color: transparent;}
   .container-fluid{
     position: relative;
     .row{
       padding-top: 0;
-      .row{
+      .row{        
         .testimonial{
           display: flex;
           h3{
@@ -558,15 +559,14 @@ a.ctc{
         div{order:1}
         .testimonial{
           display: flex;
-          background-color:$white;
           div{
             margin:0;
-            background-color:transparent;
+            background-color:$white;
             p{color:$dark}
           }
           
           &.testimonial:first-of-type{
-            background-color: $main;
+            div{background-color: $main;}
             @media (max-width:992px){
               order: 3
             }
@@ -606,6 +606,10 @@ a.ctc{
   }
 }
 
+.reveal-wrapper{height:100%}
+.reveal{
+  overflow: hidden;
+}
 
 .cta{
   .row{
