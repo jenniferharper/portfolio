@@ -1,12 +1,20 @@
 console.clear();
 gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
+
 ScrollTrigger.matchMedia({	
+  "(max-width: 992px)": function() {
+    gsap.set(".reveal div",{
+      yPercent: 0,
+      opacity:1,
+    })
+  },
+
+
   // desktop
   "(min-width: 992px)": function() {
-    // class for all drop down wrapper items
+    //////////////////////////////////////////////
     let revealContainers = document.querySelectorAll(".reveal");
-    // creates stagger for the 3 columns in the row
     let cols = 3;
     for (let i = 0; i < revealContainers.length; i += cols) {
       let containers = []
@@ -15,32 +23,27 @@ ScrollTrigger.matchMedia({
       }    
       createTrigger(containers);
     }
-
     function createTrigger(containers) {     
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: containers[0],
-          start: "top center",
-          markers: true,
+          start: "top bottom-=100",
           toggleActions: 'play none none reverse',
         }
       })        
       containers.forEach((container, i) => {
         let image = container.querySelector(".reveal div");
-        
-        let subTl = gsap.timeline()
-          .from(image, {
+        let subTl = gsap.timeline()         
+         .from(image, {
             yPercent: -100,
             opacity:0,
-            height:0
-          });
-        
-        tl.add(subTl, i * 0.1);
+          });        
+        tl.add(subTl, i * 0.2);
       });    
     }   
   },
 	
-  // all 
+  ///////// all 
   "all": function() {
     // //background image amination
     gsap.set('.zoom', {scale:1.5, transformOrigin:'50% 50%'},0);	
@@ -68,10 +71,6 @@ ScrollTrigger.matchMedia({
     })
 
     let arrows = gsap.timeline({
-      scrollTrigger:{
-        trigger:'.bottle',
-        start:'top bottom',
-      }
     })
 
     arrows.from('.stem', {
@@ -79,7 +78,7 @@ ScrollTrigger.matchMedia({
       ease: "none",
       opacity:0,
       duration:1,
-      stagger:0.7
+      stagger:0.7,
     },0);
 
     arrows.from('.cap', {
@@ -89,6 +88,16 @@ ScrollTrigger.matchMedia({
       duration:0.5,
       stagger:0.7
     },0.8);
+
+    arrows.to('.arrow', {
+    scale:1.25,
+    repeat:-1,
+    yoyo:true,
+    transformOrigin:'50% 50%',
+    },2);
+
+
+
     //////////////////////////////////////////
 
   }	

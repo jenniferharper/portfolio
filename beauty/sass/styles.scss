@@ -504,7 +504,11 @@ a.ctc{
   // &.styled .row{background-color: transparent;}
   .container-fluid{
     position: relative;
+    max-width: calc(100% - 7%);
+    background-color: $main-dark;
+    padding: 0 $sm $sm;
     .row{
+ 
       padding-top: 0;
       .row{        
         .testimonial{
@@ -526,7 +530,7 @@ a.ctc{
               margin:0 10px
             }
             @media (min-width:1240px){
-              min-height: 70vh;
+              min-height: 100vh;
             }
           }
           figure{

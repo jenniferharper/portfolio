@@ -416,7 +416,10 @@ a.ctc {
   text-align: center; }
 
 .testimonials .container-fluid {
-  position: relative; }
+  position: relative;
+  max-width: calc(100% - 7%);
+  background-color: #5F0017;
+  padding: 0 4% 4%; }
   .testimonials .container-fluid .row {
     padding-top: 0; }
     .testimonials .container-fluid .row .row .testimonial {
@@ -439,7 +442,7 @@ a.ctc {
             margin: 0 10px; } }
         @media (min-width: 1240px) {
           .testimonials .container-fluid .row .row .testimonial div {
-            min-height: 70vh; } }
+            min-height: 100vh; } }
       .testimonials .container-fluid .row .row .testimonial figure svg {
         max-width: 50px;
         margin-bottom: 20px;
