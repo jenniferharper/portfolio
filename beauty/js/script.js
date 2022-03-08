@@ -25,34 +25,38 @@ ScrollTrigger.matchMedia({
         }
       });  
     })
-    //////////////////////////////////////////
+    /////////////////hero arrows /////////////////////////
+    gsap.set(".arrow-wrap path",{
+      stroke:'#f1353d',
+      strokeWidth:5,
+      fill:'none',
+      strokeLinecap:'round',
+      strokeMiterlimit:10
+    })
 
-    let arrow = gsap.timeline({
-    });
+    let arrows = gsap.timeline({
+      scrollTrigger:{
+        trigger:'.bottle',
+        start:'top bottom',
+      }
+    })
 
-    arrow.from(".arrow-wrap .stem", {
+    arrows.from('.stem', {
       drawSVG: '0% 0%',
       ease: "none",
       opacity:0,
       duration:1,
-    },1);
+      stagger:0.7
+    },0);
 
-   arrow.from(".arrow-wrap .cap", {
+    arrows.from('.cap', {
       drawSVG: '50% 50%',
       ease: "none",
       opacity:0,
-      duration:1,
-    },1.5);
-
-
-
-
-  //////////////////////////////////////////
-
-
-
-
-
+      duration:0.5,
+      stagger:0.7
+    },0.8);
+    //////////////////////////////////////////
 
   }	
 }); 
