@@ -1,5 +1,5 @@
 console.clear();
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 ScrollTrigger.matchMedia({	
   // desktop
@@ -25,6 +25,35 @@ ScrollTrigger.matchMedia({
         }
       });  
     })
+    //////////////////////////////////////////
+
+    let arrow = gsap.timeline({
+    });
+
+    arrow.from(".arrow-wrap .stem", {
+      drawSVG: '0% 0%',
+      ease: "none",
+      opacity:0,
+      duration:1,
+    },1);
+
+   arrow.from(".arrow-wrap .cap", {
+      drawSVG: '50% 50%',
+      ease: "none",
+      opacity:0,
+      duration:1,
+    },1.5);
+
+
+
+
+  //////////////////////////////////////////
+
+
+
+
+
+
   }	
 }); 
 
