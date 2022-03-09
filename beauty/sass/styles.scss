@@ -349,10 +349,41 @@ a.ctc{
 .products{
   padding:$lg 0;
 	text-align: center;
-
-	.img-fluid {
-		max-width:300px !important;
-	}
+  div{
+    position: relative;
+    a.btnwrap{
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      height: 100%;
+      left:0;
+      top:0;
+      .arrows-bg{
+        position: relative;
+        svg{
+          // z-index: 0;
+          position: absolute;
+          width: 100%;
+          left:0;
+          top:0;
+          fill:none;
+          stroke:white;
+          stroke-width: 5;
+          path{transform:scale(0);transition: all 0.8s ease-in-out; transform-origin: 50% 50%;}
+        }
+        img{
+          z-index: 0;
+          max-width:250px !important;
+          position: relative;
+        }
+      }
+      &:hover{        
+        svg{
+          stroke:$secondary;
+          path{transform:scale(1);transition: all 0.8s ease-in-out;}
+        }
+      }
+    }
+  }
 	h2{
 		position: relative;
 		padding-top:40px;
@@ -376,8 +407,6 @@ a.ctc{
 		}
 	}
 	a{		
-		background-color:#fff;
-		overflow:hidden;
 		h4{
 			line-height: 50px;
 			// font-weight: bold;
@@ -408,6 +437,9 @@ a.ctc{
 		}
 	}
 }
+
+
+
 
 .usps{
   padding:$md;

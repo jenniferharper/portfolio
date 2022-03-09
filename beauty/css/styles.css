@@ -281,8 +281,37 @@ a.ctc {
 .products {
   padding: 10% 0;
   text-align: center; }
-  .products .img-fluid {
-    max-width: 300px !important; }
+  .products div {
+    position: relative; }
+    .products div a.btnwrap {
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
+      .products div a.btnwrap .arrows-bg {
+        position: relative; }
+        .products div a.btnwrap .arrows-bg svg {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          top: 0;
+          fill: none;
+          stroke: white;
+          stroke-width: 5; }
+          .products div a.btnwrap .arrows-bg svg path {
+            transform: scale(0);
+            transition: all 0.8s ease-in-out;
+            transform-origin: 50% 50%; }
+        .products div a.btnwrap .arrows-bg img {
+          z-index: 0;
+          max-width: 250px !important;
+          position: relative; }
+      .products div a.btnwrap:hover svg {
+        stroke: #f1353d; }
+        .products div a.btnwrap:hover svg path {
+          transform: scale(1);
+          transition: all 0.8s ease-in-out; }
   .products h2 {
     position: relative;
     padding-top: 40px;
@@ -303,30 +332,27 @@ a.ctc {
       @media (min-width: 768px) {
         .products h2::after {
           top: -40px; } }
-  .products a {
-    background-color: #fff;
-    overflow: hidden; }
-    .products a h4 {
-      line-height: 50px;
-      font-size: 1em; }
-      .products a h4 span {
-        border: 1.5px solid #5F0017;
-        padding: 8px 12px 8px; }
-      .products a h4 b {
-        padding: 8px;
-        border: 1.5px solid #2d2929;
-        border-right: 0; }
-      .products a h4 .fas {
-        padding-left: 10px; }
-    .products a span, .products a b {
-      transition: all .5s ease-in-out; }
-    .products a:hover {
-      text-decoration: none; }
-      .products a:hover span, .products a:hover b {
-        color: #fff;
-        transition: all .5s ease-in-out;
-        background-color: #c31e22;
-        border-color: #f2f2f2; }
+  .products a h4 {
+    line-height: 50px;
+    font-size: 1em; }
+    .products a h4 span {
+      border: 1.5px solid #5F0017;
+      padding: 8px 12px 8px; }
+    .products a h4 b {
+      padding: 8px;
+      border: 1.5px solid #2d2929;
+      border-right: 0; }
+    .products a h4 .fas {
+      padding-left: 10px; }
+  .products a span, .products a b {
+    transition: all .5s ease-in-out; }
+  .products a:hover {
+    text-decoration: none; }
+    .products a:hover span, .products a:hover b {
+      color: #fff;
+      transition: all .5s ease-in-out;
+      background-color: #c31e22;
+      border-color: #f2f2f2; }
 
 .usps {
   padding: 8%; }
