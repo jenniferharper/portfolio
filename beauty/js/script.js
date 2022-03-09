@@ -73,7 +73,6 @@ ScrollTrigger.matchMedia({
           ease:Power1.easeInOut,
           duration:1,
           scrollTrigger: {
-            markers:true,
             trigger: section,
               start: 'top bottom-=200',
               toggleActions: 'play none none none',

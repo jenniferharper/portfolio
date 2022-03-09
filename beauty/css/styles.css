@@ -267,7 +267,8 @@ a.ctc {
       flex-direction: column;
       align-items: center; }
       .pods .pods-wrapper .pod a p {
-        margin: 20px 0; }
+        margin: 20px 0;
+        font-family: "Pacifico-Regular", cursive; }
     .pods .pods-wrapper .pod.bg-img {
       background-image: url("../img/flamingo.jpg");
       background-repeat: no-repeat;
@@ -292,14 +293,15 @@ a.ctc {
       .products div a.btnwrap .arrows-bg {
         position: relative; }
         .products div a.btnwrap .arrows-bg svg {
+          z-index: 10;
           position: absolute;
           width: 100%;
           left: 0;
           top: 0;
           fill: none;
-          stroke: white;
           stroke-width: 5; }
           .products div a.btnwrap .arrows-bg svg path {
+            stroke: white;
             transform: scale(0);
             transition: all 0.8s ease-in-out;
             transform-origin: 50% 50%; }
@@ -307,11 +309,10 @@ a.ctc {
           z-index: 0;
           max-width: 250px !important;
           position: relative; }
-      .products div a.btnwrap:hover svg {
-        stroke: #f1353d; }
-        .products div a.btnwrap:hover svg path {
-          transform: scale(1);
-          transition: all 0.8s ease-in-out; }
+      .products div a.btnwrap:hover svg path {
+        stroke: #f1353d;
+        transform: scale(1);
+        transition: all 0.8s ease-in-out; }
   .products h2 {
     position: relative;
     padding-top: 40px;

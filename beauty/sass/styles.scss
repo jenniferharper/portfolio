@@ -333,6 +333,7 @@ a.ctc{
         align-items: center;
         p{
           margin: 20px 0 ;
+          font-family: $other-font
         }
       }
       &.bg-img{
@@ -360,15 +361,18 @@ a.ctc{
       .arrows-bg{
         position: relative;
         svg{
-          // z-index: 0;
+          z-index: 10;
           position: absolute;
           width: 100%;
           left:0;
           top:0;
-          fill:none;
-          stroke:white;
+          fill:none;          
           stroke-width: 5;
-          path{transform:scale(0);transition: all 0.8s ease-in-out; transform-origin: 50% 50%;}
+          path{
+            stroke:white;
+            transform:scale(0);
+            transition: all 0.8s ease-in-out; transform-origin: 50% 50%;
+          }
         }
         img{
           z-index: 0;
@@ -378,8 +382,12 @@ a.ctc{
       }
       &:hover{        
         svg{
-          stroke:$secondary;
-          path{transform:scale(1);transition: all 0.8s ease-in-out;}
+          
+          path{
+            stroke:$secondary;
+            transform:scale(1);
+            transition: all 0.8s ease-in-out;
+          }
         }
       }
     }
