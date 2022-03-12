@@ -216,6 +216,47 @@ a.ctc{
   }
 }
 
+//////////// svg moving blobs
+.blobs{
+  svg{
+    path{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100px;
+      z-index: -1;
+      transform-origin: 50% 50%;
+    }
+    .main{fill:$main;  animation: move-one 10s ease-in-out infinite;}
+    .feature{fill:$main-dark;  animation: move-two 10s ease-in-out infinite;}
+    .other{fill:$secondary-dark;  animation: move-three 10s ease-in-out infinite;}  
+  }
+
+  @keyframes move-one {
+      0%   { transform: scale(1); }
+      20%  { transform: scale(0.7, 1) rotate(160deg); }
+      35%  { transform: scale(0.8, 1)  rotate(160deg); }
+      66%  { transform: scale(0.9) rotate(-20deg); }
+      86%  { transform: scale(0.9)  rotate(-20deg); }
+      100% { transform: scale(1) }
+    }
+    @keyframes move-two {
+      0%   { transform: scale(1)}
+      40%  { transform: scale(0.8, 1) rotate(160deg); }
+      50%  { transform: scale(0.8, 1) rotate(160deg); }
+      60%  { transform: scale(1) rotate(-20deg); }
+      80%  { transform: scale(0.6) rotate(-20deg); }
+      100% { transform: scale(1)  }
+    }
+    @keyframes move-three {
+      0%   { transform: scale(1); }
+      20%  { transform: scale(0.9)  rotate(-20deg); }
+      35%  { transform: scale(0.9, )  rotate(160deg); }
+      66%  { transform: scale(0.8,1) rotate(-20deg); }
+      86%  {  transform: scale(0.7, 1) rotate(160deg);}
+      100% { transform: scale(1) }
+    }
+}
 
 //////////////general///////////////
 .hero{
@@ -514,87 +555,45 @@ a.ctc{
 
 
 }
-
+////////////////////
 .usps{
   padding:$md;
   .row{
     .content{
       padding:$lg;
       text-align: center;
-    
-    }
-    figure.blobs{
-      width: 100%;
-      margin: 0 auto;
-      max-width: 150px;
-    }    
+      figure.blobs{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 150px;
+      } 
+      h3{
+        padding:20px 10px 10px;
+        font-weight: bold;
+        font-size:1em;
+        span{
+          border:1.5px solid $dark;
+          padding:8px;
+        }
+        b{
+          padding:8px;
+          border:1.5px solid $dark;
+          border-right:0;
+        }
+      }
+   
+      h3,p{
+        text-align: center;
+        color:$dark;      
+      }
 
-    h3{
-      padding:20px 10px 10px;
-      font-weight: bold;
-      font-size:1em;
-      span{
-        border:1.5px solid $dark;
-        padding:8px;
+      @media (min-width:1200px){
+        p{padding:0 20px;}
       }
-      b{
-        padding:8px;
-        border:1.5px solid $dark;
-        border-right:0;
-      }
-    }
- 
-    h3,p{
-      text-align: center;
-      color:$dark;      
-    }
-    
-    @media (min-width:1200px){
-      p{padding:0 20px;}
-    }
+    } 
   }
 }
 
-.blobs{
-  svg{
-    path{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width:100px;
-      z-index: -1;
-      transform-origin: 50% 50%;
-    }
-    .main{fill:$main;  animation: move-one 10s ease-in-out infinite;}
-    .feature{fill:$main-dark;  animation: move-two 10s ease-in-out infinite;}
-    .other{fill:$secondary-dark;  animation: move-three 10s ease-in-out infinite;}  
-  }
-
-  @keyframes move-one {
-      0%   { transform: scale(1); }
-      20%  { transform: scale(0.7, 1) rotate(160deg); }
-      35%  { transform: scale(0.8, 1)  rotate(160deg); }
-      66%  { transform: scale(0.9) rotate(-20deg); }
-      86%  { transform: scale(0.9)  rotate(-20deg); }
-      100% { transform: scale(1) }
-    }
-    @keyframes move-two {
-      0%   { transform: scale(1)}
-      40%  { transform: scale(0.8, 1) rotate(160deg); }
-      50%  { transform: scale(0.8, 1) rotate(160deg); }
-      60%  { transform: scale(1) rotate(-20deg); }
-      80%  { transform: scale(0.6) rotate(-20deg); }
-      100% { transform: scale(1)  }
-    }
-    @keyframes move-three {
-      0%   { transform: scale(1); }
-      20%  { transform: scale(0.9)  rotate(-20deg); }
-      35%  { transform: scale(0.9, )  rotate(160deg); }
-      66%  { transform: scale(0.8,1) rotate(-20deg); }
-      86%  {  transform: scale(0.7, 1) rotate(160deg);}
-      100% { transform: scale(1) }
-    }
-}
 
 //////////////////////////////////
 .intro{
