@@ -306,7 +306,6 @@ a, a:hover {
         align-items: center; }
         .pods .pods-wrapper .pod figure a p {
           margin: 20px 0 10px;
-          font-family: "Pacifico-Regular", cursive;
           display: flex;
           transition-property: all;
           transition-duration: 0.5s;
@@ -317,7 +316,7 @@ a, a:hover {
         transition-property: all;
         transition-duration: 0.5s;
         transition-timing-function: ease-in-out;
-        background-color: red; }
+        background-color: #fff; }
         .pods .pods-wrapper .pod figure:hover img {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.16);
           transition-property: all;
@@ -343,8 +342,7 @@ a, a:hover {
   text-align: center;
   overflow: hidden; }
   .products div {
-    position: relative;
-    overflow: hidden; }
+    position: relative; }
   .products a.btnwrap {
     transition: all 0.3s ease-in-out;
     width: 100%;
@@ -353,9 +351,11 @@ a, a:hover {
     top: 0; }
     .products a.btnwrap .arrows-bg {
       position: relative;
-      overflow: visible; }
+      overflow: visible;
+      max-width: 400px !important;
+      margin: 0 auto; }
       .products a.btnwrap .arrows-bg svg {
-        z-index: 10;
+        z-index: 0;
         position: absolute;
         width: 100%;
         left: 0;
@@ -368,13 +368,20 @@ a, a:hover {
           transition: all 0.8s ease-in-out;
           transform-origin: 50% 50%; }
       .products a.btnwrap .arrows-bg img {
-        z-index: 0;
+        z-index: 1;
         max-width: 250px !important;
         position: relative; }
     .products a.btnwrap:hover svg path {
       stroke: #f1353d;
       transform: scale(1);
       transition: all 0.8s ease-in-out; }
+  .products .handwritten {
+    font-size: 18vw;
+    text-align: center;
+    color: #f8c4d0; }
+    @media (min-width: 992px) {
+      .products .handwritten {
+        font-size: 10vw; } }
   .products h2 {
     position: relative;
     padding-top: 40px;

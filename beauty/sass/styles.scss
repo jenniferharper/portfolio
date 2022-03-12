@@ -379,7 +379,6 @@ a, a:hover{
           align-items: center;
           p{
             margin: 20px 0 10px;
-            font-family: $other-font;
             display: flex;
             @include transition;
           }
@@ -390,7 +389,7 @@ a, a:hover{
 
         &:hover{
           @include transition;
-          background-color:red;
+          background-color:$white;
           img{
             box-shadow: $shadow;
             @include transition;
@@ -422,7 +421,6 @@ a, a:hover{
   overflow: hidden;
   div{
     position: relative;
-    overflow:hidden;
   }
 
   a.btnwrap{
@@ -434,8 +432,10 @@ a, a:hover{
     .arrows-bg{
       position: relative;
       overflow:visible;
+      max-width:400px !important;
+      margin:0 auto;
       svg{
-        z-index: 10;
+        z-index: 0;
         position: absolute;
         width: 100%;
         left:0;
@@ -449,7 +449,7 @@ a, a:hover{
         }
       }
       img{
-        z-index: 0;
+        z-index: 1;
         max-width:250px !important;
         position: relative;
       }
@@ -465,16 +465,14 @@ a, a:hover{
     }
   }
 
-  // .handwritten{
-  //   font-size: 18vw;
-  //   text-align: center;
-  //   color: #f8c4d0;
-  //   // position: absolute;
-  //   // left: -50%;
-  //   @media(min-width:992px){
-  //     font-size:10vw;
-  //   }
-  // }
+  .handwritten{
+    font-size: 18vw;
+    text-align: center;
+    color: #f8c4d0;
+    @media(min-width:992px){
+      font-size:10vw;
+    }
+  }
 
 	h2{
 		position: relative;
