@@ -1,5 +1,5 @@
 console.clear();
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, SplitText);
 
 
 ScrollTrigger.matchMedia({	
@@ -64,9 +64,7 @@ ScrollTrigger.matchMedia({
 
       // //background image amination
       gsap.set('.zoom-other', {backgroundSize:'150%', transformOrigin:'50% 50%'},0);
-
-      const zoomOther = document.querySelectorAll('.zoom-other');
-  
+      const zoomOther = document.querySelectorAll('.zoom-other');  
       zoomOther.forEach((section, index) => {
         gsap.to(zoomOther, {
           backgroundSize:'100%',
@@ -87,11 +85,10 @@ ScrollTrigger.matchMedia({
       strokeWidth:5,
       fill:'none',
       strokeLinecap:'round',
-      strokeMiterlimit:10
+      strokeMiterlimit:10,
     })
 
-    let arrows = gsap.timeline({
-    })
+    let arrows = gsap.timeline({delay:0.1})
 
     arrows.from('.arrow-wrap .stem', {
       drawSVG: '0% 0%',
@@ -110,15 +107,38 @@ ScrollTrigger.matchMedia({
     },0.8);
 
     arrows.to('.arrow', {
+      delay:2,
       scale:1.25,
       repeat:-1,
       yoyo:true,
       transformOrigin:'50% 50%',
     },2);
-
-
-
+    
     //////////////////////////////////////////
+
+        // //split text titles
+        var text = gsap.utils.toArray(".enterText");
+        text.forEach((el) => {
+            var splitWords = new SplitText(el, {type: "words,chars"});
+            chars = splitWords.chars;
+    
+            var splitTimeline = gsap.timeline({
+              scrollTrigger: {
+                trigger: el,
+                start: "top bottom-=100",
+                end: "bottom top",
+                toggleActions: "play none none none",
+              }
+            });
+            splitTimeline.from(chars, {
+                opacity:0,
+                duration: 0.5,
+                yPercent: 100,
+                ease: "back.out",
+                stagger: 0.05
+            });
+        });
+        //////////////
 
   }	
 }); 

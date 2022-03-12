@@ -111,10 +111,10 @@ if($(window).width() > 576){
 var splitWords = new SplitText('.aniText', {type: "words,chars"});
 chars = splitWords.words;
 
-  var splitTimeline = gsap.timeline({ });  
+  var splitTimeline = gsap.timeline({ });
 
   splitTimeline.from(chars, {
-	  delay:0.2,
+	 delay:0.2,
     opacity: 0,
     yPercent: 180,
     duration: 0.8,
