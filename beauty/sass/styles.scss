@@ -327,102 +327,93 @@ a.ctc{
   margin-bottom: $md;
   div[class^="container"]{ 
     .row{
-      .media-box{
-        @media (min-width:992px){
-          min-height:50vh;
-        }
-      }
-      h2{
-        color:$white;
-        margin: 50px 0; 
-        text-align: center;       
-        @media(min-width:992px){
-          margin-right: -8%;
-          max-width: 900px;
-          text-align: right;
-          z-index: 2;
-          margin-left: auto;
-        }
-      }      
-    }
-    .order{
       display: flex;
       flex-direction: column-reverse;
       @media(min-width:992px){
         flex-direction: row;
       }
-    }
-  }
-
- .branding{
-    &.bg-img{
-      @include bg-img(url("../img/product-01.jpg"));
-      min-height: 50vh;
-    }
-  }
-
-  .pods-wrapper{
-    display: flex;
-    flex-direction: column;
-    .row{
-      // flex-direction: column-reverse;
-      @media (min-width:576px){
-        flex-direction: row;
-      }
-    }
-    .pod{          
-      figure{
-        background: $main;
-        height: 100%;
-        @include transition;
-        img{
-          box-shadow: none;
-          @include transition;
+      div.pods-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h2{
+          color:$white;
+          margin: 50px 0; 
+          text-align: center;       
+          @media(min-width:992px){
+            margin-right: -8%;
+            max-width: 900px;
+            text-align: right;
+            z-index: 2;
+            margin-left: auto;
+          }
         }
-        @media (min-width:992px){
-          margin:0 20px;
-        }
-        a{
-          display: flex;
+        .row{
           flex-direction: column;
-          align-items: center;
-          p{
-            margin: 20px 0 10px;
-            display: flex;
-            @include transition;
+          @media (min-width:576px){
+            flex-direction: row;
           }
-          i{
-            margin-left: 20px;
+          .pod{ 
+            &.bg-img{
+              @include bg-img(url("../img/flamingo.jpg"));
+              min-height: 50vh;
+              @media (min-width:576px){
+                min-height: inherit;
+              }
+              @media (max-width:576px){
+                margin-bottom:20px
+              }
+            }         
+            figure{
+              background: $main;
+              height: 100%;
+              @include transition;
+              @media (min-width:992px){
+                margin:0 20px;
+              }
+              a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p{
+                  margin: 20px 0 10px;
+                  display: flex;
+                  @include transition;
+                }
+                i{
+                  margin-left: 20px;
+                }
+                img{
+                  box-shadow: none;
+                  @include transition;
+                }
+              }      
+              &:hover{
+                @include transition;
+                background-color:$white;
+                img{
+                  box-shadow: $shadow;
+                  @include transition;
+                }
+                p{
+                  fill:$dark;
+                }
+              }      
+            }    
           }
         }
-
-        &:hover{
-          @include transition;
-          background-color:$white;
-          img{
-            box-shadow: $shadow;
-            @include transition;
-          }
-          p{
-            fill:$dark;
-          }
-        }
-
       }
-
-      &.bg-img{
-        @include bg-img(url("../img/flamingo.jpg"));
-        min-height: 50vh;
-        @media (min-width:576px){
-          min-height: inherit;
-        }
-        @media (max-width:576px){
-          margin-bottom:20px
+      div.branding{
+        &.bg-img{
+          @include bg-img(url("../img/product-01.jpg"));
+          min-height: 50vh;
         }
       }
-    }
+    }     
   }
 }
+
+
 ////////////////////////////////////////////////
 .products{
   padding:$lg 0;

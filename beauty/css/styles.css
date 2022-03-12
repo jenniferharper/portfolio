@@ -253,88 +253,88 @@ a.ctc {
 
 .pods {
   margin-bottom: 8%; }
-  @media (min-width: 992px) {
-    .pods div[class^="container"] .row .media-box {
-      min-height: 50vh; } }
-  .pods div[class^="container"] .row h2 {
-    color: #fff;
-    margin: 50px 0;
-    text-align: center; }
-    @media (min-width: 992px) {
-      .pods div[class^="container"] .row h2 {
-        margin-right: -8%;
-        max-width: 900px;
-        text-align: right;
-        z-index: 2;
-        margin-left: auto; } }
-  .pods div[class^="container"] .order {
+  .pods div[class^="container"] .row {
     display: flex;
     flex-direction: column-reverse; }
     @media (min-width: 992px) {
-      .pods div[class^="container"] .order {
+      .pods div[class^="container"] .row {
         flex-direction: row; } }
-  .pods .branding.bg-img {
-    background-image: url("../img/product-01.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    min-height: 50vh; }
-  .pods .pods-wrapper {
-    display: flex;
-    flex-direction: column; }
-    @media (min-width: 576px) {
-      .pods .pods-wrapper .row {
-        flex-direction: row; } }
-    .pods .pods-wrapper .pod figure {
-      background: #f8c4d0;
-      height: 100%;
-      transition-property: all;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out; }
-      .pods .pods-wrapper .pod figure img {
-        box-shadow: none;
-        transition-property: all;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out; }
-      @media (min-width: 992px) {
-        .pods .pods-wrapper .pod figure {
-          margin: 0 20px; } }
-      .pods .pods-wrapper .pod figure a {
-        display: flex;
-        flex-direction: column;
-        align-items: center; }
-        .pods .pods-wrapper .pod figure a p {
-          margin: 20px 0 10px;
-          display: flex;
+    .pods div[class^="container"] .row div.pods-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .pods div[class^="container"] .row div.pods-wrapper h2 {
+        color: #fff;
+        margin: 50px 0;
+        text-align: center; }
+        @media (min-width: 992px) {
+          .pods div[class^="container"] .row div.pods-wrapper h2 {
+            margin-right: -8%;
+            max-width: 900px;
+            text-align: right;
+            z-index: 2;
+            margin-left: auto; } }
+      .pods div[class^="container"] .row div.pods-wrapper .row {
+        flex-direction: column; }
+        @media (min-width: 576px) {
+          .pods div[class^="container"] .row div.pods-wrapper .row {
+            flex-direction: row; } }
+        .pods div[class^="container"] .row div.pods-wrapper .row .pod.bg-img {
+          background-image: url("../img/flamingo.jpg");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: cover;
+          min-height: 50vh; }
+          @media (min-width: 576px) {
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod.bg-img {
+              min-height: inherit; } }
+          @media (max-width: 576px) {
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod.bg-img {
+              margin-bottom: 20px; } }
+        .pods div[class^="container"] .row div.pods-wrapper .row .pod figure {
+          background: #f8c4d0;
+          height: 100%;
           transition-property: all;
           transition-duration: 0.5s;
           transition-timing-function: ease-in-out; }
-        .pods .pods-wrapper .pod figure a i {
-          margin-left: 20px; }
-      .pods .pods-wrapper .pod figure:hover {
-        transition-property: all;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out;
-        background-color: #fff; }
-        .pods .pods-wrapper .pod figure:hover img {
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.16);
-          transition-property: all;
-          transition-duration: 0.5s;
-          transition-timing-function: ease-in-out; }
-        .pods .pods-wrapper .pod figure:hover p {
-          fill: #2d2929; }
-    .pods .pods-wrapper .pod.bg-img {
-      background-image: url("../img/flamingo.jpg");
+          @media (min-width: 992px) {
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod figure {
+              margin: 0 20px; } }
+          .pods div[class^="container"] .row div.pods-wrapper .row .pod figure a {
+            display: flex;
+            flex-direction: column;
+            align-items: center; }
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod figure a p {
+              margin: 20px 0 10px;
+              display: flex;
+              transition-property: all;
+              transition-duration: 0.5s;
+              transition-timing-function: ease-in-out; }
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod figure a i {
+              margin-left: 20px; }
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod figure a img {
+              box-shadow: none;
+              transition-property: all;
+              transition-duration: 0.5s;
+              transition-timing-function: ease-in-out; }
+          .pods div[class^="container"] .row div.pods-wrapper .row .pod figure:hover {
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            background-color: #fff; }
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod figure:hover img {
+              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.16);
+              transition-property: all;
+              transition-duration: 0.5s;
+              transition-timing-function: ease-in-out; }
+            .pods div[class^="container"] .row div.pods-wrapper .row .pod figure:hover p {
+              fill: #2d2929; }
+    .pods div[class^="container"] .row div.branding.bg-img {
+      background-image: url("../img/product-01.jpg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover;
       min-height: 50vh; }
-      @media (min-width: 576px) {
-        .pods .pods-wrapper .pod.bg-img {
-          min-height: inherit; } }
-      @media (max-width: 576px) {
-        .pods .pods-wrapper .pod.bg-img {
-          margin-bottom: 20px; } }
 
 .products {
   padding: 10% 0;
