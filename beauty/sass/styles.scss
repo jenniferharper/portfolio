@@ -413,7 +413,6 @@ a.ctc{
   }
 }
 
-
 ////////////////////////////////////////////////
 .products{
   padding:$lg 0;
@@ -421,96 +420,98 @@ a.ctc{
   overflow: hidden;
   div{
     position: relative;
-  }
-
-  a.btnwrap{
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    height: 100%;
-    left:0;
-    top:0;
-    .arrows-bg{
+    .handwritten{
+      font-size: 18vw;
+      text-align: center;
+      color: #f8c4d0;
+      @media(min-width:992px){
+        font-size:10vw;
+      }
+    }
+    h2{
       position: relative;
-      overflow:visible;
-      max-width:400px !important;
-      margin:0 auto;
-      svg{
-        z-index: 0;
-        position: absolute;
-        width: 100%;
-        left:0;
-        top:0;
-        fill:none;          
-        stroke-width: 5;
-        path{
-          stroke:white;
-          transform:scale(0);
-          transition: all 0.8s ease-in-out; transform-origin: 50% 50%;
-        }
-      }
-      img{
-        z-index: 1;
-        max-width:250px !important;
+      padding-top:40px;
+      padding-bottom:8%;
+      z-index: 1;
+    }
+    a.btnwrap{
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      height: 100%;
+      left:0;
+      top:0;
+      .arrows-bg{
         position: relative;
+        overflow:visible;
+        max-width:400px !important;
+        margin:0 auto;
+        svg{
+          z-index: 0;
+          position: absolute;
+          width: 100%;
+          left:0;
+          top:0;
+          fill:none;          
+          stroke-width: 5;
+          path{
+            stroke:white;
+            transform:scale(0);
+            transition: all 0.8s ease-in-out; transform-origin: 50% 50%;
+          }
+        }
+        img{
+          z-index: 1;
+          max-width:250px !important;
+          position: relative;
+        }
       }
-    }
-    &:hover{        
-      svg{        
-        path{
-          stroke:$secondary;
-          transform:scale(1);
-          transition: all 0.8s ease-in-out;
+
+      h4{
+        line-height: 50px;
+        font-size:1em;
+        span{
+          border:1.5px solid $main-dark;
+          padding:8px 12px 8px;
+        }
+        b{
+          padding:8px;
+          border:1.5px solid $dark;
+          border-right:0;
+        }
+        span,b{
+          transition:all .5s ease-in-out;
+        }
+        .fas{padding-left:10px;}
+      }
+
+      &:hover{                
+        svg{        
+          path{
+            stroke:$secondary;
+            transform:scale(1);
+            transition: all 0.8s ease-in-out;
+          }
+        }
+        text-decoration:none;
+        span,b{
+          color:#fff;
+          transition:all .5s ease-in-out;
+          background-color: $secondary-dark;
+          border-color:#f2f2f2;
         }
       }
     }
   }
 
-  .handwritten{
-    font-size: 18vw;
-    text-align: center;
-    color: #f8c4d0;
-    @media(min-width:992px){
-      font-size:10vw;
-    }
-  }
 
-	h2{
-		position: relative;
-		padding-top:40px;
-		padding-bottom:8%;
-		z-index: 1;
-	}
+
+
+
+
   
-	a{		
-		h4{
-			line-height: 50px;
-			// font-weight: bold;
-			font-size:1em;
-			span{
-				border:1.5px solid $main-dark;
-				padding:8px 12px 8px;
-			}
-			b{
-				padding:8px;
-				border:1.5px solid $dark;
-				border-right:0;
-			}
-			.fas{padding-left:10px;}
-		}
+	
 
-		span,b{
-			transition:all .5s ease-in-out;
-		}
-		&:hover{		
-			text-decoration:none;
-			span,b{
-				color:#fff;
-				transition:all .5s ease-in-out;
-				background-color: $secondary-dark;
-				border-color:#f2f2f2;
-			}
-		}
-	}
+
 
 }
 
