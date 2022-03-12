@@ -17,8 +17,7 @@ body {
   background: transparent;
   /* Optional: just make scrollbar invisible */ }
 
-.container-fluid,
-.container {
+div[class^="container"] {
   padding: 0; }
 
 .row {
@@ -43,6 +42,11 @@ a:hover {
   color: #2d2929;
   text-decoration: none;
   transition: all 0.3s ease-in-out; }
+
+a, a:hover {
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out; }
 
 p, p span, p a, a {
   color: #2d2929; }
@@ -125,13 +129,13 @@ img {
   left: 0;
   z-index: 0; }
 
-.styled .container-fluid {
+.styled div[class^="container"] {
   max-width: calc(100% - 8%); }
-  .styled .container-fluid .row {
+  .styled div[class^="container"] .row {
     background-color: #5F0017;
     padding: 4%;
     margin: 0 auto; }
-    .styled .container-fluid .row .row {
+    .styled div[class^="container"] .row .row {
       padding: 0; }
 
 a.ctc {
@@ -146,17 +150,12 @@ a.ctc {
     a.ctc i svg {
       width: 30px;
       transform-origin: 50% 50%; }
-  @media (min-width: 992px) {
-    a.ctc {
-      justify-content: flex-start; } }
   a.ctc:hover {
     color: #f1353d;
     fill: #f1353d; }
-
-a, a:hover {
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out; }
+  @media (min-width: 992px) {
+    a.ctc {
+      justify-content: flex-start; } }
 
 @keyframes changewidth {
   0% {
@@ -196,83 +195,83 @@ a, a:hover {
           text-align: left; }
           .hero .row div:first-of-type {
             order: 1; } }
-  .hero .hero-intro {
-    padding: 8% 4% 4%;
-    position: relative;
-    z-index: 1; }
-  .hero .handwritten {
-    font-size: 30vw; }
-    @media (min-width: 992px) {
-      .hero .handwritten {
-        top: 50px;
-        left: -15%;
-        font-size: 18vw; } }
-  .hero .small-text {
-    font-family: "Pacifico-Regular", cursive;
-    font-size: 1.7em;
-    color: #c31e22;
-    letter-spacing: 2px; }
-  .hero .bottle {
-    z-index: 2; }
-    @media (max-width: 768px) {
-      .hero .bottle {
-        max-width: 50%;
-        margin: 0 auto; } }
-    .hero .bottle a figure {
-      position: relative; }
-      .hero .bottle a figure img {
-        transition-property: all;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out; }
-      .hero .bottle a figure svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; }
-        .hero .bottle a figure svg path {
+    @media (max-width: 992px) {
+      .hero .row .media-box {
+        min-height: 80vh; } }
+    .hero .row .hero-intro {
+      padding: 8% 4% 4%;
+      position: relative;
+      z-index: 1; }
+      .hero .row .hero-intro .handwritten {
+        font-size: 30vw; }
+        @media (min-width: 992px) {
+          .hero .row .hero-intro .handwritten {
+            top: 50px;
+            left: -15%;
+            font-size: 18vw; } }
+      .hero .row .hero-intro .small-text {
+        font-family: "Pacifico-Regular", cursive;
+        font-size: 1.7em;
+        color: #c31e22;
+        letter-spacing: 2px; }
+      .hero .row .hero-intro a.ctc {
+        margin-top: 20px; }
+        .hero .row .hero-intro a.ctc i {
+          margin-right: 20px; }
+    .hero .row .bottle {
+      z-index: 2; }
+      @media (max-width: 768px) {
+        .hero .row .bottle {
+          max-width: 50%;
+          margin: 0 auto; } }
+      .hero .row .bottle a figure {
+        position: relative; }
+        .hero .row .bottle a figure img {
           transition-property: all;
           transition-duration: 0.5s;
           transition-timing-function: ease-in-out; }
-    .hero .bottle a:hover img {
-      transform: scale(0.9);
-      transition-property: all;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out; }
-    .hero .bottle a:hover svg path {
-      stroke: purple !important;
-      stroke-width: 8px !important;
-      transition-property: all;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out; }
-  @media (max-width: 992px) {
-    .hero .media-box {
-      min-height: 80vh; } }
-  .hero a.ctc {
-    margin-top: 20px; }
-    .hero a.ctc i {
-      margin-right: 20px; }
+        .hero .row .bottle a figure svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%; }
+          .hero .row .bottle a figure svg path {
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out; }
+      .hero .row .bottle a:hover img {
+        transform: scale(0.9);
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out; }
+      .hero .row .bottle a:hover svg path {
+        stroke: purple !important;
+        stroke-width: 8px !important;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out; }
 
 .pods {
   margin-bottom: 8%; }
   @media (min-width: 992px) {
-    .pods .container-fluid .row .media-box {
+    .pods div[class^="container"] .row .media-box {
       min-height: 50vh; } }
-  .pods .container-fluid .row h2 {
+  .pods div[class^="container"] .row h2 {
     color: #fff;
     margin: 50px 0;
     text-align: center; }
     @media (min-width: 992px) {
-      .pods .container-fluid .row h2 {
+      .pods div[class^="container"] .row h2 {
         margin-right: -8%;
         max-width: 900px;
         text-align: right;
         z-index: 2;
         margin-left: auto; } }
-  .pods .container-fluid .order {
+  .pods div[class^="container"] .order {
     display: flex;
     flex-direction: column-reverse; }
     @media (min-width: 992px) {
-      .pods .container-fluid .order {
+      .pods div[class^="container"] .order {
         flex-direction: row; } }
   .pods .branding.bg-img {
     background-image: url("../img/product-01.jpg");
@@ -496,21 +495,18 @@ a, a:hover {
   margin: 50px 0;
   text-align: center; }
 
-.testimonials .container-fluid {
-  position: relative;
-  max-width: calc(100% - 8%);
-  background-color: #5F0017;
-  padding: 0 4% 4%; }
-  .testimonials .container-fluid .row {
+.testimonials div[class^="container"] {
+  position: relative; }
+  .testimonials div[class^="container"] .row {
     padding-top: 0; }
-    .testimonials .container-fluid .row .row .testimonial {
+    .testimonials div[class^="container"] .row .row .testimonial {
       display: flex; }
-      .testimonials .container-fluid .row .row .testimonial h3 {
+      .testimonials div[class^="container"] .row .row .testimonial h3 {
         font-family: "Pacifico-Regular", cursive;
         margin-bottom: 20px; }
-      .testimonials .container-fluid .row .row .testimonial p {
+      .testimonials div[class^="container"] .row .row .testimonial p {
         color: #fff; }
-      .testimonials .container-fluid .row .row .testimonial div {
+      .testimonials div[class^="container"] .row .row .testimonial div {
         padding: 8%;
         text-align: center;
         background-color: #c31e22;
@@ -519,74 +515,74 @@ a, a:hover {
         display: flex;
         flex-direction: column; }
         @media (min-width: 992px) {
-          .testimonials .container-fluid .row .row .testimonial div {
+          .testimonials div[class^="container"] .row .row .testimonial div {
             margin: 0 10px; } }
         @media (min-width: 1240px) {
-          .testimonials .container-fluid .row .row .testimonial div {
+          .testimonials div[class^="container"] .row .row .testimonial div {
             min-height: 100vh; } }
-      .testimonials .container-fluid .row .row .testimonial figure svg {
+      .testimonials div[class^="container"] .row .row .testimonial figure svg {
         max-width: 50px;
         margin-bottom: 20px;
         fill: #f8c4d0; }
-    .testimonials .container-fluid .row .row .bg-img figure {
+    .testimonials div[class^="container"] .row .row .bg-img figure {
       width: 100%;
       height: 100%;
       min-height: 60vh; }
-    .testimonials .container-fluid .row .row > div {
+    .testimonials div[class^="container"] .row .row > div {
       margin-bottom: 20px; }
       @media (min-width: 992px) {
-        .testimonials .container-fluid .row .row > div {
+        .testimonials div[class^="container"] .row .row > div {
           margin-bottom: 0; } }
-    .testimonials .container-fluid .row .row:first-of-type .bg-img:first-of-type {
+    .testimonials div[class^="container"] .row .row:first-of-type .bg-img:first-of-type {
       background-image: url("../img/product-04.jpg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover; }
-    .testimonials .container-fluid .row .row:first-of-type .bg-img:last-of-type {
+    .testimonials div[class^="container"] .row .row:first-of-type .bg-img:last-of-type {
       background-image: url("../img/model-02.jpg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover; }
-    .testimonials .container-fluid .row .row:nth-last-of-type(2) div {
+    .testimonials div[class^="container"] .row .row:nth-last-of-type(2) div {
       order: 1; }
-    .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial {
+    .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .testimonial {
       display: flex; }
-      .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial div {
+      .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .testimonial div {
         margin: 0;
         background-color: #fff; }
-        .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial div p {
+        .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .testimonial div p {
           color: #2d2929; }
-      .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type div {
+      .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type div {
         background-color: #f8c4d0; }
       @media (max-width: 992px) {
-        .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type {
+        .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .testimonial.testimonial:first-of-type {
           order: 3; } }
-      .testimonials .container-fluid .row .row:nth-last-of-type(2) .testimonial svg {
+      .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .testimonial svg {
         fill: #c31e22; }
-    .testimonials .container-fluid .row .row:nth-last-of-type(2) .bg-img figure {
+    .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .bg-img figure {
       background-image: url("../img/model-03.jpg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover; }
       @media (min-width: 992px) {
-        .testimonials .container-fluid .row .row:nth-last-of-type(2) .bg-img figure {
+        .testimonials div[class^="container"] .row .row:nth-last-of-type(2) .bg-img figure {
           width: calc(100% - 20px);
           margin-left: 10px; } }
     @media (min-width: 992px) {
-      .testimonials .container-fluid .row .row:nth-last-of-type(2) {
+      .testimonials div[class^="container"] .row .row:nth-last-of-type(2) {
         margin-top: 10px; } }
-    .testimonials .container-fluid .row .row:last-of-type .bg-img:first-of-type figure {
+    .testimonials div[class^="container"] .row .row:last-of-type .bg-img:first-of-type figure {
       background-image: url("../img/product-03.png");
       background-repeat: no-repeat;
       background-position: 75% 70%;
       background-size: cover; }
-    .testimonials .container-fluid .row .row:last-of-type .bg-img:last-of-type figure {
+    .testimonials div[class^="container"] .row .row:last-of-type .bg-img:last-of-type figure {
       background-image: url("../img/model-05.jpg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover; }
     @media (min-width: 992px) {
-      .testimonials .container-fluid .row .row:last-of-type {
+      .testimonials div[class^="container"] .row .row:last-of-type {
         margin-top: 10px; } }
 
 .reveal-wrapper {

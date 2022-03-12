@@ -88,7 +88,7 @@ ScrollTrigger.matchMedia({
       strokeMiterlimit:10,
     })
 
-    let arrows = gsap.timeline({delay:0.1})
+    let arrows = gsap.timeline({delay:0.5})
 
     arrows.from('.arrow-wrap .stem', {
       drawSVG: '0% 0%',

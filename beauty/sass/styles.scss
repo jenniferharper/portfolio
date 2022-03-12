@@ -24,10 +24,10 @@ body {
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
-.container-fluid,
-.container{
+ div[class^="container"]{
   padding:0;
 }
+
 .row{
   margin-left:0;
   margin-right:0;
@@ -53,6 +53,9 @@ a:hover{
   color:$dark;
   text-decoration: none;
   transition:all 0.3s ease-in-out;
+}
+a, a:hover{
+  @include transition;
 }
 
 p, p span,p a,a{  color:$dark;}
@@ -147,10 +150,15 @@ img{
   left:0;
   z-index: 0;
 }
-/////////////styles///////////
 
+
+
+/////////////universal styles///////////
+
+
+///////////full width with margin style sections
 .styled{
-  .container-fluid{ 
+   div[class^="container"]{ 
     max-width: calc(100% - 8%);
     .row{
       background-color: $main-dark;
@@ -163,43 +171,36 @@ img{
   }
 }
 
+////////////// anchor link with arrow in circle
 a.ctc{
   display: flex;
   justify-content:center;
   i{
-    // padding:0 20px 0 0 ;
-    svg{
-      width: 30px;
-      transform-origin: 50% 50%;
-    }
     animation-duration: 0.5s;
     animation-name: changewidth;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function:ease-in;
+    svg{
+      width: 30px;
+      transform-origin: 50% 50%;
+    }
   }
-
-  @media (min-width:992px){
-    justify-content:flex-start;
-  }
-
   &:hover{
     color:$secondary;
     fill:$secondary;
   }
+  @media (min-width:992px){
+    justify-content:flex-start;
+  }
 }
-
-a, a:hover{
-  @include transition;
-}
-
-
+//// keyframe for a.ctc button
 @keyframes changewidth {
   0%   { transform: scale(1)}
   100% { transform: scale(1.1)}
 }
 
-
+//////////// handwritten style above titles
 .handwritten{
   display: block;
   font-family:$other-font;
@@ -214,6 +215,8 @@ a, a:hover{
     display:block;
   }
 }
+
+
 //////////////general///////////////
 .hero{
 	position: relative;
@@ -224,6 +227,7 @@ a, a:hover{
       padding-bottom: 0;
     }
     div{
+      ////structure
       text-align: center;
       order:1;
       &:first-of-type{
@@ -238,85 +242,90 @@ a, a:hover{
           order:1
         }
       }
-    }
-  }
-  .hero-intro{
-    padding:$md $sm $sm;
-    position: relative;
-    z-index: 1;
-  }
-  .handwritten{
-    font-size: 30vw;
-    @media(min-width:992px){
-      top:50px;				
-      left:-15%;
-      font-size:18vw;
-    }
-  }
-  .small-text{
-		font-family:$other-font;
-		font-size:1.7em;
-		color:$secondary-dark;
-		letter-spacing: 2px;
-	}
+    } 
 
-  .bottle {
-    z-index: 2;
-    @media (max-width:768px){
-      max-width: 50%;
-      margin: 0 auto;
+    .media-box{
+      @media (max-width:992px){
+        min-height:80vh;  
+      }
     }
-    a{
-      figure{
-        position: relative;
-        img{
-          @include transition;
-        }
-        svg{
-          position:absolute;
-          top:0;
-          left: 0;
-          width: 100%;
-          // svg styled in js
-          path{
-            @include transition;
-          }
+
+    .hero-intro{
+      padding:$md $sm $sm;
+      position: relative;
+      z-index: 1;
+      .handwritten{
+        font-size: 30vw;
+        @media(min-width:992px){
+          top:50px;				
+          left:-15%;
+          font-size:18vw;
         }
       }
+      .small-text{
+        font-family:$other-font;
+        font-size:1.7em;
+        color:$secondary-dark;
+        letter-spacing: 2px;
+      }
+      a.ctc{
+        margin-top: 20px;
+        i{margin-right: 20px;}
+      }
+    }
 
-      &:hover{
-        img{
-          transform:scale(0.9);
-          @include transition;
-        }
-        svg{
-          path{
-            stroke:purple !important;
-            stroke-width: 8px !important;
+    .bottle {
+      z-index: 2;
+      @media (max-width:768px){
+        max-width: 50%;
+        margin: 0 auto;
+      }
+      a{
+        figure{
+          position: relative;
+          img{
             @include transition;
           }
+          svg{
+            position:absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            // svg styled in js
+            path{
+              @include transition;
+            }
+          }
+        }  
+        &:hover{
+          img{
+            transform:scale(0.9);
+            @include transition;
+          }
+          svg{
+            path{
+              stroke:purple !important;
+              stroke-width: 8px !important;
+              @include transition;
+            }
+          }
         }
-      }
-    }  
-  }
+      }  
+    }    
+}
 
-  .media-box{
-    // height:100%;
-    @media (max-width:992px){
-      min-height:80vh;
 
-    }
-  }
-  a.ctc{
-      margin-top: 20px;
-      i{margin-right: 20px;}
-  }
+
+
+
+
+
 
 }
 //////////////////////////////////////////
 .pods{
   margin-bottom: $md;
-  .container-fluid{ 
+  div[class^="container"]{ 
     .row{
       .media-box{
         @media (min-width:992px){
@@ -606,12 +615,8 @@ a, a:hover{
   }  
 }
 .testimonials{
-  // &.styled .row{background-color: transparent;}
-  .container-fluid{
+   div[class^="container"]{
     position: relative;
-    max-width: calc(100% - 8%);
-    background-color: $main-dark;
-    padding: 0 $sm $sm;
     .row{ 
       padding-top: 0;
       .row{        
