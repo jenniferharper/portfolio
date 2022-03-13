@@ -46,7 +46,8 @@ a:hover {
 a, a:hover {
   transition-property: all;
   transition-duration: 0.5s;
-  transition-timing-function: ease-in-out; }
+  transition-timing-function: ease-in-out;
+  text-decoration: none; }
 
 p, p span, p a, a {
   color: #2d2929; }
@@ -90,6 +91,13 @@ h2 {
 img {
   position: relative; }
 
+svg {
+  width: 100%; }
+
+figure {
+  position: relative;
+  overflow: visible; }
+
 .media-box {
   position: relative;
   height: 50vh;
@@ -97,7 +105,7 @@ img {
   overflow: hidden; }
   @media (min-width: 992px) {
     .media-box {
-      min-height: 95vh;
+      min-height: 85vh;
       height: 100%; } }
 
 .media-box img {
@@ -128,6 +136,125 @@ img {
   top: 0;
   left: 0;
   z-index: 0; }
+
+.navbar {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  padding: 0;
+  background-color: #f9f6f1;
+  top: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out; }
+  .navbar .container-fluid {
+    padding: 0; }
+    .navbar .container-fluid a.navbar-brand {
+      width: 230px;
+      height: 100px;
+      position: relative;
+      padding: 0;
+      display: flex;
+      align-items: center; }
+      .navbar .container-fluid a.navbar-brand figure {
+        position: relative;
+        margin: 0;
+        overflow: visible;
+        width: 100%;
+        height: inherit; }
+        .navbar .container-fluid a.navbar-brand figure svg {
+          overflow: visible;
+          width: 100%;
+          height: 100%;
+          max-width: 200px;
+          transform: scale(1.4);
+          transform-origin: 0 0;
+          transform-origin: 50% 00%;
+          transition-property: all;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-in-out; }
+          .navbar .container-fluid a.navbar-brand figure svg .circle {
+            fill: #f8c4d0;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out; }
+          .navbar .container-fluid a.navbar-brand figure svg .outline {
+            stroke: #2d2929;
+            stroke-width: 0.5px; }
+          .navbar .container-fluid a.navbar-brand figure svg .hair {
+            fill: #fff;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out; }
+      .navbar .container-fluid a.navbar-brand p {
+        color: #2d2929;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      @media (min-width: 992px) {
+        .navbar .container-fluid a.navbar-brand {
+          width: 320px; }
+          .navbar .container-fluid a.navbar-brand p {
+            font-size: 28px; } }
+    .navbar .container-fluid button.navbar-toggler {
+      padding: 0 10px;
+      font-size: 30px;
+      line-height: 1;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      transition: none;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      align-items: center; }
+      .navbar .container-fluid button.navbar-toggler:focus {
+        box-shadow: none; }
+      .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
+        color: red;
+        height: auto; }
+    .navbar .container-fluid div.navbar-collapse {
+      justify-content: flex-end;
+      margin-top: -1px;
+      transition: all 0.5s ease-in-out; }
+      .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
+        padding: 0px 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center; }
+        .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
+          padding: 10px 14px;
+          color: #2d2929; }
+    .navbar .container-fluid .open .navbar-toggler-icon i {
+      transform: rotate(-90deg); }
+  @media (min-width: 992px) {
+    .navbar {
+      background-color: transparent; }
+      .navbar .container-fluid button.navbar-toggler {
+        display: none; }
+      .navbar .container-fluid div.navbar-collapse {
+        background-color: transparent; } }
+
+.nav--up {
+  top: -100px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out; }
+  .nav--up a.navbar-brand figure svg {
+    transform: scale(0.1) !important;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; }
+
+.nav--scrolled {
+  background: #f9f6f1; }
+  .nav--scrolled .container-fluid a.navbar-brand figure svg {
+    transform: scale(1) !important;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; }
 
 .styled div[class^="container"] {
   max-width: calc(100% - 8%); }
@@ -191,6 +318,8 @@ a.ctc {
 .blobs svg .other {
   fill: #c31e22;
   animation: move-three 10s ease-in-out infinite; }
+.blobs svg .logo {
+  animation: logo 10s ease-in-out infinite; }
 @keyframes move-one {
   0% {
     transform: scale(1); }
@@ -230,11 +359,28 @@ a.ctc {
     transform: scale(0.7, 1) rotate(160deg); }
   100% {
     transform: scale(1); } }
+@keyframes logo {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(1.1) rotate(-20deg); }
+  35% {
+    transform: scale(1.05) rotate(40deg); }
+  66% {
+    transform: scale(1) rotate(-20deg); }
+  86% {
+    transform: scale(0.9) rotate(40deg); }
+  100% {
+    transform: scale(1); } }
 .hero {
   position: relative; }
   .hero .row {
     align-items: center;
-    padding: 4% 4% 8%; }
+    padding: 4% 4% 8%;
+    margin-top: 130px; }
+    @media (min-width: 992px) {
+      .hero .row {
+        margin-top: 30px; } }
     @media (max-width: 768px) {
       .hero .row {
         padding-bottom: 0; } }
@@ -360,7 +506,7 @@ a.ctc {
             flex-direction: column;
             align-items: center; }
             .pods div[class^="container"] .row div.pods-wrapper .row .pod figure a p {
-              margin: 20px 0 10px;
+              margin: 20px 0 20px;
               display: flex;
               transition-property: all;
               transition-duration: 0.5s;
@@ -596,22 +742,25 @@ a.ctc {
     display: flex;
     justify-content: center;
     text-align: center; }
+    @media (min-width: 768px) {
+      .cta .row div {
+        text-align: left; } }
     .cta .row div .blobs svg {
       position: absolute;
       z-index: 0; }
       .cta .row div .blobs svg .pattern {
         transform: rotate(15deg); }
     .cta .row div .handwritten {
-      font-size: 20vw;
-      margin-bottom: 40px; }
+      font-size: 25vw;
+      margin-bottom: 25px; }
       @media (min-width: 768px) {
         .cta .row div .handwritten {
           font-size: 14vw; } }
       @media (min-width: 992px) {
         .cta .row div .handwritten {
-          top: 20%;
-          left: -15%;
-          font-size: 12vw; } }
+          position: relative;
+          font-size: 12vw;
+          margin-left: -40px; } }
   .cta .row ul {
     list-style: none;
     display: flex;
@@ -630,8 +779,5 @@ a.ctc {
         justify-content: flex-start; }
         .cta .row ul li {
           padding: 0 40px 0 0; } }
-  @media (min-width: 768px) {
-    .cta .row {
-      text-align: left; } }
 
 /*# sourceMappingURL=styles.css.map */
