@@ -76,13 +76,10 @@ h1, h2, h3, h4, h5, h6 {
 
   h1 {
     letter-spacing: 1px;
-    font-size:1.5em;
+    font-size:2.5em;
     font-weight: 700;
-    @media (min-width:768px){
-      font-size:1.8em;
-    }
-    @media (min-width:1024px){
-      font-size:2em;
+    @media (min-width:992px){
+      font-size:2.5em;
     }
     @media (min-width:1200px){
       font-size:4em;
@@ -270,7 +267,7 @@ figure{
         box-shadow: none;
       }
       .navbar-toggler-icon {
-        color: red;
+        color: $secondary;
         height: auto;
       }
     }
@@ -285,11 +282,21 @@ figure{
         display: flex;
         justify-content: center;
         align-items: center;
+        height:100vh;
         a.nav-link {
           padding: 10px 14px;
           color:$dark;
           &:hover{
             color:$secondary;
+          }
+        }
+        .socials{
+          margin-top:20px
+        }
+        @media (min-width:992px){
+          height:inherit;
+          .socials{
+            margin-top:0
           }
         }
       }
@@ -332,7 +339,7 @@ figure{
 }
 
 ///////////universal styles///////////
-ul.socials{
+.socials{
   list-style: none;
   display: flex; 
   padding-left: 0;
@@ -398,11 +405,12 @@ a.ctc{
   font-weight:lighter;
   z-index: -10;
   line-height: 0;
-
+margin-bottom: 20px;
   @media(min-width:992px){
     position: absolute;
     width: 100%;
     display:block;
+    margin-bottom:0
   }
 }
 

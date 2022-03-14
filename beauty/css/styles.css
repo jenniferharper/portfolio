@@ -62,14 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   letter-spacing: 1px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: 700; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     h1 {
-      font-size: 1.8em; } }
-  @media (min-width: 1024px) {
-    h1 {
-      font-size: 2em; } }
+      font-size: 2.5em; } }
   @media (min-width: 1200px) {
     h1 {
       font-size: 4em; } }
@@ -241,7 +238,7 @@ figure {
       .navbar .container-fluid button.navbar-toggler:focus {
         box-shadow: none; }
       .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
-        color: red;
+        color: #f1353d;
         height: auto; }
     .navbar .container-fluid div.navbar-collapse {
       justify-content: flex-end;
@@ -252,12 +249,20 @@ figure {
         text-align: center;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        height: 100vh; }
         .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
           padding: 10px 14px;
           color: #2d2929; }
           .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link:hover {
             color: #f1353d; }
+        .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
+          margin-top: 20px; }
+        @media (min-width: 992px) {
+          .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
+            height: inherit; }
+            .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
+              margin-top: 0; } }
     .navbar .container-fluid .open .navbar-toggler-icon i {
       transform: rotate(-90deg); }
   @media (min-width: 992px) {
@@ -288,18 +293,18 @@ figure {
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out; }
 
-ul.socials {
+.socials {
   list-style: none;
   display: flex;
   padding-left: 0;
   justify-content: center; }
-  ul.socials i {
+  .socials i {
     color: #f8c4d0;
     padding: 0 10px; }
-  ul.socials li {
+  .socials li {
     padding: 0; }
-  ul.socials i:hover,
-  ul.socials a:hover {
+  .socials i:hover,
+  .socials a:hover {
     color: #5F0017; }
 
 .styled div[class^="container"] {
@@ -341,12 +346,14 @@ a.ctc {
   color: #fbdfe6;
   font-weight: lighter;
   z-index: -10;
-  line-height: 0; }
+  line-height: 0;
+  margin-bottom: 20px; }
   @media (min-width: 992px) {
     .handwritten {
       position: absolute;
       width: 100%;
-      display: block; } }
+      display: block;
+      margin-bottom: 0; } }
 
 .blobs svg path {
   position: absolute;
