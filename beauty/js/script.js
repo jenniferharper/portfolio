@@ -141,7 +141,7 @@ ScrollTrigger.matchMedia({
       stagger:0.7
     },0.8);
 
-    arrows.to('.arrow', {
+    arrows.from('.arrow', {
       delay:2,
       scale:1.25,
       repeat:-1,
