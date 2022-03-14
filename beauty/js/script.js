@@ -38,10 +38,7 @@ ScrollTrigger.create({
   }}
 });
 
-
-
-ScrollTrigger.matchMedia({
-  
+ScrollTrigger.matchMedia({  
   //tablet/mobile
   "(max-width: 992px)": function() {
     gsap.set(".reveal div",{
@@ -126,7 +123,7 @@ ScrollTrigger.matchMedia({
       strokeMiterlimit:10,
     })
 
-    let arrows = gsap.timeline({delay:0.5})
+    let arrows = gsap.timeline({delay:0.5, start:'top top'})
 
     arrows.from('.arrow-wrap .stem', {
       drawSVG: '0% 0%',
@@ -173,7 +170,7 @@ ScrollTrigger.matchMedia({
                 duration: 0.5,
                 yPercent: 100,
                 ease: "back.out",
-                stagger: 0.05
+                stagger: 0.02
             });
         });
         //////////////
@@ -182,3 +179,63 @@ ScrollTrigger.matchMedia({
 }); 
 
 
+    ///////////////////site preloader////////////////////////
+    var imgLoad = imagesLoaded('.wrapper');
+    var progressBar = $(".c-preloader__progress"),
+        count = $(".c-preloader__count"),
+        images = $("img").length,
+        loadedCount = 0,
+        loadingProgress = 0,
+        tlProgress = gsap.timeline();
+     
+    imgLoad.on( 'progress', function( instance, image ) {
+        loadProgress();
+    });
+     
+    function loadProgress(imgLoad, image) {
+    
+        loadedCount++;
+      
+        loadingProgress = (loadedCount/images);
+        console.log(loadingProgress);
+    
+        gsap.to(tlProgress, 1, {progress:loadingProgress});
+    }
+    
+    var tlProgress = gsap.timeline({
+        paused: true,
+        onUpdate: countPercent,
+        onComplete: loadComplete
+    });
+     
+    tlProgress
+      .set(".c-preloader",{ transformOrigin:'0 0'},0)
+      .set('.hero', {yPercent:10},0)
+      .to('html',{overflow:'hidden'},0)
+      .to(progressBar, 1, {width:"100%"},0)      
+      .to(count, 0.5, {autoAlpha:0},1)
+
+    
+    
+    function countPercent() {
+          var newPercent = (tlProgress.progress()*100).toFixed();
+          count.text(newPercent + "%");
+    }
+    
+    function loadComplete() {
+      mySplitText = new SplitText(".hero h1", { type: "words,chars" }),
+      chars = mySplitText.chars;
+    
+      var tlEnd =  gsap.timeline({});
+      tlEnd
+        .to('html',{overflow:'visible'},0)
+        .to(".c-preloader", 0.5, { height:0},0)
+        .to('.hero',0.5,  {yPercent:0},'-=0.5')
+        .from(chars, {
+          opacity:0,
+          duration: 0.5,
+          yPercent: 100,
+          ease: "back.out",
+          stagger: 0.05
+        });
+    }
