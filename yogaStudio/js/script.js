@@ -89,10 +89,10 @@ gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
 
 ////////////////////////////////////////////////////////////////
-//// moving arch background/////
+// moving arch background/////
 gsap.timeline({repeat:-1, yoyo:true})
-.to('#img', {
-  attr:{x:-250,},
+.to('#panning', {
+  objectPosition:'80% 0',
   duration:10, ease:'power1.inOut',
   repeat:1, yoyo:true
 },0)
