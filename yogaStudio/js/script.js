@@ -22,6 +22,12 @@ ScrollTrigger.scrollerProxy(".scroller", {
 bodyScrollBar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({ scroller: scroller });
 
+const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
+bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
+  el.addEventListener("click", () => {
+    bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+  })
+})
 
 
 
@@ -61,31 +67,6 @@ ScrollTrigger.create({
 
 //// text around arch/////
 gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
-
-
-///////////
-// gsap.set(".circleText svg", { autoAlpha: 1 });
-// var circle = gsap.timeline({
-// 	defaults: { ease: "none", duration: 4 },
-// 	scrollTrigger:{
-// 		trigger:'.circleWrap',
-// 		start:'top bottom',
-// 		//markers:true
-// 		// toggleActions: "play none none none",
-// 	}
-// })
-
-// circle.from(
-//     ".circleText .text",
-//     {
-//       attr: { startOffset: "100%" }
-//     }
-//   )
-//   circle.from("#circle", {
-//     rotation: 360,
-//     transformOrigin: "center center",
-//     repeat: -1
-//   });
 
 
 ////////////////////////////////////////////////////////////////
