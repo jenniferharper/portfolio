@@ -124,7 +124,6 @@ horizontalSections.forEach(function (sec, i) {
       pin: true,  
 	     pinReparent: true, 
       invalidateOnRefresh: true,
-    //   anticipatePin: 1,
       scrub: true,
     }
   });

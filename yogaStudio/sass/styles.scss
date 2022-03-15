@@ -22,8 +22,16 @@ body {
   background-color: #fafafa;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
 
+  .bg-lines{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    fill:$light;
+    opacity: 0.3;
+  }
 }
-
 .scroller {
   height: 100vh;
 }
@@ -181,6 +189,7 @@ figure {
   z-index: 1;
   // height: 100%;
   width: 100%;
+  position: relative;
   svg{
     width: 100%;
   }
@@ -313,6 +322,13 @@ svg{
   }
 }
 
+.mesh{
+  position:absolute;
+  z-index: -1;  
+  opacity: 0.5;
+  width: 150%;
+
+}
 ////-----------------------------------------/////
 
 .hero{
@@ -324,18 +340,22 @@ svg{
         min-height: 60vh;
         max-width: 400px;
         margin: 0 auto;
-      }
-      .media-box{
-        border-top-left-radius: 200px;
-        border-top-right-radius: 200px;
-        img{
-          position: absolute;
-          top: 0;
-          left: 0;
-          -o-object-fit: cover;
-          object-fit: cover;
-          -o-object-position: 50% 50%;
-          object-position: 50% 50%;
+        .mesh{
+          top: -15%;
+          left:-15%;
+        }
+        .media-box{
+          border-top-left-radius: 200px;
+          border-top-right-radius: 200px;
+           img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: 50% 50%;
+            object-position: 50% 50%;
+          }
         }
       }
     }
@@ -350,6 +370,10 @@ svg{
         justify-content: flex-end;
         max-width: 100px;
         margin: 0 auto;
+        .mesh{
+          bottom: -55%;
+          right:-45%;
+        }
       }
       h1,.preamble, .btn-wrap{
         text-align: center;
@@ -402,6 +426,7 @@ svg{
 
 ///////////////////////////////////////
 .about{
+  @include gradient(top, $grad1);
   .row{
     padding:0 $sm;
     align-items: center;
@@ -409,17 +434,27 @@ svg{
       > div{
         padding:$md $md 0;
       }
+      .mesh{
+        bottom: -15%;
+        right:-25%;
+      }
     }
+
     > div:last-of-type{
       padding:$md;
       flex-direction: column-reverse;
       > div{
         padding:$md;
       }
+      .mesh{
+        top: -15%;
+        right:-25%;
+      }
       @media (min-width:992px){
         flex-direction: column;
       }
     }
+
     figure.arch{
       padding: 20px;
     }
@@ -444,12 +479,14 @@ svg{
 }
 ///////////////////
 .horizontal{
+  background-color:$lightest;
   .spacer{height:$sm}
   overflow: hidden;
   width: 100%;
 
   .pin-wrap{  
     overflow: hidden;
+    height: 100vh;
   }
   .pin-wrap,
   .animation-wrap {
@@ -460,6 +497,7 @@ svg{
   }  
   .animation-wrap{
     width: 100%;
+    height: calc(100vh - 50px);
   }
 
   .item {
@@ -467,8 +505,6 @@ svg{
     position: relative;
     padding:0px;
     flex: 0 0 100%;
-    min-height: calc(100vh - 30px);
-    max-height: 1000px;
     display: flex;
     justify-content: center;
     line-height: 1.7;
@@ -477,10 +513,6 @@ svg{
     -ms-user-select: none;
     user-select: none;
     background-color: transparent;
-    @media (min-width:992px){
-      min-height: calc(100vh - 110px);
-      max-height: 1000px;  
-    }
 
     figure{
       justify-content: center;
@@ -514,11 +546,15 @@ svg{
       flex: 0 0 100%;  
     }
   }
+
 }
 
 
 .dates{
-  div[class^="container"]{    
+  @include gradient(bottom, $grad1);
+  overflow:hidden; 
+  div[class^="container"]{ 
+      
     .row{
       padding: $md $sm;
       flex-direction: column-reverse;
@@ -537,6 +573,7 @@ svg{
         border-top-right-radius: 200px;
         max-width: 400px;
         margin: 0 auto;
+        box-shadow: $shadow-inset;
         figure:first-of-type{ 
           margin: 0 auto;
           display:none;
@@ -587,7 +624,9 @@ svg{
             }
           }
         }
-
+        .mesh{
+          left: -15%;
+        }
       }
     }
   }
@@ -615,6 +654,10 @@ svg{
           &:hover{color:$secondary}
         }
       }
+    }
+    .mesh{
+      right:-50%;
+      top:-15%;
     }
 
     .btn-wrap {

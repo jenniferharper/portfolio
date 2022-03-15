@@ -12,6 +12,14 @@ body {
   overflow: hidden;
   background-color: #fafafa;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); }
+  body .bg-lines {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    fill: #d8d1c3;
+    opacity: 0.3; }
 
 .scroller {
   height: 100vh; }
@@ -130,7 +138,8 @@ a:hover {
 figure {
   margin: 0;
   z-index: 1;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   figure svg {
     width: 100%; }
 
@@ -242,6 +251,12 @@ svg .main {
         transition-timing-function: ease-in;
         margin-left: 30px; }
 
+.mesh {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+  width: 150%; }
+
 .hero .row {
   padding: 4%; }
   .hero .row .visual figure {
@@ -249,17 +264,20 @@ svg .main {
     min-height: 60vh;
     max-width: 400px;
     margin: 0 auto; }
-  .hero .row .visual .media-box {
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px; }
-    .hero .row .visual .media-box img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      -o-object-fit: cover;
-      object-fit: cover;
-      -o-object-position: 50% 50%;
-      object-position: 50% 50%; }
+    .hero .row .visual figure .mesh {
+      top: -15%;
+      left: -15%; }
+    .hero .row .visual figure .media-box {
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px; }
+      .hero .row .visual figure .media-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: 50% 50%;
+        object-position: 50% 50%; }
   .hero .row .content {
     padding: 4%; }
     .hero .row .content .preamble {
@@ -269,6 +287,9 @@ svg .main {
       justify-content: flex-end;
       max-width: 100px;
       margin: 0 auto; }
+      .hero .row .content .small-branding .mesh {
+        bottom: -55%;
+        right: -45%; }
     .hero .row .content h1, .hero .row .content .preamble, .hero .row .content .btn-wrap {
       text-align: center; }
     @media (min-width: 768px) {
@@ -303,40 +324,53 @@ svg .main {
         line-height: 1;
         color: #424e78; }
 
-.about .row {
-  padding: 0 4%;
-  align-items: center; }
-  .about .row .content > div {
-    padding: 8% 8% 0; }
-  .about .row > div:last-of-type {
-    padding: 8%;
-    flex-direction: column-reverse; }
-    .about .row > div:last-of-type > div {
-      padding: 8%; }
-    @media (min-width: 992px) {
-      .about .row > div:last-of-type {
-        flex-direction: column; } }
-  .about .row figure.arch {
-    padding: 20px; }
-  .about .row p, .about .row h3, .about .row h2 {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto; }
-  .about .row .btn-wrap {
-    text-align: center; }
-  @media (min-width: 992px) {
+.about {
+  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 100%);
+  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 100%);
+  background: -o-linear-gradient(top, transparent 0%, #f5efe3 100%);
+  background: linear-gradient(top, transparent 0%, #f5efe3 100%); }
+  .about .row {
+    padding: 0 4%;
+    align-items: center; }
+    .about .row .content > div {
+      padding: 8% 8% 0; }
+    .about .row .content .mesh {
+      bottom: -15%;
+      right: -25%; }
+    .about .row > div:last-of-type {
+      padding: 8%;
+      flex-direction: column-reverse; }
+      .about .row > div:last-of-type > div {
+        padding: 8%; }
+      .about .row > div:last-of-type .mesh {
+        top: -15%;
+        right: -25%; }
+      @media (min-width: 992px) {
+        .about .row > div:last-of-type {
+          flex-direction: column; } }
+    .about .row figure.arch {
+      padding: 20px; }
     .about .row p, .about .row h3, .about .row h2 {
-      text-align: left; }
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto; }
     .about .row .btn-wrap {
-      text-align: left; } }
+      text-align: center; }
+    @media (min-width: 992px) {
+      .about .row p, .about .row h3, .about .row h2 {
+        text-align: left; }
+      .about .row .btn-wrap {
+        text-align: left; } }
 
 .horizontal {
+  background-color: #f5efe3;
   overflow: hidden;
   width: 100%; }
   .horizontal .spacer {
     height: 4%; }
   .horizontal .pin-wrap {
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100vh; }
   .horizontal .pin-wrap,
   .horizontal .animation-wrap {
     display: flex;
@@ -344,14 +378,13 @@ svg .main {
     z-index: 1;
     width: 100%; }
   .horizontal .animation-wrap {
-    width: 100%; }
+    width: 100%;
+    height: calc(100vh - 50px); }
   .horizontal .item {
     will-change: transform;
     position: relative;
     padding: 0px;
     flex: 0 0 100%;
-    min-height: calc(100vh - 30px);
-    max-height: 1000px;
     display: flex;
     justify-content: center;
     line-height: 1.7;
@@ -360,10 +393,6 @@ svg .main {
     -ms-user-select: none;
     user-select: none;
     background-color: transparent; }
-    @media (min-width: 992px) {
-      .horizontal .item {
-        min-height: calc(100vh - 110px);
-        max-height: 1000px; } }
     .horizontal .item figure {
       justify-content: center;
       display: flex;
@@ -388,65 +417,74 @@ svg .main {
       .horizontal .item {
         flex: 0 0 100%; } }
 
-.dates div[class^="container"] .row {
-  padding: 8% 4%;
-  flex-direction: column-reverse; }
-  @media (min-width: 768px) {
-    .dates div[class^="container"] .row {
-      flex-direction: row; } }
-  .dates div[class^="container"] .row h3 {
-    margin-top: 0;
-    margin-bottom: 10px; }
-  .dates div[class^="container"] .row .logo-figure {
-    justify-content: flex-end;
-    background-color: #d8d1c3;
-    align-items: flex-end;
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
-    max-width: 400px;
-    margin: 0 auto; }
-    .dates div[class^="container"] .row .logo-figure figure:first-of-type {
-      margin: 0 auto;
-      display: none; }
-      .dates div[class^="container"] .row .logo-figure figure:first-of-type svg {
-        transform: rotate(90deg); }
-      @media (min-width: 576px) and (max-width: 991px) {
-        .dates div[class^="container"] .row .logo-figure figure:first-of-type {
-          display: block; } }
-    .dates div[class^="container"] .row .logo-figure figure {
-      max-width: 90%; }
-      @media (min-width: 992px) {
-        .dates div[class^="container"] .row .logo-figure figure {
-          max-width: 100%; } }
-  .dates div[class^="container"] .row .content {
-    padding: 8%;
-    justify-content: flex-end; }
+.dates {
+  background: -webkit-linear-gradient(bottom, transparent 0%, #f5efe3 100%);
+  background: -moz-linear-gradient(bottom, transparent 0%, #f5efe3 100%);
+  background: -o-linear-gradient(bottom, transparent 0%, #f5efe3 100%);
+  background: linear-gradient(bottom, transparent 0%, #f5efe3 100%);
+  overflow: hidden; }
+  .dates div[class^="container"] .row {
+    padding: 8% 4%;
+    flex-direction: column-reverse; }
     @media (min-width: 768px) {
-      .dates div[class^="container"] .row .content {
-        padding: 4% 0 0 4%; } }
-    @media (min-width: 1200px) {
-      .dates div[class^="container"] .row .content {
-        padding: 4% 4% 0; } }
-    .dates div[class^="container"] .row .content .text {
-      max-width: 350px; }
-      .dates div[class^="container"] .row .content .text a p, .dates div[class^="container"] .row .content .text a i {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
-      .dates div[class^="container"] .row .content .text a i {
-        margin-left: 10px;
-        padding-left: 10px;
-        border-left: 1px solid #424e78; }
-      .dates div[class^="container"] .row .content .text a:hover p, .dates div[class^="container"] .row .content .text a:hover i {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
-      .dates div[class^="container"] .row .content .text a:hover p {
-        color: #424e78; }
-      .dates div[class^="container"] .row .content .text a:hover i {
-        color: #b20000;
-        border-color: #b20000;
-        padding-left: 30px; }
+      .dates div[class^="container"] .row {
+        flex-direction: row; } }
+    .dates div[class^="container"] .row h3 {
+      margin-top: 0;
+      margin-bottom: 10px; }
+    .dates div[class^="container"] .row .logo-figure {
+      justify-content: flex-end;
+      background-color: #d8d1c3;
+      align-items: flex-end;
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: inset 0 10px 100px rgba(252, 239, 185, 0.5); }
+      .dates div[class^="container"] .row .logo-figure figure:first-of-type {
+        margin: 0 auto;
+        display: none; }
+        .dates div[class^="container"] .row .logo-figure figure:first-of-type svg {
+          transform: rotate(90deg); }
+        @media (min-width: 576px) and (max-width: 991px) {
+          .dates div[class^="container"] .row .logo-figure figure:first-of-type {
+            display: block; } }
+      .dates div[class^="container"] .row .logo-figure figure {
+        max-width: 90%; }
+        @media (min-width: 992px) {
+          .dates div[class^="container"] .row .logo-figure figure {
+            max-width: 100%; } }
+    .dates div[class^="container"] .row .content {
+      padding: 8%;
+      justify-content: flex-end; }
+      @media (min-width: 768px) {
+        .dates div[class^="container"] .row .content {
+          padding: 4% 0 0 4%; } }
+      @media (min-width: 1200px) {
+        .dates div[class^="container"] .row .content {
+          padding: 4% 4% 0; } }
+      .dates div[class^="container"] .row .content .text {
+        max-width: 350px; }
+        .dates div[class^="container"] .row .content .text a p, .dates div[class^="container"] .row .content .text a i {
+          transition-property: all;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in; }
+        .dates div[class^="container"] .row .content .text a i {
+          margin-left: 10px;
+          padding-left: 10px;
+          border-left: 1px solid #424e78; }
+        .dates div[class^="container"] .row .content .text a:hover p, .dates div[class^="container"] .row .content .text a:hover i {
+          transition-property: all;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in; }
+        .dates div[class^="container"] .row .content .text a:hover p {
+          color: #424e78; }
+        .dates div[class^="container"] .row .content .text a:hover i {
+          color: #b20000;
+          border-color: #b20000;
+          padding-left: 30px; }
+      .dates div[class^="container"] .row .content .mesh {
+        left: -15%; }
 
 .cta .row {
   padding: 8% 0;
@@ -465,6 +503,9 @@ svg .main {
         color: #424e78; }
         .cta .row .socials li a:hover {
           color: #b20000; }
+  .cta .row .mesh {
+    right: -50%;
+    top: -15%; }
   .cta .row .btn-wrap a {
     border-width: 0; }
     .cta .row .btn-wrap a i {

@@ -20,11 +20,15 @@
 
 // @include transition();
 
-@mixin bg-mask($image, $background-position:center center, $background-size:contain) {
--webkit-mask: $image;
--webkit-mask-position: $background-position;
--webkit-mask-size: $background-size;
--webkit-mask-repeat: no-repeat;
-}
 
+
+$grad1:transparent 0%, $lightest 100%;
+$grad2:$lightest 0%, $light 100%;
+
+@mixin gradient($direction, $list) { 
+  background: -webkit-linear-gradient($direction, $grad1);
+  background: -moz-linear-gradient($direction,  $grad1);
+  background: -o-linear-gradient($direction, $grad1);
+  background: linear-gradient($direction,  $grad1);  
+}
 
