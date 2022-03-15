@@ -21,16 +21,6 @@ body {
   // overscroll-behavior-x: none;
   background-color: #fafafa;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
-
-  .bg-lines{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-    fill:$light;
-    opacity: 0.3;
-  }
 }
 .scroller {
   height: 100vh;
@@ -680,7 +670,7 @@ svg{
 
 footer{
   width: 100%;
-  background-color: $light;
+  background-color: $lightest;
   padding:10px 40px;
   div{
     text-align: right;

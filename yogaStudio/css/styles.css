@@ -12,14 +12,6 @@ body {
   overflow: hidden;
   background-color: #fafafa;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); }
-  body .bg-lines {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-    fill: #d8d1c3;
-    opacity: 0.3; }
 
 .scroller {
   height: 100vh; }
@@ -517,7 +509,7 @@ svg .main {
 
 footer {
   width: 100%;
-  background-color: #d8d1c3;
+  background-color: #f5efe3;
   padding: 10px 40px; }
   footer div {
     text-align: right; }
