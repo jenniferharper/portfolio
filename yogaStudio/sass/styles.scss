@@ -127,15 +127,20 @@ h1 {
   font-size:32px;
   letter-spacing: 1px;
   margin-bottom: 40px;
+  color:$main;
+  span.detail{
+    font-size: 30px;
+  }
   @media (min-width:1200px){
     font-size:46px;
-  }
-  span.detail{
-    font-size: 50px;
+    span.detail{
+      font-size: 50px;
+    }
   }
 }
 
 h2 {
+  color:$main;
   margin-bottom: 20px;
   font-size: 26px;
   @media (min-width:992px){
@@ -149,7 +154,7 @@ h2 {
 h3 {
   font-size: 22px;
   margin: 20px 0;
-  color:$main;
+  color:$main-light;
   span.detail{
     font-size: 22px;
   }
@@ -274,10 +279,9 @@ svg {
   left: 0;
   z-index: 0;
 }
-
+///////////////////////////////////////////////////
 
 ////all arches//////
-.circle,
 .arch{
   .svg.height{
     width: 100%;
@@ -298,73 +302,91 @@ svg {
     font-family: $variable;
     fill:$main;
   }
+  max-width: 600px;
+  margin: 0 auto;
 }
+
+//// logo figure colors
+svg{
+  .light{
+    fill:$light;
+  }
+  .main{
+    stroke:none;
+    fill:$main
+  }
+}
+
 
 
 ////--------FOOTER----------------------------------/////
 
-.new{
-  padding-top:8%;
-  .row{
-    align-items: center;
-  }
-  .after::after{
-    background-color: $main-dark;
-    z-index: -1;
-    width: 175%;
-    left:-50%;
-    border-radius: 150px;
-  }
-}
 
-.st0{
-  fill:$light;
-}
-.st1{
-  stroke:none;
-  fill:$main
-}
+
+
 
 .standard.hero{
   .row{
     padding: $sm;
     .visual{
-      .row{
-       >  div[class^="col"]:first-of-type{
-         figure{
-           height: 100%;
-           min-height: 80vh;
-         }
-          .media-box{
-            border-radius:200px;
-            img{
-              position: absolute;
-              top: 0;
-              left: 0;
-              -o-object-fit: cover;
-              object-fit: cover;
-              -o-object-position: 50% 50%;
-              object-position: 50% 50%;
-            }
-          }
-        }
-
-        > div[class^="col"]:last-of-type{
-          padding: 0 40px;
-          figure{
-            height: 50%;
-            &:first-of-type{
-              margin-bottom: 20px;
-            }
-          }
+      figure{
+        height: 100%;
+        min-height: 60vh;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .media-box{
+        border-top-left-radius: 200px;
+        border-top-right-radius: 200px;
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          -o-object-fit: cover;
+          object-fit: cover;
+          -o-object-position: 50% 50%;
+          object-position: 50% 50%;
         }
       }
     }
+
     .content{
-      justify-content: center;
+      padding:$sm;
+      .preamble{
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+      .small-branding{
+        justify-content: flex-end;
+        max-width: 100px;
+        margin: 0 auto;
+      }
+      h1,.preamble, .btn-wrap{
+        text-align: center;
+      }
+
+      @media (min-width:768px){
+        .small-branding{
+          max-width: 200px;
+        }
+        .preamble{
+          padding: 20px;
+          margin-bottom: 0px;
+        }
+
+        .preamble, .btn-wrap{
+          text-align: left;
+        }
+      }
+      @media (min-width:992px){
+        h1{text-align: left;}
+      }
     }
   }
 }
+
+
+
 
 
 ///////////////////
@@ -553,29 +575,33 @@ section.horizontal{
           padding: $sm $sm 0 ;
         }
         justify-content: flex-end;
-        a{
-          p,i{
-            @include transition();
-          }
-          i{
-            margin-left:10px;
-            padding-left:10px;
-            border-left:1px solid $main;
-          }
-          &:hover{
+        .text{
+          max-width: 350px;
+          a{
             p,i{
               @include transition();
             }
-            p{
-              color:$main;
-            }
             i{
-              color:$secondary;
-              border-color:$secondary;
-              padding-left: 30px;
+              margin-left:10px;
+              padding-left:10px;
+              border-left:1px solid $main;
+            }
+            &:hover{
+              p,i{
+                @include transition();
+              }
+              p{
+                color:$main;
+              }
+              i{
+                color:$secondary;
+                border-color:$secondary;
+                padding-left: 30px;
+              }
             }
           }
         }
+
       }
     }
   }

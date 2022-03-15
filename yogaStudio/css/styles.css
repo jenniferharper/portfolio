@@ -89,14 +89,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 32px;
   letter-spacing: 1px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  color: #424e78; }
+  h1 span.detail {
+    font-size: 30px; }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 46px; } }
-  h1 span.detail {
-    font-size: 50px; }
+      font-size: 46px; }
+      h1 span.detail {
+        font-size: 50px; } }
 
 h2 {
+  color: #424e78;
   margin-bottom: 20px;
   font-size: 26px; }
   @media (min-width: 992px) {
@@ -108,7 +112,7 @@ h2 {
 h3 {
   font-size: 22px;
   margin: 20px 0;
-  color: #424e78; }
+  color: #4f5465; }
   h3 span.detail {
     font-size: 22px; }
 
@@ -219,52 +223,41 @@ svg {
   left: 0;
   z-index: 0; }
 
-.circle .svg.height,
-.arch .svg.height {
-  width: 100%;
-  height: 100%; }
-  .circle .svg.height image,
-  .arch .svg.height image {
-    height: 110%; }
-.circle .svg.width,
-.arch .svg.width {
-  width: 100%;
-  height: 100%; }
-  .circle .svg.width image,
-  .arch .svg.width image {
-    width: 110%; }
-.circle .svg textPath,
-.arch .svg textPath {
-  font-size: 30px;
-  font-family: "Meddon", cursive;
-  fill: #424e78; }
+.arch {
+  max-width: 600px;
+  margin: 0 auto; }
+  .arch .svg.height {
+    width: 100%;
+    height: 100%; }
+    .arch .svg.height image {
+      height: 110%; }
+  .arch .svg.width {
+    width: 100%;
+    height: 100%; }
+    .arch .svg.width image {
+      width: 110%; }
+  .arch .svg textPath {
+    font-size: 30px;
+    font-family: "Meddon", cursive;
+    fill: #424e78; }
 
-.new {
-  padding-top: 8%; }
-  .new .row {
-    align-items: center; }
-  .new .after::after {
-    background-color: #64697a;
-    z-index: -1;
-    width: 175%;
-    left: -50%;
-    border-radius: 150px; }
-
-.st0 {
+svg .light {
   fill: #d8d1c3; }
-
-.st1 {
+svg .main {
   stroke: none;
   fill: #424e78; }
 
 .standard.hero .row {
   padding: 4%; }
-  .standard.hero .row .visual .row > div[class^="col"]:first-of-type figure {
+  .standard.hero .row .visual figure {
     height: 100%;
-    min-height: 80vh; }
-  .standard.hero .row .visual .row > div[class^="col"]:first-of-type .media-box {
-    border-radius: 200px; }
-    .standard.hero .row .visual .row > div[class^="col"]:first-of-type .media-box img {
+    min-height: 60vh;
+    max-width: 400px;
+    margin: 0 auto; }
+  .standard.hero .row .visual .media-box {
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px; }
+    .standard.hero .row .visual .media-box img {
       position: absolute;
       top: 0;
       left: 0;
@@ -272,14 +265,28 @@ svg {
       object-fit: cover;
       -o-object-position: 50% 50%;
       object-position: 50% 50%; }
-  .standard.hero .row .visual .row > div[class^="col"]:last-of-type {
-    padding: 0 40px; }
-    .standard.hero .row .visual .row > div[class^="col"]:last-of-type figure {
-      height: 50%; }
-      .standard.hero .row .visual .row > div[class^="col"]:last-of-type figure:first-of-type {
-        margin-bottom: 20px; }
   .standard.hero .row .content {
-    justify-content: center; }
+    padding: 4%; }
+    .standard.hero .row .content .preamble {
+      justify-content: center;
+      margin-bottom: 40px; }
+    .standard.hero .row .content .small-branding {
+      justify-content: flex-end;
+      max-width: 100px;
+      margin: 0 auto; }
+    .standard.hero .row .content h1, .standard.hero .row .content .preamble, .standard.hero .row .content .btn-wrap {
+      text-align: center; }
+    @media (min-width: 768px) {
+      .standard.hero .row .content .small-branding {
+        max-width: 200px; }
+      .standard.hero .row .content .preamble {
+        padding: 20px;
+        margin-bottom: 0px; }
+      .standard.hero .row .content .preamble, .standard.hero .row .content .btn-wrap {
+        text-align: left; } }
+    @media (min-width: 992px) {
+      .standard.hero .row .content h1 {
+        text-align: left; } }
 
 .marquee {
   position: relative;
@@ -425,23 +432,25 @@ section.horizontal {
     @media (min-width: 1200px) {
       .dates div[class^="container"] .row .content {
         padding: 4% 4% 0; } }
-    .dates div[class^="container"] .row .content a p, .dates div[class^="container"] .row .content a i {
-      transition-property: all;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
-    .dates div[class^="container"] .row .content a i {
-      margin-left: 10px;
-      padding-left: 10px;
-      border-left: 1px solid #424e78; }
-    .dates div[class^="container"] .row .content a:hover p, .dates div[class^="container"] .row .content a:hover i {
-      transition-property: all;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
-    .dates div[class^="container"] .row .content a:hover p {
-      color: #424e78; }
-    .dates div[class^="container"] .row .content a:hover i {
-      color: #b20000;
-      border-color: #b20000;
-      padding-left: 30px; }
+    .dates div[class^="container"] .row .content .text {
+      max-width: 350px; }
+      .dates div[class^="container"] .row .content .text a p, .dates div[class^="container"] .row .content .text a i {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+      .dates div[class^="container"] .row .content .text a i {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 1px solid #424e78; }
+      .dates div[class^="container"] .row .content .text a:hover p, .dates div[class^="container"] .row .content .text a:hover i {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+      .dates div[class^="container"] .row .content .text a:hover p {
+        color: #424e78; }
+      .dates div[class^="container"] .row .content .text a:hover i {
+        color: #b20000;
+        border-color: #b20000;
+        padding-left: 30px; }
 
 /*# sourceMappingURL=styles.css.map */
