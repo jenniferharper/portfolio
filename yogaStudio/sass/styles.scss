@@ -86,15 +86,6 @@ body {
               margin-bottom: 0;
             }
           }
-          li::before {
-            content: "\f00c";
-            position: absolute;
-            left: -20px;
-            top: 0;
-            font-size: 16px;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-          }
         }
       }
     }
@@ -177,28 +168,7 @@ a:hover {
   color: $main-light;
 }
 
-// ////buttons
-.btn-wrap {
-margin-top:20px;
-a{
-  @include transition;
-  border-left:1px solid $main;
-  color:$main;
-  font-size: 20px;
-  padding:8px 20px;
-  i{margin-left:20px; color:inherit} 
-  &:hover{
-  color:$secondary;
-  border-color:inherit
-  }
-  &:hover{
-    @include transition;
-    margin-left: 20px;
- 
-  }
-}
 
-}
 
 ////---------- Image elements
 .responsive-img img {
@@ -316,16 +286,36 @@ svg{
     fill:$main
   }
 }
+//////////////
+// ////buttons
+.btn-wrap {
+  margin-top:20px;
+  a{
+    @include transition;
+    border-left:1px solid $main;
+    color:$main;
+    font-size: 20px;
+    padding:8px 20px;
+    i{
+      margin-left:20px;
+      color:inherit;  
+      @include transition(margin);
+    } 
+      
+    &:hover{
+    color:$secondary;
+    border-color:inherit;
+      i{
+        @include transition(margin);
+        margin-left: 30px;
+      }
+    }
+  }
+}
 
+////-----------------------------------------/////
 
-
-////--------FOOTER----------------------------------/////
-
-
-
-
-
-.standard.hero{
+.hero{
   .row{
     padding: $sm;
     .visual{
@@ -385,10 +375,6 @@ svg{
   }
 }
 
-
-
-
-
 ///////////////////
 .marquee {
   position: relative;
@@ -417,7 +403,7 @@ svg{
 ///////////////////////////////////////
 .about{
   .row{
-    padding:$sm;
+    padding:0 $sm;
     align-items: center;
     .content{
       > div{
@@ -457,7 +443,7 @@ svg{
   }
 }
 ///////////////////
-section.horizontal{
+.horizontal{
   .spacer{height:$sm}
   overflow: hidden;
   width: 100%;
@@ -602,6 +588,63 @@ section.horizontal{
           }
         }
 
+      }
+    }
+  }
+}
+
+.cta{
+  .row{
+    padding: $md 0;
+    max-width: 800px;
+    margin: 0 auto;
+    h2{
+      text-align: center;
+    }
+    .preamble{
+      justify-content: center;
+    }
+
+    .socials{
+      display: flex;
+      justify-content:center;
+      li{
+        padding: 0 10px ;
+        a{
+          color:$main;
+          &:hover{color:$secondary}
+        }
+      }
+    }
+
+    .btn-wrap {
+      a{
+        border-width:0;
+        i{
+          margin-right:20px;
+          margin-left: 0;
+        }           
+        &:hover{
+          i{
+            margin-left: 0;
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  background-color: $light;
+  padding:10px 40px;
+  div{
+    text-align: right;
+    a{
+      color:$main;
+      &:hover{
+        color:$secondary
       }
     }
   }
