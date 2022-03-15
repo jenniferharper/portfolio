@@ -13,15 +13,15 @@ body {
 body {   
   margin: 0 auto;
   padding: 0;  
-  // height: 100%;
+  height: 100vh;
   width: 100%;  
   max-width: 2000px;
   overflow: hidden;
-   // overscroll-behavior-y: none;
-  // overscroll-behavior-x: none;
   background-color: #fafafa;
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
 }
+
+
 .scroller {
   height: 100vh;
 }
@@ -333,156 +333,6 @@ div.socials{
 ////-----------------------------------------/////
 
 ///////////navigation///////////
-.navbar {
-  display: block;
-  position: fixed !important;
-  z-index: 100;
-  width: 100%;
-  padding: 0;
-  background-color: $main-light;
-  top: 0;
-  z-index: 5;
-  @include transition;
-  .container-fluid {
-    padding: 0;
-    a.navbar-brand {
-      width: 230px;
-      height: 100px;
-      position: relative;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      figure{
-        position: relative; 
-        margin:0;
-        overflow:visible;
-        width: 100%;
-        height: inherit;
-        svg {
-          overflow:visible;
-          width: 100%;
-          height: 100%;
-          max-width: 200px;
-          transform: scale(1.4);
-          transform-origin: 0 0;
-          transform-origin: 50% 00%;
-          @include transition;
-          .circle{
-            fill:$main;
-            @include transition;
-          }
-          .outline{
-            stroke:$dark;
-            stroke-width: 0.5px;
-          }
-          .hair{
-            fill:$white;
-            @include transition;
-          }
-        }
-      }
-      p{
-        color:$dark;
-        font-size: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-      @media (min-width:992px){
-        width: 320px;
-        p{font-size: 28px;}
-      }
-    }
-    // hamburger
-    button.navbar-toggler {
-      padding: 0 10px;
-      font-size: 30px;
-      line-height: 1;
-      background-color: transparent;
-      border: 0;
-      border-radius: 0;
-      transition: none;
-      display: flex;
-      flex-direction: row;
-      height: 100%;
-      align-items: center;
-      &:focus {
-        box-shadow: none;
-      }
-      .navbar-toggler-icon {
-        color: $secondary;
-        height: auto;
-      }
-    }
-    // hamburger down
-    div.navbar-collapse {
-      justify-content: flex-end;  
-      margin-top: -1px;
-      transition: all 0.5s ease-in-out;
-      ul.navbar-nav {
-        padding: 0px 20px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height:100vh;
-        a.nav-link {
-          padding: 10px 14px;
-          color:$dark;
-          &:hover{
-            color:$secondary;
-          }
-        }
-        .socials{
-          margin-top:20px
-        }
-        @media (min-width:992px){
-          height:inherit;
-          .socials{
-            margin-top:0
-          }
-        }
-      }
-    }
-    .open {
-        .navbar-toggler-icon i {
-            transform: rotate(-90deg);
-        }
-    }
-  }
-
-  @media (min-width:992px){
-    background-color: transparent;
-    .container-fluid{
-        button.navbar-toggler{
-            display:none;
-        }
-        div.navbar-collapse{
-            background-color: transparent;
-        }
-      }
-  }
-}
-// GSAP toggle css
-.nav--up {
-  top: -100px;
-  @include transition;
-  a.navbar-brand figure svg {
-    transform: scale(0.1) !important;    
-    @include transition;
-  }
-}
-.nav--scrolled {
-  background:$main-light;
-  box-shadow:$shadow;
- .container-fluid a.navbar-brand figure svg {
-    transform: scale(1) !important; 
-    @include transition;
-  }
-}
-
-
-
 .hero{
   .row{
     padding: $sm;
@@ -842,3 +692,4 @@ footer{
     }
   }
 }
+

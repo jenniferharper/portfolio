@@ -38,6 +38,7 @@ ScrollTrigger.create({
   }}
 });
 
+
 ScrollTrigger.matchMedia({  
   //tablet/mobile
   "(max-width: 992px)": function() {

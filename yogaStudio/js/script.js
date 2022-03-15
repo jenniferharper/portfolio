@@ -31,6 +31,7 @@ bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
 
 
 
+
 /////---------- Navigation
 //////hamburger and menu changes/////
 $('.navbar-toggler').click(function(){
@@ -45,23 +46,6 @@ $('.nav-item a').click(function() {
 $('.nav-link').on('click',function() {
   $('.navbar-collapse').collapse('hide');
 });
-
-var scrollUp = document.querySelector('.navbar');
-// // adds bg color when start scrolling
-ScrollTrigger.create({
-	trigger:'.hero',
-	id:'scrolling-down',
-	start: 'top top',
-  endTrigger:'footer',
-	end:'bottom top',
-	toggleClass: {className: 'nav--scrolled', targets: scrollUp},
-	onToggle: scrollTrigger => {
-		scrollTrigger.refresh()
-	  },
-});
-
-
-
 
 
 
