@@ -29,11 +29,6 @@ ScrollTrigger.defaults({ scroller: scroller });
 //   })
 // })
 ////////////////////////////////////////////
-var navBtn = document.querySelector('nav button');
-var ul = document.querySelector('nav ul');
-var li = document.querySelectorAll('ul li');
-
-
 
 
 

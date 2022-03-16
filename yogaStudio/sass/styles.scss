@@ -678,9 +678,10 @@ div.socials{
 }
 
 footer{
-  width: 100%;
-  background-color: $lightest;
+  // width: 100%;
+  border-top: 1px solid $light;
   padding:10px 40px;
+  margin: 0 40px;
   div{
     text-align: right;
     a{

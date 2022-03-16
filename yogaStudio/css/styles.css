@@ -523,9 +523,9 @@ div.socials {
       margin-right: 30px; }
 
 footer {
-  width: 100%;
-  background-color: #f5efe3;
-  padding: 10px 40px; }
+  border-top: 1px solid #d8d1c3;
+  padding: 10px 40px;
+  margin: 0 40px; }
   footer div {
     text-align: right; }
     footer div a {
