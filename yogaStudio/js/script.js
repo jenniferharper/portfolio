@@ -150,11 +150,21 @@ ScrollTrigger.create({
   trigger: '.fixed',
   pin: '.fixed-scroll .nav-fix',
   start: 'top top',
-  end:'+=20000',
+  end:'+=21000',
 
 })
 
 
+
+var scrollUp = document.querySelector('.navbar');
+
+////adds bg color when start scrolling
+ScrollTrigger.create({
+  id:'scrolling-down',
+  start: 'top top-=50',
+  end:'+=21000',
+  toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
+});
 
 
 
