@@ -22,12 +22,19 @@ ScrollTrigger.scrollerProxy(".scroller", {
 bodyScrollBar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({ scroller: scroller });
 
-const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
-bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
-  el.addEventListener("click", () => {
-    bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
-  })
-})
+// const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
+// bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
+//   el.addEventListener("click", () => {
+//     bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+//   })
+// })
+////////////////////////////////////////////
+var navBtn = document.querySelector('nav button');
+var ul = document.querySelector('nav ul');
+var li = document.querySelectorAll('ul li');
+
+
+
 
 
 /////---------- Navigation
