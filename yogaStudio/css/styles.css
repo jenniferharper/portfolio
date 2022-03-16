@@ -533,4 +533,115 @@ footer {
       footer div a:hover {
         color: #b20000; }
 
+.fixed-scroll {
+  z-index: 10;
+  position: relative; }
+  .fixed-scroll .nav-fix {
+    background-color: blue;
+    padding: 0 40px; }
+    .fixed-scroll .nav-fix .navbar {
+      padding: 0;
+      z-index: 5;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+      .fixed-scroll .nav-fix .navbar .container-fluid {
+        padding: 0; }
+        .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand {
+          width: 230px;
+          height: 100px;
+          position: relative;
+          padding: 0;
+          display: flex;
+          align-items: center; }
+          .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure {
+            position: relative;
+            margin: 0;
+            overflow: visible;
+            width: 100%;
+            height: inherit; }
+            .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg {
+              overflow: visible;
+              width: 100%;
+              height: 100%;
+              max-width: 200px;
+              transform: scale(1.4);
+              transform-origin: 0 0;
+              transform-origin: 50% 00%;
+              transition-property: all;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in; }
+              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg .circle {
+                fill: #424e78;
+                transition-property: all;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in; }
+              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg .outline {
+                stroke: #010514;
+                stroke-width: 0.5px; }
+              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg .hair {
+                fill: #fafafa;
+                transition-property: all;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in; }
+          .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand p {
+            color: #010514;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0; }
+          @media (min-width: 992px) {
+            .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand {
+              width: 320px; }
+              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand p {
+                font-size: 28px; } }
+        .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler {
+          padding: 0 10px;
+          font-size: 30px;
+          line-height: 1;
+          background-color: transparent;
+          border: 0;
+          border-radius: 0;
+          transition: none;
+          display: flex;
+          flex-direction: row;
+          height: 100%;
+          align-items: center; }
+          .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler:focus {
+            box-shadow: none; }
+          .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
+            color: #b20000;
+            height: auto; }
+        .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse {
+          justify-content: flex-end;
+          margin-top: -1px;
+          transition: all 0.5s ease-in-out; }
+          .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
+            padding: 0px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; }
+            .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
+              padding: 10px 14px;
+              color: #010514; }
+              .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link:hover {
+                color: #b20000; }
+            .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
+              margin-top: 20px; }
+            @media (min-width: 992px) {
+              .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
+                height: inherit; }
+                .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
+                  margin-top: 0; } }
+        .fixed-scroll .nav-fix .navbar .container-fluid .open .navbar-toggler-icon i {
+          transform: rotate(-90deg); }
+      @media (min-width: 992px) {
+        .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler {
+          display: none; }
+        .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse {
+          background-color: transparent; } }
+
 /*# sourceMappingURL=styles.css.map */

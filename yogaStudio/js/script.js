@@ -22,12 +22,12 @@ ScrollTrigger.scrollerProxy(".scroller", {
 bodyScrollBar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({ scroller: scroller });
 
-// const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
-// bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
-//   el.addEventListener("click", () => {
-//     bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
-//   })
-// })
+const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
+bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
+  el.addEventListener("click", () => {
+    bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+  })
+})
 ////////////////////////////////////////////
 
 
@@ -139,6 +139,44 @@ gsap.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "li
 gsap.set(".marquee__inner", {xPercent: -50});
 
 /////////////////////////////text feature
+
+
+
+
+
+
+////////////////////////---------- Fixed section
+ScrollTrigger.create({
+  trigger: '.fixed',
+  pin: '.fixed-scroll .nav-fix',
+  start: 'top top',
+  end:'+=20000',
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Only necessary to correct marker position - not needed in production
