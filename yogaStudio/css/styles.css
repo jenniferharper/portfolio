@@ -14,6 +14,7 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); }
 
 .scroller {
+  margin-top: -2px;
   height: 100vh; }
 
 .container-fluid,
@@ -531,131 +532,5 @@ footer {
       color: #424e78; }
       footer div a:hover {
         color: #b20000; }
-
-.fixme {
-  transition-property: opacity;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  display: block;
-  position: fixed !important;
-  z-index: 100;
-  width: 100%;
-  padding: 0;
-  background-color: transparent;
-  top: 0; }
-  .fixme .navbar {
-    background-color: transparent;
-    padding: 0;
-    z-index: 5;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-    .fixme .navbar .container-fluid {
-      padding: 0; }
-      .fixme .navbar .container-fluid a.navbar-brand {
-        width: 230px;
-        height: 100px;
-        position: relative;
-        padding: 0;
-        display: flex;
-        align-items: center; }
-        .fixme .navbar .container-fluid a.navbar-brand figure {
-          position: relative;
-          margin: 0;
-          overflow: visible;
-          width: 100%;
-          height: inherit; }
-          .fixme .navbar .container-fluid a.navbar-brand figure svg {
-            overflow: visible;
-            width: 100%;
-            height: 100%;
-            max-width: 200px;
-            transform: scale(1.4);
-            transform-origin: 0 0;
-            transform-origin: 50% 00%;
-            transition-property: all;
-            transition-duration: 0.3s;
-            transition-timing-function: ease-in; }
-            .fixme .navbar .container-fluid a.navbar-brand figure svg .circle {
-              fill: #424e78;
-              transition-property: all;
-              transition-duration: 0.3s;
-              transition-timing-function: ease-in; }
-            .fixme .navbar .container-fluid a.navbar-brand figure svg .outline {
-              stroke: #010514;
-              stroke-width: 0.5px; }
-            .fixme .navbar .container-fluid a.navbar-brand figure svg .hair {
-              fill: #fafafa;
-              transition-property: all;
-              transition-duration: 0.3s;
-              transition-timing-function: ease-in; }
-        .fixme .navbar .container-fluid a.navbar-brand p {
-          color: #010514;
-          font-size: 20px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 2px; }
-        @media (min-width: 992px) {
-          .fixme .navbar .container-fluid a.navbar-brand {
-            width: 320px; }
-            .fixme .navbar .container-fluid a.navbar-brand p {
-              font-size: 28px; } }
-      .fixme .navbar .container-fluid button.navbar-toggler {
-        padding: 0 10px;
-        font-size: 30px;
-        line-height: 1;
-        background-color: transparent;
-        border: 0;
-        border-radius: 0;
-        transition: none;
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        align-items: center; }
-        .fixme .navbar .container-fluid button.navbar-toggler:focus {
-          box-shadow: none; }
-        .fixme .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
-          color: #b20000;
-          height: auto; }
-      .fixme .navbar .container-fluid div.navbar-collapse {
-        justify-content: flex-end;
-        margin-top: -1px;
-        transition: all 0.5s ease-in-out; }
-        .fixme .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
-          padding: 0px 20px;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh; }
-          .fixme .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
-            padding: 10px 14px;
-            color: #010514; }
-            .fixme .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link:hover {
-              color: #b20000; }
-          .fixme .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
-            margin-top: 20px; }
-          @media (min-width: 992px) {
-            .fixme .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
-              height: inherit; }
-              .fixme .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
-                margin-top: 0; } }
-      .fixme .navbar .container-fluid .open .navbar-toggler-icon i {
-        transform: rotate(-90deg); }
-    @media (min-width: 992px) {
-      .fixme .navbar .container-fluid button.navbar-toggler {
-        display: none; }
-      .fixme .navbar .container-fluid div.navbar-collapse {
-        background-color: transparent; } }
-    .fixme .navbar.nav--scrolled {
-      background: #f5efe3;
-      transition-property: background-color;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
-      .fixme .navbar.nav--scrolled .container-fluid a.navbar-brand figure svg {
-        transform: scale(1) !important;
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -30,37 +30,6 @@ bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
 })
 
 
-
-
-
-const fixedElem = document.getElementsByClassName('fixme')[0]
-const scrollbar = Scrollbar.init(
-  document.getElementsByClassName('scroller')[0]
-)
-
-scrollbar.addListener( status => {
-  const offset = status.offset  
-  fixedElem.style.top = offset.y + 'px'
-})
-
-
-
-
-var scrollUp = document.querySelector('.navbar');
-ScrollTrigger.create({
-  id:'scrolling-down',
-  start: 'top top-=50',
-  end:'+=20000',
-  markers:true,
-  toggleClass: {className: 'nav--scrolled', targets: scrollUp,}
-});
-
-
-
-
-
-
-
 /////---------- Navigation
 //////hamburger and menu changes/////
 $('.navbar-toggler').click(function(){
