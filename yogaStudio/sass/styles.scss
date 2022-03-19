@@ -16,15 +16,21 @@ body {
   padding: 0;  
   width: 100%;  
   max-width: 2000px;
-  overflow: hidden;
+  overflow-x:hidden;
   background-color: #fafafa;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
+  
 }
-.scroller {
-  margin-top: -2px;
-  height: 100vh;
+
+.scroller.add--scroller{
+    margin-top: -2px;
+    height: 100vh;
 }
+
+
+
+
 
 
 
