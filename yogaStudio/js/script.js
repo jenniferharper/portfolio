@@ -89,7 +89,7 @@ horizontalSections.forEach(function (sec, i) {
   var text = gsap.utils.toArray(".aniText");
   text.forEach((el) => {
       var splitWords = new SplitText(el, {type: "words,chars"});
-      chars = splitWords.chars;
+      chars = splitWords.words;
 
       var splitTimeline = gsap.timeline({
         scrollTrigger: {
@@ -112,25 +112,15 @@ horizontalSections.forEach(function (sec, i) {
 
 
 ////////////////////////---------- Fixed section
-ScrollTrigger.create({
-  trigger: '.fixed',
-  pin: '.fixed-scroll .nav-fix',
-  start: 'top top',
-  end:'+=21000',
+// var scrollUp = document.querySelector('.navbar');
 
-})
-
-
-
-var scrollUp = document.querySelector('.navbar');
-
-////adds bg color when start scrolling
-ScrollTrigger.create({
-  id:'scrolling-down',
-  start: 'top top-=50',
-  end:'+=21000',
-  toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
-});
+// ////adds bg color when start scrolling
+// ScrollTrigger.create({
+//   id:'scrolling-down',
+//   start: 'top top-=50',
+//   end:'+=21000',
+//   toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
+// });
 
 
 
