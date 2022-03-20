@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: 2000px;
   overflow-x: hidden;
-  background-color: red;
+  background-color: #fafafa;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -470,13 +470,16 @@ div.socials {
           padding-left: 30px; }
 
 .cta .row {
-  padding: 8% 0;
+  padding: 8% 4%;
   max-width: 800px;
   margin: 0 auto; }
-  .cta .row h2 {
+  .cta .row h2, .cta .row p {
     text-align: center; }
   .cta .row .preamble {
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
+    .cta .row .preamble p {
+      margin-top: 20px; }
   .cta .row ul.socials {
     display: flex;
     justify-content: center; }
@@ -486,9 +489,6 @@ div.socials {
         color: #424e78; }
         .cta .row ul.socials li a:hover {
           color: #e49806; }
-  .cta .row .mesh {
-    right: -50%;
-    top: -15%; }
   .cta .row .btn-wrap a {
     border-width: 0; }
     .cta .row .btn-wrap a i {
@@ -497,6 +497,11 @@ div.socials {
     .cta .row .btn-wrap a:hover i {
       margin-left: 0;
       margin-right: 30px; }
+  @media (min-width: 768px) {
+    .cta .row .preamble {
+      align-items: flex-start; }
+      .cta .row .preamble p {
+        text-align: left; } }
 
 footer {
   border-top: 1px solid #d8d1c3;
@@ -636,5 +641,7 @@ footer {
           transition-property: height;
           transition-duration: 0.3s;
           transition-timing-function: ease-in; }
+          .fixed-scroll .nav-fix .navbar.nav--scrolled a.navbar-brand svg {
+            height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

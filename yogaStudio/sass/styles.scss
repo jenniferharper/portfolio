@@ -17,8 +17,8 @@ body {
   width: 100%;  
   max-width: 2000px;
   overflow-x:hidden;
-  // background-color: #fafafa;
-  background-color: red;
+  background-color: #fafafa;
+  // background-color: red;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -626,14 +626,19 @@ div.socials{
 
 .cta{
   .row{
-    padding: $md 0;
+    padding: $md $sm;
     max-width: 800px;
     margin: 0 auto;
-    h2{
+    h2, p{
       text-align: center;
     }
+
     .preamble{
       justify-content: center;
+      align-items: center;
+      p{
+        margin-top: 20px;
+      }
     }
 
     ul.socials{
@@ -646,10 +651,6 @@ div.socials{
           &:hover{color:$secondary}
         }
       }
-    }
-    .mesh{
-      right:-50%;
-      top:-15%;
     }
 
     .btn-wrap {
@@ -666,6 +667,15 @@ div.socials{
           }
         }
       }
+    }
+
+    @media (min-width:768px){
+      .preamble{
+        align-items: flex-start;
+      p{
+        text-align: left;
+      }
+    }
     }
   }
 }
@@ -827,6 +837,9 @@ footer{
         a.navbar-brand{
           height:60px;
           @include transition(height);
+          svg{
+            height: 100%;
+          }
         }
       }
     }
