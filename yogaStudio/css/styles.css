@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: 2000px;
   overflow-x: hidden;
-  background-color: #fafafa;
+  background-color: lemonchiffon;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -515,134 +515,134 @@ footer {
       footer div a:hover {
         color: #e49806; }
 
-.fixed-scroll {
+.navbar {
+  margin: 0 auto;
+  background-color: #fafafa;
+  background-image: url("../img/background-texture.png");
+  box-shadow: none;
+  padding: 0;
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
-  position: relative; }
-  .fixed-scroll .nav-fix {
-    padding: 0 40px; }
-    .fixed-scroll .nav-fix .navbar {
-      margin: 0 auto;
-      background-color: #fafafa;
-      background-image: url("../img/background-texture.png");
-      box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in; }
+  .navbar .container-fluid {
+    padding: 10px 10px; }
+    .navbar .container-fluid a.navbar-brand {
+      width: 230px;
+      height: 80px;
+      position: relative;
       padding: 0;
-      z-index: 5;
-      transition-property: all;
+      display: flex;
+      align-items: center;
+      transition-property: height;
       transition-duration: 0.3s;
       transition-timing-function: ease-in; }
-      .fixed-scroll .nav-fix .navbar .container-fluid {
-        padding: 10px 10px; }
-        .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand {
-          width: 230px;
-          height: 80px;
-          position: relative;
-          padding: 0;
-          display: flex;
-          align-items: center;
-          transition-property: height;
-          transition-duration: 0.3s;
-          transition-timing-function: ease-in; }
-          .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure {
-            position: relative;
-            margin: 0;
-            overflow: visible;
-            width: 100%;
-            height: 100%; }
-            .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg {
-              overflow: visible;
-              width: 100%;
-              height: 100%;
-              max-width: 200px;
-              transform: scale(1);
-              transform-origin: 0 0;
-              transform-origin: 50% 00%;
-              transition-property: all;
-              transition-duration: 0.3s;
-              transition-timing-function: ease-in; }
-              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg .circle {
-                fill: #424e78;
-                transition-property: all;
-                transition-duration: 0.3s;
-                transition-timing-function: ease-in; }
-              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg .outline {
-                stroke: #011147;
-                stroke-width: 0.5px; }
-              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand figure svg .hair {
-                fill: #fafafa;
-                transition-property: all;
-                transition-duration: 0.3s;
-                transition-timing-function: ease-in; }
-          .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand p {
-            color: #424e78;
-            font-size: 20px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0;
-            margin-left: 10px; }
-          @media (min-width: 992px) {
-            .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand {
-              width: 320px; }
-              .fixed-scroll .nav-fix .navbar .container-fluid a.navbar-brand p {
-                font-size: 28px; } }
-        .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler {
-          padding: 0 10px;
-          font-size: 30px;
-          line-height: 1;
-          background-color: transparent;
-          border: 0;
-          border-radius: 0;
-          transition: none;
-          display: flex;
-          flex-direction: row;
+      .navbar .container-fluid a.navbar-brand figure {
+        position: relative;
+        margin: 0;
+        overflow: visible;
+        width: 100%;
+        height: 100%; }
+        .navbar .container-fluid a.navbar-brand figure svg {
+          overflow: visible;
+          width: 100%;
           height: 100%;
-          align-items: center; }
-          .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler:focus {
-            box-shadow: none; }
-          .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
-            color: #e49806;
-            height: auto; }
-        .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse {
-          justify-content: flex-end;
-          margin-top: -1px;
-          transition: all 0.5s ease-in-out; }
-          .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
-            padding: 0px 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; }
-            .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
-              padding: 10px 14px;
-              color: #424e78; }
-              .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link:hover {
-                color: #c52800; }
-            .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
-              margin-top: 20px; }
-            @media (min-width: 992px) {
-              .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
-                height: inherit; }
-                .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
-                  margin-top: 0; } }
-        .fixed-scroll .nav-fix .navbar .container-fluid .open .navbar-toggler-icon i {
-          transform: rotate(-90deg); }
-      @media (min-width: 992px) {
-        .fixed-scroll .nav-fix .navbar .container-fluid button.navbar-toggler {
-          display: none; }
-        .fixed-scroll .nav-fix .navbar .container-fluid div.navbar-collapse {
-          background-color: transparent; } }
-      .fixed-scroll .nav-fix .navbar.nav--scrolled {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in;
-        box-shadow: 0 10px 20px rgba(160, 160, 160, 0.2); }
-        .fixed-scroll .nav-fix .navbar.nav--scrolled a.navbar-brand {
-          height: 60px;
-          transition-property: height;
+          max-width: 200px;
+          transform: scale(1);
+          transform-origin: 0 0;
+          transform-origin: 50% 00%;
+          transition-property: all;
           transition-duration: 0.3s;
           transition-timing-function: ease-in; }
-          .fixed-scroll .nav-fix .navbar.nav--scrolled a.navbar-brand svg {
-            height: 100%; }
+          .navbar .container-fluid a.navbar-brand figure svg .circle {
+            fill: #424e78;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in; }
+          .navbar .container-fluid a.navbar-brand figure svg .outline {
+            stroke: #011147;
+            stroke-width: 0.5px; }
+          .navbar .container-fluid a.navbar-brand figure svg .hair {
+            fill: #fafafa;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in; }
+      .navbar .container-fluid a.navbar-brand p {
+        color: #424e78;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+        margin-left: 10px; }
+      @media (min-width: 992px) {
+        .navbar .container-fluid a.navbar-brand {
+          width: 320px; }
+          .navbar .container-fluid a.navbar-brand p {
+            font-size: 28px; } }
+    .navbar .container-fluid button.navbar-toggler {
+      padding: 0 10px;
+      font-size: 30px;
+      line-height: 1;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      transition: none;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      align-items: center; }
+      .navbar .container-fluid button.navbar-toggler:focus {
+        box-shadow: none; }
+      .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
+        color: #e49806;
+        height: auto; }
+    .navbar .container-fluid div.navbar-collapse {
+      justify-content: flex-end;
+      margin-top: -1px;
+      transition: all 0.5s ease-in-out; }
+      .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
+        padding: 0px 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; }
+        .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
+          padding: 10px 14px;
+          color: #424e78; }
+          .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link:hover {
+            color: #c52800; }
+        .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
+          margin-top: 20px; }
+        @media (min-width: 992px) {
+          .navbar .container-fluid div.navbar-collapse ul.navbar-nav {
+            height: inherit; }
+            .navbar .container-fluid div.navbar-collapse ul.navbar-nav .socials {
+              margin-top: 0; } }
+    .navbar .container-fluid .open .navbar-toggler-icon i {
+      transform: rotate(-90deg); }
+  @media (min-width: 992px) {
+    .navbar .container-fluid button.navbar-toggler {
+      display: none; }
+    .navbar .container-fluid div.navbar-collapse {
+      background-color: transparent; } }
+  .navbar.nav--scrolled {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    box-shadow: 0 10px 20px rgba(160, 160, 160, 0.2); }
+    .navbar.nav--scrolled a.navbar-brand {
+      height: 60px;
+      transition-property: height;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+      .navbar.nav--scrolled a.navbar-brand svg {
+        height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

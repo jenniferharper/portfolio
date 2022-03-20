@@ -17,8 +17,8 @@ body {
   width: 100%;  
   max-width: 2000px;
   overflow-x:hidden;
-  background-color: #fafafa;
-  // background-color: pink;
+  // background-color: #fafafa;
+  background-color: lemonchiffon;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -697,11 +697,7 @@ footer{
   }
 }
 
-.fixed-scroll{
-  z-index: 10;
-  position: relative;
-  .nav-fix{
-    padding:0 40px;
+
     .navbar {
       margin: 0 auto;
       background-color: #fafafa;
@@ -709,6 +705,11 @@ footer{
       box-shadow: none;
       padding: 0;
       z-index: 5;
+      position:fixed;
+      width: 100%;
+      top:0;
+      left:0;
+      z-index: 10;
       @include transition();
       .container-fluid {
         padding: 10px 10px;
@@ -844,5 +845,4 @@ footer{
         }
       }
     }
-  }
-}
+

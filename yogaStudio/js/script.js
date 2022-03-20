@@ -86,42 +86,42 @@ horizontalSections.forEach(function (sec, i) {
 
 
 // split text titles
-  var text = gsap.utils.toArray(".aniText");
-  text.forEach((el) => {
-      var splitWords = new SplitText(el, {type: "words,chars"});
-      chars = splitWords.chars;
+  // var text = gsap.utils.toArray(".aniText");
+  // text.forEach((el) => {
+  //     var splitWords = new SplitText(el, {type: "words,chars"});
+  //     chars = splitWords.chars;
 
-      var splitTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: "top bottom-=100",
-          end: "bottom top",
-          toggleActions: "play none none none",
-        }
-      });
-      splitTimeline.from(chars, {
-          opacity:0,
-          duration: 0.5,
-          yPercent: 10,
-          rotate:30,
-          ease: "back.out",
-          stagger: 0.02
-      });
-  });
+  //     var splitTimeline = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: el,
+  //         start: "top bottom-=100",
+  //         end: "bottom top",
+  //         toggleActions: "play none none none",
+  //       }
+  //     });
+  //     splitTimeline.from(chars, {
+  //         opacity:0,
+  //         duration: 0.5,
+  //         yPercent: 10,
+  //         rotate:30,
+  //         ease: "back.out",
+  //         stagger: 0.02
+  //     });
+  // });
 
   ///////////////////////////////////////////
 
 
 ////////////////////////---------- Fixed section
-// var scrollUp = document.querySelector('.navbar');
+var scrollUp = document.querySelector('.navbar');
 
-// ////adds bg color when start scrolling
-// ScrollTrigger.create({
-//   id:'scrolling-down',
-//   start: 'top top-=50',
-//   end:'+=21000',
-//   toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
-// });
+////adds bg color when start scrolling
+ScrollTrigger.create({
+  id:'scrolling-down',
+  start: 'top top-=50',
+  end:'+=21000',
+  toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
+});
 
 
 
