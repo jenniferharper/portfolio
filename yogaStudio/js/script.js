@@ -43,12 +43,12 @@ gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
 ////////////////////////////////////////////////////////////////
 // moving arch background/////
-gsap.timeline({repeat:-1, yoyo:true})
-.to('#hero-panning', {
-  objectPosition:'90% 0',
-  duration:10, ease:'none',
-  repeat:1, yoyo:true
-},0)
+// gsap.timeline({repeat:-1, yoyo:true})
+// .to('#hero-panning', {
+//   objectPosition:'90% 0',
+//   duration:10, ease:'none',
+//   repeat:1, yoyo:true
+// },0)
 
 // set image to center
 gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
