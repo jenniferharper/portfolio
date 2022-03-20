@@ -306,38 +306,23 @@ div.socials {
       .hero .row .content h1 {
         text-align: left; } }
 
-.marquee-other,
 .marquee {
-  position: relative;
-  overflow: hidden;
-  --offset: 20vw;
-  --move-initial: calc(-25% + var(--offset));
-  --move-final: calc(-50% + var(--offset));
-  animation-play-state: running; }
-
-.marquee__inner-other,
-.marquee__inner {
-  width: fit-content;
   display: flex;
-  position: relative;
-  transform: translate3d(var(--move-initial), 0, 0);
-  animation: marquee 5s linear infinite; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .marquee .marquee-container {
+    white-space: nowrap;
+    margin: 0;
+    overflow: hidden; }
+    .marquee .marquee-container p {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      font-size: 12vw;
+      font-family: "Marcellus", serif;
+      color: #424e78; }
 
-.marquee-other p,
-.marquee p {
-  font-size: 18vw;
-  line-height: 1;
-  color: #424e78;
-  padding: 0 2vw;
-  font-family: "Marcellus", serif;
-  white-space: nowrap;
-  text-transform: lowercase; }
-
-@keyframes marquee {
-  0% {
-    transform: translate3d(var(--move-initial), 0, 0); }
-  100% {
-    transform: translate3d(var(--move-final), 0, 0); } }
 .about .row {
   padding: 0 4%;
   align-items: center; }
