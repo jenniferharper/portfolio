@@ -78,50 +78,50 @@ $('.nav-link').on('click',function() {
 
 
 //// text around arch/////
-gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
+// gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
 
 ////////////////////////////////////////////////////////////////
 // moving arch background/////
-gsap.timeline({repeat:-1, yoyo:true})
-.to('#hero-panning', {
-  objectPosition:'90% 0',
-  duration:10, ease:'none',
-  repeat:1, yoyo:true
-},0)
+// gsap.timeline({repeat:-1, yoyo:true})
+// .to('#hero-panning', {
+//   objectPosition:'90% 0',
+//   duration:10, ease:'none',
+//   repeat:1, yoyo:true
+// },0)
 
-// set image to center
-gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
-  attr:{ x:'-50%' },
+// // set image to center
+// gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
+//   attr:{ x:'-50%' },
 
-})
+// })
 
 
 ///////////////////////////horizonl scroll section/////////////////////////////////////
 
-const horizontalSections = gsap.utils.toArray('section.horizontal')
+// const horizontalSections = gsap.utils.toArray('section.horizontal')
 
-horizontalSections.forEach(function (sec, i) {	  
-  var thisPinWrap = sec.querySelector('.pin-wrap');
-  var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');  
-  var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
+// horizontalSections.forEach(function (sec, i) {	  
+//   var thisPinWrap = sec.querySelector('.pin-wrap');
+//   var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');  
+//   var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
 
-  gsap.fromTo(thisAnimWrap, { 
-    x: () => thisAnimWrap.classList.contains('animation-wrap') ? 0 : getToValue() }, { 
-    x: () => thisAnimWrap.classList.contains('animation-wrap') ? getToValue() : 0, 
-    ease: "none",
-    scrollTrigger: {
-      trigger: sec,		
-      start: "top top",
-      end: () => "+=" + thisAnimWrap.scrollWidth,
-      pin: true,  
-	     pinReparent: true, 
-      invalidateOnRefresh: true,
-      scrub: true,
-    }
-  });
+//   gsap.fromTo(thisAnimWrap, { 
+//     x: () => thisAnimWrap.classList.contains('animation-wrap') ? 0 : getToValue() }, { 
+//     x: () => thisAnimWrap.classList.contains('animation-wrap') ? getToValue() : 0, 
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: sec,		
+//       start: "top top",
+//       end: () => "+=" + thisAnimWrap.scrollWidth,
+//       pin: true,  
+// 	     pinReparent: true, 
+//       invalidateOnRefresh: true,
+//       scrub: true,
+//     }
+//   });
 
-});	
+// });	
 
 
 
