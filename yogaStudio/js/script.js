@@ -89,7 +89,7 @@ horizontalSections.forEach(function (sec, i) {
   var text = gsap.utils.toArray(".aniText");
   text.forEach((el) => {
       var splitWords = new SplitText(el, {type: "words,chars"});
-      chars = splitWords.words;
+      chars = splitWords.chars;
 
       var splitTimeline = gsap.timeline({
         scrollTrigger: {
@@ -102,9 +102,10 @@ horizontalSections.forEach(function (sec, i) {
       splitTimeline.from(chars, {
           opacity:0,
           duration: 0.5,
-          yPercent: 100,
+          yPercent: 10,
+          rotate:30,
           ease: "back.out",
-          stagger: 0.05
+          stagger: 0.02
       });
   });
 
@@ -133,7 +134,7 @@ horizontalSections.forEach(function (sec, i) {
 
 // We want to define the rate, and we can 
 // define that statically
-r = 150;
+r = 50;
 adjustJank = 4; // Set this to 0 to see the jank I'm talking about ... this just adds to the distance animated to smooth out the seam
 
 // Get the initial scroll elements and save them for later

@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: 2000px;
   overflow-x: hidden;
-  background-color: pink;
+  background-color: #fafafa;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -284,7 +284,8 @@ div.socials {
         -o-object-position: 50% 50%;
         object-position: 50% 50%; }
   .hero .row .content {
-    padding: 4%; }
+    padding: 4%;
+    justify-content: center; }
     .hero .row .content .preamble {
       justify-content: center;
       margin-bottom: 40px; }

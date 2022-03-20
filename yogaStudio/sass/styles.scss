@@ -17,8 +17,8 @@ body {
   width: 100%;  
   max-width: 2000px;
   overflow-x:hidden;
-  // background-color: #fafafa;
-  background-color: pink;
+  background-color: #fafafa;
+  // background-color: pink;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -366,6 +366,7 @@ div.socials{
     }
     .content{
       padding:$sm;
+      justify-content: center;
       .preamble{
         justify-content: center;
         margin-bottom: 40px;
