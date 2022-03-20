@@ -17,7 +17,7 @@ body {
   width: 100%;  
   max-width: 2000px;
   overflow-x:hidden;
-  background-color: #fafafa;
+  background-color: red;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -428,7 +428,7 @@ div.socials{
 }
 ///////////////////////////////////////
 .about{
-  @include gradient(top, $grad1);
+  // @include gradient(top, $grad1);
   .row{
     padding:0 $sm;
     align-items: center;
@@ -545,7 +545,7 @@ div.socials{
 }
 
 .dates{
-  @include gradient(bottom, $grad1);
+  // @include gradient(bottom, $grad1);
   overflow:hidden; 
   div[class^="container"]{ 
       

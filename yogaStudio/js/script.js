@@ -127,28 +127,25 @@ $('.nav-link').on('click',function() {
 
 // split text titles
   var text = gsap.utils.toArray(".aniText");
-  text.forEach((el) => {  
-	  
-  var splitWords = new SplitText(el, {type: "words,chars"});
-  chars = splitWords.words;
-  
-	var splitTimeline = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		start: "top bottom-=100",
-		end: "bottom top",
-		toggleActions: "play none none none",
-	  }
-	});
-	
-  
-	splitTimeline.from(chars, {
-		opacity:0,
-		duration: 0.8,
-		yPercent: 100,
-		ease: "back.out",
-		stagger: 0.05
-	});
+  text.forEach((el) => {
+      var splitWords = new SplitText(el, {type: "words,chars"});
+      chars = splitWords.chars;
+
+      var splitTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom-=100",
+          end: "bottom top",
+          toggleActions: "play none none none",
+        }
+      });
+      splitTimeline.from(chars, {
+          opacity:0,
+          duration: 0.5,
+          yPercent: 100,
+          ease: "back.out",
+          stagger: 0.02
+      });
   });
 
   ///////////////////////////////////////////

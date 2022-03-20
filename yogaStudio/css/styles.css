@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: 2000px;
   overflow-x: hidden;
-  background-color: #fafafa;
+  background-color: red;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -325,37 +325,32 @@ div.socials {
         line-height: 1;
         color: #424e78; }
 
-.about {
-  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 100%);
-  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 100%);
-  background: -o-linear-gradient(top, transparent 0%, #f5efe3 100%);
-  background: linear-gradient(top, transparent 0%, #f5efe3 100%); }
-  .about .row {
-    padding: 0 4%;
-    align-items: center; }
-    .about .row .content > div {
-      padding: 8% 8% 0; }
-    .about .row > div:last-of-type {
-      padding: 8%;
-      flex-direction: column-reverse; }
-      .about .row > div:last-of-type > div {
-        padding: 8%; }
-      @media (min-width: 992px) {
-        .about .row > div:last-of-type {
-          flex-direction: column; } }
-    .about .row figure.arch {
-      padding: 20px; }
-    .about .row p, .about .row h3, .about .row h2 {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto; }
-    .about .row .btn-wrap {
-      text-align: center; }
+.about .row {
+  padding: 0 4%;
+  align-items: center; }
+  .about .row .content > div {
+    padding: 8% 8% 0; }
+  .about .row > div:last-of-type {
+    padding: 8%;
+    flex-direction: column-reverse; }
+    .about .row > div:last-of-type > div {
+      padding: 8%; }
     @media (min-width: 992px) {
-      .about .row p, .about .row h3, .about .row h2 {
-        text-align: left; }
-      .about .row .btn-wrap {
-        text-align: left; } }
+      .about .row > div:last-of-type {
+        flex-direction: column; } }
+  .about .row figure.arch {
+    padding: 20px; }
+  .about .row p, .about .row h3, .about .row h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+  .about .row .btn-wrap {
+    text-align: center; }
+  @media (min-width: 992px) {
+    .about .row p, .about .row h3, .about .row h2 {
+      text-align: left; }
+    .about .row .btn-wrap {
+      text-align: left; } }
 
 .horizontal {
   background-color: #f5efe3;
@@ -413,10 +408,6 @@ div.socials {
         flex: 0 0 100%; } }
 
 .dates {
-  background: -webkit-linear-gradient(bottom, transparent 0%, #f5efe3 100%);
-  background: -moz-linear-gradient(bottom, transparent 0%, #f5efe3 100%);
-  background: -o-linear-gradient(bottom, transparent 0%, #f5efe3 100%);
-  background: linear-gradient(bottom, transparent 0%, #f5efe3 100%);
   overflow: hidden; }
   .dates div[class^="container"] .row {
     padding: 8% 4%;
