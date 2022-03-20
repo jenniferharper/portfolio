@@ -10,7 +10,7 @@ body {
   width: 100%;
   max-width: 2000px;
   overflow-x: hidden;
-  background-color: #fafafa;
+  background-color: red;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -310,7 +310,8 @@ div.socials {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
   .marquee .marquee-container {
     white-space: nowrap;
     margin: 0;
