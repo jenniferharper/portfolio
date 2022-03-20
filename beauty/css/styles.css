@@ -822,24 +822,4 @@ a.ctc {
         .cta .row div ul.socials {
           justify-content: flex-start; } }
 
-.marquee {
-  position: relative;
-  overflow: hidden; }
-  .marquee .marquee__inner {
-    -webkit-font-smoothing: antialiased;
-    width: fit-content;
-    display: flex;
-    flex: auto;
-    flex-direction: row;
-    align-items: center; }
-    .marquee .marquee__inner .marquee__part {
-      display: flex;
-      flex-direction: row; }
-      .marquee .marquee__inner .marquee__part p {
-        will-change: transform;
-        white-space: nowrap;
-        font-size: 18vw;
-        line-height: 1;
-        color: #f8c4d0; }
-
 /*# sourceMappingURL=styles.css.map */

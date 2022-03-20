@@ -1,64 +1,24 @@
 console.clear;
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, MotionPathPlugin, DrawSVGPlugin);
 
-// if (!Modernizr.touch) {
-//        console.log("not touch");
-//        $("logo").css("display", "block");
-
-//     }else{
-//       console.log("touch");
-//       $("logo").css("display", "none");
-// }
-
-
-
-// Setup
 
 
 
 ////////////////////////////////////////////
-ScrollTrigger.matchMedia({  
-  //tablet/mobile
-  "(max-width: 992px)": function() {
+// ScrollTrigger.matchMedia({  
+//   //tablet/mobile
+//   "(max-width: 992px)": function() {
 
-  },
-  "(min-width: 1400px)": function() {
+//   },
+//   "(min-width: 1400px)": function() {
 
-  //   $( ".scroller" ).toggleClass( "add--scroller" )
+ 
+//   },
 
-  //     const scroller = document.querySelector('.scroller');
-  // const bodyScrollBar = Scrollbar.init(scroller, { 
-  //   damping: 0.05, 
-  //   delegateTo: document, 
-  //   alwaysShowTracks: true,
+//   "all": function() {
 
-  // });
-
-  // ScrollTrigger.scrollerProxy(".scroller", {
-  //   scrollTop(value) {
-  //     if (arguments.length) {
-  //       bodyScrollBar.scrollTop = value;
-  //     }
-  //     return bodyScrollBar.scrollTop;
-  //   }
-  // });
-
-  // bodyScrollBar.addListener(ScrollTrigger.update);
-  // ScrollTrigger.defaults({ scroller: scroller });
-
-  // const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
-  // bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
-  //   el.addEventListener("click", () => {
-  //     bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
-  //   })
-  // })
-  
-  },
-
-  "all": function() {
-
-  }	
-});
+//   }	
+// });
 
 
 /////---------- Navigation
@@ -180,30 +140,8 @@ for (var i = 0; i < 3; i++) {
     element.parent().append(element.clone());
 }
 
-gsap.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
+gsap.to(".marquee__part p", {xPercent: -100, repeat: -1, yoyo:true, duration: 10, ease: "linear"}).totalProgress(0.5);
 gsap.set(".marquee__inner", {xPercent: -50});
 
 /////////////////////////////text feature
 
-
-
-
-
-
-
-
-
-
-
-// Only necessary to correct marker position - not needed in production
-
-
-// if (document.querySelector('.gsap-marker-scroller-start')) {		
-//   const markers = gsap.utils.toArray('[class *= "gsap-marker"]');	
-
-//   bodyScrollBar.addListener(({ offset }) => {  
-//     gsap.set(markers, { marginTop: -offset.y })
-//   });
-
-//   console.log('true')
-// }

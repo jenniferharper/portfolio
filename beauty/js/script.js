@@ -82,17 +82,6 @@ ScrollTrigger.matchMedia({
   ///////// all 
   "all": function() {
 
-    var element = $('.marquee__part p');
-    for (var i = 0; i < 3; i++) {
-        element.parent().append(element.clone());
-    }
-    
-    gsap.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
-    gsap.set(".marquee__inner", {xPercent: -50});
-
-
-
-
 
     // //background image amination
     gsap.set('.zoom', {scale:1.5, transformOrigin:'50% 50%'},0);	

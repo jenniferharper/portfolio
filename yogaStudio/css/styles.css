@@ -14,10 +14,6 @@ body {
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
-.scroller.add--scroller {
-  margin-top: -2px;
-  height: 100vh; }
-
 .container-fluid,
 .container {
   padding-left: 0px;
