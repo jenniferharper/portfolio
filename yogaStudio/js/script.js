@@ -135,13 +135,16 @@ ScrollTrigger.create({
 
 
 ///////////////////marquee
-var element = $('.marquee__part p');
+var element = $('.marquee__inner p');
 for (var i = 0; i < 3; i++) {
     element.parent().append(element.clone());
 }
 
-gsap.to(".marquee__part p", {xPercent: -100, repeat: -1, yoyo:true, duration: 10, ease: "linear"}).totalProgress(0.5);
-gsap.set(".marquee__inner", {xPercent: -50});
+var element = $('.marquee__inner-other p');
+for (var i = 0; i < 3; i++) {
+    element.parent().append(element.clone());
+}
+
 
 /////////////////////////////text feature
 
