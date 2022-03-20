@@ -22,41 +22,41 @@ ScrollTrigger.matchMedia({
   "(max-width: 992px)": function() {
 
   },
-  "(min-width: 1240px)": function() {
+  "(min-width: 1400px)": function() {
 
     $( ".scroller" ).toggleClass( "add--scroller" )
 
+      const scroller = document.querySelector('.scroller');
+  const bodyScrollBar = Scrollbar.init(scroller, { 
+    damping: 0.05, 
+    delegateTo: document, 
+    alwaysShowTracks: true,
 
+  });
 
+  ScrollTrigger.scrollerProxy(".scroller", {
+    scrollTop(value) {
+      if (arguments.length) {
+        bodyScrollBar.scrollTop = value;
+      }
+      return bodyScrollBar.scrollTop;
+    }
+  });
+
+  bodyScrollBar.addListener(ScrollTrigger.update);
+  ScrollTrigger.defaults({ scroller: scroller });
+
+  const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
+  bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
+    el.addEventListener("click", () => {
+      bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
+    })
+  })
+  
   },
 
   "all": function() {
-    const scroller = document.querySelector('.scroller');
-    const bodyScrollBar = Scrollbar.init(scroller, { 
-      damping: 0.05, 
-      delegateTo: document, 
-      alwaysShowTracks: true,
-  
-    });
-  
-    ScrollTrigger.scrollerProxy(".scroller", {
-      scrollTop(value) {
-        if (arguments.length) {
-          bodyScrollBar.scrollTop = value;
-        }
-        return bodyScrollBar.scrollTop;
-      }
-    });
-  
-    bodyScrollBar.addListener(ScrollTrigger.update);
-    ScrollTrigger.defaults({ scroller: scroller });
-  
-    const bar = Scrollbar.init(document.querySelector('#my-scrollbar'));
-    bar.containerEl.querySelectorAll("a[href*='#']").forEach(el => {
-      el.addEventListener("click", () => {
-        bar.scrollIntoView(document.getElementById(el.getAttribute("href").substring(1)))
-      })
-    })
+
   }	
 });
 
