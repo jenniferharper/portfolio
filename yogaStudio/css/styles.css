@@ -280,7 +280,7 @@ div.socials {
     .standard.hero .row .visual .bg-img-hero {
       background-image: url("../img/bg-01.jpg");
       background-repeat: no-repeat;
-      background-position: 0 0;
+      background-position: 45% 100%;
       background-size: cover;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
@@ -654,7 +654,7 @@ footer {
     transition-timing-function: ease-in;
     box-shadow: 0 10px 20px rgba(160, 160, 160, 0.2); }
     .navbar.nav--scrolled a.navbar-brand {
-      height: 60px;
+      height: 40px;
       transition-property: height;
       transition-duration: 0.3s;
       transition-timing-function: ease-in; }
