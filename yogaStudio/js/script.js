@@ -52,6 +52,7 @@ ScrollTrigger.matchMedia({
               start: "top bottom-=100",
               end: "bottom top",
               toggleActions: "play none none none",
+              // markers:true
             }
           });
           splitTimeline.from(chars, {
@@ -98,29 +99,50 @@ ScrollTrigger.matchMedia({
     //   });
     // });	
 
-    /////////non mobile devices
+
+
+
+
+    ///// -------------Touch or non touch devices -------------------------/////
     var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+
     if(!isTouch) {
-    ////////////////////////////////////////////////////////////////////////////////
+    /////-- Non touch ---//////
+
+      /////marquee text
       var element = $('.marquee__part p');
       for (var i = 0; i < 3; i++) {
           element.parent().append(element.clone());
       }
-      /////marquee text
       gsap.set(".marquee__inner", {xPercent: -50});  
       let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
       marquee.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
       
-      return function() {
-         marquee.kill(); 
-         gsap.set(".marquee__part p", {clearProps:"all"});           
-      };
 
-      /////////////////////////////////////////////////////////////////////////////////////// 
     } else {
+    /////-- Touch ---//////
 
-    }
-          /////////////////////////////////////////////////////////////////////////////////////// 
+      /////marquee text
+      var element = $('.marquee__part p');
+      for (var i = 0; i < 2; i++) {
+          element.parent().append(element.clone());
+      }      
+      gsap.set(".marquee__inner", {xPercent: -25});       
+      let marquee = gsap.timeline( {
+        scrollTrigger: {
+          trigger: '.marquee',
+          start: "top bottom-=100",
+          end: "bottom top",
+          toggleActions: "play play play reverse",
+          markers:true,
+          scrub:0.5
+        }
+      });      
+      marquee.to(".marquee__part p", {xPercent: -50, duration: 5, ease: "linear"});
+
+
+     }
+    /////////////////////////////////////////////////////////////////////////////////////// 
   } // all end
 });
 
