@@ -273,6 +273,24 @@ div.socials {
   div.socials a:hover {
     color: #c52800; }
 
+.marquee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+  .marquee .marquee-container {
+    white-space: nowrap;
+    margin: 0;
+    overflow: hidden; }
+    .marquee .marquee-container p {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      font-size: 12vw;
+      font-family: "Marcellus", serif;
+      color: #424e78; }
+
 .standard.hero {
   margin-bottom: 20px; }
   .standard.hero .row {
@@ -318,26 +336,6 @@ div.socials {
     @media (min-width: 1240px) {
       .standard.hero .row {
         padding: 8% 4% 4%; } }
-
-.marquee {
-  position: relative;
-  overflow: hidden; }
-  .marquee .marquee__inner {
-    -webkit-font-smoothing: antialiased;
-    width: fit-content;
-    display: flex;
-    flex: auto;
-    flex-direction: row;
-    align-items: center; }
-    .marquee .marquee__inner .marquee__part {
-      display: flex;
-      flex-direction: row; }
-      .marquee .marquee__inner .marquee__part p {
-        will-change: transform;
-        white-space: nowrap;
-        font-size: 18vw;
-        line-height: 1;
-        color: #424e78; }
 
 .about .row {
   padding: 0 4%;
