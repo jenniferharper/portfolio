@@ -44,7 +44,7 @@ ScrollTrigger.matchMedia({
       var text = gsap.utils.toArray(".aniText");
       text.forEach((el) => {
           var splitWords = new SplitText(el, {type: "words,chars"});
-          chars = splitWords.words;
+          chars = splitWords.chars;
 
           var splitTimeline = gsap.timeline({
             scrollTrigger: {
@@ -55,11 +55,11 @@ ScrollTrigger.matchMedia({
             }
           });
           splitTimeline.from(chars, {
-              opacity:0,
-              duration: 0.5,
-              yPercent: 100,
-              ease: "back.out",
-              stagger: 0.03
+            opacity:0,
+            // duration: 0.5,
+            yPercent: 100,
+            ease: "back.out",
+            stagger: 0.02
           });
       });
 
