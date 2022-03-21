@@ -109,7 +109,7 @@ ScrollTrigger.matchMedia({
     if(!isTouch) {
     /////-- Non touch ---//////
 
-      /////marquee text
+      ///marquee text
       var element = $('.marquee__part p');
       for (var i = 0; i < 3; i++) {
           element.parent().append(element.clone());
@@ -117,40 +117,34 @@ ScrollTrigger.matchMedia({
       gsap.set(".marquee__inner", {xPercent: -50}); 
 
       var mrq = gsap.utils.toArray(".marquee__part p");
-      mrq.forEach((el) => {
-        let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
-        marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
-      });
-
-
+      let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
+      marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
     } else {
     /////-- Touch ---//////
-
-      /////marquee text
-      var element = $('.marquee__part p');
+    /////marquee text
+    var element = $('.marquee__part p');
       for (var i = 0; i < 2; i++) {
           element.parent().append(element.clone());
       }  
 
-      gsap.set(".marquee__inner", {xPercent: -25});   
-       
-      var mrq = gsap.utils.toArray(".marquee__part p");
-      mrq.forEach((el) => {
-
-      let marquee = gsap.timeline( {
-        scrollTrigger: {
-          trigger: '.marquee',
-          start: "top bottom-=100",
-          end: "bottom top",
-          toggleActions: "play play play reverse",
-          markers:true,
-          scrub:0.5
-        }
-      });      
-      marquee.to(mrq, {xPercent: -50, duration: 5, ease: "none"});
-      });
-
+      gsap.set(".marquee__inner", {xPercent: -25}); 
+      const sections = document.querySelectorAll('.marquee__part p');
+      sections.forEach((section) => {
+        gsap.to(section, {
+          xPercent: -50, 
+          duration: 5, 
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom-=100",
+            end: "bottom top",
+            toggleActions: "play play play reverse",
+            markers:true,
+            scrub:0.5
+          }
+        }); 
+      })
     }
     /////////////////////////////////////////////////////////////////////////////////////// 
   } // all end
