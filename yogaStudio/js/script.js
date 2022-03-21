@@ -137,9 +137,7 @@ ScrollTrigger.matchMedia({
           ease: "none",
           scrollTrigger: {
             trigger: section,
-            start: "top bottom-=100",
-            end: "bottom top",
-            toggleActions: "play play play reverse",
+            start: "top bottom",
             markers:true,
             scrub:0.5
           }
