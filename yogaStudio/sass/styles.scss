@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: #fafafa;
-  // background-color: lemonchiffon;
+  background-color: lemonchiffon;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -351,51 +351,29 @@ div.socials{
 
 ///////////////////
 
-
 .marquee {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   overflow: hidden;
-  .marquee-container{
-    white-space: nowrap;
-    margin: 0;
-    overflow: hidden;
-    p{
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      font-size: 12vw;
-      font-family:$header-font;
-      color:$main;
+  .marquee__inner {
+    -webkit-font-smoothing: antialiased;
+    width: fit-content;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+    .marquee__part{
+      display:flex;
+      flex-direction:row;
+      p{
+        will-change: transform;
+        white-space:nowrap;
+        font-size: 18vw;
+        line-height: 1;
+        color:$main;
+      }
     }
   }
 }
-
-// .marquee {
-//   position: relative;
-//   overflow: hidden;
-//   .marquee__inner {
-//     -webkit-font-smoothing: antialiased;
-//     width: fit-content;
-//     display: flex;
-//     flex: auto;
-//     flex-direction: row;
-//     align-items: center;
-//     .marquee__part{
-//       display:flex;
-//       flex-direction:row;
-//       p{
-//         will-change: transform;
-//         white-space:nowrap;
-//         font-size: 18vw;
-//         line-height: 1;
-//         color:$main;
-//       }
-//     }
-//   }
-// }
 
 
 ///////////navigation///////////

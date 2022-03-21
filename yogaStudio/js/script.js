@@ -110,75 +110,18 @@ ScrollTrigger.matchMedia({
       gsap.set(".marquee__inner", {xPercent: -50});  
       let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
       marquee.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
-       
-      let heroPan = gsap.timeline({repeat:-1, yoyo:true,}); 
-      heroPan.to('.bg-img-hero', { backgroundPosition:'100% 100%', duration:10, ease:'none'})
-       return function() {
+      
+      return function() {
          marquee.kill(); 
-         gsap.set(".marquee__part p", {clearProps:"all"});  
-         
+         gsap.set(".marquee__part p", {clearProps:"all"});           
       };
 
-
-
-
-
-
-
-
-
       /////////////////////////////////////////////////////////////////////////////////////// 
-    }  //touch end
+    } else {
+
+    }
+          /////////////////////////////////////////////////////////////////////////////////////// 
   } // all end
 });
 
 
-/////////////////////////////text feature
-
-r = 50;
-adjustJank = 4; 
-const scrollElems = document.querySelectorAll('.marquee-container p');
-
-// Adjust our tween based on the object and distance given
-function adjustTween(obj, d) {
-  // Get the progress of the previous tween if it exists
-  let progress = 0;
-  if(obj.tween) {
-    progress = obj.tween.progress();
-    // Kill the previous tween
-    obj.tween.kill();
-  }
-  
-  var t = d/r;
-
-  // Create a new tween to animate our text so that it loops
-  // Make sure to save it to the object so we can refer to it later
-  obj.tween = gsap.fromTo(obj.parentElement, {x: 0}, {
-    duration: t,
-    x: "-"+(d+adjustJank), 
-    ease: 'linear',
-    repeat: -1,
-  }).progress(progress); // Set the progress of the new tween to the same value of
-                         // the previous tween (if it exists) before it was killed
-}
-
-// Set up for what appears to be an seamless stream of text
-// This could go in an init() function
-scrollElems.forEach((obj, i) => {
-  var d = obj.offsetWidth;
-  var parent = obj.parentElement;
-  var clone = obj.cloneNode(true);
-  parent.appendChild(clone);
-  gsap.set(parent.parentElement, {width: d});  
-  adjustTween(obj, d);
-});
-
-// Adjust widths and tweens on resize
-window.addEventListener("resize", () => {
-  scrollElems.forEach((obj, i) => {
-    var d = obj.offsetWidth;
-    var parent = obj.parentElement;
-    gsap.set(parent.parentElement, {width: d});
-    adjustTween(obj, d);
-  });
-});
