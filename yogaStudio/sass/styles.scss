@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: #fafafa;
-  background-color: lemonchiffon;
+  // background-color: lemonchiffon;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -262,6 +262,7 @@ svg {
   svg.height{
     width: 100%;
     height: 100%;
+    z-index: 1;
     // filter: drop-shadow(30px -10px 60px rgba(228, 152, 6,0.2));
     image{
       height: 110%;
@@ -270,7 +271,8 @@ svg {
   svg.width{
     width: 100%;
     height: 100%;
-    // filter: drop-shadow(30px -10px 60px rgba(228, 152, 6,0.2));
+    z-index: 1;
+
     image{
       width: 110%;
     }
@@ -279,6 +281,16 @@ svg {
     font-size: 30px;
     font-family: $variable;
     fill:$main;
+  }
+
+  svg.shadowSvg{
+    position:absolute;
+    width: 90%;
+    left: 5%;
+    top:5%;
+    z-index: -1;
+    fill:$secondary;
+    filter: drop-shadow(30px -10px 60px rgba(228, 152, 6,0.5));
   }
 }
 
@@ -338,64 +350,58 @@ div.socials{
 
 ///////////navigation///////////
 
-.hero{
+.standard.hero{
+  margin-bottom: 20px;
   .row{  
-    padding: $md $sm $sm;
+    padding: 120px $sm $sm;
     .visual{
-      figure{
+      .bg-img-hero{
+        @include bg-img(url("../img/bg-01.jpg"), 0 0, cover);
+        border-top-left-radius: 200px;
+        border-top-right-radius: 200px;
+        // border-bottom-right-radius: 200px;
+        box-shadow: -40px 40px 60px rgba(228, 152, 6,0.1);
         height: 95%;
         min-height: 50vh;
         max-width: 400px;
         margin: 2.5% auto;
-        .media-box{
-          border-top-left-radius: 200px;
-          border-top-right-radius: 200px;
-          // border-bottom-right-radius: 200px;
-          box-shadow: -40px 40px 60px rgba(228, 152, 6,0.1);
-           img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            -o-object-fit: cover;
-            object-fit: cover;
-            -o-object-position: 50% 50%;
-            object-position: 50% 50%;
-          }
-        }
       }
     }
     .content{
-      padding:$sm;
-      justify-content: center;
-      .preamble{
+      .row{
+        padding:$sm;
         justify-content: center;
-        margin-bottom: 40px;
-      }
-      .small-branding{
-        justify-content: flex-end;
-        max-width: 100px;
-        margin: 0 auto;
-      }
-      h1,.preamble, .btn-wrap{
-        text-align: center;
-      }
-
-      @media (min-width:768px){
-        .small-branding{
-          max-width: 200px;
-        }
         .preamble{
-          padding: 20px;
-          margin-bottom: 0px;
+          justify-content: center;
+          margin-bottom: 40px;
         }
+        .small-branding{
+          justify-content: flex-end;
+          max-width: 100px;
+          margin: 0 auto;
+        }
+        h1,.preamble, .btn-wrap{
+          text-align: center;
+        }
+  
+        @media (min-width:768px){
+          .small-branding{
+            max-width: 200px;
+          }
+          .preamble{
+            padding: 20px;
+            margin-bottom: 0px;
+          }
+  
+          .preamble, .btn-wrap{
+            text-align: left;
+          }
+        }
+        @media (min-width:992px){
+          h1{text-align: left;}
+        }
+      }
 
-        .preamble, .btn-wrap{
-          text-align: left;
-        }
-      }
-      @media (min-width:992px){
-        h1{text-align: left;}
-      }
     }
   }
 }
@@ -475,7 +481,6 @@ div.socials{
 }
 ///////////////////
 .horizontal{
-  background-color:$lightest;
   .spacer{height:$sm}
   overflow: hidden;
   width: 100%;
@@ -847,6 +852,3 @@ footer{
     }
 
 
-    .bg-img-test{
-      @include bg-img(url("../img/bg-01.jpg"), 0 0, cover);
-    }

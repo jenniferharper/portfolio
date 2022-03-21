@@ -11,7 +11,6 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #fafafa;
-  background-color: lemonchiffon;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -205,18 +204,28 @@ svg {
   overflow: visible; }
   .arch svg.height {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
     .arch svg.height image {
       height: 110%; }
   .arch svg.width {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
     .arch svg.width image {
       width: 110%; }
   .arch svg textPath {
     font-size: 30px;
     font-family: "Meddon", cursive;
     fill: #424e78; }
+  .arch svg.shadowSvg {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+    z-index: -1;
+    fill: #e49806;
+    filter: drop-shadow(30px -10px 60px rgba(228, 152, 6, 0.5)); }
 
 svg .light {
   fill: #d8d1c3; }
@@ -263,48 +272,45 @@ div.socials {
   div.socials a:hover {
     color: #c52800; }
 
-.hero .row {
-  padding: 8% 4% 4%; }
-  .hero .row .visual figure {
-    height: 95%;
-    min-height: 50vh;
-    max-width: 400px;
-    margin: 2.5% auto; }
-    .hero .row .visual figure .media-box {
+.standard.hero {
+  margin-bottom: 20px; }
+  .standard.hero .row {
+    padding: 120px 4% 4%; }
+    .standard.hero .row .visual .bg-img-hero {
+      background-image: url("../img/bg-01.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
-      box-shadow: -40px 40px 60px rgba(228, 152, 6, 0.1); }
-      .hero .row .visual figure .media-box img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        -o-object-fit: cover;
-        object-fit: cover;
-        -o-object-position: 50% 50%;
-        object-position: 50% 50%; }
-  .hero .row .content {
-    padding: 4%;
-    justify-content: center; }
-    .hero .row .content .preamble {
-      justify-content: center;
-      margin-bottom: 40px; }
-    .hero .row .content .small-branding {
-      justify-content: flex-end;
-      max-width: 100px;
-      margin: 0 auto; }
-    .hero .row .content h1, .hero .row .content .preamble, .hero .row .content .btn-wrap {
-      text-align: center; }
-    @media (min-width: 768px) {
-      .hero .row .content .small-branding {
-        max-width: 200px; }
-      .hero .row .content .preamble {
-        padding: 20px;
-        margin-bottom: 0px; }
-      .hero .row .content .preamble, .hero .row .content .btn-wrap {
-        text-align: left; } }
-    @media (min-width: 992px) {
-      .hero .row .content h1 {
-        text-align: left; } }
+      box-shadow: -40px 40px 60px rgba(228, 152, 6, 0.1);
+      height: 95%;
+      min-height: 50vh;
+      max-width: 400px;
+      margin: 2.5% auto; }
+    .standard.hero .row .content .row {
+      padding: 4%;
+      justify-content: center; }
+      .standard.hero .row .content .row .preamble {
+        justify-content: center;
+        margin-bottom: 40px; }
+      .standard.hero .row .content .row .small-branding {
+        justify-content: flex-end;
+        max-width: 100px;
+        margin: 0 auto; }
+      .standard.hero .row .content .row h1, .standard.hero .row .content .row .preamble, .standard.hero .row .content .row .btn-wrap {
+        text-align: center; }
+      @media (min-width: 768px) {
+        .standard.hero .row .content .row .small-branding {
+          max-width: 200px; }
+        .standard.hero .row .content .row .preamble {
+          padding: 20px;
+          margin-bottom: 0px; }
+        .standard.hero .row .content .row .preamble, .standard.hero .row .content .row .btn-wrap {
+          text-align: left; } }
+      @media (min-width: 992px) {
+        .standard.hero .row .content .row h1 {
+          text-align: left; } }
 
 .marquee {
   display: flex;
@@ -352,7 +358,6 @@ div.socials {
       text-align: left; } }
 
 .horizontal {
-  background-color: #f5efe3;
   overflow: hidden;
   width: 100%; }
   .horizontal .spacer {
@@ -643,11 +648,5 @@ footer {
       transition-timing-function: ease-in; }
       .navbar.nav--scrolled a.navbar-brand svg {
         height: 100%; }
-
-.bg-img-test {
-  background-image: url("../img/bg-01.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover; }
 
 /*# sourceMappingURL=styles.css.map */
