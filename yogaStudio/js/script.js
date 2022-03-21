@@ -1,33 +1,6 @@
 console.clear;
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, MotionPathPlugin, DrawSVGPlugin);
 
-
-// const deviceType = () => {
-//   const ua = navigator.userAgent;
-//   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-//       // return "tablet";
-//       console.log('tablet')
-//   }
-//   else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-//       // return "mobile";
-//       console.log('mobile')
-//   }
-//   // return "desktop";
-//   console.log('desktop')
-// };
-
-
-// var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
-var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
-
-if(isTouch) {
-        // is mobile device
-        alert("has touch support");
-} else {
-        // is not a mobile device
-        alert("no touch support");
-}
-////////////////////////////////////////////
 // ScrollTrigger.matchMedia({  
 //   //tablet/mobile
 //   "(max-width: 992px)": function() {
@@ -43,6 +16,34 @@ if(isTouch) {
 //   }	
 // });
 
+
+// var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
+var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+if(isTouch) {
+        // things i want on mobile only
+        alert("has touch support");
+} else {
+    // things i want on desk only
+    console.log("no touch support");
+    // ///moving arch background/////
+    // gsap.timeline({repeat:-1, yoyo:true})
+    // .to('#hero-panning', {
+    //   objectPosition:'90% 0',
+    //   duration:10, ease:'none',
+    //   repeat:1, yoyo:true
+    // },0)
+
+    ///moving arch background/////
+
+}
+////////////////////////////////////////////
+
+gsap.timeline({repeat:-1, yoyo:true})
+.to('.bg-img-test', {
+  backgroundPosition:'100% 100%',
+  duration:10, ease:'none',
+  repeat:1, yoyo:true
+},0)
 
 /////---------- Navigation
 //////hamburger and menu changes/////
@@ -65,13 +66,7 @@ gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
 
 ////////////////////////////////////////////////////////////////
-// moving arch background/////
-// gsap.timeline({repeat:-1, yoyo:true})
-// .to('#hero-panning', {
-//   objectPosition:'90% 0',
-//   duration:10, ease:'none',
-//   repeat:1, yoyo:true
-// },0)
+
 
 // set image to center
 gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
