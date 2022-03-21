@@ -7,26 +7,18 @@ for (var i = 0; i < 3; i++) {
     element.parent().append(element.clone());
 }
 
+
+
+
 // gsap.to()... infinity and beyond!
 // For more check out greensock.com// record the initial inline CSS for these elements so that ScrollTrigger can revert them even if animations add inline styles later
 ScrollTrigger.saveStyles(".marquee__inner, .marquee__inner p"); // if you put this INSIDE one of the functions, it'll only revert the recorded elements when that media query no longer matches. You can use ScrollTrigger.saveStyles() in multiple places.
 
-ScrollTrigger.matchMedia({  
+ScrollTrigger.matchMedia({ 
 
   "(min-width: 1336px)": function() {
-    gsap.set(".marquee__inner", {xPercent: -50});    
-    
-   // other animations that aren't ScrollTrigger-related...
-    let tl = gsap.timeline( {repeat: 100, yoyo: true} );
-    tl.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});
-    // THIS IS THE KEY! Return a function that'll get called when the breakpoint no longer matches so we can kill() the animation (or whatever)
-    return function() {
-      tl.kill(); 
-      gsap.set(".marquee__part p", {clearProps:"all"});      
-      // other cleanup code can go here. 
-    };
-  },
 
+  },
 
  "all": function() {
     /////---------- Navigation
@@ -115,7 +107,23 @@ ScrollTrigger.matchMedia({
         }
       });
     });	
-  }	
+
+
+    var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+    if(!isTouch) {
+      gsap.set(".marquee__inner", {xPercent: -50});    
+    
+      // other animations that aren't ScrollTrigger-related...
+       let tl = gsap.timeline( {repeat: 100, yoyo: true} );
+       tl.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});
+       // THIS IS THE KEY! Return a function that'll get called when the breakpoint no longer matches so we can kill() the animation (or whatever)
+       return function() {
+         tl.kill(); 
+         gsap.set(".marquee__part p", {clearProps:"all"});      
+         // other cleanup code can go here. 
+       };
+    }  
+  }
 });
 
 
