@@ -132,7 +132,7 @@ h2 {
   margin-bottom: 20px;
   font-size: 26px;
   @media (min-width:992px){
-    font-size:30px;
+    font-size:35px;
   }
   span.detail{
     font-size: 30px;
@@ -140,9 +140,9 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 25px;
   margin: 20px 0;
-  color:$main-light;
+  color:$main;
   span.detail{
     font-size: 22px;
   }
@@ -499,76 +499,96 @@ div.socials{
  
   }
 }
+
+
+
+
+////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////
-.horizontal{
-  .spacer{height:$sm}
-  overflow: hidden;
-  width: 100%;
+// .horizontal{
+//   .spacer{height:$sm}
+//   overflow: hidden;
+//   width: 100%;
 
-  .pin-wrap{  
-    overflow: hidden;
-    height: 100vh;
-  }
-  .pin-wrap,
-  .animation-wrap {
-      display: flex;
-      position: relative;
-      z-index: 1;  
-      width: 100%;
-  }  
-  .animation-wrap{
-    width: 100%;
-    height: calc(100vh - 50px);
-  }
+//   .pin-wrap{  
+//     overflow: hidden;
+//     height: 100vh;
+//   }
+//   .pin-wrap,
+//   .animation-wrap {
+//       display: flex;
+//       position: relative;
+//       z-index: 1;  
+//       width: 100%;
+//   }  
+//   .animation-wrap{
+//     width: 100%;
+//     height: calc(100vh - 50px);
+//   }
 
-  .item {
-    will-change: transform;
-    position: relative;
-    padding:0px;
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-    line-height: 1.7;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
+//   .item {
+//     will-change: transform;
+//     position: relative;
+//     padding:0px;
+//     flex: 0 0 100%;
+//     display: flex;
+//     justify-content: center;
+//     line-height: 1.7;
+//     -webkit-user-select: none;
+//     -moz-user-select: none;
+//     -ms-user-select: none;
+//     user-select: none;
+//     background-color: transparent;
 
-    figure{
-      justify-content: center;
-      display: flex;
-      margin: 20px;
-      &.bg{
-        background-color: $main;        
-      }
-      &.bg.dark{
-        background-color: $main-dark;
-        p{color:$white}
-      }
-      &.arch,
-      &.logo-figure{
-        svg{
-          max-width: 70%;
-        }
-      }
-    }
-    @media (min-width:992px){
-      flex: 0 0 50%;
-      .content{
-        text-align: left;
-      }
-    }
-    @media (min-width:1200px){
-      flex: 0 0 33.333%;
-    }
+//     figure{
+//       justify-content: center;
+//       display: flex;
+//       margin: 20px;
+//       &.bg{
+//         background-color: $main;        
+//       }
+//       &.bg.dark{
+//         background-color: $main-dark;
+//         p{color:$white}
+//       }
+//       &.arch,
+//       &.logo-figure{
+//         svg{
+//           max-width: 70%;
+//         }
+//       }
+//     }
+//     @media (min-width:992px){
+//       flex: 0 0 50%;
+//       .content{
+//         text-align: left;
+//       }
+//     }
+//     @media (min-width:1200px){
+//       flex: 0 0 33.333%;
+//     }
 
-    @media (min-height:1366px) and (max-height:1367px){
-      flex: 0 0 100%;  
-    }
-  }
+//     @media (min-height:1366px) and (max-height:1367px){
+//       flex: 0 0 100%;  
+//     }
+//   }
 
-}
+// }
 
 .dates{
   // @include gradient(bottom, $grad1);

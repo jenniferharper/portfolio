@@ -78,7 +78,8 @@ ScrollTrigger.matchMedia({
 
     // ////horizonl scroll section////
     // const horizontalSections = gsap.utils.toArray('section.horizontal')
-    // horizontalSections.forEach(function (sec, i) {	  
+    // horizontalSections.forEach(function (sec, i) {
+      	  
     //   var thisPinWrap = sec.querySelector('.pin-wrap');
     //   var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');  
     //   var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
