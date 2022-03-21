@@ -56,7 +56,7 @@ ScrollTrigger.matchMedia({
           });
           splitTimeline.from(chars, {
               opacity:0,
-              duration: 1,
+              duration: 0.4,
               yPercent: 100,
               ease: "back.out",
               stagger: 0.02
