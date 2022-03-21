@@ -114,10 +114,15 @@ ScrollTrigger.matchMedia({
       for (var i = 0; i < 3; i++) {
           element.parent().append(element.clone());
       }
-      gsap.set(".marquee__inner", {xPercent: -50});  
-      let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
-      marquee.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
-      
+      gsap.set(".marquee__inner", {xPercent: -50}); 
+
+      var mrq = gsap.utils.toArray(".marquee__part p");
+      mrq.forEach((el) => {
+        let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
+        marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
+      });
+
+
 
     } else {
     /////-- Touch ---//////
@@ -126,8 +131,13 @@ ScrollTrigger.matchMedia({
       var element = $('.marquee__part p');
       for (var i = 0; i < 2; i++) {
           element.parent().append(element.clone());
-      }      
-      gsap.set(".marquee__inner", {xPercent: -25});       
+      }  
+
+      gsap.set(".marquee__inner", {xPercent: -25});   
+       
+      var mrq = gsap.utils.toArray(".marquee__part p");
+      mrq.forEach((el) => {
+
       let marquee = gsap.timeline( {
         scrollTrigger: {
           trigger: '.marquee',
@@ -138,10 +148,10 @@ ScrollTrigger.matchMedia({
           scrub:0.5
         }
       });      
-      marquee.to(".marquee__part p", {xPercent: -50, duration: 5, ease: "linear"});
+      marquee.to(mrq, {xPercent: -50, duration: 5, ease: "none"});
+      });
 
-
-     }
+    }
     /////////////////////////////////////////////////////////////////////////////////////// 
   } // all end
 });
