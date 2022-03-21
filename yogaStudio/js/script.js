@@ -56,10 +56,10 @@ ScrollTrigger.matchMedia({
           });
           splitTimeline.from(chars, {
               opacity:0,
-              duration: 0.4,
+              duration: 0.5,
               yPercent: 100,
               ease: "back.out",
-              stagger: 0.02
+              stagger: 0.03
           });
       });
 
