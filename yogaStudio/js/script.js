@@ -6,8 +6,54 @@ ScrollTrigger.matchMedia({
  "(max-width: 1023px)": function() {
 
 },
-"(min-width: 1024px)": function() {
+"(min-width: 1336px)": function() {
 
+      /////////////////////////////marquee text feature
+      r = 100;
+      adjustJank = 4;
+      const scrollElems = document.querySelectorAll('.marquee-container p');
+  
+      function adjustTween(obj, d) {
+        // Get the progress of the previous tween if it exists
+        let progress = 0;
+        if(obj.tween) {
+          progress = obj.tween.progress();
+          // Kill the previous tween
+          obj.tween.kill();
+        }
+  
+        var t = d/r;
+        obj.tween = gsap.fromTo(obj.parentElement, {x: 0}, {
+          duration: t,
+          x: "-"+(d+adjustJank), 
+          ease: 'linear',
+          repeat: -1,
+        }).progress(progress); 
+        // Set the progress of the new tween to the same value of
+        // the previous tween (if it exists) before it was killed
+      }
+  
+      // Set up for what appears to be an seamless stream of text
+      // This could go in an init() function
+      scrollElems.forEach((obj, i) => {
+        var d = obj.offsetWidth;
+        var parent = obj.parentElement;
+        var clone = obj.cloneNode(true);
+        parent.appendChild(clone);
+        gsap.set(parent.parentElement, {width: d});      
+        adjustTween(obj, d);
+      });
+  
+      // Adjust widths and tweens on resize
+      window.addEventListener("resize", () => {
+        scrollElems.forEach((obj, i) => {
+          var d = obj.offsetWidth;
+          var parent = obj.parentElement;
+          gsap.set(parent.parentElement, {width: d});
+          adjustTween(obj, d);
+        });
+      });
+      // =============================
  
 },
 
@@ -99,52 +145,7 @@ ScrollTrigger.matchMedia({
       });
     });	
 
-    /////////////////////////////marquee text feature
-    r = 100;
-    adjustJank = 4;
-    const scrollElems = document.querySelectorAll('.marquee-container p');
 
-    function adjustTween(obj, d) {
-      // Get the progress of the previous tween if it exists
-      let progress = 0;
-      if(obj.tween) {
-        progress = obj.tween.progress();
-        // Kill the previous tween
-        obj.tween.kill();
-      }
-
-      var t = d/r;
-      obj.tween = gsap.fromTo(obj.parentElement, {x: 0}, {
-        duration: t,
-        x: "-"+(d+adjustJank), 
-        ease: 'linear',
-        repeat: -1,
-      }).progress(progress); 
-      // Set the progress of the new tween to the same value of
-      // the previous tween (if it exists) before it was killed
-    }
-
-    // Set up for what appears to be an seamless stream of text
-    // This could go in an init() function
-    scrollElems.forEach((obj, i) => {
-      var d = obj.offsetWidth;
-      var parent = obj.parentElement;
-      var clone = obj.cloneNode(true);
-      parent.appendChild(clone);
-      gsap.set(parent.parentElement, {width: d});      
-      adjustTween(obj, d);
-    });
-
-    // Adjust widths and tweens on resize
-    window.addEventListener("resize", () => {
-      scrollElems.forEach((obj, i) => {
-        var d = obj.offsetWidth;
-        var parent = obj.parentElement;
-        gsap.set(parent.parentElement, {width: d});
-        adjustTween(obj, d);
-      });
-    });
-    // =============================
 
   }	
 });
