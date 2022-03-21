@@ -18,27 +18,37 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, Mot
 
 
 // var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
-var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
-if(isTouch) {
-        // things i want on mobile only
-        alert("has touch support");
-} else {
-    // things i want on desk only
-    console.log("no touch support");
-    // ///moving arch background/////
-    // gsap.timeline({repeat:-1, yoyo:true})
-    // .to('#hero-panning', {
-    //   objectPosition:'90% 0',
-    //   duration:10, ease:'none',
-    //   repeat:1, yoyo:true
-    // },0)
+// var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+// if(isTouch) {
+//         // things i want on mobile only
+//         alert("has touch support");
+// } else {
+//     // things i want on desk only
+//     console.log("no touch support");
+//     // ///moving arch background/////
+//     // gsap.timeline({repeat:-1, yoyo:true})
+//     // .to('#hero-panning', {
+//     //   objectPosition:'90% 0',
+//     //   duration:10, ease:'none',
+//     //   repeat:1, yoyo:true
+//     // },0)
 
-    ///moving arch background/////
+//     ///moving arch background/////
 
-}
+// }
 ////////////////////////////////////////////
 
-gsap.timeline({repeat:-1, yoyo:true})
+gsap.timeline({
+  repeat:-1, yoyo:true,
+    scrollTrigger: {
+      trigger: '.navbar',
+      start: "top top+=50",
+      endTrigger:'.hero',
+      end: "bottom center",
+      toggleActions: 'play none none reverse',
+      markers: true,
+    }
+})
 .to('.bg-img-test', {
   backgroundPosition:'100% 100%',
   duration:10, ease:'none',
