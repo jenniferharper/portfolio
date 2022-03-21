@@ -652,10 +652,5 @@ footer {
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     box-shadow: 0 10px 20px rgba(160, 160, 160, 0.2); }
-    .navbar.nav--scrolled a.navbar-brand {
-      height: 60px;
-      transition-property: height;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
 
 /*# sourceMappingURL=styles.css.map */

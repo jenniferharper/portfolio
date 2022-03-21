@@ -871,10 +871,10 @@ footer{
       &.nav--scrolled {
         @include transition();
         box-shadow: $shadow;
-        a.navbar-brand{
-          height:60px;
-          @include transition(height);
-        }
+        // a.navbar-brand{
+        //   height:60px;
+        //   @include transition(height);
+        // }
       }
     }
 
