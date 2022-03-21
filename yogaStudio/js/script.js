@@ -98,34 +98,31 @@ ScrollTrigger.matchMedia({
     //   });
     // });	
 
-    ///////////non mobile devices
-
-    // var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
-    // if(!isTouch) {
-
-    //   var element = $('.marquee__part p');
-    //   for (var i = 0; i < 3; i++) {
-    //       element.parent().append(element.clone());
-    //   }
-    //   /////marquee text
-    //   gsap.set(".marquee__inner", {xPercent: -50});  
-    //   let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
-    //   marquee.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
+    /////////non mobile devices
+    var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+    if(!isTouch) {
+    ////////////////////////////////////////////////////////////////////////////////
+      var element = $('.marquee__part p');
+      for (var i = 0; i < 3; i++) {
+          element.parent().append(element.clone());
+      }
+      /////marquee text
+      gsap.set(".marquee__inner", {xPercent: -50});  
+      let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
+      marquee.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
        
-    //   let heroPan = gsap.timeline({repeat:-1, yoyo:true,}); 
-    //   heroPan.to('.bg-img-hero', { backgroundPosition:'100% 100%', duration:10, ease:'none'})
+      let heroPan = gsap.timeline({repeat:-1, yoyo:true,}); 
+      heroPan.to('.bg-img-hero', { backgroundPosition:'100% 100%', duration:10, ease:'none'})
 
 
-    //    return function() {
-    //      marquee.kill(); 
-    //      gsap.set(".marquee__part p", {clearProps:"all"});  
+       return function() {
+         marquee.kill(); 
+         gsap.set(".marquee__part p", {clearProps:"all"});  
          
-    //      heroPan.kill(); 
-    //      gsap.set(".bg-img-hero", {clearProps:"all"}); 
-    //    };
+       };
 
-       
-    // }  //touch end
+      /////////////////////////////////////////////////////////////////////////////////////// 
+    }  //touch end
   } // all end
 });
 
