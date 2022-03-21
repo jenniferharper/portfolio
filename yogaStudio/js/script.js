@@ -17,15 +17,15 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, Mot
 // };
 
 
-var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
-    isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+// var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
+var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
 
-if(isMobile.matches && isTouch) {
+if(isTouch) {
         // is mobile device
-        alert("is mobile and has touch support");
+        alert("has touch support");
 } else {
         // is not a mobile device
-        alert("is not mobile and has no touch support");
+        alert("no touch support");
 }
 ////////////////////////////////////////////
 // ScrollTrigger.matchMedia({  
