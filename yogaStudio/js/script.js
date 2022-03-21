@@ -139,7 +139,6 @@ ScrollTrigger.matchMedia({
           scrollTrigger: {
             trigger: section,
             start: "top bottom",
-            markers:true,
             scrub:0.5
           }
         }); 
