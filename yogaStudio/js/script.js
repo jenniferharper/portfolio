@@ -56,7 +56,6 @@ ScrollTrigger.matchMedia({
           });
           splitTimeline.from(chars, {
             opacity:0,
-            // duration: 0.5,
             yPercent: 100,
             ease: "back.out",
             stagger: 0.02
@@ -64,8 +63,8 @@ ScrollTrigger.matchMedia({
       });
 
 
-    ////// text around arch/////
-    // gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
+    //// text around arch/////
+    gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
     //// set image to center on masked images
     gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
