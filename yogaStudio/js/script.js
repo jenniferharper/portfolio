@@ -2,8 +2,31 @@ console.clear;
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, MotionPathPlugin, DrawSVGPlugin);
 
 
+// const deviceType = () => {
+//   const ua = navigator.userAgent;
+//   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+//       // return "tablet";
+//       console.log('tablet')
+//   }
+//   else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+//       // return "mobile";
+//       console.log('mobile')
+//   }
+//   // return "desktop";
+//   console.log('desktop')
+// };
 
 
+var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
+    isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+
+if(isMobile.matches && isTouch) {
+        // is mobile device
+        alert("is mobile and has touch support");
+} else {
+        // is not a mobile device
+        alert("is not mobile and has no touch support");
+}
 ////////////////////////////////////////////
 // ScrollTrigger.matchMedia({  
 //   //tablet/mobile
