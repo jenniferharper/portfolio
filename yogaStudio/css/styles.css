@@ -219,13 +219,14 @@ svg {
     font-family: "Meddon", cursive;
     fill: #424e78; }
   .arch svg.shadowSvg {
+    overflow: visible;
     position: absolute;
-    width: 90%;
-    left: 5%;
-    top: 5%;
+    width: 80%;
+    left: 10%;
+    top: 10%;
     z-index: -1;
     fill: #e49806;
-    filter: drop-shadow(30px -10px 60px rgba(228, 152, 6, 0.5)); }
+    filter: drop-shadow(30px -10px 60px rgba(228, 152, 6, 0.3)); }
 
 svg .light {
   fill: #d8d1c3; }
@@ -283,7 +284,7 @@ div.socials {
       background-size: cover;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
-      box-shadow: -40px 40px 60px rgba(228, 152, 6, 0.1);
+      box-shadow: -40px 40px 60px rgba(228, 152, 6, 0.2);
       height: 95%;
       min-height: 50vh;
       max-width: 400px;
@@ -311,6 +312,12 @@ div.socials {
       @media (min-width: 992px) {
         .standard.hero .row .content .row h1 {
           text-align: left; } }
+    @media (min-width: 992px) {
+      .standard.hero .row {
+        padding: 12% 4% 4%; } }
+    @media (min-width: 1240px) {
+      .standard.hero .row {
+        padding: 8% 4% 4%; } }
 
 .marquee {
   display: flex;
@@ -475,11 +482,14 @@ div.socials {
           padding-left: 30px; }
 
 .cta .row {
+  overflow: visible;
   padding: 8% 4%;
   max-width: 800px;
   margin: 0 auto; }
   .cta .row h2, .cta .row p {
     text-align: center; }
+  .cta .row .branding {
+    overflow: visible; }
   .cta .row .preamble {
     justify-content: center;
     align-items: center; }
