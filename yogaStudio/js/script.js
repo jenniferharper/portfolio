@@ -108,7 +108,7 @@ ScrollTrigger.matchMedia({
 
     if(!isTouch) {
     /////-- Non touch ---//////
-
+      console.log('non tablet/mobile')
       ///marquee text
       var element = $('.marquee__part p');
       for (var i = 0; i < 3; i++) {
@@ -121,8 +121,9 @@ ScrollTrigger.matchMedia({
       marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
     } else {
-    /////-- Touch ---//////
-    /////marquee text
+      console.log('tablet/mobile')
+    ///-- Touch ---//////
+    ///marquee text
     var element = $('.marquee__part p');
       for (var i = 0; i < 2; i++) {
           element.parent().append(element.clone());

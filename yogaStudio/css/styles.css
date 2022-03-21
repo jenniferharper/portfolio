@@ -296,7 +296,7 @@ div.socials {
 .standard.hero {
   margin-bottom: 20px; }
   .standard.hero .row {
-    padding: 120px 4% 4%; }
+    padding: 100px 4% 4%; }
     .standard.hero .row .visual .bg-img-hero {
       background-image: url("../img/bg-01.jpg");
       background-repeat: no-repeat;
@@ -305,10 +305,11 @@ div.socials {
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
       box-shadow: -40px 40px 60px rgba(228, 152, 6, 0.2);
-      height: 95%;
+      height: 90%;
       min-height: 50vh;
+      width: 75%;
       max-width: 400px;
-      margin: 2.5% auto; }
+      margin: 0 auto; }
     .standard.hero .row .content .row {
       padding: 4%;
       justify-content: center; }
@@ -332,6 +333,15 @@ div.socials {
       @media (min-width: 992px) {
         .standard.hero .row .content .row h1 {
           text-align: left; } }
+    @media (min-width: 768px) {
+      .standard.hero .row {
+        padding-top: 140px; }
+        .standard.hero .row .visual .bg-img-hero {
+          height: 100%;
+          min-height: 50vh;
+          width: 100%;
+          max-width: 450px;
+          margin: 0 auto; } }
     @media (min-width: 992px) {
       .standard.hero .row {
         padding: 12% 4% 4%; } }
