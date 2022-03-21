@@ -320,22 +320,24 @@ div.socials {
         padding: 8% 4% 4%; } }
 
 .marquee {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   overflow: hidden; }
-  .marquee .marquee-container {
-    white-space: nowrap;
-    margin: 0;
-    overflow: hidden; }
-    .marquee .marquee-container p {
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      font-size: 12vw;
-      font-family: "Marcellus", serif;
-      color: #424e78; }
+  .marquee .marquee__inner {
+    -webkit-font-smoothing: antialiased;
+    width: fit-content;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center; }
+    .marquee .marquee__inner .marquee__part {
+      display: flex;
+      flex-direction: row; }
+      .marquee .marquee__inner .marquee__part p {
+        will-change: transform;
+        white-space: nowrap;
+        font-size: 18vw;
+        line-height: 1;
+        color: #424e78; }
 
 .about .row {
   padding: 0 4%;

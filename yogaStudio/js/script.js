@@ -1,61 +1,15 @@
 console.clear;
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, MotionPathPlugin, DrawSVGPlugin);
 
+
+
+
 ScrollTrigger.matchMedia({  
-//tablet/mobile
- "(max-width: 1023px)": function() {
 
-},
-"(min-width: 1336px)": function() {
 
-      /////////////////////////////marquee text feature
-      r = 100;
-      adjustJank = 4;
-      const scrollElems = document.querySelectorAll('.marquee-container p');
-  
-      function adjustTween(obj, d) {
-        // Get the progress of the previous tween if it exists
-        let progress = 0;
-        if(obj.tween) {
-          progress = obj.tween.progress();
-          // Kill the previous tween
-          obj.tween.kill();
-        }
-  
-        var t = d/r;
-        obj.tween = gsap.fromTo(obj.parentElement, {x: 0}, {
-          duration: t,
-          x: "-"+(d+adjustJank), 
-          ease: 'linear',
-          repeat: -1,
-        }).progress(progress); 
-        // Set the progress of the new tween to the same value of
-        // the previous tween (if it exists) before it was killed
-      }
-  
-      // Set up for what appears to be an seamless stream of text
-      // This could go in an init() function
-      scrollElems.forEach((obj, i) => {
-        var d = obj.offsetWidth;
-        var parent = obj.parentElement;
-        var clone = obj.cloneNode(true);
-        parent.appendChild(clone);
-        gsap.set(parent.parentElement, {width: d});      
-        adjustTween(obj, d);
-      });
-  
-      // Adjust widths and tweens on resize
-      window.addEventListener("resize", () => {
-        scrollElems.forEach((obj, i) => {
-          var d = obj.offsetWidth;
-          var parent = obj.parentElement;
-          gsap.set(parent.parentElement, {width: d});
-          adjustTween(obj, d);
-        });
-      });
-      // =============================
- 
-},
+  "(min-width: 1336px)": function() {
+  },
+
 
  "all": function() {
     /////---------- Navigation
@@ -144,25 +98,15 @@ ScrollTrigger.matchMedia({
         }
       });
     });	
-
-
-
   }	
 });
 
 
-// var isMobile = window.matchMedia("only screen and (max-width: 760px)"),
-// var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
-// if(isTouch) {
-//         // things i want on mobile only
-//         alert("has touch support");
-// } else {
-//     // things i want on desk only
-//     console.log("no touch support");
-// }
+///////////////////marquee
+var element = $('.marquee__part p');
+for (var i = 0; i < 3; i++) {
+    element.parent().append(element.clone());
+}
 
-
-
-
-
-
+gsap.to(".marquee__part p", {xPercent: -100, repeat: -1, duration: 10, ease: "linear"}).totalProgress(0.5);
+gsap.set(".marquee__inner", {xPercent: -50});
