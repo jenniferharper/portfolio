@@ -41,18 +41,16 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, Mot
 gsap.timeline({
   repeat:-1, yoyo:true,
     scrollTrigger: {
-      trigger: '.navbar',
-      start: "top top+=50",
-      endTrigger:'.hero',
-      end: "bottom center",
-      toggleActions: 'play none none reverse',
+      trigger: '.hero',
+      start: "top top+=100",
+      end:"center center",
+      // toggleActions: 'play none none reverse',
       markers: true,
     }
 })
 .to('.bg-img-test', {
   backgroundPosition:'100% 100%',
   duration:10, ease:'none',
-  repeat:1, yoyo:true
 },0)
 
 /////---------- Navigation
