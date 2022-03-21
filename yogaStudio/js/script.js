@@ -71,6 +71,10 @@ ScrollTrigger.matchMedia({
       attr:{ x:'-50%' },
     })
 
+    let heroPan = gsap.timeline({repeat:-1, yoyo:true,}); 
+    heroPan.to('.bg-img-hero', { backgroundPosition:'100% 100%', duration:10, ease:'none'})
+
+
     // ////horizonl scroll section////
     // const horizontalSections = gsap.utils.toArray('section.horizontal')
     // horizontalSections.forEach(function (sec, i) {	  
