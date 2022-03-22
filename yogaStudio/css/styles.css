@@ -145,18 +145,17 @@ figure {
   overflow: hidden; }
   .media-box img {
     width: 100%;
-    height: 100%; }
-  @media (min-width: 400px) {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%; }
+  @media (min-width: 300px) {
     .media-box {
-      min-height: 50vh; }
-      .media-box img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        -o-object-fit: cover;
-        object-fit: cover;
-        -o-object-position: 50% 50%;
-        object-position: 50% 50%; } }
+      min-height: 50vh; } }
   @media (min-width: 1140px) and (max-width: 1600px) {
     .media-box {
       min-height: 70vh; } }
@@ -397,7 +396,6 @@ div.socials {
       padding: 0; }
       .slider .wrapper .section .content {
         transition: all 0.5s ease-in-out;
-        background-color: #c52800;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -414,8 +412,6 @@ div.socials {
             background-color: #424e78; }
           .slider .wrapper .section .content figure.bg.dark {
             background-color: #64697a; }
-            .slider .wrapper .section .content figure.bg.dark p {
-              color: #fafafa; }
           .slider .wrapper .section .content figure.arch svg, .slider .wrapper .section .content figure.logo-figure svg {
             max-width: 70%; }
       @media (min-width: 992px) {

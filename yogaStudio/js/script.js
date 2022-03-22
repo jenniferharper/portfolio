@@ -157,7 +157,7 @@ var boxes = document.querySelectorAll('.section');
 let tlSlider = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".slider",
-		start: "top top-=20",
+		start: "center center",
 		end: function(){  
 			return "+=" + container[0].scrollWidth;
 		},
@@ -172,6 +172,7 @@ let tlSlider = gsap.timeline({
 
 refresher();
 function refresher(){
+  tlSlider.kill(); 
 	gsap.set(boxes, {clearProps:"all"}); 
 	tlSlider.clear();
 	tlSlider.to(boxes, {	
@@ -186,8 +187,6 @@ var windowWidth = $(window).width();
 $(window).resize(function(){	
 	if ($(window).width() != windowWidth) {
 	windowWidth = $(window).width();
-	
-	// refresher.clear();
 	refresher();	
 	}
 });
