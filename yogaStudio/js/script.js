@@ -150,3 +150,44 @@ ScrollTrigger.matchMedia({
 });
 
 
+////////// slider
+var container = $('.slider .wrapper');
+var boxes = document.querySelectorAll('.section');
+
+let tlSlider = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".slider",
+		start: "top top-=20",
+		end: function(){  
+			return "+=" + container[0].scrollWidth;
+		},
+		scrub: 1,
+		pin: true,
+		toggleClass: "is-active",
+		refreshPriority: 1,
+    // markers:true
+    ease:'none'
+	}
+});
+
+refresher();
+function refresher(){
+	gsap.set(boxes, {clearProps:"all"}); 
+	tlSlider.clear();
+	tlSlider.to(boxes, {	
+		x: function(){  
+		return -(container[0].scrollWidth - document.documentElement.clientWidth) + "px";
+		},
+	});
+};
+
+
+var windowWidth = $(window).width();
+$(window).resize(function(){	
+	if ($(window).width() != windowWidth) {
+	windowWidth = $(window).width();
+	
+	// refresher.clear();
+	refresher();	
+	}
+});

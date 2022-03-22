@@ -453,7 +453,6 @@ div.socials{
   }
 }
 
-///////////////////////////////////////
 .about{
   // @include gradient(top, $grad1);
   .row{
@@ -500,95 +499,75 @@ div.socials{
   }
 }
 
+.slider{
+  position: relative;
+  .wrapper{
+    transform: scale(0.85);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  .section { 
+    width: 100vw;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding:0;
+    .content{
+      transition:all 0.5s ease-in-out;
+      background-color: $secondary-dark;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0px 10px;
+      height: calc(100% + 110px);
+      text-align: center;
+      align-items: center;
+      width: 100%;
 
+      figure{
+        justify-content: center;
+        display: flex;
+        height: 100%;
+        &.bg{
+          background-color: $main;        
+        }
+        &.bg.dark{
+          background-color: $main-dark;
+          p{color:$white}
+        }
+        &.arch,
+        &.logo-figure{
+          svg{
+            max-width: 70%;
+          }
+        }
+      }
+    }  
+    @media (min-width:992px){width:50%} 
+    @media (min-width:1366px){width:calc(33.333% + 20px)} 
+  }
+  } 
+}
 
+/////aka .slide .wrapper
+.slider.is-active{
+  .wrapper{
+    margin-top: 60px;
+    transform: scale(1);
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
 
-////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////////////////
-// .horizontal{
-//   .spacer{height:$sm}
-//   overflow: hidden;
-//   width: 100%;
-
-//   .pin-wrap{  
-//     overflow: hidden;
-//     height: 100vh;
-//   }
-//   .pin-wrap,
-//   .animation-wrap {
-//       display: flex;
-//       position: relative;
-//       z-index: 1;  
-//       width: 100%;
-//   }  
-//   .animation-wrap{
-//     width: 100%;
-//     height: calc(100vh - 50px);
-//   }
-
-//   .item {
-//     will-change: transform;
-//     position: relative;
-//     padding:0px;
-//     flex: 0 0 100%;
-//     display: flex;
-//     justify-content: center;
-//     line-height: 1.7;
-//     -webkit-user-select: none;
-//     -moz-user-select: none;
-//     -ms-user-select: none;
-//     user-select: none;
-//     background-color: transparent;
-
-//     figure{
-//       justify-content: center;
-//       display: flex;
-//       margin: 20px;
-//       &.bg{
-//         background-color: $main;        
-//       }
-//       &.bg.dark{
-//         background-color: $main-dark;
-//         p{color:$white}
-//       }
-//       &.arch,
-//       &.logo-figure{
-//         svg{
-//           max-width: 70%;
-//         }
-//       }
-//     }
-//     @media (min-width:992px){
-//       flex: 0 0 50%;
-//       .content{
-//         text-align: left;
-//       }
-//     }
-//     @media (min-width:1200px){
-//       flex: 0 0 33.333%;
-//     }
-
-//     @media (min-height:1366px) and (max-height:1367px){
-//       flex: 0 0 100%;  
-//     }
-//   }
-
-// }
+  .content{
+    height:95% !important;
+  }
+}
 
 .dates{
   // @include gradient(bottom, $grad1);
@@ -745,150 +724,149 @@ footer{
   }
 }
 
-
-    .navbar {
-      margin: 0 auto;
-      background-color: #fafafa;
-      background-image: url("../img/background-texture.png");
-      box-shadow: none;
+.navbar {
+  margin: 0 auto;
+  background-color: #fafafa;
+  background-image: url("../img/background-texture.png");
+  box-shadow: none;
+  padding: 0;
+  z-index: 5;
+  position:fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 10;
+  @include transition();
+  .container-fluid {
+    padding: 10px 10px;
+    a.navbar-brand {
+      width: 230px;
+      height: 80px;
+      position: relative;
       padding: 0;
-      z-index: 5;
-      position:fixed;
-      width: 100%;
-      top:0;
-      left:0;
-      z-index: 10;
-      @include transition();
-      .container-fluid {
-        padding: 10px 10px;
-        a.navbar-brand {
-          width: 230px;
-          height: 80px;
-          position: relative;
-          padding: 0;
-          display: flex;
-          align-items: center;
-          @include transition(height);
-          figure{
-            position: relative; 
-            margin:0;
-            overflow:visible;
-            // width: 100%;
-            height: 100%;
-            svg {
-              overflow:visible;
-              width: 100%;
-              height: 100%;
-              max-width: 200px;
-              transform: scale(1);
-              transform-origin: 0 0;
-              transform-origin: 50% 00%;
-              @include transition;
-              .circle{
-                fill:$main;
-                @include transition;
-              }
-              .outline{
-                stroke:$dark;
-                stroke-width: 0.5px;
-              }
-              .hair{
-                fill:$white;
-                @include transition;
-              }
-            }
-          }
-          p{
-            color:$main;
-            font-size: 20px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom:0;
-            margin-left:10px;
-          }
-          @media (min-width:992px){
-            width: 320px;
-            p{font-size: 28px;}
-          }
-        }
-        // hamburger
-        button.navbar-toggler {
-          padding: 0 10px;
-          font-size: 30px;
-          line-height: 1;
-          background-color: transparent;
-          border: 0;
-          border-radius: 0;
-          transition: none;
-          display: flex;
-          flex-direction: row;
+      display: flex;
+      align-items: center;
+      @include transition(height);
+      figure{
+        position: relative; 
+        margin:0;
+        overflow:visible;
+        // width: 100%;
+        height: 100%;
+        svg {
+          overflow:visible;
+          width: 100%;
           height: 100%;
-          align-items: center;
-          &:focus {
-            box-shadow: none;
+          max-width: 200px;
+          transform: scale(1);
+          transform-origin: 0 0;
+          transform-origin: 50% 00%;
+          @include transition;
+          .circle{
+            fill:$main;
+            @include transition;
           }
-          .navbar-toggler-icon {
-            color: $secondary;
-            height: auto;
+          .outline{
+            stroke:$dark;
+            stroke-width: 0.5px;
           }
-        }
-        // hamburger down
-        div.navbar-collapse {
-          justify-content: flex-end;  
-          margin-top: -1px;
-          transition: all 0.5s ease-in-out;
-          ul.navbar-nav {
-            padding: 0px 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:100vh;
-            a.nav-link {
-              padding: 10px 14px;
-              color:$main;
-              &:hover{
-                color:$secondary-dark;
-              }
-            }
-            .socials{
-              margin-top:20px
-            }
-            @media (min-width:992px){
-              height:inherit;
-              .socials{
-                margin-top:0
-              }
-            }
+          .hair{
+            fill:$white;
+            @include transition;
           }
         }
-        .open {
-            .navbar-toggler-icon i {
-                transform: rotate(-90deg);
-            }
-        }
-      }    
-      @media (min-width:992px){
-        // background-color: transparent;
-        .container-fluid{
-            button.navbar-toggler{
-                display:none;
-            }
-            div.navbar-collapse{
-                background-color: transparent;
-            }
-          }
       }
-
-      &.nav--scrolled {
-        @include transition();
-        box-shadow: $shadow;
-        // a.navbar-brand{
-        //   height:60px;
-        //   @include transition(height);
-        // }
+      p{
+        color:$main;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom:0;
+        margin-left:10px;
+      }
+      @media (min-width:992px){
+        width: 320px;
+        p{font-size: 28px;}
       }
     }
+    // hamburger
+    button.navbar-toggler {
+      padding: 0 10px;
+      font-size: 30px;
+      line-height: 1;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      transition: none;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      align-items: center;
+      &:focus {
+        box-shadow: none;
+      }
+      .navbar-toggler-icon {
+        color: $secondary;
+        height: auto;
+      }
+    }
+    // hamburger down
+    div.navbar-collapse {
+      justify-content: flex-end;  
+      margin-top: -1px;
+      transition: all 0.5s ease-in-out;
+      ul.navbar-nav {
+        padding: 0px 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        a.nav-link {
+          padding: 10px 14px;
+          color:$main;
+          &:hover{
+            color:$secondary-dark;
+          }
+        }
+        .socials{
+          margin-top:20px
+        }
+        @media (min-width:992px){
+          height:inherit;
+          .socials{
+            margin-top:0
+          }
+        }
+      }
+    }
+    .open {
+        .navbar-toggler-icon i {
+            transform: rotate(-90deg);
+        }
+    }
+  }    
+  @media (min-width:992px){
+    // background-color: transparent;
+    .container-fluid{
+        button.navbar-toggler{
+            display:none;
+        }
+        div.navbar-collapse{
+            background-color: transparent;
+        }
+      }
+  }
+
+  &.nav--scrolled {
+    @include transition();
+    box-shadow: $shadow;
+    // a.navbar-brand{
+    //   height:60px;
+    //   @include transition(height);
+    // }
+  }
+}
 
 
