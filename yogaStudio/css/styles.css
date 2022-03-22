@@ -153,12 +153,6 @@ figure {
     object-fit: cover;
     -o-object-position: 50% 50%;
     object-position: 50% 50%; }
-  @media (min-width: 300px) {
-    .media-box {
-      min-height: 50vh; } }
-  @media (min-width: 1140px) and (max-width: 1600px) {
-    .media-box {
-      min-height: 70vh; } }
 
 svg {
   overflow: visible !important; }
@@ -344,7 +338,7 @@ div.socials {
     @media (min-width: 992px) {
       .standard.hero .row {
         padding: 12% 4% 4%; } }
-    @media (min-width: 1240px) {
+    @media (min-width: 1440px) {
       .standard.hero .row {
         padding: 8% 4% 4%; } }
 
@@ -388,7 +382,7 @@ div.socials {
     overflow: hidden; }
     .slider .wrapper .section {
       width: 100vw;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -404,14 +398,14 @@ div.socials {
         text-align: center;
         align-items: center;
         width: 100%; }
+        .slider .wrapper .section .content.bg {
+          background-color: #424e78; }
+        .slider .wrapper .section .content.bg.dark {
+          background-color: #64697a; }
         .slider .wrapper .section .content figure {
           justify-content: center;
           display: flex;
           height: 100%; }
-          .slider .wrapper .section .content figure.bg {
-            background-color: #424e78; }
-          .slider .wrapper .section .content figure.bg.dark {
-            background-color: #64697a; }
           .slider .wrapper .section .content figure.arch svg, .slider .wrapper .section .content figure.logo-figure svg {
             max-width: 70%; }
       @media (min-width: 992px) {
@@ -420,6 +414,42 @@ div.socials {
       @media (min-width: 1366px) {
         .slider .wrapper .section {
           width: calc(33.333% + 20px); } }
+  .slider.touch {
+    padding: 8% 4% 0; }
+    .slider.touch .wrapper {
+      transform: scale(1);
+      flex-wrap: wrap; }
+      .slider.touch .wrapper .section {
+        width: calc(100% - 20px);
+        margin: 10px;
+        height: auto; }
+        .slider.touch .wrapper .section .content {
+          height: 60vh;
+          margin: 0; }
+        @media (min-width: 768px) {
+          .slider.touch .wrapper .section {
+            order: 1;
+            width: calc(50% - 20px);
+            height: auto; }
+            .slider.touch .wrapper .section:nth-of-type(1) {
+              order: 2; }
+            .slider.touch .wrapper .section:nth-of-type(2) {
+              order: 1; }
+            .slider.touch .wrapper .section:nth-of-type(3) {
+              order: 3; }
+            .slider.touch .wrapper .section:nth-of-type(4) {
+              order: 6; }
+            .slider.touch .wrapper .section:nth-of-type(5) {
+              order: 5; }
+            .slider.touch .wrapper .section:nth-of-type(6) {
+              order: 4; }
+            .slider.touch .wrapper .section:last-of-type {
+              order: 7;
+              width: 100vw; } }
+        @media (min-width: 1366px) {
+          .slider.touch .wrapper .section {
+            width: calc(33.333% - 20px);
+            order: 1; } }
 
 .slider.is-active .wrapper {
   margin-top: 60px;

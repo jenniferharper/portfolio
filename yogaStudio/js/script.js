@@ -76,39 +76,12 @@ ScrollTrigger.matchMedia({
     heroPan.to('.bg-img-hero', { backgroundPosition:'90% 100%', duration:15, ease:'none'})
 
 
-    // ////horizonl scroll section////
-    // const horizontalSections = gsap.utils.toArray('section.horizontal')
-    // horizontalSections.forEach(function (sec, i) {
-      	  
-    //   var thisPinWrap = sec.querySelector('.pin-wrap');
-    //   var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');  
-    //   var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
-
-    //   gsap.fromTo(thisAnimWrap, { 
-    //     x: () => thisAnimWrap.classList.contains('animation-wrap') ? 0 : getToValue() }, { 
-    //     x: () => thisAnimWrap.classList.contains('animation-wrap') ? getToValue() : 0, 
-    //     ease: "none",
-    //     scrollTrigger: {
-    //       trigger: sec,		
-    //       start: "top top",
-    //       end: () => "+=" + thisAnimWrap.scrollWidth,
-    //       pin: true,  
-    //       pinReparent: true, 
-    //       invalidateOnRefresh: true,
-    //       scrub: true,
-    //     }
-    //   });
-    // });	
-
-
-
-
-
     ///// -------------Touch or non touch devices -------------------------/////
     var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
 
     if(!isTouch) {
     /////-- Non touch ---//////
+    $( ".slider" ).removeClass( "touch" )
       console.log('non tablet/mobile')
       ///marquee text
       var element = $('.marquee__part p');
@@ -121,9 +94,54 @@ ScrollTrigger.matchMedia({
       let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
       marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
+
+      ////////// slider
+      var container = $('.slider .wrapper');
+      var boxes = document.querySelectorAll('.section');
+
+      let tlSlider = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".slider",
+          start: "center center",
+          end: function(){  
+            return "+=" + container[0].scrollWidth;
+          },
+          scrub: 1,
+          pin: true,
+          toggleClass: "is-active",
+          refreshPriority: 1,
+          // markers:true
+          ease:'none'
+        }
+      });
+
+      refresher();
+      function refresher(){
+        tlSlider.kill(); 
+        gsap.set(boxes, {clearProps:"all"}); 
+        tlSlider.clear();
+        tlSlider.to(boxes, {	
+          x: function(){  
+          return -(container[0].scrollWidth - document.documentElement.clientWidth) + "px";
+          },
+        });
+      };
+
+      var windowWidth = $(window).width();
+      $(window).resize(function(){	
+        if ($(window).width() != windowWidth) {
+        windowWidth = $(window).width();
+        refresher();	
+        }
+      });
+
     } else {
-      console.log('tablet/mobile')
+
+    console.log('tablet/mobile')
+    $( ".slider" ).addClass( "touch" )
+
     ///-- Touch ---//////
+
     ///marquee text
     var element = $('.marquee__part p');
       for (var i = 0; i < 2; i++) {
@@ -134,59 +152,34 @@ ScrollTrigger.matchMedia({
       const sections = document.querySelectorAll('.marquee__part p');
       sections.forEach((section) => {
         gsap.to(section, {
-          xPercent: -50, 
+          xPercent: -25, 
           duration: 5, 
           ease: "none",
           scrollTrigger: {
             trigger: section,
             start: "top bottom",
-            scrub:0.5
+            scrub:0.5,
           }
         }); 
       })
     }
+
+    ////// horizontal slider
+
+
+        // gsap.from('.slider .section .content', {
+        //   height:0, 
+        //   // stagger:0.05,
+        //   ease: "none",
+        //   scrollTrigger: {
+        //     trigger: '.slider',
+        //     start: "top bottom",
+        //     // scrub:0.5
+        //   }
+        // }); 
+
+
     /////////////////////////////////////////////////////////////////////////////////////// 
   } // all end
 });
 
-
-////////// slider
-var container = $('.slider .wrapper');
-var boxes = document.querySelectorAll('.section');
-
-let tlSlider = gsap.timeline({
-	scrollTrigger: {
-		trigger: ".slider",
-		start: "center center",
-		end: function(){  
-			return "+=" + container[0].scrollWidth;
-		},
-		scrub: 1,
-		pin: true,
-		toggleClass: "is-active",
-		refreshPriority: 1,
-    // markers:true
-    ease:'none'
-	}
-});
-
-refresher();
-function refresher(){
-  tlSlider.kill(); 
-	gsap.set(boxes, {clearProps:"all"}); 
-	tlSlider.clear();
-	tlSlider.to(boxes, {	
-		x: function(){  
-		return -(container[0].scrollWidth - document.documentElement.clientWidth) + "px";
-		},
-	});
-};
-
-
-var windowWidth = $(window).width();
-$(window).resize(function(){	
-	if ($(window).width() != windowWidth) {
-	windowWidth = $(window).width();
-	refresher();	
-	}
-});
