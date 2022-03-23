@@ -61,7 +61,6 @@ body {
       position: relative;
       display: flex;
       flex-direction: column;
-      padding:0;
       overflow:visible;
     }
     ul {
@@ -111,7 +110,7 @@ h1 {
   color:$dark;
   z-index: 8;
   @media (min-width:1200px){
-    font-size:46px;
+    font-size:48px;
   }
 }
 
@@ -120,7 +119,7 @@ h2 {
   margin-bottom: 20px;
   font-size: 26px;
   @media (min-width:992px){
-    font-size:40px;
+    font-size:42px;
   }
 }
 
@@ -321,11 +320,8 @@ svg{
   }
 }
 
-div.socials{
-  list-style: none;
-  display: flex; 
-  padding-left: 0;
-  justify-content: center;
+div{
+  ul.socials{padding: 0; list-style: none; display: flex; margin: 0;}
   i{color:$main; padding:0 10px}
   li{padding: 0;}
   i:hover,
@@ -362,16 +358,57 @@ div.socials{
 }
 
 
-///////////navigation///////////
-
-.standard.hero{
-  margin-bottom: 20px;
+.large-text{
+  padding: $md 0;
   min-height: 100vh;
   display: flex;
+  justify-content: center;
+  @include gradient(top,$grad1);
+  .row > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p{font-size:20px; text-align: center;}
+  p.large{
+    will-change: transform;
+    white-space:nowrap;
+    font-size: 18vw;
+    line-height: 1;
+    color:$main;
+    position: relative;
+    &:after{
+      content:'';
+      width: 100%;
+      height: 4px;
+      background-color: $main;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+  figure{
+   padding:$sm
+  }
+}
+
+
+.social{
+  .row > div{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:4px solid $main;
+    align-items: center;
+  }
+}
+///////////////////////////////
+
+.standard.hero{
+  @include gradient(bottom,$grad1);
+  display: flex;
   align-items: center;
-  .row{  
-    padding: 100px $sm $sm;
-    
+  .row{   
+   padding-bottom: $md;
     .visual{
       .bg-img-hero{
         @include bg-img(url("../img/bg-01.jpg"), 45% 100%, cover);
@@ -387,7 +424,7 @@ div.socials{
       }
     }
     .content{
-      padding:$sm;
+      padding:$sm ;
       .row{
         padding:$sm ;
         justify-content: center;
@@ -430,7 +467,6 @@ div.socials{
 
     }
     @media (min-width:768px){
-      padding-top: 140px;
       .visual{
         .bg-img-hero{
           height: 90%;
@@ -441,76 +477,15 @@ div.socials{
         }
       }
     }
-    @media (min-width:992px){
-      padding: $xl $sm $sm;
-    }
-    @media (min-width:1440px){
-      padding: $md $sm $sm;
-    }
   }
 }
 
-.about{
-  figure.flowers{
-    width: 20%;
-    top: 0px;
-    right:0;
-  }
-  .row{
-    padding:$md $sm;
-    align-items: center;
-    .content{
-      > div{
-        padding:$md $md 0;
-      }
 
-    }
-
-    > div:last-of-type{
-      padding:$md;
-      flex-direction: column-reverse;
-      > div{
-        padding:$md;
-        padding-left: $lg;
-      }
-      @media (min-width:992px){
-        flex-direction: column;
-      }
-    }
-
-    figure.arch{
-      padding: 20px;   
-      max-width: 350px;
-    }
-
-    .drawText{
-      fill:$flowers
-    }
-
-    p,h3,h2{
-      text-align: center;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .btn-wrap{
-      text-align: center;
-    }
-    @media (min-width:992px){
-      p,h3,h2{
-        text-align: left;
-      }
-      .btn-wrap{
-        text-align: left;
-      }
-    }
- 
-  }
-}
 
 .slider{
   position: relative;
   .wrapper{
-    transform: scale(0.85);
+    transform: scale(0.90);
     transition: all 0.3s ease-in-out;
     display: flex;
     flex-wrap: nowrap;
@@ -543,21 +518,31 @@ div.socials{
         background-color: $main-dark;
       }
       figure{
-        justify-content: center;
-        display: flex;
-        height: 100%;
-
-        &.arch,
-        &.logo-figure{
-          svg{
-            max-width: 70%;
+          justify-content: center;
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          align-items: center;
+          &.arch,          
+          &.logo-figure{
+            svg{
+              max-height: 60%;
+            }
           }
-        }
+          h3{
+            color:$white;
+          }
+          a{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
       }
     }  
     @media (min-width:992px){width:50%} 
     @media (min-width:1366px){width:calc(33.333% + 20px)} 
-  }
+    }
   } 
 
   &.touch{
@@ -611,23 +596,75 @@ div.socials{
       }
     }
   }
+  /////gsap transition
+  &.is-active{
+    .wrapper{
+      margin-top: 60px;
+      transform: scale(1);
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+    .content{
+      height:95% !important;
+    }
+  }
 }
 
-/////aka .slide .wrapper
-.slider.is-active{
-  .wrapper{
-    margin-top: 60px;
-    transform: scale(1);
-    width: 100%;
-    transition: all 0.3s ease-in-out;
+
+
+
+.about{
+  @include gradient(top,$grad1);
+  figure.flowers{
+    width: 20%;
+    top: 0px;
+    right:0;
   }
-  .content{
-    height:95% !important;
+  .row{
+    padding:$md $sm $sm;
+    align-items: center;
+    .content{
+      padding:$sm;
+    }
+    .content:last-of-type{
+      flex-direction: column-reverse;
+      div{
+        max-width: 400px;
+        margin: 40px auto;
+      }
+      @media (min-width:992px){
+        flex-direction: column;
+      }
+    }
+    figure.arch{
+      margin-bottom: 40px;   
+      max-width: 400px;
+    }
+
+    .drawText{
+      fill:$flowers
+    }
+
+    p,h3,h2{
+      text-align: center;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .btn-wrap{
+      text-align: center;
+    }
+    @media (min-width:992px){
+      p,h3,h2{
+        text-align: left;
+      }
+      .btn-wrap{
+        text-align: left;
+      }
+    }
+ 
   }
 }
-
 .dates{
-  // @include gradient(bottom, $grad1);
   overflow:hidden; 
   div[class^="container"]{ 
       
@@ -640,16 +677,16 @@ div.socials{
       h3{
         margin-top: 0;
         margin-bottom: 10px;
+        color:$flowers
       }
       .logo-figure{
         justify-content: flex-end;
-        background-color: $light;
+        background-color: $main;
         align-items: flex-end;
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;
         max-width: 400px;
         margin: 0 auto;
-        box-shadow: $shadow-inset;
         figure:first-of-type{ 
           margin: 0 auto;
           display:none;
@@ -666,16 +703,17 @@ div.socials{
         }
       }
       .content{
-        padding: $md;
-        @media (min-width:768px){
-          padding: $sm  0 0 $sm;
-        }
-        @media (min-width:1200px){
-          padding: $sm $sm 0 ;
-        }
+        padding: $sm 0;
+        // @media (min-width:768px){
+        //   padding: $sm  0 0 $sm;
+        // }
+        // @media (min-width:1200px){
+        //   padding: $sm $sm 0 ;
+        // }
         justify-content: flex-end;
         .text{
-          max-width: 350px;
+          max-width: 300px;
+          margin-bottom: 30px;
           a{
             p,i{
               @include transition();
@@ -707,6 +745,7 @@ div.socials{
 }
 
 .cta{
+  @include gradient(top,$grad1);
   .row{
     overflow:visible;
     padding: $md $sm;
@@ -767,9 +806,8 @@ div.socials{
 
 footer{
   // width: 100%;
-  border-top: 1px solid $light;
+  border-top: 4px solid $main;
   padding:10px 40px;
-  margin: 0 40px;
   div{
     text-align: right;
     a{
@@ -793,22 +831,21 @@ footer{
   top:0;
   left:0;
   z-index: 10;
+  opacity: 0;
   @include transition();
   .container-fluid {
-    padding: 10px 10px;
+    padding: 10px 10px;    
     a.navbar-brand {
       width: 230px;
-      height: 80px;
+      height: 60px;
       position: relative;
       padding: 0;
       display: flex;
       align-items: center;
-      @include transition(height);
       figure{
         position: relative; 
         margin:0;
         overflow:visible;
-        // width: 100%;
         height: 100%;
         svg {
           overflow:visible;
@@ -917,14 +954,9 @@ footer{
   }
 
   &.nav--scrolled {
-    // background-color: #fafafa;
-    // background-image: url("../img/background-texture.png");
+    opacity: 1;
     @include transition();
     box-shadow: $shadow;
-    // a.navbar-brand{
-    //   transform:scale(0.8);
-    //   @include transition();
-    // }
   }
 }
 
