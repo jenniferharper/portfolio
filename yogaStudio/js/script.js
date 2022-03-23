@@ -80,10 +80,11 @@ ScrollTrigger.matchMedia({
     var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
 
     if(!isTouch) {
-    /////-- Non touch ---//////
-    $( ".slider" ).removeClass( "touch" )
-      console.log('non tablet/mobile')
-      ///marquee text
+    console.log('non tablet/mobile')
+    /////-- Non touch ---//////  
+
+
+      ///---------------marquee text
       var element = $('.marquee__part p');
       for (var i = 0; i < 3; i++) {
           element.parent().append(element.clone());
@@ -95,7 +96,8 @@ ScrollTrigger.matchMedia({
       marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
 
-      ////////// slider
+      ////----------------------slider
+      $( ".slider" ).removeClass( "touch" )
       var container = $('.slider .wrapper');
       var boxes = document.querySelectorAll('.section');
 
@@ -110,7 +112,6 @@ ScrollTrigger.matchMedia({
           pin: true,
           toggleClass: "is-active",
           refreshPriority: 1,
-          // markers:true
           ease:'none'
         }
       });
@@ -135,14 +136,19 @@ ScrollTrigger.matchMedia({
         }
       });
 
-    } else {
 
+      ////----------------------- end non touch----------------------- ////
+
+    } else {
+    ///-- Touch ---//////
     console.log('tablet/mobile')
+
+    ////---------------deactivate slider
     $( ".slider" ).addClass( "touch" )
 
-    ///-- Touch ---//////
+    
 
-    ///marquee text
+    ////---------------marquee text
     var element = $('.marquee__part p');
       for (var i = 0; i < 2; i++) {
           element.parent().append(element.clone());

@@ -46,22 +46,17 @@ body {
       flex-direction: column;
       padding: 0;
       overflow: visible; }
-      .standard .row > div:not(.btn-wrap).content {
-        padding: 0; }
-        @media (min-width: 992px) {
-          .standard .row > div:not(.btn-wrap).content {
-            padding: 4%; } }
-        .standard .row > div:not(.btn-wrap).content ul {
-          list-style: none;
-          margin-bottom: 0;
-          padding-left: 40px;
-          padding-right: 0px; }
-          .standard .row > div:not(.btn-wrap).content ul li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 10px; }
-            .standard .row > div:not(.btn-wrap).content ul li:last-of-type {
-              margin-bottom: 0; }
+    .standard .row ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 40px;
+      padding-right: 0px; }
+      .standard .row ul li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 10px; }
+        .standard .row ul li:last-of-type {
+          margin-bottom: 0; }
 
 span.detail {
   color: #e49806;
@@ -83,13 +78,9 @@ h1 {
   margin-bottom: 40px;
   color: #011147;
   z-index: 8; }
-  h1 span.detail {
-    font-size: 30px; }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 46px; }
-      h1 span.detail {
-        font-size: 50px; } }
+      font-size: 46px; } }
 
 h2 {
   color: #424e78;
@@ -97,16 +88,12 @@ h2 {
   font-size: 26px; }
   @media (min-width: 992px) {
     h2 {
-      font-size: 35px; } }
-  h2 span.detail {
-    font-size: 30px; }
+      font-size: 40px; } }
 
 h3 {
   font-size: 25px;
   margin: 20px 0;
   color: #424e78; }
-  h3 span.detail {
-    font-size: 22px; }
 
 p, p span, p a, a, ul, li {
   font-family: "Marcellus", serif;
@@ -221,6 +208,11 @@ svg {
     fill: #e49806;
     filter: drop-shadow(30px -10px 60px rgba(228, 152, 6, 0.3)); }
 
+figure.flowers {
+  position: absolute; }
+  figure.flowers svg {
+    fill: #CA9E67; }
+
 svg .light {
   fill: #d8d1c3; }
 svg .main {
@@ -234,7 +226,7 @@ svg .main {
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     border-left: 1px solid #424e78;
-    color: #c52800;
+    color: #CA9E67;
     font-size: 20px;
     padding: 8px 20px; }
     .btn-wrap a i {
@@ -287,7 +279,10 @@ div.socials {
         color: #424e78; }
 
 .standard.hero {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; }
   .standard.hero .row {
     padding: 100px 4% 4%; }
     .standard.hero .row .visual .bg-img-hero {
@@ -297,44 +292,49 @@ div.socials {
       background-size: cover;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
-      box-shadow: -40px 40px 60px rgba(228, 152, 6, 0.2);
+      box-shadow: 40px 40px 60px rgba(228, 152, 6, 0.1);
       height: 90%;
       min-height: 50vh;
       width: 75%;
       max-width: 400px;
       margin: 0 auto; }
-    .standard.hero .row .content .row {
-      padding: 4%;
-      justify-content: center; }
-      .standard.hero .row .content .row .preamble {
-        justify-content: center;
-        margin-bottom: 40px; }
-      .standard.hero .row .content .row .small-branding {
-        justify-content: flex-end;
-        max-width: 100px;
-        margin: 0 auto; }
-      .standard.hero .row .content .row h1, .standard.hero .row .content .row .preamble, .standard.hero .row .content .row .btn-wrap {
-        text-align: center; }
-      @media (min-width: 768px) {
-        .standard.hero .row .content .row .small-branding {
-          max-width: 200px; }
+    .standard.hero .row .content {
+      padding: 4%; }
+      .standard.hero .row .content .row {
+        padding: 4%;
+        justify-content: center; }
         .standard.hero .row .content .row .preamble {
-          padding: 20px;
-          margin-bottom: 0px; }
-        .standard.hero .row .content .row .preamble, .standard.hero .row .content .row .btn-wrap {
-          text-align: left; } }
-      @media (min-width: 992px) {
-        .standard.hero .row .content .row h1 {
-          text-align: left; } }
+          justify-content: center;
+          margin-bottom: 40px; }
+        .standard.hero .row .content .row .small-branding {
+          justify-content: flex-end;
+          max-width: 100px;
+          margin: 0 auto; }
+          .standard.hero .row .content .row .small-branding figure.flowers {
+            width: 90%;
+            bottom: 0;
+            left: -40%; }
+        .standard.hero .row .content .row h1, .standard.hero .row .content .row .preamble, .standard.hero .row .content .row .btn-wrap {
+          text-align: center; }
+        @media (min-width: 768px) {
+          .standard.hero .row .content .row .small-branding {
+            max-width: 200px; }
+          .standard.hero .row .content .row .preamble {
+            padding: 20px;
+            margin-bottom: 0px; }
+          .standard.hero .row .content .row .preamble, .standard.hero .row .content .row .btn-wrap {
+            text-align: left; } }
+        @media (min-width: 992px) {
+          .standard.hero .row .content .row h1 {
+            text-align: left; } }
     @media (min-width: 768px) {
       .standard.hero .row {
         padding-top: 140px; }
         .standard.hero .row .visual .bg-img-hero {
-          height: 100%;
-          min-height: 50vh;
+          height: 90%;
           width: 100%;
           max-width: 450px;
-          margin: 0 auto; } }
+          margin: 5% auto; } }
     @media (min-width: 992px) {
       .standard.hero .row {
         padding: 12% 4% 4%; } }
@@ -342,8 +342,12 @@ div.socials {
       .standard.hero .row {
         padding: 8% 4% 4%; } }
 
+.about figure.flowers {
+  width: 20%;
+  top: 0px;
+  right: 0; }
 .about .row {
-  padding: 0 4%;
+  padding: 8% 4%;
   align-items: center; }
   .about .row .content > div {
     padding: 8% 8% 0; }
@@ -351,12 +355,16 @@ div.socials {
     padding: 8%;
     flex-direction: column-reverse; }
     .about .row > div:last-of-type > div {
-      padding: 8%; }
+      padding: 8%;
+      padding-left: 10%; }
     @media (min-width: 992px) {
       .about .row > div:last-of-type {
         flex-direction: column; } }
   .about .row figure.arch {
-    padding: 20px; }
+    padding: 20px;
+    max-width: 350px; }
+  .about .row .drawText {
+    fill: #CA9E67; }
   .about .row p, .about .row h3, .about .row h2 {
     text-align: center;
     margin-left: auto;

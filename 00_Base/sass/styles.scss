@@ -1,0 +1,229 @@
+// Import all the partial files
+@import "variables";
+@import "mixins";
+@import url("https://d2ta2fpo91apla.cloudfront.net/fontawesome-free-5.9.0-web/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Noto+Serif+Display:wght@200;400;700&display=swap');
+/////---------- Structure Elements
+
+
+
+
+html{
+  overflow-x:hidden;
+  overflow: scroll;
+}
+body {
+  position: relative;  
+  height: 100%;
+  margin: 0;
+  max-width:2000px;
+  overflow-x:hidden;
+  margin:50px;
+}
+
+
+div[class^="container"]{
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow:visible;
+  @media (max-width:1024px){
+    max-width: unset;
+  }
+}
+
+
+.standard {
+  position: relative;
+  &.dark{
+    background-color: $dark;
+    h2,  h3,  h4,  h5,  h6,
+    p, p span,  p a,  a,  ul,  li {
+      color:$white;
+    }
+    & a:hover {
+      color: $main-light;
+    }
+
+  }
+  .row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin:0;
+    > div:not(.btn-wrap) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding:0;
+      overflow:visible;
+      &.content{
+        padding: 0;
+        @media (min-width:992px){
+          padding:$sm;
+        }
+        ul {
+          list-style: none;
+          margin-bottom: 0;
+          padding-left: 40px;
+          padding-right: 0px;
+      
+          li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//////---------- Type Elements
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $header-font;
+  font-weight: 100;
+  margin-top: 0;
+  position: relative;
+}
+
+
+
+h1 {
+  font-size:32px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  color:$dark;
+  z-index: 8;
+  span.detail{
+    font-size: 30px;
+  }
+  @media (min-width:1200px){
+    font-size:46px;
+    span.detail{
+      font-size: 50px;
+    }
+  }
+}
+
+h2 {
+  color:$main;
+  margin-bottom: 20px;
+  font-size: 26px;
+  @media (min-width:992px){
+    font-size:35px;
+  }
+  span.detail{
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  margin: 20px 0;
+  color:$main;
+  span.detail{
+    font-size: 22px;
+  }
+}
+
+
+
+p,p span,p a,a,ul,li {
+  font-family: $body-font;
+  position: relative;
+  z-index: 1;
+  line-height: 1.7em;
+  color:$dark;
+  font-size: 16px;
+}
+
+a { text-decoration: none;}
+a:hover {
+  text-decoration: none;
+  color: $main-light;
+}
+
+
+
+////---------- Image elements
+.responsive-img img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  svg{
+    width: 100%;
+    z-index: 1;
+  }
+}
+svg {
+    overflow: visible !important;
+  }
+
+.media-box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+  }
+}
+
+.bg-img {
+  height:100%;
+  min-height: 50vh;
+  width:100%;
+  @media (min-width: 1024px) {
+    min-height: 70vh;
+  }
+  @media (min-height: 1025px) {
+    min-height: 40vh;
+  }
+  @include bg-img(url("../img/placeholder.jpg"), 50%, 0);
+}
+
+////---------- Pseudo elements
+.before::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.after::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+///////////////////////////////////
+

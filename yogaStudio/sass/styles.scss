@@ -63,25 +63,19 @@ body {
       flex-direction: column;
       padding:0;
       overflow:visible;
-      &.content{
-        padding: 0;
-        @media (min-width:992px){
-          padding:$sm;
-        }
-        ul {
-          list-style: none;
+    }
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 40px;
+      padding-right: 0px;
+  
+      li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 10px;
+        &:last-of-type {
           margin-bottom: 0;
-          padding-left: 40px;
-          padding-right: 0px;
-      
-          li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 10px;
-            &:last-of-type {
-              margin-bottom: 0;
-            }
-          }
         }
       }
     }
@@ -116,14 +110,8 @@ h1 {
   margin-bottom: 40px;
   color:$dark;
   z-index: 8;
-  span.detail{
-    font-size: 30px;
-  }
   @media (min-width:1200px){
     font-size:46px;
-    span.detail{
-      font-size: 50px;
-    }
   }
 }
 
@@ -132,10 +120,7 @@ h2 {
   margin-bottom: 20px;
   font-size: 26px;
   @media (min-width:992px){
-    font-size:35px;
-  }
-  span.detail{
-    font-size: 30px;
+    font-size:40px;
   }
 }
 
@@ -143,9 +128,6 @@ h3 {
   font-size: 25px;
   margin: 20px 0;
   color:$main;
-  span.detail{
-    font-size: 22px;
-  }
 }
 
 
@@ -292,7 +274,12 @@ svg {
   }
 }
 
-
+figure.flowers{
+  position:absolute;
+  svg{
+    fill:$flowers
+  }
+}
 
 
 //// logo figure colors
@@ -314,7 +301,7 @@ svg{
   a{
     @include transition;
     border-left:1px solid $main;
-    color:$secondary-dark;
+    color:$flowers;
     font-size: 20px;
     padding:8px 20px;
     i{
@@ -379,15 +366,19 @@ div.socials{
 
 .standard.hero{
   margin-bottom: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   .row{  
     padding: 100px $sm $sm;
+    
     .visual{
       .bg-img-hero{
         @include bg-img(url("../img/bg-01.jpg"), 45% 100%, cover);
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;
         // border-bottom-right-radius: 200px;
-        box-shadow: -40px 40px 60px rgba(228, 152, 6,0.2);
+        box-shadow: 40px 40px 60px rgba(228, 152, 6,0.1);
         height: 90%;
         min-height: 50vh;
         width: 75%;
@@ -396,8 +387,9 @@ div.socials{
       }
     }
     .content{
+      padding:$sm;
       .row{
-        padding:$sm;
+        padding:$sm ;
         justify-content: center;
         .preamble{
           justify-content: center;
@@ -407,6 +399,12 @@ div.socials{
           justify-content: flex-end;
           max-width: 100px;
           margin: 0 auto;
+          figure.flowers{
+            width: 90%;
+            bottom: 0;
+            left: -40%;
+            // transform-origin: 50% 100%;
+          }
         }
         h1,.preamble, .btn-wrap{
           text-align: center;
@@ -435,11 +433,11 @@ div.socials{
       padding-top: 140px;
       .visual{
         .bg-img-hero{
-          height: 100%;
-          min-height: 50vh;
+          height: 90%;
+          // min-height: 50vh;
           width: 100%;
           max-width: 450px;
-          margin: 0 auto;
+          margin: 5% auto;
         }
       }
     }
@@ -453,9 +451,13 @@ div.socials{
 }
 
 .about{
-  // @include gradient(top, $grad1);
+  figure.flowers{
+    width: 20%;
+    top: 0px;
+    right:0;
+  }
   .row{
-    padding:0 $sm;
+    padding:$md $sm;
     align-items: center;
     .content{
       > div{
@@ -469,6 +471,7 @@ div.socials{
       flex-direction: column-reverse;
       > div{
         padding:$md;
+        padding-left: $lg;
       }
       @media (min-width:992px){
         flex-direction: column;
@@ -476,8 +479,14 @@ div.socials{
     }
 
     figure.arch{
-      padding: 20px;
+      padding: 20px;   
+      max-width: 350px;
     }
+
+    .drawText{
+      fill:$flowers
+    }
+
     p,h3,h2{
       text-align: center;
       margin-left:auto;
@@ -908,11 +917,13 @@ footer{
   }
 
   &.nav--scrolled {
+    // background-color: #fafafa;
+    // background-image: url("../img/background-texture.png");
     @include transition();
     box-shadow: $shadow;
     // a.navbar-brand{
-    //   height:60px;
-    //   @include transition(height);
+    //   transform:scale(0.8);
+    //   @include transition();
     // }
   }
 }
