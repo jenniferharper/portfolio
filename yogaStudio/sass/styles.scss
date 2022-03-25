@@ -2,8 +2,8 @@
 @import "variables";
 @import "mixins";
 @import url("https://d2ta2fpo91apla.cloudfront.net/fontawesome-free-5.9.0-web/css/all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Meddon&family=Marcellus&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
 /////---------- Structure Elements
 
 html,
@@ -82,17 +82,6 @@ body {
 }
 
 //////---------- Type Elements
-span.detail{
-  color:$secondary;
-  font-family: $variable; 
-  white-space: nowrap;  
-} 
-
-h2 span.detail{
-  font-size:30px
-}
-
-
 
 h1,h2,h3,h4,h5,h6 {
   font-family: $header-font;
@@ -110,7 +99,7 @@ h1 {
   color:$dark;
   z-index: 8;
   @media (min-width:1200px){
-    font-size:48px;
+    font-size:46px;
   }
 }
 
@@ -119,12 +108,13 @@ h2 {
   margin-bottom: 20px;
   font-size: 26px;
   @media (min-width:992px){
-    font-size:42px;
+    font-size:40px;
   }
 }
 
 h3 {
-  font-size: 25px;
+  font-family: $variable;
+  font-size: 30px;
   margin: 20px 0;
   color:$main;
 }
@@ -285,10 +275,12 @@ figure.flowers{
 svg{
   .light{
     fill:$light;
+    transition: fill 0.3s ease-in-out
   }
   .main{
     stroke:none;
-    fill:$main
+    fill:$main;
+    transition: fill 0.3s ease-in-out
   }
 }
 //////////////
@@ -359,16 +351,20 @@ div{
 
 
 .large-text{
-  padding: $md 0;
-  min-height: 100vh;
+  padding: $md $md;
   display: flex;
   justify-content: center;
+  flex-direction:row-reverse;
+  min-height: 100vh;
+  max-height: 1024px;
+  align-items: center;
   @include gradient(top,$grad1);
   .row > div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding:0 $sm; 
+    flex-direction: column-reverse;
+    display: flex;   
   }
+
   p{font-size:20px; text-align: center;}
   p.large{
     will-change: transform;
@@ -388,17 +384,48 @@ div{
     }
   }
   figure{
-   padding:$sm
+   padding:$sm $sm $sm 0;
+   max-width: 450px;
+   margin: 0 auto;
+   min-width: 300px;
   }
+
+  @media (min-width:992px){
+    padding: $md $sm;
+    .row > div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+    figure.logo-figure{
+      max-width: 600px;
+    }
+  }
+  // for ipad pro
+  @media (min-height:1366px) and (max-height:1367px){
+    min-height: 40vh;
+  }
+
+
 }
 
 
 .social{
+  padding: 0 $sm;
   .row > div{
     display: flex;
-    justify-content: space-between;
-    border-bottom:4px solid $main;
+    justify-content: space-between;    
     align-items: center;
+    position: relative;
+    &::after{
+      border-bottom:4px solid $main;
+      content:'';
+      width: calc(100% - 40px);
+      bottom: 0;
+      left: 20px;
+      position: absolute;
+    }
   }
 }
 ///////////////////////////////
@@ -408,23 +435,34 @@ div{
   display: flex;
   align-items: center;
   .row{   
-   padding-bottom: $md;
+   padding: 0 $sm $md;
+
     .visual{
       .bg-img-hero{
         @include bg-img(url("../img/bg-01.jpg"), 45% 100%, cover);
-        border-top-left-radius: 200px;
-        border-top-right-radius: 200px;
-        // border-bottom-right-radius: 200px;
+        border-top-left-radius: 400px;
+        border-top-right-radius: 400px;
         box-shadow: 40px 40px 60px rgba(228, 152, 6,0.1);
-        height: 90%;
-        min-height: 50vh;
-        width: 75%;
-        max-width: 400px;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
+      }  
+      @media (min-width:768px){
+          min-height: 70vh;
       }
+      @media (min-width:992px){
+        min-height: auto;
+        .bg-img-hero{
+          height: 90%;
+          margin: 5% auto;
+        }
+      }  
     }
+
     .content{
-      padding:$sm ;
+      padding:$sm;
+      padding-left: 0;
       .row{
         padding:$sm ;
         justify-content: center;
@@ -435,7 +473,7 @@ div{
         .small-branding{
           justify-content: flex-end;
           max-width: 100px;
-          margin: 0 auto;
+          margin: 0 auto 20px;
           figure.flowers{
             width: 90%;
             bottom: 0;
@@ -466,17 +504,7 @@ div{
       }
 
     }
-    @media (min-width:768px){
-      .visual{
-        .bg-img-hero{
-          height: 90%;
-          // min-height: 50vh;
-          width: 100%;
-          max-width: 450px;
-          margin: 5% auto;
-        }
-      }
-    }
+
   }
 }
 
@@ -512,10 +540,19 @@ div{
       align-items: center;
       width: 100%;
       &.bg{
-        background-color: $main;        
+        background-color: $main;  
+        &:hover{
+          background-color: $light; 
+          figure svg .light{fill:$white; transition: fill 0.3s ease-in-out}
+          h3{color: $dark;} 
+        }      
       }
       &.bg.dark{
         background-color: $main-dark;
+        &:hover{
+          background-color: $light;  
+          h3{color: $dark;} 
+        } 
       }
       figure{
           justify-content: center;
@@ -538,6 +575,7 @@ div{
             flex-direction: column;
             justify-content: center;
           }
+
       }
     }  
     @media (min-width:992px){width:50%} 
@@ -555,8 +593,21 @@ div{
         margin: 10px;
         height: auto;
         .content{
-          height: 60vh;
           margin: 0;
+          &.bg{
+            min-height: 100vh;
+          }
+          .media-box{
+            min-height: 50vh;
+          }
+
+          @media (min-width:768px){
+            .media-box,
+            &.bg{
+              min-height: 0;
+            }
+          }
+
         }
 
         @media (min-width:768px){
@@ -565,10 +616,10 @@ div{
           height: auto;
 
           &:nth-of-type(1){
-            order: 2;
+            order: 1;
           }
           &:nth-of-type(2){
-            order: 1;
+            order: 2;
           }
           &:nth-of-type(3){
             order: 3;
@@ -583,10 +634,7 @@ div{
             order: 4;
           }
 
-          &:last-of-type{
-            order: 7;
-            width: 100vw;
-          }
+
         }
 
         @media (min-width:1366px){
@@ -621,23 +669,25 @@ div{
     right:0;
   }
   .row{
-    padding:$md $sm $sm;
+    padding:$md $sm;
     align-items: center;
     .content{
       padding:$sm;
     }
     .content:last-of-type{
       flex-direction: column-reverse;
+      margin-bottom: 40px;
       div{
-        max-width: 400px;
-        margin: 40px auto;
+        max-width: 350px;
+        margin: 20px auto;
       }
       @media (min-width:992px){
         flex-direction: column;
+        margin-bottom: 00px;
       }
     }
     figure.arch{
-      margin-bottom: 40px;   
+      // margin-bottom: 40px;   
       max-width: 400px;
     }
 
@@ -681,20 +731,13 @@ div{
       }
       .logo-figure{
         justify-content: flex-end;
-        background-color: $main;
+        background-color: $main-light;
         align-items: flex-end;
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;
         max-width: 400px;
         margin: 0 auto;
-        figure:first-of-type{ 
-          margin: 0 auto;
-          display:none;
-          svg{transform:rotate(90deg)}
-          @media(min-width:576px) and (max-width:991px){
-            display: block;
-          }
-        }
+        padding: 40px 20px;
         figure{
           max-width: 90%;          
           @media(min-width:992px){
@@ -703,14 +746,10 @@ div{
         }
       }
       .content{
-        padding: $sm 0;
-        // @media (min-width:768px){
-        //   padding: $sm  0 0 $sm;
-        // }
-        // @media (min-width:1200px){
-        //   padding: $sm $sm 0 ;
-        // }
+        padding: $sm ;
         justify-content: flex-end;
+        text-align: center;
+        align-items: center;
         .text{
           max-width: 300px;
           margin-bottom: 30px;
@@ -738,7 +777,10 @@ div{
             }
           }
         }
-
+        @media (min-width:992px){
+          align-items: flex-start;
+          text-align: left;
+        }
       }
     }
   }
@@ -768,6 +810,7 @@ div{
     ul.socials{
       display: flex;
       justify-content:center;
+      padding-left: 0;
       li{
         padding: 0 10px ;
         a{
@@ -804,20 +847,6 @@ div{
   }
 }
 
-footer{
-  // width: 100%;
-  border-top: 4px solid $main;
-  padding:10px 40px;
-  div{
-    text-align: right;
-    a{
-      color:$main;
-      &:hover{
-        color:$secondary
-      }
-    }
-  }
-}
 
 .navbar {
   margin: 0 auto;
@@ -834,9 +863,9 @@ footer{
   opacity: 0;
   @include transition();
   .container-fluid {
-    padding: 10px 10px;    
+    padding: 10px 40px;    
     a.navbar-brand {
-      width: 230px;
+      // width: 230px;
       height: 60px;
       position: relative;
       padding: 0;
@@ -880,7 +909,7 @@ footer{
         margin-left:10px;
       }
       @media (min-width:992px){
-        width: 320px;
+        // width: 320px;
         p{font-size: 28px;}
       }
     }
@@ -911,7 +940,7 @@ footer{
       margin-top: -1px;
       transition: all 0.5s ease-in-out;
       ul.navbar-nav {
-        padding: 0px 20px;
+        padding: 0px 0px;
         text-align: center;
         display: flex;
         justify-content: center;

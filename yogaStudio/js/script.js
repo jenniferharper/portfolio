@@ -76,14 +76,6 @@ ScrollTrigger.matchMedia({
     heroPan.to('.bg-img-hero', { backgroundPosition:'90% 100%', duration:15, ease:'none'})
 
 
-    ///// -------------Touch or non touch devices -------------------------/////
-    var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
-
-    if(!isTouch) {
-    console.log('non tablet/mobile')
-    /////-- Non touch ---//////  
-
-
       ///---------------marquee text
       var element = $('.marquee__part p');
       for (var i = 0; i < 3; i++) {
@@ -92,9 +84,18 @@ ScrollTrigger.matchMedia({
       gsap.set(".marquee__inner", {xPercent: -50}); 
 
       var mrq = gsap.utils.toArray(".marquee__part p");
-      let marquee = gsap.timeline( {repeat: 100, yoyo: true} );
+      let marquee = gsap.timeline( {repeat: -1, yoyo: true} );
       marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
+
+
+
+    ///// -------------Touch or non touch devices -------------------------/////
+    var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
+
+    if(!isTouch) {
+    console.log('non tablet/mobile')
+      /////-- This is for non touch/desktop etc ---////// 
 
       ////----------------------slider
       $( ".slider" ).removeClass( "touch" )
@@ -140,52 +141,16 @@ ScrollTrigger.matchMedia({
       ////----------------------- end non touch----------------------- ////
 
     } else {
-    ///-- Touch ---//////
-    console.log('tablet/mobile')
+      ///-- This is for touch devices ---//////
+      console.log('tablet/mobile')
 
-    ////---------------deactivate slider
-    $( ".slider" ).addClass( "touch" )
+      ////---------------deactivate slider
+      $( ".slider" ).addClass( "touch" ); 
 
-    
 
-    ////---------------marquee text
-    var element = $('.marquee__part p');
-      for (var i = 0; i < 2; i++) {
-          element.parent().append(element.clone());
-      }  
-
-      gsap.set(".marquee__inner", {xPercent: -25}); 
-      const sections = document.querySelectorAll('.marquee__part p');
-      sections.forEach((section) => {
-        gsap.to(section, {
-          xPercent: -25, 
-          duration: 5, 
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top bottom",
-            scrub:0.5,
-          }
-        }); 
-      })
     }
 
-    ////// horizontal slider
-
-
-        // gsap.from('.slider .section .content', {
-        //   height:0, 
-        //   // stagger:0.05,
-        //   ease: "none",
-        //   scrollTrigger: {
-        //     trigger: '.slider',
-        //     start: "top bottom",
-        //     // scrub:0.5
-        //   }
-        // }); 
-
-
-    /////////////////////////////////////////////////////////////////////////////////////// 
+   /////////////////////////////////////////////////////////////////////////////////////// 
   } // all end
 });
 
