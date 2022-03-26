@@ -535,7 +535,7 @@ div{
       flex-direction: column;
       justify-content: center;
       margin: 0px 10px;
-      height: calc(100% + 110px);
+      height: 100%;
       text-align: center;
       align-items: center;
       width: 100%;
@@ -594,9 +594,6 @@ div{
         height: auto;
         .content{
           margin: 0;
-          &.bg{
-            min-height: 100vh;
-          }
           .media-box{
             min-height: 50vh;
           }

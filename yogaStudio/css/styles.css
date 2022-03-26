@@ -427,7 +427,7 @@ div a:hover {
         flex-direction: column;
         justify-content: center;
         margin: 0px 10px;
-        height: calc(100% + 110px);
+        height: 100%;
         text-align: center;
         align-items: center;
         width: 100%; }
@@ -478,8 +478,6 @@ div a:hover {
         height: auto; }
         .slider.touch .wrapper .section .content {
           margin: 0; }
-          .slider.touch .wrapper .section .content.bg {
-            min-height: 100vh; }
           .slider.touch .wrapper .section .content .media-box {
             min-height: 50vh; }
           @media (min-width: 768px) {
