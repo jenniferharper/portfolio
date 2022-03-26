@@ -142,7 +142,7 @@ ScrollTrigger.matchMedia({
 
     } else {
       ///-- This is for touch devices ---//////
-      alert('tablet/mobile')
+      console.log('tablet/mobile')
 
       ////---------------deactivate slider
       $( ".slider" ).addClass( "touch" ); 

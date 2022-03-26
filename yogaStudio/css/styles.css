@@ -11,7 +11,8 @@ body {
   width: 100%;
   max-width: 2000px;
   overflow-x: hidden;
-  background-color: #fafafa;
+  background-color: #f5efe3;
+  background-color: orange;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -137,21 +138,6 @@ figure {
 svg {
   overflow: visible !important; }
 
-.bg-img {
-  height: 100%;
-  min-height: 50vh;
-  width: 100%;
-  background-image: url("../img/placeholder.jpg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 0; }
-  @media (min-width: 1024px) {
-    .bg-img {
-      min-height: 70vh; } }
-  @media (min-height: 1025px) {
-    .bg-img {
-      min-height: 40vh; } }
-
 .before::before {
   content: "";
   position: absolute;
@@ -200,12 +186,6 @@ svg {
     z-index: -1;
     fill: #e49806;
     filter: drop-shadow(30px -10px 60px rgba(228, 152, 6, 0.3)); }
-  .arch .test {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -1; }
 
 figure.flowers {
   position: absolute; }
@@ -287,10 +267,10 @@ div a:hover {
   height: 100vh;
   max-height: 800px;
   align-items: center;
-  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: linear-gradient(top, transparent 0%, #d8d1c3 90%); }
+  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -o-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%); }
   .large-text .row > div {
     padding: 0 4%;
     flex-direction: column-reverse;
@@ -349,10 +329,10 @@ div a:hover {
       position: absolute; }
 
 .standard.hero {
-  background: -webkit-linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
-  background: -moz-linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
-  background: -o-linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
-  background: linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
+  background: -webkit-linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -moz-linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -o-linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
   display: flex;
   align-items: center; }
   .standard.hero .row {
@@ -484,22 +464,18 @@ div a:hover {
         height: unset; }
         .slider.touch .wrapper .section .content {
           margin: 0; }
-        @media (min-width: 768px) {
+          .slider.touch .wrapper .section .content.bg-img {
+            min-height: 100vh; }
+            @media (min-width: 992px) {
+              .slider.touch .wrapper .section .content.bg-img {
+                min-height: unset; } }
+        @media (min-width: 992px) {
           .slider.touch .wrapper .section {
-            order: 1;
-            width: calc(50% - 20px); }
-            .slider.touch .wrapper .section:nth-of-type(1) {
-              order: 1; }
-            .slider.touch .wrapper .section:nth-of-type(2) {
-              order: 2; }
-            .slider.touch .wrapper .section:nth-of-type(3) {
-              order: 3; }
-            .slider.touch .wrapper .section:nth-of-type(4) {
-              order: 6; }
-            .slider.touch .wrapper .section:nth-of-type(5) {
-              order: 5; }
-            .slider.touch .wrapper .section:nth-of-type(6) {
-              order: 4; } }
+            width: calc(50% - 20px);
+            margin: 10px; } }
+        @media (min-width: 1366px) {
+          .slider.touch .wrapper .section {
+            width: calc(33.333% + 20px); } }
         @media (min-width: 1366px) {
           .slider.touch .wrapper .section {
             width: calc(33.333% - 20px);
@@ -513,10 +489,10 @@ div a:hover {
     height: 95% !important; }
 
 .about {
-  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: linear-gradient(top, transparent 0%, #d8d1c3 90%); }
+  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -o-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%); }
   .about figure.flowers {
     width: 20%;
     top: 0px;
@@ -610,10 +586,10 @@ div a:hover {
           text-align: left; } }
 
 .cta {
-  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 90%);
-  background: linear-gradient(top, transparent 0%, #d8d1c3 90%); }
+  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -o-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%); }
   .cta .row {
     overflow: visible;
     padding: 8% 4%;
