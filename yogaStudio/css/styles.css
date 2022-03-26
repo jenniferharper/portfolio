@@ -12,6 +12,7 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
+  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -198,6 +199,9 @@ svg .main {
   stroke: none;
   fill: #424e78;
   transition: fill 0.3s ease-in-out; }
+
+.svg.height image {
+  height: 110%; }
 
 .btn-wrap {
   margin-top: 20px; }

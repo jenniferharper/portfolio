@@ -67,10 +67,10 @@ ScrollTrigger.matchMedia({
     //// text around arch/////
     gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
-    //// set image to center on masked images
-    // gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
-    //   attr:{ x:'-50%' },
-    // })
+    // set image to center on masked images
+    gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
+      attr:{ x:'-50%' },
+    })
 
     let heroPan = gsap.timeline({repeat:-1, yoyo:true,}); 
     heroPan.to('.bg-img-hero', { backgroundPosition:'90% 100%', duration:15, ease:'none'})
