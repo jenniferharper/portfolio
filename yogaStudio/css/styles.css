@@ -12,7 +12,6 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #fafafa;
-  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -475,11 +474,10 @@ div a:hover {
       flex-wrap: wrap; }
       .slider.touch .wrapper .section {
         width: calc(100% - 20px);
-        margin: 10px; }
+        margin: 10px;
+        height: unset; }
         .slider.touch .wrapper .section .content {
           margin: 0; }
-          .slider.touch .wrapper .section .content .media-box {
-            min-height: 50vh; }
         @media (min-width: 768px) {
           .slider.touch .wrapper .section {
             order: 1;

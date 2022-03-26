@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: #fafafa;
-  background-color: green;
+  // background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -585,12 +585,15 @@ div{
       .section { 
         width: calc(100% - 20px);
         margin: 10px;
-        // height: auto;
+        height: unset;
         .content{
           margin: 0;
-          .media-box{
-            min-height: 50vh;
-          }
+
+          // @media (max-width:768px){
+          //   .media-box{
+          //     min-height: 50vh;
+          //   }
+          // }
         }
 
         @media (min-width:768px){
