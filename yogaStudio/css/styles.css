@@ -12,7 +12,7 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #fafafa;
-  background-color: red;
+  background-color: #d8d1c3;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -453,8 +453,6 @@ div a:hover {
           height: 100%;
           flex-direction: column;
           align-items: center; }
-          .slider .wrapper .section .content figure.arch svg, .slider .wrapper .section .content figure.logo-figure svg {
-            max-height: 60%; }
           .slider .wrapper .section .content figure h3 {
             color: #fafafa; }
           .slider .wrapper .section .content figure a {

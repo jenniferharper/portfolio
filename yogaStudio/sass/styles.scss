@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: #fafafa;
-  background-color: red;
+  background-color: $light;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -560,12 +560,12 @@ div{
           height: 100%;
           flex-direction: column;
           align-items: center;
-          &.arch,          
-          &.logo-figure{
-            svg{
-              max-height: 60%;
-            }
-          }
+          // &.arch,          
+          // &.logo-figure{
+          //   svg{
+          //     max-height: 60%;
+          //   }
+          // }
           h3{
             color:$white;
           }
@@ -597,14 +597,6 @@ div{
           .media-box{
             min-height: 50vh;
           }
-
-          // @media (min-width:768px){
-          //   .media-box,
-          //   &.bg{
-          //     min-height: 0;
-          //   }
-          // }
-
         }
 
         @media (min-width:768px){
