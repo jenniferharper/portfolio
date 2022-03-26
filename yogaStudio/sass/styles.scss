@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: #fafafa;
-  background-color: blueviolet;
+  // background-color: blueviolet;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -260,6 +260,13 @@ svg {
     z-index: -1;
     fill:$secondary;
     filter: drop-shadow(30px -10px 60px rgba(228, 152, 6,0.3));
+  }
+  .test{
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top:0;
+    z-index: -1;
   }
 }
 
