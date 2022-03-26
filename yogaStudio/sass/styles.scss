@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: $lightest;
-  background-color: orange;
+  // background-color: orange;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -591,7 +591,10 @@ div{
           &.bg-img{
             min-height:100vh;
             @media (min-width:992px){
-              min-height: unset;
+              min-height:50vh;
+            }
+            @media (min-width:1240px){
+              min-height:60vh;
             }
           }
 

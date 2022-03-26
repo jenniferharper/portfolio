@@ -12,7 +12,6 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
-  background-color: orange;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -468,7 +467,10 @@ div a:hover {
             min-height: 100vh; }
             @media (min-width: 992px) {
               .slider.touch .wrapper .section .content.bg-img {
-                min-height: unset; } }
+                min-height: 50vh; } }
+            @media (min-width: 1240px) {
+              .slider.touch .wrapper .section .content.bg-img {
+                min-height: 60vh; } }
         @media (min-width: 992px) {
           .slider.touch .wrapper .section {
             width: calc(50% - 20px);
