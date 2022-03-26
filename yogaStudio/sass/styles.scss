@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: #fafafa;
-  background-color: $light;
+  background-color: pink;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -403,7 +403,7 @@ div{
     }
   }
   // for ipad pro
-  @media (min-height:1366px) and (max-height:1367px){
+  @media (min-height:1365px) and (max-height:1367px){
     min-height: 40vh;
   }
 
