@@ -12,7 +12,6 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
-  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -193,7 +192,7 @@ figure.flowers {
     fill: #CA9E67; }
 
 svg .light {
-  fill: #d8d1c3;
+  fill: rgba(216, 209, 195, 0.8);
   transition: fill 0.3s ease-in-out; }
 svg .main {
   stroke: none;
@@ -270,10 +269,10 @@ div a:hover {
   height: 100vh;
   max-height: 800px;
   align-items: center;
-  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -o-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .large-text .row > div {
     padding: 0 4%;
     flex-direction: column-reverse;
@@ -303,7 +302,7 @@ div a:hover {
     min-width: 300px; }
   @media (min-width: 992px) {
     .large-text {
-      max-height: 800px;
+      max-height: 700px;
       padding: 8% 4%; }
       .large-text .row > div {
         display: flex;
@@ -332,10 +331,10 @@ div a:hover {
       position: absolute; }
 
 .standard.hero {
-  background: -webkit-linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -moz-linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -o-linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: linear-gradient(bottom, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
+  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
   display: flex;
   align-items: center; }
   .standard.hero .row {
@@ -424,7 +423,7 @@ div a:hover {
         .slider .wrapper .section .content.bg {
           background-color: #424e78; }
           .slider .wrapper .section .content.bg:hover {
-            background-color: #d8d1c3; }
+            background-color: rgba(216, 209, 195, 0.8); }
             .slider .wrapper .section .content.bg:hover figure svg .light {
               fill: #fafafa;
               transition: fill 0.3s ease-in-out; }
@@ -433,7 +432,7 @@ div a:hover {
         .slider .wrapper .section .content.bg.dark {
           background-color: #64697a; }
           .slider .wrapper .section .content.bg.dark:hover {
-            background-color: #d8d1c3; }
+            background-color: rgba(216, 209, 195, 0.8); }
             .slider .wrapper .section .content.bg.dark:hover h3 {
               color: #011147; }
         .slider .wrapper .section .content figure {
@@ -495,10 +494,10 @@ div a:hover {
     height: 95% !important; }
 
 .about {
-  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -o-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .about figure.flowers {
     width: 20%;
     top: 0px;
@@ -592,10 +591,10 @@ div a:hover {
           text-align: left; } }
 
 .cta {
-  background: -webkit-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -moz-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: -o-linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%);
-  background: linear-gradient(top, transparent 0%, #f5efe3 33.33%, #d8d1c3 90%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .cta .row {
     overflow: visible;
     padding: 8% 4%;

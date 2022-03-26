@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: $lightest;
-  background-color: green;
+  // background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -38,6 +38,7 @@ body {
 
 
 .standard {
+
   position: relative;
   &.dark{
     background-color: $dark;
@@ -397,7 +398,7 @@ div{
   }
 
   @media (min-width:992px){
-    max-height: 800px;
+    max-height: 700px;
     padding: $md $sm;
     .row > div{
       display: flex;
