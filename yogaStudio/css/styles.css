@@ -192,15 +192,18 @@ figure.flowers {
     fill: #CA9E67; }
 
 svg .light {
-  fill: rgba(216, 209, 195, 0.8);
+  fill: #d8d1c3;
   transition: fill 0.3s ease-in-out; }
 svg .main {
   stroke: none;
   fill: #424e78;
   transition: fill 0.3s ease-in-out; }
 
-.svg.height image {
-  height: 110%; }
+.svg.height {
+  max-width: 70%;
+  margin: 0 auto; }
+  .svg.height image {
+    height: 110%; }
 
 .btn-wrap {
   margin-top: 20px; }
@@ -315,21 +318,6 @@ div a:hover {
     .large-text {
       max-height: 1024px; } }
 
-.social {
-  padding: 0 4%; }
-  .social .row > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; }
-    .social .row > div::after {
-      border-bottom: 4px solid #424e78;
-      content: '';
-      width: calc(100% - 40px);
-      bottom: 0;
-      left: 20px;
-      position: absolute; }
-
 .standard.hero {
   background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
   background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
@@ -391,6 +379,21 @@ div a:hover {
           .standard.hero .row .content .row h1 {
             text-align: left; } }
 
+.social {
+  padding: 0 4%; }
+  .social .row > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; }
+    .social .row > div::after {
+      border-bottom: 4px solid #424e78;
+      content: '';
+      width: calc(100% - 40px);
+      bottom: 0;
+      left: 20px;
+      position: absolute; }
+
 .slider {
   position: relative; }
   .slider .wrapper {
@@ -423,7 +426,7 @@ div a:hover {
         .slider .wrapper .section .content.bg {
           background-color: #424e78; }
           .slider .wrapper .section .content.bg:hover {
-            background-color: rgba(216, 209, 195, 0.8); }
+            background-color: #d8d1c3; }
             .slider .wrapper .section .content.bg:hover figure svg .light {
               fill: #fafafa;
               transition: fill 0.3s ease-in-out; }
@@ -432,7 +435,7 @@ div a:hover {
         .slider .wrapper .section .content.bg.dark {
           background-color: #64697a; }
           .slider .wrapper .section .content.bg.dark:hover {
-            background-color: rgba(216, 209, 195, 0.8); }
+            background-color: #d8d1c3; }
             .slider .wrapper .section .content.bg.dark:hover h3 {
               color: #011147; }
         .slider .wrapper .section .content figure {
@@ -449,6 +452,8 @@ div a:hover {
             display: flex;
             flex-direction: column;
             justify-content: center; }
+        .slider .wrapper .section .content .logo-figure {
+          padding: 40px; }
       @media (min-width: 992px) {
         .slider .wrapper .section {
           width: 50%; } }

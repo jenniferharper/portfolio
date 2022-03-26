@@ -286,6 +286,8 @@ svg{
 }
 
 .svg.height{
+  max-width: 70%;
+  margin: 0 auto;
  image{
   height: 110%;
  }
@@ -417,24 +419,7 @@ div{
 }
 
 
-.social{
-  padding: 0 $sm;
-  .row > div{
-    display: flex;
-    justify-content: space-between;    
-    align-items: center;
-    position: relative;
-    &::after{
-      border-bottom:4px solid $main;
-      content:'';
-      width: calc(100% - 40px);
-      bottom: 0;
-      left: 20px;
-      position: absolute;
-    }
-  }
-}
-///////////////////////////////
+
 
 .standard.hero{
   @include gradient(bottom,$grad1);
@@ -514,7 +499,24 @@ div{
   }
 }
 
-
+.social{
+  padding: 0 $sm;
+  .row > div{
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    position: relative;
+    &::after{
+      border-bottom:4px solid $main;
+      content:'';
+      width: calc(100% - 40px);
+      bottom: 0;
+      left: 20px;
+      position: absolute;
+    }
+  }
+}
+///////////////////////////////
 
 .slider{
   position: relative;
@@ -577,6 +579,9 @@ div{
             justify-content: center;
           }
 
+      }
+      .logo-figure{
+        padding: 40px;
       }
     }  
     @media (min-width:992px){width:50%} 
