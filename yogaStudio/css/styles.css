@@ -12,6 +12,7 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #fafafa;
+  background-color: blueviolet;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -281,10 +282,10 @@ div a:hover {
   height: 100vh;
   max-height: 800px;
   align-items: center;
-  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: linear-gradient(top, transparent 0%, #d8d1c3 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: linear-gradient(top, transparent 0%, #d8d1c3 90%); }
   .large-text .row > div {
     padding: 0 4%;
     flex-direction: column-reverse;
@@ -343,10 +344,10 @@ div a:hover {
       position: absolute; }
 
 .standard.hero {
-  background: -webkit-linear-gradient(bottom, transparent 0%, #d8d1c3 100%);
-  background: -moz-linear-gradient(bottom, transparent 0%, #d8d1c3 100%);
-  background: -o-linear-gradient(bottom, transparent 0%, #d8d1c3 100%);
-  background: linear-gradient(bottom, transparent 0%, #d8d1c3 100%);
+  background: -webkit-linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
+  background: -moz-linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
+  background: -o-linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
+  background: linear-gradient(bottom, transparent 0%, #d8d1c3 90%);
   display: flex;
   align-items: center; }
   .standard.hero .row {
@@ -507,10 +508,10 @@ div a:hover {
     height: 95% !important; }
 
 .about {
-  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: linear-gradient(top, transparent 0%, #d8d1c3 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: linear-gradient(top, transparent 0%, #d8d1c3 90%); }
   .about figure.flowers {
     width: 20%;
     top: 0px;
@@ -604,10 +605,10 @@ div a:hover {
           text-align: left; } }
 
 .cta {
-  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 100%);
-  background: linear-gradient(top, transparent 0%, #d8d1c3 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: -moz-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: -o-linear-gradient(top, transparent 0%, #d8d1c3 90%);
+  background: linear-gradient(top, transparent 0%, #d8d1c3 90%); }
   .cta .row {
     overflow: visible;
     padding: 8% 4%;
