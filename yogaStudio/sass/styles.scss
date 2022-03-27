@@ -548,6 +548,7 @@ div{
       align-items: center;
       width: 100%;
       &.bg{
+        padding: 20px;
         background-color: $main;  
         &:hover{
           background-color: $light; 
@@ -841,7 +842,7 @@ div{
   opacity: 0;
   @include transition();
   .container-fluid {
-    padding: 10px 40px;    
+    padding: 10px $sm;    
     a.navbar-brand {
       // width: 230px;
       height: 60px;
@@ -885,6 +886,9 @@ div{
         letter-spacing: 2px;
         margin-bottom:0;
         margin-left:10px;
+      }
+      @media (max-width:567px){
+        max-width: 250px;
       }
       @media (min-width:992px){
         // width: 320px;

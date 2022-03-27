@@ -424,6 +424,7 @@ div a:hover {
         align-items: center;
         width: 100%; }
         .slider .wrapper .section .content.bg {
+          padding: 20px;
           background-color: #424e78; }
           .slider .wrapper .section .content.bg:hover {
             background-color: #d8d1c3; }
@@ -655,7 +656,7 @@ div a:hover {
   transition-duration: 0.3s;
   transition-timing-function: ease-in; }
   .navbar .container-fluid {
-    padding: 10px 40px; }
+    padding: 10px 4%; }
     .navbar .container-fluid a.navbar-brand {
       height: 60px;
       position: relative;
@@ -699,6 +700,9 @@ div a:hover {
         letter-spacing: 2px;
         margin-bottom: 0;
         margin-left: 10px; }
+      @media (max-width: 567px) {
+        .navbar .container-fluid a.navbar-brand {
+          max-width: 250px; } }
       @media (min-width: 992px) {
         .navbar .container-fluid a.navbar-brand p {
           font-size: 28px; } }
