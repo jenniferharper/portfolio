@@ -407,20 +407,13 @@ div a:hover {
         width: 100%; }
         .slider .wrapper .section .content.bg {
           padding: 40px 20px 20px;
-          background-color: #424e78; }
+          background-color: #d8d1c3; }
+          .slider .wrapper .section .content.bg h3 {
+            color: #011147; }
           .slider .wrapper .section .content.bg:hover {
-            background-color: #d8d1c3; }
-            .slider .wrapper .section .content.bg:hover figure svg .light {
-              fill: #fafafa;
-              transition: fill 0.3s ease-in-out; }
+            background-color: #424e78; }
             .slider .wrapper .section .content.bg:hover h3 {
-              color: #011147; }
-        .slider .wrapper .section .content.bg.dark {
-          background-color: #64697a; }
-          .slider .wrapper .section .content.bg.dark:hover {
-            background-color: #d8d1c3; }
-            .slider .wrapper .section .content.bg.dark:hover h3 {
-              color: #011147; }
+              color: #d8d1c3; }
         .slider .wrapper .section .content figure {
           justify-content: center;
           display: flex;
@@ -599,7 +592,7 @@ div a:hover {
   background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .cta .row {
     overflow: visible;
-    padding: 10% 4% 4%;
+    padding: 10% 4% 10%;
     max-width: 800px;
     margin: 0 auto; }
     .cta .row h2, .cta .row p {
