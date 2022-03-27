@@ -12,7 +12,6 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
-  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -360,7 +359,7 @@ div a:hover {
           margin-bottom: 40px; }
         .standard.hero .row .content .row .small-branding {
           justify-content: flex-end;
-          max-width: 100px;
+          max-width: 150px;
           margin: 0 auto 20px; }
           .standard.hero .row .content .row .small-branding figure.flowers {
             width: 90%;
@@ -425,7 +424,7 @@ div a:hover {
         align-items: center;
         width: 100%; }
         .slider .wrapper .section .content.bg {
-          padding: 20px;
+          padding: 40px 20px 20px;
           background-color: #424e78; }
           .slider .wrapper .section .content.bg:hover {
             background-color: #d8d1c3; }
@@ -454,8 +453,6 @@ div a:hover {
             display: flex;
             flex-direction: column;
             justify-content: center; }
-        .slider .wrapper .section .content .logo-figure {
-          padding: 40px; }
       @media (min-width: 992px) {
         .slider .wrapper .section {
           width: 50%; } }
