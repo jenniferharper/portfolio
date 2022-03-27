@@ -2,17 +2,25 @@ console.clear;
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, MotionPathPlugin, DrawSVGPlugin);
 
 
-
-
-// gsap.to()... infinity and beyond!
-// For more check out greensock.com// record the initial inline CSS for these elements so that ScrollTrigger can revert them even if animations add inline styles later
-// ScrollTrigger.saveStyles(".marquee__inner, .marquee__inner p");
- // if you put this INSIDE one of the functions, it'll only revert the recorded elements when that media query no longer matches. You can use ScrollTrigger.saveStyles() in multiple places.
+ ScrollTrigger.saveStyles(".dates figure");
 
 ScrollTrigger.matchMedia({ 
-  "(min-width: 1336px)": function() {
+  "(min-width: 992px)": function() {
+    //--------------------figure down
+    let downward = gsap.timeline({
+      scrollTrigger:{
+        trigger:'.dates',
+        start:'top center',
+        scrub:true
+      }
+    })
+    downward.from('.dates figure',{yPercent:-80});
 
-  },
+    return function() {
+      downward.kill(); 
+      gsap.set(".dates figure", {clearProps:"all"});         
+    };
+},
 
  "all": function() {
     /////---------- Navigation
@@ -90,24 +98,13 @@ ScrollTrigger.matchMedia({
       marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
 
-      //--------------------figure down
-      gsap.from('.dates figure',{
-        yPercent:-80,
-        scrollTrigger:{
-          trigger:'.dates',
-          start:'top center',
-          // end:'bottom bottom',
-          markers:true,
-          scrub:true
-        }
-      });
 
 
     ///// -------------Touch or non touch devices -------------------------/////
     var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
 
     if(!isTouch) {
-    console.log('non tablet/mobile')
+    console.log('non mobile')
       /////-- This is for non touch/desktop etc ---////// 
 
       ////----------------------slider
@@ -155,7 +152,7 @@ ScrollTrigger.matchMedia({
 
     } else {
       ///-- This is for touch devices ---//////
-      console.log('tablet/mobile')
+      console.log('touch and mobile')
 
       ////---------------deactivate slider
       $( ".slider" ).addClass( "touch" ); 

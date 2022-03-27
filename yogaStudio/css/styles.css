@@ -524,7 +524,7 @@ div a:hover {
         flex-direction: row; } }
     .dates div[class^="container"] .row h2,
     .dates div[class^="container"] .row h3 {
-      color: #fafafa; }
+      color: #d8d1c3; }
     .dates div[class^="container"] .row .logo-figure {
       justify-content: flex-end;
       background-color: #d8d1c3;
@@ -561,10 +561,8 @@ div a:hover {
           transition-duration: 0.3s;
           transition-timing-function: ease-in; }
         .dates div[class^="container"] .row .content .text a:hover p {
-          color: #424e78; }
+          color: #d8d1c3; }
         .dates div[class^="container"] .row .content .text a:hover i {
-          color: #e49806;
-          border-color: #e49806;
           padding-left: 30px; }
       @media (min-width: 992px) {
         .dates div[class^="container"] .row .content {

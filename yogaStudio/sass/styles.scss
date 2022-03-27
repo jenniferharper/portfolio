@@ -681,7 +681,7 @@ div{
       h3{
         // margin-top: 0;
         // margin-bottom: 10px;
-        color:$white
+        color:$light
       }
       .logo-figure{
         justify-content: flex-end;
@@ -722,11 +722,9 @@ div{
                 @include transition();
               }
               p{
-                color:$main;
+                color:$light;
               }
               i{
-                color:$secondary;
-                border-color:$secondary;
                 padding-left: 30px;
               }
             }
