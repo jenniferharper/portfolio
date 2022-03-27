@@ -528,9 +528,7 @@ div a:hover {
     .dates div[class^="container"] .row h3 {
       color: #d8d1c3; }
     .dates div[class^="container"] .row .logo-figure {
-      justify-content: flex-end;
       background-color: #d8d1c3;
-      align-items: flex-end;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
       max-width: 400px;
@@ -592,7 +590,7 @@ div a:hover {
         white-space: nowrap;
         font-size: 18vw;
         line-height: 1;
-        color: #fafafa; }
+        color: #d8d1c3; }
 
 .cta {
   background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);

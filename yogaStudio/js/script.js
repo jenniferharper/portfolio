@@ -14,7 +14,7 @@ ScrollTrigger.matchMedia({
         scrub:true
       }
     })
-    downward.from('.dates figure',{yPercent:-80});
+    downward.to('.dates figure',{yPercent:80});
 
     return function() {
       downward.kill(); 

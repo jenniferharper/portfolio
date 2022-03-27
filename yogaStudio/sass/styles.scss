@@ -687,9 +687,9 @@ div{
         color:$light
       }
       .logo-figure{
-        justify-content: flex-end;
+        // justify-content: flex-end;
         background-color: $light;
-        align-items: flex-end;
+        // align-items: flex-end;
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;
         max-width: 400px;
@@ -762,7 +762,7 @@ div{
         white-space:nowrap;
         font-size: 18vw;
         line-height: 1;
-        color:$white;
+        color:$light;
       }
     }
   }
