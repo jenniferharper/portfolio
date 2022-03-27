@@ -319,14 +319,14 @@ div a:hover {
       max-height: 1024px; } }
 
 .standard.hero {
-  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
   display: flex;
   align-items: center; }
   .standard.hero .row {
-    padding: 0 4% 8%; }
+    padding: 0 4% 8%;
+    background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+    background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+    background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+    background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
     .standard.hero .row .visual .bg-img-hero {
       background-image: url("../img/bg-01.jpg");
       background-repeat: no-repeat;
@@ -658,6 +658,7 @@ div a:hover {
   .navbar .container-fluid {
     padding: 10px 4%; }
     .navbar .container-fluid a.navbar-brand {
+      justify-content: flex-start;
       height: 60px;
       position: relative;
       padding: 0;
