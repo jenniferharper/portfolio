@@ -12,6 +12,7 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
+  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -272,10 +273,10 @@ div a:hover {
   height: 100vh;
   max-height: 800px;
   align-items: center;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .large-text .row > div {
     padding: 0 4%;
     flex-direction: column-reverse;
@@ -320,13 +321,13 @@ div a:hover {
 
 .standard.hero {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .standard.hero .row {
-    padding: 0 4% 8%;
-    background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-    background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-    background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-    background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+    padding: 0 4% 4%; }
     .standard.hero .row .visual .bg-img-hero {
       background-image: url("../img/bg-01.jpg");
       background-repeat: no-repeat;
@@ -500,10 +501,10 @@ div a:hover {
     height: 95% !important; }
 
 .about {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .about figure.flowers {
     width: 20%;
     top: 0px;
@@ -597,10 +598,10 @@ div a:hover {
           text-align: left; } }
 
 .cta {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 10%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
   .cta .row {
     overflow: visible;
     padding: 8% 4%;
@@ -701,9 +702,6 @@ div a:hover {
         letter-spacing: 2px;
         margin-bottom: 0;
         margin-left: 10px; }
-      @media (max-width: 567px) {
-        .navbar .container-fluid a.navbar-brand {
-          max-width: 250px; } }
       @media (min-width: 992px) {
         .navbar .container-fluid a.navbar-brand p {
           font-size: 28px; } }
