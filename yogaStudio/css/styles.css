@@ -189,7 +189,7 @@ svg {
 figure.flowers {
   position: absolute; }
   figure.flowers svg {
-    fill: #CA9E67; }
+    fill: #c52800; }
 
 svg .light {
   fill: #d8d1c3;
@@ -212,7 +212,7 @@ svg .main {
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     border-left: 1px solid #424e78;
-    color: #CA9E67;
+    color: #c52800;
     font-size: 20px;
     padding: 8px 20px; }
     .btn-wrap a i {
@@ -283,6 +283,8 @@ div a:hover {
     max-width: 450px;
     margin: 0 auto;
     min-width: 300px; }
+    .large-text figure .light {
+      fill: #d4ccbd; }
   @media (min-width: 992px) {
     .large-text {
       max-height: 700px;
@@ -499,7 +501,7 @@ div a:hover {
   .about .row figure.arch {
     max-width: 400px; }
   .about .row .drawText {
-    fill: #CA9E67; }
+    fill: #c52800; }
   .about .row p, .about .row h3, .about .row h2 {
     text-align: center;
     margin-left: auto;

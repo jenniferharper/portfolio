@@ -267,7 +267,7 @@ svg {
 figure.flowers{
   position:absolute;
   svg{
-    fill:$flowers
+    fill:$secondary-dark
   }
 }
 
@@ -301,7 +301,7 @@ svg{
   a{
     @include transition;
     border-left:1px solid $main;
-    color:$flowers;
+    color:$secondary-dark;
     font-size: 20px;
     padding:8px 20px;
     i{
@@ -374,6 +374,9 @@ div{
    max-width: 450px;
    margin: 0 auto;
    min-width: 300px;
+   .light{
+     fill:darken( $light, 2% )
+   }
   }
 
   @media (min-width:992px){
@@ -643,7 +646,7 @@ div{
     }
 
     .drawText{
-      fill:$flowers
+      fill:$secondary-dark
     }
 
     p,h3,h2{
