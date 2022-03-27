@@ -334,31 +334,6 @@ div{
 
 ///////////////////
 
-.marquee {
-  margin: 0 20px;
-  position: relative;
-  overflow: hidden;
-  background-color: $main;
-  .marquee__inner {
-    -webkit-font-smoothing: antialiased;
-    width: fit-content;
-    display: flex;
-    flex: auto;
-    flex-direction: row;
-    align-items: center;
-    .marquee__part{
-      display:flex;
-      flex-direction:row;
-      p{
-        will-change: transform;
-        white-space:nowrap;
-        font-size: 18vw;
-        line-height: 1;
-        color:$white;
-      }
-    }
-  }
-}
 
 
 .large-text{
@@ -765,12 +740,39 @@ div{
     }
   }
 }
+.marquee {
+  margin: 0 20px $sm;
+  padding-bottom: $md;
+  position: relative;
+  overflow: hidden;
+  background-color: $main;
+  .marquee__inner {
+    -webkit-font-smoothing: antialiased;
+    width: fit-content;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+    .marquee__part{
+      display:flex;
+      flex-direction:row;
+      p{
+        will-change: transform;
+        white-space:nowrap;
+        font-size: 18vw;
+        line-height: 1;
+        color:$white;
+      }
+    }
+  }
+}
+
 
 .cta{
   @include gradient(top,$grad1);
   .row{
     overflow:visible;
-    padding: $md $sm;
+    padding: $lg $sm $sm;
     max-width: 800px;
     margin: 0 auto;
     h2, p{
@@ -830,8 +832,6 @@ div{
 
 .navbar {
   margin: 0 auto;
-
-  // background-image: url("../img/background-texture.png");
   box-shadow: none;
   padding: 0;
   z-index: 5;
@@ -957,6 +957,7 @@ div{
     }
   }    
   @media (min-width:992px){
+
     // background-color: transparent;
     .container-fluid{
         button.navbar-toggler{
@@ -969,9 +970,10 @@ div{
   }
 
   &.nav--scrolled {
+    // background-image: url("../img/background-texture.png");
     background-color: $light;
     @include transition();
-    box-shadow: $shadow;
+    // box-shadow: $shadow;
   }
 }
 

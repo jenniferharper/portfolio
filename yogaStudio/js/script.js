@@ -34,7 +34,8 @@ ScrollTrigger.matchMedia({
     var scrollUp = document.querySelector('.navbar');
     ScrollTrigger.create({
       id:'scrolling-down',
-      
+      endTrigger:".cta",
+      end:'bottom top',
         toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
     });
 
@@ -89,6 +90,17 @@ ScrollTrigger.matchMedia({
       marquee.to(mrq, {xPercent: -100, repeat: -1, duration: 10, ease: "linear"});  
 
 
+      //--------------------figure down
+      gsap.from('.dates figure',{
+        yPercent:-80,
+        scrollTrigger:{
+          trigger:'.dates',
+          start:'top center',
+          // end:'bottom bottom',
+          markers:true,
+          scrub:true
+        }
+      });
 
 
     ///// -------------Touch or non touch devices -------------------------/////
