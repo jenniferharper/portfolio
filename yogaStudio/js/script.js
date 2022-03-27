@@ -1,25 +1,8 @@
 console.clear;
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText,MorphSVGPlugin, MotionPathPlugin, DrawSVGPlugin);
 
-
- ScrollTrigger.saveStyles(".dates figure");
-
 ScrollTrigger.matchMedia({ 
   "(min-width: 992px)": function() {
-    //--------------------figure down
-    let downward = gsap.timeline({
-      scrollTrigger:{
-        trigger:'.dates',
-        start:'top center',
-        scrub:true
-      }
-    })
-    downward.to('.dates figure',{yPercent:80});
-
-    return function() {
-      downward.kill(); 
-      gsap.set(".dates figure", {clearProps:"all"});         
-    };
 },
 
  "all": function() {

@@ -362,24 +362,25 @@ div a:hover {
             text-align: left; } }
 
 .social {
-  padding: 0 4%; }
+  margin: 0 48px 40px; }
   .social .row > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; }
+    position: relative;
+    padding: 0; }
     .social .row > div::after {
       border-bottom: 4px solid #424e78;
       content: '';
-      width: calc(100% - 40px);
+      width: 100%;
       bottom: 0;
-      left: 20px;
+      left: 0;
       position: absolute; }
 
 .slider {
   position: relative; }
   .slider .wrapper {
-    transform: scale(0.9);
+    transform: scale(0.88);
     transition: all 0.3s ease-in-out;
     display: flex;
     flex-wrap: nowrap;
@@ -509,58 +510,75 @@ div a:hover {
 
 .dates {
   margin: 0 20px;
-  background-color: #424e78;
-  overflow: hidden; }
-  .dates div[class^="container"] .row {
-    padding: 8% 4%;
+  display: flex;
+  align-items: center;
+  background-color: #424e78; }
+  .dates .container > .row {
+    padding: 8% 4% 4%;
     flex-direction: column-reverse; }
-    @media (min-width: 768px) {
-      .dates div[class^="container"] .row {
-        flex-direction: row; } }
-    .dates div[class^="container"] .row h2,
-    .dates div[class^="container"] .row h3 {
-      color: #d8d1c3; }
-    .dates div[class^="container"] .row .logo-figure {
-      background-color: #d8d1c3;
-      border-top-left-radius: 200px;
-      border-top-right-radius: 200px;
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 40px 20px; }
-      .dates div[class^="container"] .row .logo-figure figure {
-        max-width: 90%; }
-        @media (min-width: 992px) {
-          .dates div[class^="container"] .row .logo-figure figure {
-            max-width: 100%; } }
-    .dates div[class^="container"] .row .content {
-      padding: 4%;
-      justify-content: flex-end;
+  .dates .visual {
+    border-top-left-radius: 400px;
+    border-top-right-radius: 400px;
+    background-color: #d8d1c3;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+    justify-content: space-evenly; }
+    .dates .visual figure {
+      max-width: 300px;
+      margin: 20px auto; }
+    .dates .visual .text {
+      padding: 0 20px;
+      text-align: center; }
+      .dates .visual .text h3 {
+        font-weight: bold; }
+      .dates .visual .text p {
+        margin-bottom: 40px; }
+      .dates .visual .text .btn-wrap a {
+        border-left-width: 0;
+        border-top: 1px solid #424e78;
+        padding-top: 12px; }
+  .dates .content {
+    padding: 4% 4%;
+    justify-content: center; }
+    .dates .content h2 {
+      color: #d8d1c3;
+      text-align: center; }
+    .dates .content .preamble {
+      justify-content: center;
       text-align: center;
-      align-items: center; }
-      .dates div[class^="container"] .row .content .text {
-        max-width: 300px;
-        margin-bottom: 30px; }
-        .dates div[class^="container"] .row .content .text a p, .dates div[class^="container"] .row .content .text a i {
-          transition-property: all;
-          transition-duration: 0.3s;
-          transition-timing-function: ease-in;
-          color: #fafafa; }
-        .dates div[class^="container"] .row .content .text a i {
-          margin-left: 10px;
-          padding-left: 10px;
-          border-left: 1px solid #424e78; }
-        .dates div[class^="container"] .row .content .text a:hover p, .dates div[class^="container"] .row .content .text a:hover i {
-          transition-property: all;
-          transition-duration: 0.3s;
-          transition-timing-function: ease-in; }
-        .dates div[class^="container"] .row .content .text a:hover p {
-          color: #d8d1c3; }
-        .dates div[class^="container"] .row .content .text a:hover i {
-          padding-left: 30px; }
-      @media (min-width: 992px) {
-        .dates div[class^="container"] .row .content {
-          align-items: flex-start;
-          text-align: left; } }
+      color: #d8d1c3; }
+      .dates .content .preamble p {
+        color: #d8d1c3; }
+    .dates .content .small-branding {
+      justify-content: space-evenly;
+      max-width: 150px;
+      margin: 0px auto 30px; }
+      .dates .content .small-branding figure.flowers {
+        width: 90%;
+        bottom: 0;
+        left: -40%; }
+  @media (min-width: 768px) {
+    .dates {
+      margin: 0 40px; }
+      .dates .container > .row {
+        padding: 8% 4%; }
+      .dates .small-branding {
+        margin: 20px auto; }
+      .dates .content .preamble {
+        text-align: left; } }
+  @media (min-width: 992px) {
+    .dates .container > .row {
+      flex-direction: row;
+      padding: 8% 0 4% 4%; }
+    .dates .content h2, .dates .content .preamble p {
+      text-align: left; }
+    .dates .content h2 {
+      margin-bottom: 40px; }
+    .dates .visual figure {
+      max-width: 80%; } }
+  @media (min-width: 1240px) {
+    .dates .container > .row {
+      padding: 8% 4%; } }
 
 .marquee {
   margin: 0 20px 4%;
