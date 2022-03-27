@@ -671,7 +671,7 @@ div{
   align-items: center;
   background-color: $main;
   .container > .row{   
-   padding: $md $sm $sm;
+   padding: $md 6% 6%;
    flex-direction: column-reverse;
   }
   .visual{
@@ -720,7 +720,7 @@ div{
     }
     .small-branding{
       justify-content: space-evenly;
-      max-width: 150px;
+      max-width: 250px;
       margin: 0px auto 30px;
       figure.flowers{
         width: 90%;
@@ -732,9 +732,6 @@ div{
 
   @media (min-width:768px){
     margin: 0 40px;
-    .container > .row{ 
-      padding: $md $sm;
-    }
     .small-branding{
       margin: 20px auto;
     }
@@ -746,7 +743,6 @@ div{
   @media (min-width:992px){
     .container > .row{   
       flex-direction: row;
-      padding: $md 0 $sm $sm;
      }
      .content{
        h2,.preamble p{
@@ -764,8 +760,8 @@ div{
     .container > .row{   
       padding: $md $sm;
      }
-
   }
+
 
 }
 

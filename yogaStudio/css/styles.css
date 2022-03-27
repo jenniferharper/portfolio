@@ -514,7 +514,7 @@ div a:hover {
   align-items: center;
   background-color: #424e78; }
   .dates .container > .row {
-    padding: 8% 4% 4%;
+    padding: 8% 6% 6%;
     flex-direction: column-reverse; }
   .dates .visual {
     border-top-left-radius: 400px;
@@ -551,7 +551,7 @@ div a:hover {
         color: #d8d1c3; }
     .dates .content .small-branding {
       justify-content: space-evenly;
-      max-width: 150px;
+      max-width: 250px;
       margin: 0px auto 30px; }
       .dates .content .small-branding figure.flowers {
         width: 90%;
@@ -560,16 +560,13 @@ div a:hover {
   @media (min-width: 768px) {
     .dates {
       margin: 0 40px; }
-      .dates .container > .row {
-        padding: 8% 4%; }
       .dates .small-branding {
         margin: 20px auto; }
       .dates .content .preamble {
         text-align: left; } }
   @media (min-width: 992px) {
     .dates .container > .row {
-      flex-direction: row;
-      padding: 8% 0 4% 4%; }
+      flex-direction: row; }
     .dates .content h2, .dates .content .preamble p {
       text-align: left; }
     .dates .content h2 {
