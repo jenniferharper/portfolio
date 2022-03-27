@@ -34,6 +34,7 @@ ScrollTrigger.matchMedia({
     var scrollUp = document.querySelector('.navbar');
     ScrollTrigger.create({
       id:'scrolling-down',
+      
         toggleClass: {className: 'nav--scrolled', targets: scrollUp,},
     });
 

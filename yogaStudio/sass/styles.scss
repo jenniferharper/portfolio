@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: $lightest;
-
+  // background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -335,8 +335,10 @@ div{
 ///////////////////
 
 .marquee {
+  margin: 0 20px;
   position: relative;
   overflow: hidden;
+  background-color: $main;
   .marquee__inner {
     -webkit-font-smoothing: antialiased;
     width: fit-content;
@@ -352,7 +354,7 @@ div{
         white-space:nowrap;
         font-size: 18vw;
         line-height: 1;
-        color:$main;
+        color:$white;
       }
     }
   }
@@ -426,7 +428,7 @@ div{
   align-items: center;
   @include gradient(bottom,$grad1);
   .row{   
-   padding: 0 $sm $sm;
+   padding: $sm;
 
     .visual{
       .bg-img-hero{
@@ -581,9 +583,7 @@ div{
           }
 
       }
-      .logo-figure{
-        // padding: 40px;
-      }
+
     }  
     @media (min-width:992px){width:50%} 
     @media (min-width:1366px){width:calc(33.333% + 20px)} 
@@ -637,11 +637,8 @@ div{
   }
 }
 
-
-
-
 .about{
-  @include gradient(top,$grad1);
+
   figure.flowers{
     width: 20%;
     top: 0px;
@@ -694,6 +691,8 @@ div{
   }
 }
 .dates{
+  margin: 0 20px;
+  background-color: $main;
   overflow:hidden; 
   div[class^="container"]{ 
       
@@ -703,14 +702,15 @@ div{
       @media (min-width:768px){
         flex-direction: row;
       }
+      h2,
       h3{
-        margin-top: 0;
-        margin-bottom: 10px;
-        color:$flowers
+        // margin-top: 0;
+        // margin-bottom: 10px;
+        color:$white
       }
       .logo-figure{
         justify-content: flex-end;
-        background-color: $main-light;
+        background-color: $light;
         align-items: flex-end;
         border-top-left-radius: 200px;
         border-top-right-radius: 200px;
@@ -735,6 +735,7 @@ div{
           a{
             p,i{
               @include transition();
+              color:$white;
             }
             i{
               margin-left:10px;
@@ -829,8 +830,8 @@ div{
 
 .navbar {
   margin: 0 auto;
-  background-color: #fafafa;
-  background-image: url("../img/background-texture.png");
+
+  // background-image: url("../img/background-texture.png");
   box-shadow: none;
   padding: 0;
   z-index: 5;
@@ -839,7 +840,7 @@ div{
   top:0;
   left:0;
   z-index: 10;
-  opacity: 0;
+
   flex-wrap: nowrap;
   @include transition();
   .container-fluid {
@@ -968,7 +969,7 @@ div{
   }
 
   &.nav--scrolled {
-    opacity: 1;
+    background-color: $light;
     @include transition();
     box-shadow: $shadow;
   }

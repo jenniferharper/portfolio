@@ -245,8 +245,10 @@ div a:hover {
   color: #c52800; }
 
 .marquee {
+  margin: 0 20px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #424e78; }
   .marquee .marquee__inner {
     -webkit-font-smoothing: antialiased;
     width: fit-content;
@@ -262,7 +264,7 @@ div a:hover {
         white-space: nowrap;
         font-size: 18vw;
         line-height: 1;
-        color: #424e78; }
+        color: #fafafa; }
 
 .large-text {
   padding: 8% 8%;
@@ -272,10 +274,10 @@ div a:hover {
   height: 100vh;
   max-height: 800px;
   align-items: center;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .large-text .row > div {
     padding: 0 4%;
     flex-direction: column-reverse;
@@ -321,12 +323,12 @@ div a:hover {
 .standard.hero {
   display: flex;
   align-items: center;
-  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+  background: -webkit-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: -moz-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .standard.hero .row {
-    padding: 0 4% 4%; }
+    padding: 4%; }
     .standard.hero .row .visual .bg-img-hero {
       background-image: url("../img/bg-01.jpg");
       background-repeat: no-repeat;
@@ -497,47 +499,44 @@ div a:hover {
   .slider.is-active .content {
     height: 95% !important; }
 
-.about {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
-  .about figure.flowers {
-    width: 20%;
-    top: 0px;
-    right: 0; }
-  .about .row {
-    padding: 8% 4%;
-    align-items: center; }
-    .about .row .content {
-      padding: 4%; }
-    .about .row .content:last-of-type {
-      flex-direction: column-reverse;
-      margin-bottom: 40px; }
-      .about .row .content:last-of-type div {
-        max-width: 350px;
-        margin: 20px auto; }
-      @media (min-width: 992px) {
-        .about .row .content:last-of-type {
-          flex-direction: column;
-          margin-bottom: 00px; } }
-    .about .row figure.arch {
-      max-width: 400px; }
-    .about .row .drawText {
-      fill: #CA9E67; }
-    .about .row p, .about .row h3, .about .row h2 {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto; }
-    .about .row .btn-wrap {
-      text-align: center; }
+.about figure.flowers {
+  width: 20%;
+  top: 0px;
+  right: 0; }
+.about .row {
+  padding: 8% 4%;
+  align-items: center; }
+  .about .row .content {
+    padding: 4%; }
+  .about .row .content:last-of-type {
+    flex-direction: column-reverse;
+    margin-bottom: 40px; }
+    .about .row .content:last-of-type div {
+      max-width: 350px;
+      margin: 20px auto; }
     @media (min-width: 992px) {
-      .about .row p, .about .row h3, .about .row h2 {
-        text-align: left; }
-      .about .row .btn-wrap {
-        text-align: left; } }
+      .about .row .content:last-of-type {
+        flex-direction: column;
+        margin-bottom: 00px; } }
+  .about .row figure.arch {
+    max-width: 400px; }
+  .about .row .drawText {
+    fill: #CA9E67; }
+  .about .row p, .about .row h3, .about .row h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+  .about .row .btn-wrap {
+    text-align: center; }
+  @media (min-width: 992px) {
+    .about .row p, .about .row h3, .about .row h2 {
+      text-align: left; }
+    .about .row .btn-wrap {
+      text-align: left; } }
 
 .dates {
+  margin: 0 20px;
+  background-color: #424e78;
   overflow: hidden; }
   .dates div[class^="container"] .row {
     padding: 8% 4%;
@@ -545,13 +544,12 @@ div a:hover {
     @media (min-width: 768px) {
       .dates div[class^="container"] .row {
         flex-direction: row; } }
+    .dates div[class^="container"] .row h2,
     .dates div[class^="container"] .row h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: #CA9E67; }
+      color: #fafafa; }
     .dates div[class^="container"] .row .logo-figure {
       justify-content: flex-end;
-      background-color: #4f5465;
+      background-color: #d8d1c3;
       align-items: flex-end;
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
@@ -574,7 +572,8 @@ div a:hover {
         .dates div[class^="container"] .row .content .text a p, .dates div[class^="container"] .row .content .text a i {
           transition-property: all;
           transition-duration: 0.3s;
-          transition-timing-function: ease-in; }
+          transition-timing-function: ease-in;
+          color: #fafafa; }
         .dates div[class^="container"] .row .content .text a i {
           margin-left: 10px;
           padding-left: 10px;
@@ -595,10 +594,10 @@ div a:hover {
           text-align: left; } }
 
 .cta {
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.2) 20%, rgba(216, 209, 195, 0.4) 45%, rgba(216, 209, 195, 0.8) 100%); }
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
+  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .cta .row {
     overflow: visible;
     padding: 8% 4%;
@@ -639,8 +638,6 @@ div a:hover {
 
 .navbar {
   margin: 0 auto;
-  background-color: #fafafa;
-  background-image: url("../img/background-texture.png");
   box-shadow: none;
   padding: 0;
   z-index: 5;
@@ -649,7 +646,6 @@ div a:hover {
   top: 0;
   left: 0;
   z-index: 10;
-  opacity: 0;
   flex-wrap: nowrap;
   transition-property: all;
   transition-duration: 0.3s;
@@ -753,7 +749,7 @@ div a:hover {
     .navbar .container-fluid div.navbar-collapse {
       background-color: transparent; } }
   .navbar.nav--scrolled {
-    opacity: 1;
+    background-color: #d8d1c3;
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
