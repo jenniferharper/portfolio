@@ -12,6 +12,7 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
+  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -652,6 +653,7 @@ div a:hover {
   left: 0;
   z-index: 10;
   opacity: 0;
+  flex-wrap: nowrap;
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-in; }

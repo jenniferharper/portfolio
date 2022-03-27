@@ -18,7 +18,7 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: $lightest;
-  // background-color: green;
+  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
   
@@ -840,6 +840,7 @@ div{
   left:0;
   z-index: 10;
   opacity: 0;
+  flex-wrap: nowrap;
   @include transition();
   .container-fluid {
     padding: 10px $sm;  
@@ -891,9 +892,7 @@ div{
         margin-bottom:0;
         margin-left:10px;
       }
-      // @media (max-width:567px){
-      //   max-width: 250px;
-      // }
+
       @media (min-width:992px){
         // width: 320px;
         p{font-size: 28px;}
