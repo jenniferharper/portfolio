@@ -45,7 +45,6 @@ ScrollTrigger.matchMedia({
               start: "top bottom-=100",
               end: "bottom top",
               toggleActions: "play none none none",
-              // markers:true
             }
           });
           splitTimeline.from(chars, {
@@ -189,10 +188,11 @@ ScrollTrigger.matchMedia({
     }
 
 
+
     
     function loadComplete() {
-      splitTitle = new SplitText(".large.animate", { type: "words,chars" }),
-      splitH1 = new SplitText(".heroAniText", { type: "words,chars" }),
+      var splitTitle = new SplitText(".large.animate", { type: "words,chars" });
+      var splitH1 = new SplitText(".heroAniText", { type: "words,chars" });
 
       title = splitTitle.chars;
       titleH1 = splitH1.chars;

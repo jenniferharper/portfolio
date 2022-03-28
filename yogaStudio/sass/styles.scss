@@ -666,7 +666,7 @@ div{
   margin: 0 20px;
   display: flex;
   align-items: center;
-  background-color: $main;
+  background-color:$light;
   .container > .row{   
    padding: $md 6% 6%;
    flex-direction: column-reverse;
@@ -674,7 +674,8 @@ div{
   .visual{
       border-top-left-radius: 400px;
       border-top-right-radius: 400px;
-      background-color: $light;
+      background-color: $white;
+      box-shadow: $shadow;
       margin: 0 auto;
       padding: 80px 20px 40px;
       justify-content: space-evenly;
@@ -706,14 +707,14 @@ div{
     padding: $sm $sm;
     justify-content: center;
     h2{
-      color:$light;
+      // color:$light;
       text-align: center;
     }
     .preamble{
       justify-content: center;
       text-align:center;
-      color:$light;
-      p{color:$light;}
+      // color:$light;
+      // p{color:$light;}
     }
     .small-branding{
       justify-content: space-evenly;
@@ -761,32 +762,7 @@ div{
 
 
 }
-.marquee {
-  margin: 0 20px $sm;
-  padding-bottom: $md;
-  position: relative;
-  overflow: hidden;
-  background-color: $main;
-  .marquee__inner {
-    -webkit-font-smoothing: antialiased;
-    width: fit-content;
-    display: flex;
-    flex: auto;
-    flex-direction: row;
-    align-items: center;
-    .marquee__part{
-      display:flex;
-      flex-direction:row;
-      p{
-        will-change: transform;
-        white-space:nowrap;
-        font-size: 18vw;
-        line-height: 1;
-        color:$light;
-      }
-    }
-  }
-}
+
 .cta{
   @include gradient(top,$grad1);
   .row{

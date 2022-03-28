@@ -31,7 +31,7 @@ body {
     background-color: #011147; }
     .standard.dark h2, .standard.dark h3, .standard.dark h4, .standard.dark h5, .standard.dark h6,
     .standard.dark p, .standard.dark p span, .standard.dark p a, .standard.dark a, .standard.dark ul, .standard.dark li {
-      color: #fafafa; }
+      color: #e6e1d9; }
     .standard.dark a:hover {
       color: #4f5465; }
   .standard .row {
@@ -445,7 +445,7 @@ div a:hover {
           flex-direction: column;
           align-items: center; }
           .slider .wrapper .section .content figure h3 {
-            color: #fafafa; }
+            color: #e6e1d9; }
           .slider .wrapper .section .content figure a {
             width: 100%;
             height: 100%;
@@ -535,14 +535,15 @@ div a:hover {
   margin: 0 20px;
   display: flex;
   align-items: center;
-  background-color: #424e78; }
+  background-color: #d8d1c3; }
   .dates .container > .row {
     padding: 8% 6% 6%;
     flex-direction: column-reverse; }
   .dates .visual {
     border-top-left-radius: 400px;
     border-top-right-radius: 400px;
-    background-color: #d8d1c3;
+    background-color: #e6e1d9;
+    box-shadow: 0 10px 20px rgba(160, 160, 160, 0.2);
     margin: 0 auto;
     padding: 80px 20px 40px;
     justify-content: space-evenly; }
@@ -564,14 +565,10 @@ div a:hover {
     padding: 4% 4%;
     justify-content: center; }
     .dates .content h2 {
-      color: #d8d1c3;
       text-align: center; }
     .dates .content .preamble {
       justify-content: center;
-      text-align: center;
-      color: #d8d1c3; }
-      .dates .content .preamble p {
-        color: #d8d1c3; }
+      text-align: center; }
     .dates .content .small-branding {
       justify-content: space-evenly;
       max-width: 250px;
@@ -599,29 +596,6 @@ div a:hover {
   @media (min-width: 1240px) {
     .dates .container > .row {
       padding: 8% 4%; } }
-
-.marquee {
-  margin: 0 20px 4%;
-  padding-bottom: 8%;
-  position: relative;
-  overflow: hidden;
-  background-color: #424e78; }
-  .marquee .marquee__inner {
-    -webkit-font-smoothing: antialiased;
-    width: fit-content;
-    display: flex;
-    flex: auto;
-    flex-direction: row;
-    align-items: center; }
-    .marquee .marquee__inner .marquee__part {
-      display: flex;
-      flex-direction: row; }
-      .marquee .marquee__inner .marquee__part p {
-        will-change: transform;
-        white-space: nowrap;
-        font-size: 18vw;
-        line-height: 1;
-        color: #d8d1c3; }
 
 .cta {
   background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
@@ -716,7 +690,7 @@ div a:hover {
             stroke: #011147;
             stroke-width: 0.5px; }
           .navbar .container-fluid a.navbar-brand figure svg .hair {
-            fill: #fafafa;
+            fill: #e6e1d9;
             transition-property: all;
             transition-duration: 0.3s;
             transition-timing-function: ease-in; }
