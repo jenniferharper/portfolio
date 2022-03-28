@@ -212,7 +212,7 @@ svg .main {
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     border-left: 1px solid #424e78;
-    color: #c52800;
+    color: #303957;
     font-size: 20px;
     padding: 8px 20px; }
     .btn-wrap a i {
@@ -328,8 +328,9 @@ div a:hover {
   background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
   background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .standard.hero .row {
-    padding: 10% 4% 4%; }
-    @media (min-width: 1240px) {
+    padding: 4% 4% 0;
+    padding-top: calc( 120px + 6%); }
+    @media (min-width: 1440px) {
       .standard.hero .row {
         padding: 8% 4%; } }
     .standard.hero .row .visual .bg-img-hero {
@@ -432,11 +433,19 @@ div a:hover {
         .slider .wrapper .section .content.bg {
           padding: 40px 20px 20px;
           background-color: #d8d1c3; }
+          .slider .wrapper .section .content.bg i,
           .slider .wrapper .section .content.bg h3 {
-            color: #011147; }
+            color: #011147;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in; }
           .slider .wrapper .section .content.bg:hover {
             background-color: #424e78; }
+            .slider .wrapper .section .content.bg:hover i,
             .slider .wrapper .section .content.bg:hover h3 {
+              transition-property: all;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in;
               color: #d8d1c3; }
         .slider .wrapper .section .content figure {
           justify-content: center;
@@ -444,8 +453,6 @@ div a:hover {
           height: 100%;
           flex-direction: column;
           align-items: center; }
-          .slider .wrapper .section .content figure h3 {
-            color: #e6e1d9; }
           .slider .wrapper .section .content figure a {
             width: 100%;
             height: 100%;
@@ -496,29 +503,16 @@ div a:hover {
   .slider.is-active .content {
     height: 95% !important; }
 
-.about figure.flowers {
-  width: 20%;
-  top: 0px;
-  right: 0; }
 .about .row {
-  padding: 8% 4%;
-  align-items: center; }
+  padding: 8%;
+  justify-content: center; }
   .about .row .content {
-    padding: 4%; }
-  .about .row .content:last-of-type {
-    flex-direction: column-reverse;
-    margin-bottom: 40px; }
-    .about .row .content:last-of-type div {
-      max-width: 350px;
-      margin: 20px auto; }
-    @media (min-width: 992px) {
-      .about .row .content:last-of-type {
-        flex-direction: column;
-        margin-bottom: 00px; } }
+    padding: 4%;
+    justify-content: center; }
   .about .row figure.arch {
     max-width: 400px; }
   .about .row .drawText {
-    fill: #c52800; }
+    fill: #424e78; }
   .about .row p, .about .row h3, .about .row h2 {
     text-align: center;
     margin-left: auto;
@@ -537,8 +531,7 @@ div a:hover {
   align-items: center;
   background-color: #d8d1c3; }
   .dates .container > .row {
-    padding: 8% 6% 6%;
-    flex-direction: column-reverse; }
+    padding: 8% 6% 6%; }
   .dates .visual {
     border-top-left-radius: 400px;
     border-top-right-radius: 400px;
@@ -585,8 +578,6 @@ div a:hover {
       .dates .content .preamble {
         text-align: left; } }
   @media (min-width: 992px) {
-    .dates .container > .row {
-      flex-direction: row; }
     .dates .content h2, .dates .content .preamble p {
       text-align: left; }
     .dates .content h2 {

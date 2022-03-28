@@ -279,7 +279,7 @@ svg{
   a{
     @include transition;
     border-left:1px solid $main;
-    color:$secondary-dark;
+    color:darken($main, 10%);
     font-size: 20px;
     padding:8px 20px;
     i{
@@ -406,8 +406,9 @@ div{
   align-items: center;
   @include gradient(bottom,$grad1);
   .row{   
-   padding: $lg $sm $sm;
-   @media (min-width:1240px){
+   padding:$sm $sm 0;
+   padding-top:calc( 120px + 6%);
+   @media (min-width:1440px){
     padding: $md $sm;
    }
     .visual{
@@ -531,10 +532,13 @@ div{
       &.bg{
         padding: 40px 20px 20px;
         background-color: $light; 
-        h3{color: $dark;}  
-        &:hover{
+        i,
+        h3{color: $dark; @include transition;}         
+        &:hover{          
           background-color: $main; 
-          h3{color: $light;} 
+          i,
+          h3{@include transition; color: $light;} 
+          
         }      
       }
 
@@ -544,9 +548,6 @@ div{
           height: 100%;
           flex-direction: column;
           align-items: center;
-          h3{
-            color:$white;
-          }
           a{
             width:100%;
             height: 100%;
@@ -610,37 +611,19 @@ div{
   }
 }
 .about{
-
-  figure.flowers{
-    width: 20%;
-    top: 0px;
-    right:0;
-  }
   .row{
-    padding:$md $sm;
-    align-items: center;
+    padding:$md;
+    justify-content: center;
     .content{
       padding:$sm;
-    }
-    .content:last-of-type{
-      flex-direction: column-reverse;
-      margin-bottom: 40px;
-      div{
-        max-width: 350px;
-        margin: 20px auto;
-      }
-      @media (min-width:992px){
-        flex-direction: column;
-        margin-bottom: 00px;
-      }
-    }
-    figure.arch{
-      // margin-bottom: 40px;   
-      max-width: 400px;
+      justify-content: center;
     }
 
+    figure.arch{ 
+      max-width: 400px;
+    }
     .drawText{
-      fill:$secondary-dark
+      fill:$main
     }
 
     p,h3,h2{
@@ -669,7 +652,6 @@ div{
   background-color:$light;
   .container > .row{   
    padding: $md 6% 6%;
-   flex-direction: column-reverse;
   }
   .visual{
       border-top-left-radius: 400px;
@@ -739,9 +721,6 @@ div{
   }
 
   @media (min-width:992px){
-    .container > .row{   
-      flex-direction: row;
-     }
      .content{
        h2,.preamble p{
          text-align: left;

@@ -60,8 +60,12 @@ ScrollTrigger.matchMedia({
     gsap.to(".drawText",10,{attr:{startOffset:'105%'},repeat:-1, ease:'none'});
 
     // set image to center on masked images
-    gsap.set('#about-panning, #horz-one-panning, #horz-two-panning', {	
+    gsap.set('#horz-one-panning, #horz-two-panning', {	
       attr:{ x:'-50%' },
+    })
+
+    gsap.set('#heroLittle', {	
+      attr:{ y:'-30%' },
     })
 
     let heroPan = gsap.timeline({repeat:-1, yoyo:true,}); 
@@ -177,6 +181,7 @@ ScrollTrigger.matchMedia({
     });
      
     tlProgress
+    // .to('html',{overflow:'hidden'},0)
       .to(progressBar, 1, {width:"100%"},0)      
       .to(count, 0.5, {autoAlpha:0},1)
 
@@ -200,7 +205,7 @@ ScrollTrigger.matchMedia({
       var tlEnd =  gsap.timeline({});
       tlEnd
 
-      
+     
         .from(title, {
           yPercent: 100,
           ease: "back.out",
@@ -219,7 +224,7 @@ ScrollTrigger.matchMedia({
 
         .to(".large.animate", 0.5, {yPercent:-200, autoAlpha:0},'<2')
         .to(".c-preloader", 1, { yPercent:-100},'>-0.5')
-        
+        // .to('html',{overflow:'visible'},">")
         .from(titleH1, {
           opacity:0,
           duration:1,
@@ -227,4 +232,6 @@ ScrollTrigger.matchMedia({
           ease: "back.out",
           stagger: 0.02
         },'>-0.5')
+
+     
     }
