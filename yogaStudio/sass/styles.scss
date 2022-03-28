@@ -112,7 +112,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font-size:32px;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color:$dark;
   z-index: 8;
   @media (min-width:1200px){
@@ -439,10 +439,14 @@ div{
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
+        min-height: 60vh;
       }  
-      @media (min-width:768px){
-          min-height: 70vh;
-      }
+      @media (min-width:769px){
+        .bg-img-hero{
+         min-height:unset;
+        }
+      } 
+
       @media (min-width:992px){
         min-height: auto;
         .bg-img-hero{
@@ -830,14 +834,13 @@ div{
   top:0;
   left:0;
   z-index: 10;
-
-  flex-wrap: nowrap;
+  // flex-wrap: nowrap;
+  background-color: $light;
   @include transition();
   .container-fluid {
     padding: 10px $sm;  
     // width: 100%;  
     a.navbar-brand {
-      // width: calc(100% - 65px);
       justify-content: flex-start;
       height: 60px;
       position: relative;
@@ -921,7 +924,7 @@ div{
         display: flex;
         justify-content: center;
         align-items: center;
-        height:100vh;
+        height:calc(100vh - 80px);
         a.nav-link {
           padding: 10px 14px;
           color:$main;
@@ -945,10 +948,11 @@ div{
             transform: rotate(-90deg);
         }
     }
-  }    
-  @media (min-width:992px){
+  }  
+  
 
-    // background-color: transparent;
+  @media (min-width:992px){
+    background-color: transparent;
     .container-fluid{
         button.navbar-toggler{
             display:none;
@@ -960,10 +964,8 @@ div{
   }
 
   &.nav--scrolled {
-    // background-image: url("../img/background-texture.png");
     background-color: $light;
     @include transition();
-    // box-shadow: $shadow;
   }
 }
 

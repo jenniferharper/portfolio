@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 32px;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #011147;
   z-index: 8; }
   @media (min-width: 1200px) {
@@ -353,10 +353,11 @@ div a:hover {
       height: 100%;
       width: 100%;
       max-width: 100%;
-      margin: 0 auto; }
-    @media (min-width: 768px) {
-      .standard.hero .row .visual {
-        min-height: 70vh; } }
+      margin: 0 auto;
+      min-height: 60vh; }
+    @media (min-width: 769px) {
+      .standard.hero .row .visual .bg-img-hero {
+        min-height: unset; } }
     @media (min-width: 992px) {
       .standard.hero .row .visual {
         min-height: auto; }
@@ -650,7 +651,7 @@ div a:hover {
   top: 0;
   left: 0;
   z-index: 10;
-  flex-wrap: nowrap;
+  background-color: #d8d1c3;
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-in; }
@@ -732,7 +733,7 @@ div a:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; }
+        height: calc(100vh - 80px); }
         .navbar .container-fluid div.navbar-collapse ul.navbar-nav a.nav-link {
           padding: 10px 14px;
           color: #424e78; }
@@ -748,10 +749,12 @@ div a:hover {
     .navbar .container-fluid .open .navbar-toggler-icon i {
       transform: rotate(-90deg); }
   @media (min-width: 992px) {
-    .navbar .container-fluid button.navbar-toggler {
-      display: none; }
-    .navbar .container-fluid div.navbar-collapse {
-      background-color: transparent; } }
+    .navbar {
+      background-color: transparent; }
+      .navbar .container-fluid button.navbar-toggler {
+        display: none; }
+      .navbar .container-fluid div.navbar-collapse {
+        background-color: transparent; } }
   .navbar.nav--scrolled {
     background-color: #d8d1c3;
     transition-property: all;
