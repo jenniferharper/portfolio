@@ -250,7 +250,6 @@ div a:hover {
   justify-content: center;
   flex-direction: row-reverse;
   height: 100vh;
-  max-height: 800px;
   align-items: center;
   background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
   background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
@@ -283,22 +282,43 @@ div a:hover {
     max-width: 450px;
     margin: 0 auto;
     min-width: 300px; }
-    .large-text figure .light {
-      fill: #d4ccbd; }
-  @media (min-width: 992px) {
-    .large-text {
-      max-height: 700px;
-      padding: 8% 4%; }
-      .large-text .row > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row; }
-      .large-text figure.logo-figure {
-        max-width: 600px; } }
-  @media (min-width: 1366px) {
-    .large-text {
-      max-height: 1024px; } }
+  @media (min-width: 1025px) {
+    .large-text .row > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row; }
+    .large-text figure.logo-figure {
+      max-width: 600px; } }
+
+.c-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #d8d1c3;
+  width: 100%;
+  height: 100vh;
+  z-index: 100; }
+  .c-preloader__count {
+    color: #424e78;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 15vw;
+    font-family: "Marcellus", serif; }
+  .c-preloader__progress {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .c-preloader .heroAniText,
+  .c-preloader .animate {
+    opacity: 0; }
+  .c-preloader .count-container {
+    position: relative; }
 
 .standard.hero {
   display: flex;
@@ -308,7 +328,10 @@ div a:hover {
   background: -o-linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
   background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .standard.hero .row {
-    padding: 4%; }
+    padding: 10% 4% 4%; }
+    @media (min-width: 1240px) {
+      .standard.hero .row {
+        padding: 8% 4%; } }
     .standard.hero .row .visual .bg-img-hero {
       background-image: url("../img/bg-01.jpg");
       background-repeat: no-repeat;

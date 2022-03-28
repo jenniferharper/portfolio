@@ -147,3 +147,84 @@ ScrollTrigger.matchMedia({
   } // all end
 });
 
+
+    ///////////////////site preloader////////////////////////
+    var imgLoad = imagesLoaded('.wrapper');
+    var progressBar = $(".c-preloader__progress"),
+        count = $(".c-preloader__count"),
+        images = $("img").length,
+        loadedCount = 0,
+        loadingProgress = 0,
+        tlProgress = gsap.timeline();
+     
+    imgLoad.on( 'progress', function( instance, image ) {
+        loadProgress();
+    });
+     
+    function loadProgress(imgLoad, image) {
+    
+        loadedCount++;
+      
+        loadingProgress = (loadedCount/images);
+        console.log(loadingProgress);
+    
+        gsap.to(tlProgress, 1, {progress:loadingProgress});
+    }
+    
+    var tlProgress = gsap.timeline({
+        paused: true,
+        onUpdate: countPercent,
+        onComplete: loadComplete
+    });
+     
+    tlProgress
+      .to(progressBar, 1, {width:"100%"},0)      
+      .to(count, 0.5, {autoAlpha:0},1)
+
+    
+    
+    function countPercent() {
+          var newPercent = (tlProgress.progress()*100).toFixed();
+          count.text(newPercent + "%");
+    }
+
+
+    
+    function loadComplete() {
+      splitTitle = new SplitText(".large.animate", { type: "words,chars" }),
+      splitH1 = new SplitText(".heroAniText", { type: "words,chars" }),
+
+      title = splitTitle.chars;
+      titleH1 = splitH1.chars;
+
+      var tlEnd =  gsap.timeline({});
+      tlEnd
+
+      
+        .from(title, {
+          yPercent: 100,
+          ease: "back.out",
+          scale:0.1,
+          stagger: 0.02
+        },0)
+    
+        .to('.large.animate', {autoAlpha:1},0)
+
+        .to('.intro.animate', {
+          duration: 1,
+          yPercent: 50,
+          ease: "back.out",
+          autoAlpha:1
+        },">")
+
+        .to(".large.animate", 0.5, {yPercent:-200, autoAlpha:0},'<2')
+        .to(".c-preloader", 1, { yPercent:-100},'>-0.5')
+        
+        .from(titleH1, {
+          opacity:0,
+          duration:1,
+          yPercent: 100,
+          ease: "back.out",
+          stagger: 0.02
+        },'>-0.5')
+    }
