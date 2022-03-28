@@ -672,8 +672,7 @@ div a:hover {
         position: relative;
         margin: 0;
         overflow: visible;
-        height: 100%;
-        max-width: 35%; }
+        height: 100%; }
         .navbar .container-fluid a.navbar-brand figure svg {
           overflow: visible;
           width: 100%;
