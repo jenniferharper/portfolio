@@ -334,9 +334,14 @@ div{
 
   figure{
    padding:$sm $sm $sm 0;
-   max-width: 450px;
+   max-width: 200px;
    margin: 0 auto;
-   min-width: 300px;
+  }
+
+  @media (min-width:768px){
+    figure.logo-figure{
+      max-width: 400px;
+    }
   }
 
   @media (min-width:1025px){
@@ -823,7 +828,7 @@ div{
     }
     }
   }
-}
+} 
 .navbar {
   margin: 0 auto;
   box-shadow: none;
@@ -834,12 +839,11 @@ div{
   top:0;
   left:0;
   z-index: 10;
-  // flex-wrap: nowrap;
+  width: 100%;
   background-color: $light;
   @include transition();
   .container-fluid {
     padding: 10px $sm;  
-    // width: 100%;  
     a.navbar-brand {
       justify-content: flex-start;
       height: 60px;
@@ -894,6 +898,7 @@ div{
     }
     // hamburger
     button.navbar-toggler {
+      position: relative;
       padding: 0 10px;
       font-size: 30px;
       line-height: 1;

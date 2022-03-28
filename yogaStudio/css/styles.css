@@ -264,9 +264,11 @@ div a:hover {
   display: flex; }
 .large-text figure {
   padding: 4% 4% 4% 0;
-  max-width: 450px;
-  margin: 0 auto;
-  min-width: 300px; }
+  max-width: 200px;
+  margin: 0 auto; }
+@media (min-width: 768px) {
+  .large-text figure.logo-figure {
+    max-width: 400px; } }
 @media (min-width: 1025px) {
   .large-text .row > div {
     display: flex;
@@ -651,6 +653,7 @@ div a:hover {
   top: 0;
   left: 0;
   z-index: 10;
+  width: 100%;
   background-color: #d8d1c3;
   transition-property: all;
   transition-duration: 0.3s;
@@ -707,6 +710,7 @@ div a:hover {
         .navbar .container-fluid a.navbar-brand p {
           font-size: 28px; } }
     .navbar .container-fluid button.navbar-toggler {
+      position: relative;
       padding: 0 10px;
       font-size: 30px;
       line-height: 1;
