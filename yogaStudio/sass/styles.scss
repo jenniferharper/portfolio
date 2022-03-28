@@ -407,7 +407,7 @@ div{
   @include gradient(bottom,$grad1);
   .row{   
    padding:$sm $sm 0;
-   padding-top:calc( 120px + 6%);
+   padding-top:calc( 90px + 6%);
    @media (min-width:1440px){
     padding: $md $sm;
    }
