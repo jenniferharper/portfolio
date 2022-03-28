@@ -12,7 +12,6 @@ body {
   max-width: 2000px;
   overflow-x: hidden;
   background-color: #f5efe3;
-  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
@@ -341,7 +340,7 @@ div a:hover {
   background: linear-gradient(bottom, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
   .standard.hero .row {
     padding: 4% 4% 0;
-    padding-top: calc( 120px + 6%); }
+    padding-top: calc( 90px + 6%); }
     @media (min-width: 1440px) {
       .standard.hero .row {
         padding: 8% 4%; } }
@@ -724,7 +723,7 @@ div a:hover {
       .navbar .container-fluid button.navbar-toggler:focus {
         box-shadow: none; }
       .navbar .container-fluid button.navbar-toggler .navbar-toggler-icon {
-        color: #e49806;
+        color: #424e78;
         height: auto; }
     .navbar .container-fluid div.navbar-collapse {
       justify-content: flex-end;

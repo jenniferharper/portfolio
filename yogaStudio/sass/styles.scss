@@ -18,7 +18,6 @@ body {
   max-width: 2000px;
   overflow-x:hidden;
   background-color: $lightest;
-  background-color: green;
   background-image: url("../img/background-texture.png");
   background-repeat: repeat;
 
@@ -431,7 +430,7 @@ div{
   @include gradient(bottom,$grad1);
   .row{   
    padding:$sm $sm 0;
-   padding-top:calc( 120px + 6%);
+   padding-top:calc( 90px + 6%);
    @media (min-width:1440px){
     padding: $md $sm;
    }
@@ -914,7 +913,7 @@ div{
         box-shadow: none;
       }
       .navbar-toggler-icon {
-        color: $secondary;
+        color: $main;
         height: auto;
       }
     }
