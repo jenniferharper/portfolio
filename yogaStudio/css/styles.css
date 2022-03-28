@@ -15,6 +15,20 @@ body {
   background-image: url("../img/background-texture.png");
   background-repeat: repeat; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background-color: #f5efe3; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e6e1d9;
+  border-radius: 10px; }
+
 .container-fluid,
 .container {
   padding-left: 0px;
@@ -244,52 +258,23 @@ div i:hover,
 div a:hover {
   color: #c52800; }
 
-.large-text {
-  padding: 8% 8%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row-reverse;
-  height: 100vh;
-  align-items: center;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
-  background: -moz-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%);
-  background: linear-gradient(top, transparent 0%, rgba(216, 209, 195, 0.1) 15%, rgba(216, 209, 195, 0.4) 35%, rgba(216, 209, 195, 0.8) 80%); }
+.large-text .row > div {
+  padding: 0 4%;
+  flex-direction: column-reverse;
+  display: flex; }
+.large-text figure {
+  padding: 4% 4% 4% 0;
+  max-width: 450px;
+  margin: 0 auto;
+  min-width: 300px; }
+@media (min-width: 1025px) {
   .large-text .row > div {
-    padding: 0 4%;
-    flex-direction: column-reverse;
-    display: flex; }
-  .large-text p {
-    font-size: 20px;
-    text-align: center; }
-  .large-text p.large {
-    will-change: transform;
-    white-space: nowrap;
-    font-size: 18vw;
-    line-height: 1;
-    color: #424e78;
-    position: relative; }
-    .large-text p.large:after {
-      content: '';
-      width: 100%;
-      height: 4px;
-      background-color: #424e78;
-      bottom: 0;
-      right: 0;
-      position: absolute; }
-  .large-text figure {
-    padding: 4% 4% 4% 0;
-    max-width: 450px;
-    margin: 0 auto;
-    min-width: 300px; }
-  @media (min-width: 1025px) {
-    .large-text .row > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row; }
-    .large-text figure.logo-figure {
-      max-width: 600px; } }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
+  .large-text figure.logo-figure {
+    max-width: 600px; } }
 
 .c-preloader {
   position: fixed;
@@ -298,7 +283,13 @@ div a:hover {
   background: #d8d1c3;
   width: 100%;
   height: 100vh;
-  z-index: 100; }
+  z-index: 100;
+  padding: 8% 8%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  height: 100vh;
+  align-items: center; }
   .c-preloader__count {
     color: #424e78;
     position: absolute;
@@ -314,6 +305,24 @@ div a:hover {
     position: absolute;
     top: 0;
     left: 0; }
+  .c-preloader p {
+    font-size: 20px;
+    text-align: center; }
+  .c-preloader p.large {
+    will-change: transform;
+    white-space: nowrap;
+    font-size: 18vw;
+    line-height: 1;
+    color: #424e78;
+    position: relative; }
+    .c-preloader p.large:after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: #424e78;
+      bottom: 0;
+      right: 0;
+      position: absolute; }
   .c-preloader .heroAniText,
   .c-preloader .animate {
     opacity: 0; }
