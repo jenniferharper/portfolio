@@ -139,7 +139,7 @@ ScrollTrigger.matchMedia({
 
 
    
-           .to(".large.animate", 0.5, {yPercent:-200, autoAlpha:0},'<2')
+           .to(".large.animate", 0.5, {yPercent:-100, autoAlpha:0},'<2')
            .to(".c-preloader", 1, { yPercent:-200},'>-0.5')
 
            .from(titleH1, {
