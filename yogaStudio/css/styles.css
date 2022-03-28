@@ -704,8 +704,7 @@ div a:hover {
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin-bottom: 0;
-        padding-left: 10px; }
+        margin-bottom: 0; }
       @media (min-width: 992px) {
         .navbar .container-fluid a.navbar-brand p {
           font-size: 28px; } }
