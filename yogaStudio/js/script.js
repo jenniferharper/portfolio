@@ -7,6 +7,7 @@ ScrollTrigger.matchMedia({
 },
 
 "(min-width: 1025px)": function() {
+
     ///// -------------Touch or non touch devices -------------------------/////
     var isTouch = !!("undefined" != typeof document.documentElement.ontouchstart);
 
@@ -46,13 +47,13 @@ ScrollTrigger.matchMedia({
         });
       };
 
-      // var windowWidth = $(window).width();
-      // $(window).resize(function(){	
-      //   if ($(window).width() != windowWidth) {
-      //   windowWidth = $(window).width();
-      //   refresher();	
-      //   }
-      // });
+      var windowWidth = $(window).width();
+      $(window).resize(function(){	
+        if ($(window).width() != windowWidth) {
+        windowWidth = $(window).width();
+        refresher();	
+        }
+      });
 
     ////----------------------- end non touch----------------------- ////
     } else {
@@ -147,87 +148,87 @@ ScrollTrigger.matchMedia({
 });
 
 
-    // ///////////////////site preloader////////////////////////
-    // var imgLoad = imagesLoaded('.wrapper');
-    // var progressBar = $(".c-preloader__progress"),
-    //     count = $(".c-preloader__count"),
-    //     images = $("img").length,
-    //     loadedCount = 0,
-    //     loadingProgress = 0,
-    //     tlProgress = gsap.timeline();
+    ///////////////////site preloader////////////////////////
+    var imgLoad = imagesLoaded('.wrapper');
+    var progressBar = $(".c-preloader__progress"),
+        count = $(".c-preloader__count"),
+        images = $("img").length,
+        loadedCount = 0,
+        loadingProgress = 0,
+        tlProgress = gsap.timeline();
      
-    // imgLoad.on( 'progress', function( instance, image ) {
-    //     loadProgress();
-    // });
+    imgLoad.on( 'progress', function( instance, image ) {
+        loadProgress();
+    });
      
-    // function loadProgress(imgLoad, image) {
+    function loadProgress(imgLoad, image) {
     
-    //     loadedCount++;
+        loadedCount++;
       
-    //     loadingProgress = (loadedCount/images);
-    //     console.log(loadingProgress);
+        loadingProgress = (loadedCount/images);
+        console.log(loadingProgress);
     
-    //     gsap.to(tlProgress, 1, {progress:loadingProgress});
-    // }
+        gsap.to(tlProgress, 1, {progress:loadingProgress});
+    }
     
-    // var tlProgress = gsap.timeline({
-    //     paused: true,
-    //     onUpdate: countPercent,
-    //     onComplete: loadComplete
-    // });
+    var tlProgress = gsap.timeline({
+        paused: true,
+        onUpdate: countPercent,
+        onComplete: loadComplete
+    });
      
-    // tlProgress
-    // // .to('html',{overflow:'hidden'},0)
-    //   .to(progressBar, 1, {width:"100%"},0)      
-    //   .to(count, 0.5, {autoAlpha:0},1)
+    tlProgress
+    // .to('html',{overflow:'hidden'},0)
+      .to(progressBar, 1, {width:"100%"},0)      
+      .to(count, 0.5, {autoAlpha:0},1)
 
     
     
-    // function countPercent() {
-    //       var newPercent = (tlProgress.progress()*100).toFixed();
-    //       count.text(newPercent + "%");
-    // }
+    function countPercent() {
+          var newPercent = (tlProgress.progress()*100).toFixed();
+          count.text(newPercent + "%");
+    }
 
 
 
     
-    // function loadComplete() {
-    //   var splitTitle = new SplitText(".large.animate", { type: "words,chars" });
-    //   var splitH1 = new SplitText(".heroAniText", { type: "words,chars" });
+    function loadComplete() {
+      var splitTitle = new SplitText(".large.animate", { type: "words,chars" });
+      var splitH1 = new SplitText(".heroAniText", { type: "words,chars" });
 
-    //   title = splitTitle.chars;
-    //   titleH1 = splitH1.chars;
+      title = splitTitle.chars;
+      titleH1 = splitH1.chars;
 
-    //   var tlEnd =  gsap.timeline({});
-    //   tlEnd
-
-     
-    //     .from(title, {
-    //       yPercent: 100,
-    //       ease: "back.out",
-    //       scale:0.1,
-    //       stagger: 0.02
-    //     },0)
-    
-    //     .to('.large.animate', {autoAlpha:1},0)
-
-    //     .to('.intro.animate', {
-    //       duration: 1,
-    //       yPercent: 50,
-    //       ease: "back.out",
-    //       autoAlpha:1
-    //     },">")
-
-    //     .to(".large.animate", 0.5, {yPercent:-200, autoAlpha:0},'<2')
-    //     .to(".c-preloader", 1, { yPercent:-100},'>-0.5')
-    //     // .to('html',{overflow:'visible'},">")
-    //     .from(titleH1, {
-    //       opacity:0,
-    //       duration:1,
-    //       yPercent: 100,
-    //       ease: "back.out",
-    //       stagger: 0.02
-    //     },'>-0.5')
+      var tlEnd =  gsap.timeline({});
+      tlEnd
 
      
-    // }
+        .from(title, {
+          yPercent: 100,
+          ease: "back.out",
+          scale:0.1,
+          stagger: 0.02
+        },0)
+    
+        .to('.large.animate', {autoAlpha:1},0)
+
+        .to('.intro.animate', {
+          duration: 1,
+          yPercent: 50,
+          ease: "back.out",
+          autoAlpha:1
+        },">")
+
+        .to(".large.animate", 0.5, {yPercent:-200, autoAlpha:0},'<2')
+        .to(".c-preloader", 1, { yPercent:-100},'>-0.5')
+        // .to('html',{overflow:'visible'},">")
+        .from(titleH1, {
+          opacity:0,
+          duration:1,
+          yPercent: 100,
+          ease: "back.out",
+          stagger: 0.02
+        },'>-0.5')
+
+     
+    }
