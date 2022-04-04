@@ -130,16 +130,7 @@ ScrollTrigger.matchMedia({
        
            .to('.large.animate', {autoAlpha:1},0)
    
-           .to('.intro.animate', {
-             duration: 1,
-             yPercent: 10,
-             ease: "back.out",
-             autoAlpha:1
-           },">")
-
-
-   
-           .to(".large.animate", 0.5, {yPercent:-100, autoAlpha:0},'<2')
+          .to(".large.animate", 0.5, {yPercent:-100, autoAlpha:0},'<1')
            .to(".c-preloader", 1, { yPercent:-200},'>-0.5')
 
            .from(titleH1, {
@@ -148,7 +139,7 @@ ScrollTrigger.matchMedia({
              yPercent: 100,
              ease: "back.out",
              stagger: 0.02
-           },'>-0.5')
+           },'>-1')
            
            .to('body',{overflowY:'visible'},'<+=0.2')
         

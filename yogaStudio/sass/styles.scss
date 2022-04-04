@@ -508,6 +508,7 @@ div{
 
   }
 }
+
 .social{
   margin: 0 48px 40px;
   .row > div{
@@ -587,7 +588,7 @@ div{
 
     }  
     @media (min-width:992px){width:50%} 
-    @media (min-width:1366px){width:calc(33.333% + 20px)} 
+    @media (min-width:1366px){width:33.333%} 
     }
   } 
 
@@ -637,6 +638,7 @@ div{
     }
   }
 }
+
 .about{
   .row{
     padding:$md;

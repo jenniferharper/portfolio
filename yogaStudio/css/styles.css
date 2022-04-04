@@ -476,7 +476,7 @@ div a:hover {
           width: 50%; } }
       @media (min-width: 1366px) {
         .slider .wrapper .section {
-          width: calc(33.333% + 20px); } }
+          width: 33.333%; } }
   .slider.touch {
     padding: 8% 4% 0; }
     .slider.touch .wrapper {
@@ -548,7 +548,7 @@ div a:hover {
     border-top-left-radius: 400px;
     border-top-right-radius: 400px;
     background-color: #e6e1d9;
-    box-shadow: 0 -10px 20px rgba(228, 152, 6, 0.3);
+    box-shadow: 0 -10px 40px rgba(228, 152, 6, 0.05);
     margin: 0 auto;
     padding: 80px 20px 40px;
     justify-content: space-evenly; }
