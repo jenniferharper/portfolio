@@ -31,7 +31,7 @@ ScrollTrigger.matchMedia({
           pin: true,
           toggleClass: "is-active",
           refreshPriority: 1,
-          ease:'none'
+          ease:'none',
         }
       });
 

@@ -1,16 +1,37 @@
 
+$header-font: 'Montagu Slab', serif;
+$body-font: 'Manrope', sans-serif;
 
-$header-font: 'Oswald', Arial, sans-serif;
-$body-font: 'Raleway', sans-serif;
 
 
+$xs:40px;
 $sm:4%;
 $md:8%;
 $lg:10%;
+$xl:12%;
+$xxl:20%;
 
 
-$white:#fff;
+$white:#e6e1d9;
+$light:#e9e4de;
+$dark:#011147;
 
-$main:#F89C1C;
-$contrast-one:#ce3909;
-$dark:#03396e;
+$main:#424e78;
+$main-light:#4f5465;
+$main-dark:#64697a;
+
+// ligh tteal
+$secondary:#e49806;
+$secondary-dark:#c52800;
+
+$flowers:#CA9E67;
+
+$shadow:0 -10px 40px rgba(228, 152, 6,0.05);
+$shadow-inset:inset 0 10px 100px rgba(252, 239, 185,0.5);
+$text-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+$drop-shadow:drop-shadow( 3px 3px 8px rgba(0, 0, 0, .30));
+
+
+$light1:rgba(216, 209, 195, 0.8);
+$light05:rgba(216, 209, 195, 0.4);
+$light0:rgba(216, 209, 195, 0.1);

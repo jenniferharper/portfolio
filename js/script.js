@@ -41,8 +41,8 @@ ScrollTrigger.matchMedia({
   }	
 }); 
 
-
-
+gsap.to(".asterisk",10,{rotate:360,repeat:-1, ease:'none', transformOrigin:'center'});
+gsap.to(".rotate-svg-text",10,{rotate:-360,repeat:-1, ease:'none', transformOrigin:'center'});
 
 
 
