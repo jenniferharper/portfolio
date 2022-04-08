@@ -220,6 +220,7 @@ svg {
 
 
 
+
 /////////////////////////////////
 .jh{
   .my-logo{
@@ -241,13 +242,19 @@ svg {
       transform: rotate(180deg);
       letter-spacing: 2px;
     }
-    h1{
+
+   h1{
       font-size: 8.5vw;
-      letter-spacing: 5px;
-      span{
+      overflow:hidden;
+      .job{
         font-weight: 300;
-        letter-spacing: 0px;
-        font-size: 8vw;
+        font-size: 7.5vw;
+      }
+      .name div:first-of-type div:first-of-type{
+        margin-right:-5px
+      }
+      .job div:first-of-type div:first-of-type{
+        margin-right:-10px
       }
     }
     .about{
@@ -260,10 +267,15 @@ svg {
   }
 }
 
-.intro{
+
+.feature{
   background-color:$main;
+  padding-top:$md;
   .row{
-    padding-top:$lg;
+    align-items: flex-end;
+    div{
+      padding:0
+    }
     .vert{
       text-orientation: mixed;
       writing-mode: vertical-rl; 
@@ -271,20 +283,16 @@ svg {
       letter-spacing: 2px;
     }
     .preamble{
-      font-size:4vw;
+      font-size:3vw;
+      position: absolute;
+      max-width: 70%;
+      left: 15%;
       span{
         font-family: $header-font;
         font-size: 5.5vw;
       }
     }
-  }
-}
 
-.feature{
-  background-color:$main;
-  .row{
-    min-height: 100vh;
-    padding: $sm 0;
   }
 }
 

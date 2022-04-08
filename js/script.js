@@ -1,5 +1,6 @@
 console.clear();
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 
 ScrollTrigger.matchMedia({	
   // desktop
@@ -46,3 +47,50 @@ gsap.to(".rotate-svg-text",10,{rotate:-360,repeat:-1, ease:'none', transformOrig
 
 
 
+    ////// headings animation
+    var text = gsap.utils.toArray(".animate-heading");
+
+    text.forEach((el) => {
+        var splitWords = new SplitText(el, {type: "words,chars"});
+        chars = splitWords.chars;
+
+        var splitTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom-=100",
+            end: "bottom top",
+            toggleActions: "play none none none",
+          }
+        });
+
+        splitTimeline.from(chars,{
+          opacity:0,
+          xPercent: '-200',
+          stagger: 0.08,
+          zIndex:0,
+          ease:Back.easeOut,
+          color:'#e9e4de'
+        });
+       
+    });
+
+
+    const feature = document.querySelector(".feature .row");
+    const featureImg = document.querySelector(".feature .animate-img");
+    const featurePrem = document.querySelector(".feature .preamble");
+
+    var featureTl = gsap.timeline({
+      scrollTrigger: {
+        trigger:feature,
+        start: "top top",
+        end: "bottom center",
+        toggleActions: "play none none none",
+        scrub:true,
+        pin:true,
+        onLeave: () => gsap.to(featurePrem, {yPercent:-50,ease:Back.easeOut}), 
+      }
+    });
+
+    featureTl
+    .from(featureImg,{scale:0.4, yPercent:'10'},0)
+    .to(featurePrem,{ yPercent:'10',ease:Back.easeOut},0)

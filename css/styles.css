@@ -203,37 +203,40 @@ svg {
     letter-spacing: 2px; }
   .hero .row h1 {
     font-size: 8.5vw;
-    letter-spacing: 5px; }
-    .hero .row h1 span {
+    overflow: hidden; }
+    .hero .row h1 .job {
       font-weight: 300;
-      letter-spacing: 0px;
-      font-size: 8vw; }
+      font-size: 7.5vw; }
+    .hero .row h1 .name div:first-of-type div:first-of-type {
+      margin-right: -5px; }
+    .hero .row h1 .job div:first-of-type div:first-of-type {
+      margin-right: -10px; }
   .hero .row .about {
     justify-content: space-evenly;
     padding-left: 0; }
   .hero .row .social {
     flex-direction: column; }
 
-.intro {
-  background-color: #424e78; }
-  .intro .row {
-    padding-top: 10%; }
-    .intro .row .vert {
+.feature {
+  background-color: #424e78;
+  padding-top: 8%; }
+  .feature .row {
+    align-items: flex-end; }
+    .feature .row div {
+      padding: 0; }
+    .feature .row .vert {
       text-orientation: mixed;
       writing-mode: vertical-rl;
       transform: rotate(180deg);
       letter-spacing: 2px; }
-    .intro .row .preamble {
-      font-size: 4vw; }
-      .intro .row .preamble span {
+    .feature .row .preamble {
+      font-size: 3vw;
+      position: absolute;
+      max-width: 70%;
+      left: 15%; }
+      .feature .row .preamble span {
         font-family: "Montagu Slab", serif;
         font-size: 5.5vw; }
-
-.feature {
-  background-color: #424e78; }
-  .feature .row {
-    min-height: 100vh;
-    padding: 4% 0; }
 
 .big-text .row {
   padding: 8% 0;
