@@ -50,8 +50,11 @@ gsap.to(".rotate-svg-text",10,{rotate:-360,repeat:-1, ease:'none', transformOrig
     ////// headings animation
     var text = gsap.utils.toArray(".animate-heading");
 
+    
+
     text.forEach((el) => {
-        var splitWords = new SplitText(el, {type: "words,chars"});
+
+        var splitWords = new SplitText(el, {type: "words,chars", charsClass: "special"});
         chars = splitWords.chars;
 
         var splitTimeline = gsap.timeline({
@@ -63,11 +66,11 @@ gsap.to(".rotate-svg-text",10,{rotate:-360,repeat:-1, ease:'none', transformOrig
           }
         });
 
-        splitTimeline.from(chars,{
+        splitTimeline.from('.special',{
           opacity:0,
+          scaleX:0,
           xPercent: '-200',
           stagger: 0.08,
-          zIndex:0,
           ease:Back.easeOut,
           color:'#e9e4de'
         });
@@ -75,22 +78,22 @@ gsap.to(".rotate-svg-text",10,{rotate:-360,repeat:-1, ease:'none', transformOrig
     });
 
 
-    const feature = document.querySelector(".feature .row");
-    const featureImg = document.querySelector(".feature .animate-img");
-    const featurePrem = document.querySelector(".feature .preamble");
+    // const feature = document.querySelector(".feature .row");
+    // const featureImg = document.querySelector(".feature .animate-img");
+    // const featurePrem = document.querySelector(".feature .preamble");
 
-    var featureTl = gsap.timeline({
-      scrollTrigger: {
-        trigger:feature,
-        start: "top top",
-        end: "bottom center",
-        toggleActions: "play none none none",
-        scrub:true,
-        pin:true,
-        onLeave: () => gsap.to(featurePrem, {yPercent:-50,ease:Back.easeOut}), 
-      }
-    });
+    // var featureTl = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger:feature,
+    //     start: "top top",
+    //     end: "bottom center",
+    //     toggleActions: "play none none none",
+    //     scrub:true,
+    //     pin:true,
+    //     onLeave: () => gsap.to(featurePrem, {yPercent:-50,ease:Back.easeOut}), 
+    //   }
+    // });
 
-    featureTl
-    .from(featureImg,{scale:0.4, yPercent:'10'},0)
-    .to(featurePrem,{ yPercent:'10',ease:Back.easeOut},0)
+    // featureTl
+    // .from(featureImg,{scale:0.4, yPercent:'10'},0)
+    // .to(featurePrem,{ yPercent:'10',ease:Back.easeOut},0)

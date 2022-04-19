@@ -187,6 +187,9 @@ svg {
     transition-duration: 0.3s;
     transition-timing-function: ease-in; }
 
+.special {
+  transform-origin: bottom left; }
+
 .jh .my-logo {
   top: 10px;
   left: 10px;
@@ -224,11 +227,6 @@ svg {
     align-items: flex-end; }
     .feature .row div {
       padding: 0; }
-    .feature .row .vert {
-      text-orientation: mixed;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      letter-spacing: 2px; }
     .feature .row .preamble {
       font-size: 3vw;
       position: absolute;
@@ -238,57 +236,70 @@ svg {
         font-family: "Montagu Slab", serif;
         font-size: 5.5vw; }
 
-.big-text .row {
-  padding: 8% 0;
-  min-height: 100vh; }
-  .big-text .row p {
-    line-height: 1.2; }
-  .big-text .row .big {
-    font-size: 30vw;
-    line-height: .5em;
-    font-family: "Montagu Slab", serif; }
-  .big-text .row .medium {
-    font-size: 12vw;
-    letter-spacing: 5px; }
-  .big-text .row .average {
-    font-size: 4vw; }
+.big-text {
+  overflow: hidden; }
+  .big-text .row {
+    padding: 8% 0;
+    min-height: 100vh; }
+    .big-text .row p {
+      line-height: 1em; }
+    .big-text .row .big {
+      font-size: 20vw;
+      font-family: "Montagu Slab", serif;
+      overflow: hidden;
+      position: relative; }
+      .big-text .row .big .special {
+        overflow: hidden; }
+    .big-text .row .medium {
+      font-size: 12vw;
+      letter-spacing: 5px;
+      margin-top: -40px; }
+    .big-text .row .average {
+      font-size: 4vw; }
 
-.small-intro .row {
-  padding: 8% 0;
-  min-height: 100vh; }
-  .small-intro .row p {
-    font-size: 6vw; }
+.work {
+  background-color: rgba(216, 209, 195, 0.8);
+  margin: 0 40px; }
+  .work .row {
+    padding: 8% 0 0; }
+    .work .row h2 {
+      font-size: 7.5vw;
+      letter-spacing: 4px;
+      line-height: 1em; }
+      .work .row h2 span {
+        font-family: "Manrope", sans-serif;
+        letter-spacing: 1px;
+        font-size: 6vw; }
+    .work .row p {
+      max-width: 700px;
+      margin: 20px auto; }
 
-.work .row {
-  padding: 8% 0; }
-  .work .row h2 {
-    font-size: 7.5vw;
-    letter-spacing: 4px;
-    line-height: 1em; }
-    .work .row h2 span {
-      font-family: "Manrope", sans-serif;
-      letter-spacing: 1px;
-      font-size: 6vw; }
-  .work .row p {
-    max-width: 700px;
-    margin: 20px auto; }
-
-.spotzer .row {
-  padding-bottom: 8%;
-  align-items: flex-start; }
-  .spotzer .row figure {
-    height: 60vh; }
-  .spotzer .row img.logo {
-    max-width: 70%;
-    margin: 40px auto; }
-  .spotzer .row div[class^="col"] {
-    padding: 0; }
-    .spotzer .row div[class^="col"].main {
-      padding: 0 8%; }
-  .spotzer .row .logo {
-    margin-top: 40px; }
-  .spotzer .row p {
-    margin-top: 40px; }
+.spotzer {
+  background-color: rgba(216, 209, 195, 0.8);
+  margin: 0 40px; }
+  .spotzer .row {
+    padding-bottom: 8%;
+    align-items: flex-start; }
+    .spotzer .row figure {
+      height: 60vh; }
+    .spotzer .row img.logo {
+      max-width: 70%;
+      margin: 40px auto; }
+    .spotzer .row div[class^="col"] {
+      padding: 0;
+      position: relative; }
+      .spotzer .row div[class^="col"].main {
+        padding: 0 8%;
+        margin-top: 60px; }
+    .spotzer .row .logo {
+      margin-top: 40px; }
+    .spotzer .row p {
+      margin-top: 40px; }
+    .spotzer .row .btn-svg {
+      bottom: -38%;
+      left: -38%;
+      position: absolute;
+      width: 300px; }
 
 .personal-pro {
   padding: 8% 0 4%; }

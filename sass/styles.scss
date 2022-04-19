@@ -217,7 +217,9 @@ svg {
   }
 }
 
-
+.special{
+  transform-origin: bottom left;
+}
 
 
 
@@ -271,16 +273,11 @@ svg {
 .feature{
   background-color:$main;
   padding-top:$md;
+ 
   .row{
     align-items: flex-end;
     div{
       padding:0
-    }
-    .vert{
-      text-orientation: mixed;
-      writing-mode: vertical-rl; 
-      transform: rotate(180deg);
-      letter-spacing: 2px;
     }
     .preamble{
       font-size:3vw;
@@ -298,20 +295,26 @@ svg {
 
 
 .big-text{
+  overflow:hidden;
   .row{
     padding: $md 0;
     min-height: 100vh;
     p{
-      line-height: 1.2;
+      line-height: 1em;
     }
     .big{
-      font-size: 30vw;
-      line-height: .5em;
+      font-size: 20vw;
       font-family: $header-font;
+      overflow: hidden;
+      position: relative;
+      .special{
+        overflow:hidden;     
+      }
     }
     .medium{
       font-size: 12vw;
       letter-spacing: 5px;
+      margin-top: -40px;
     }
     .average{
       font-size: 4vw;
@@ -319,19 +322,12 @@ svg {
   }
 }
 
-.small-intro{
-  .row{
-    padding: $md 0;
-    min-height: 100vh;
-    p{
-      font-size: 6vw;
-    }
-  }
-}
 
 .work{
+  background-color:$light1;
+  margin: 0 40px;
   .row{
-    padding: $md 0 ;
+    padding: $md 0 0;
     h2{
       font-size: 7.5vw;
       letter-spacing: 4px;
@@ -350,6 +346,8 @@ svg {
 }
 
 .spotzer{
+  background-color:$light1;
+  margin: 0 40px;
   .row{
     padding-bottom: $md;
     align-items: flex-start;
@@ -362,8 +360,10 @@ svg {
     }
     div[class^="col"]{
       padding: 0;
+      position: relative;
       &.main{
         padding: 0 $md;
+        margin-top: 60px;
       }
     }
       .logo{
@@ -372,7 +372,12 @@ svg {
       p{
         margin-top: 40px;
       }
-
+      .btn-svg{
+        bottom: -38%;
+        left: -38%;
+        position: absolute;
+        width: 300px;
+      }
   }
 }
 
