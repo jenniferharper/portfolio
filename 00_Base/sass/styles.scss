@@ -46,17 +46,20 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     margin:0;
-    > div:not(.btn-wrap) {
+    align-items: center;
+    div[class^="col"] {
       position: relative;
       display: flex;
       flex-direction: column;
       overflow:visible;
+      text-align: center;
     }
     ul {
       list-style: none;
       margin-bottom: 0;
       padding-left: 40px;
       padding-right: 0px;
+      display: flex;
   
       li {
         margin-bottom: 10px;
