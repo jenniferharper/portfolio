@@ -2,6 +2,8 @@
 $header-font: 'Montagu Slab', serif;
 $body-font: 'Manrope', sans-serif;
 
+$header-wix: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-wix: 'Raleway', sans-serif;
 
 
 $xs:40px;
@@ -26,7 +28,19 @@ $secondary-dark:#c52800;
 
 $flowers:#CA9E67;
 
+$wix-light:#f6f3ea;
+$wix-light2:#dde7ec;
+$wix-dark:#00273b;
+$wix-contrast:#dc5c00;
+$wix-contrast-2:#0062aa;
+
+$agency-light:#fff;
+$agency-dark:#040433;
+$agency-contrast:#d14f27;
+$agency-contrast-2:#0000C4;
+
 $shadow:0 -10px 40px rgba(228, 152, 6,0.05);
+$shadow2:0 10px 10px rgba(0, 0, 0, 0.5);
 $shadow-inset:inset 0 10px 100px rgba(252, 239, 185,0.5);
 $text-shadow: 2px 2px 10px rgba(0,0,0,0.25);
 $drop-shadow:drop-shadow( 3px 3px 8px rgba(0, 0, 0, .30));

@@ -3,6 +3,8 @@
 @import url("https://d2ta2fpo91apla.cloudfront.net/fontawesome-free-5.9.0-web/css/all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Montagu+Slab:wght@300;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@500&display=swap');
+
 html{
   overflow-x:hidden;
 }
@@ -204,7 +206,7 @@ svg {
 }
 
 .btn-svg{
-  fill: red;
+  fill: $white;
   @include transition;
   text{
     font-weight: bold;
@@ -212,7 +214,7 @@ svg {
     text-transform: uppercase;
   }
   &:hover{
-    fill:$dark;
+    fill:$secondary;
      @include transition;
   }
 }
@@ -221,9 +223,6 @@ svg {
   transform-origin: bottom left;
 }
 
-
-
-/////////////////////////////////
 .jh{
   .my-logo{
     top:10px;
@@ -233,8 +232,7 @@ svg {
   }
 }
 
-
-
+/////////////////////////////////
 .hero{
   .row{
     min-height: 100vh;
@@ -269,63 +267,9 @@ svg {
   }
 }
 
-
-.feature{
-  background-color:$main;
-  padding-top:$md;
- 
-  .row{
-    align-items: flex-end;
-    div{
-      padding:0
-    }
-    .preamble{
-      font-size:3vw;
-      position: absolute;
-      max-width: 70%;
-      left: 15%;
-      span{
-        font-family: $header-font;
-        font-size: 5.5vw;
-      }
-    }
-
-  }
-}
-
-
-.big-text{
-  overflow:hidden;
-  .row{
-    padding: $md 0;
-    min-height: 100vh;
-    p{
-      line-height: 1em;
-    }
-    .big{
-      font-size: 20vw;
-      font-family: $header-font;
-      overflow: hidden;
-      position: relative;
-      .special{
-        overflow:hidden;     
-      }
-    }
-    .medium{
-      font-size: 12vw;
-      letter-spacing: 5px;
-      margin-top: -40px;
-    }
-    .average{
-      font-size: 4vw;
-    }
-  }
-}
-
-
-.work{
-  background-color:$light1;
-  margin: 0 40px;
+.section-intro.work{
+  background-color:$dark;
+  margin: 0 66px;
   .row{
     padding: $md 0 0;
     h2{
@@ -345,11 +289,17 @@ svg {
   }
 }
 
-.spotzer{
-  background-color:$light1;
-  margin: 0 40px;
+.career{
+  background-color:$dark;
+  margin: 0 66px;
+  padding-bottom: $sm;
   .row{
-    padding-bottom: $md;
+    padding: $md $sm $sm;
+    div[class^="col"]{
+      position: relative;
+    }
+  }
+  .row.spotzer-social{
     align-items: flex-start;
     figure{
       height: 60vh;
@@ -360,28 +310,250 @@ svg {
     }
     div[class^="col"]{
       padding: 0;
-      position: relative;
       &.main{
         padding: 0 $md;
         margin-top: 60px;
       }
     }
-      .logo{
-        margin-top: 40px;
+    .logo{
+      margin-top: 40px;
+    }
+    p{
+      margin-top: 40px;
+    }
+    .btn-svg{
+      bottom: -38%;
+      left: -38%;
+      position: absolute;
+      width: 300px;
+    }
+  }
+
+  .row.wixbuilders{  
+    @include gradient(top, $grad1);  
+    margin: 0 20px 60px;
+    .branding{     
+      order: 2;      
+      display: flex;
+      align-items: center;
+      @media (min-width:992px){
+        order: unset;
+        padding: 0;
+      }
+        .wrap{
+          max-width: 360px;
+          box-shadow: $shadow;
+          display: flex;
+          justify-content: center;
+          border-radius: 22px;
+          margin-bottom: 20px;
+          background-color: $dark;
+          overflow: hidden;
+          box-shadow: $shadow2;
+          div{
+            @media(min-width:768px){
+              padding:40px;
+            }      
+            border-radius: 22px;
+            padding:$md;
+            .title{
+              font-size: 42px;
+              line-height: 1.2em;
+              font-family: $header-wix;
+              font-weight: 600;
+              color:$white
+            }
+            p{
+              font-family: $body-wix;
+              color:$white;
+              margin: 10px 0;
+              font-weight: 500;
+            }
+            p:last-of-type{
+              color:$wix-contrast;
+              margin-bottom: 40px;
+            }
+            img{
+              border-top-left-radius: 100px;
+              border-bottom-right-radius: 100px;
+              z-index: 2;
+              position: relative;
+            }
+    
+            .shapes{
+              position:absolute;
+              z-index: 0;
+              &.one{
+                width: 30%;
+                top: 0;
+                left: 0;
+                svg{fill:$wix-contrast}            
+              }
+              &.two{
+                top: 25%;
+                right: 0;
+                svg{fill:$wix-contrast-2}            
+              }
+              &.three{
+                bottom: 0;
+                left: 0;
+                width: 50%;
+                svg{fill:$wix-contrast}
+              }
+            }
+          }
+        }
+    }
+    .content{
+      padding: $sm;
+      order:1;
+      @media (min-width:992px){
+        order: unset;
+      }
+      h2{
+        font-family:$header-wix
       }
       p{
+        font-family: $body-wix;
+      }
+      a.wix-btn{
+        color:$white;
         margin-top: 40px;
+        padding: 10px 20px;
+        background-color: $wix-contrast-2;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include transition;
+        &:hover{
+          background-color: $wix-contrast;
+          @include transition;
+        }
       }
-      .btn-svg{
-        bottom: -38%;
-        left: -38%;
-        position: absolute;
-        width: 300px;
+      img{
+        max-width: 140px;
+        margin: 0 auto 20px;
       }
+    }
+  }
+
+  .spotzeragency{
+    padding: 0;
+    margin: 0 40px;
+    .row{
+      padding: 0;
+      figure.spotzer{
+        margin-top: $md;
+        svg{
+          fill:$white
+        }
+      }
+      figure.agency{
+        svg{
+          fill:$dark;
+        }
+      }
+    }
+
+    .blue-panel{
+      background-color: $agency-contrast-2;
+      &.content{
+        padding-bottom: $sm;
+      }
+    }
+
+    .content{
+      align-items: flex-start;
+      div[class^="col"]{
+        padding: $sm;
+      }
+      .cta-text{
+        font-size:30px;
+        font-weight: 600;
+        line-height: 1.3em;
+        margin-bottom: 20px;        
+      }  
+      p,.cta-text{
+        text-align: left;
+      }  
+    }
   }
 }
 
-.personal-pro{
+
+
+
+
+
+.svg-btn { 
+  width: 80%;
+  text { 
+    font-size: 6vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    fill: $white;
+    @media (min-width:768px){
+      font-size: 3vw;
+    }
+  }
+
+  .icon{
+    fill:$white;
+    position: absolute;
+  }
+  circle{
+    @include transition;
+    fill:$agency-contrast;
+  }
+  .rotate{
+    animation-name: rotate;
+    -webkit-animation-duration: 8s;
+       -moz-animation-duration: 8s;
+        -ms-animation-duration: 8s;
+         -o-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+        -ms-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+       -moz-animation-timing-function: linear;
+        -ms-animation-timing-function: linear;
+         -o-animation-timing-function: linear;
+            animation-timing-function: linear;  
+  }
+  a:hover{
+    circle{
+      fill:$dark;
+      @include transition;
+    }
+  }
+}
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+  from { -ms-transform: rotate(360deg); }
+  to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+  from { -o-transform: rotate(360deg); }
+  to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
+
+
+.section-intro.personal-pro{
   padding: $md 0 $sm;
   .row{
     h2{
@@ -458,3 +630,9 @@ svg {
     min-height: auto;
   }
 }
+
+
+
+
+
+
