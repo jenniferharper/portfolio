@@ -241,7 +241,7 @@ svg {
 .career {
   background-color: #011147;
   margin: 0 66px;
-  padding-bottom: 4%; }
+  padding-bottom: 80px; }
   .career .row {
     padding: 8% 4% 4%; }
     .career .row div[class^="col"] {
@@ -268,11 +268,11 @@ svg {
       position: absolute;
       width: 300px; }
   .career .row.wixbuilders {
-    background: -webkit-linear-gradient(top, transparent 0%, #003855 80%);
-    background: -moz-linear-gradient(top, transparent 0%, #003855 80%);
-    background: -o-linear-gradient(top, transparent 0%, #003855 80%);
-    background: linear-gradient(top, transparent 0%, #003855 80%);
-    margin: 0 20px 60px; }
+    background: -webkit-linear-gradient(bottom, transparent 0%, #000 80%);
+    background: -moz-linear-gradient(bottom, transparent 0%, #000 80%);
+    background: -o-linear-gradient(bottom, transparent 0%, #000 80%);
+    background: linear-gradient(bottom, transparent 0%, #000 80%);
+    margin: 0 60px 60px; }
     .career .row.wixbuilders .branding {
       order: 2;
       display: flex;
@@ -368,7 +368,7 @@ svg {
         margin: 0 auto 20px; }
   .career .spotzeragency {
     padding: 0;
-    margin: 0 40px; }
+    margin: 0 80px; }
     .career .spotzeragency .row {
       padding: 0; }
       .career .spotzeragency .row figure.spotzer {

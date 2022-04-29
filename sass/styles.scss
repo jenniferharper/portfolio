@@ -292,7 +292,7 @@ svg {
 .career{
   background-color:$dark;
   margin: 0 66px;
-  padding-bottom: $sm;
+  padding-bottom: 80px;
   .row{
     padding: $md $sm $sm;
     div[class^="col"]{
@@ -330,8 +330,8 @@ svg {
   }
 
   .row.wixbuilders{  
-    @include gradient(top, $grad1);  
-    margin: 0 20px 60px;
+    @include gradient(bottom, $grad1);  
+    margin: 0 60px 60px;
     .branding{     
       order: 2;      
       display: flex;
@@ -440,7 +440,7 @@ svg {
 
   .spotzeragency{
     padding: 0;
-    margin: 0 40px;
+    margin: 0 80px;
     .row{
       padding: 0;
       figure.spotzer{

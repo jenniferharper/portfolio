@@ -22,7 +22,7 @@
 
 
 
-$grad1:transparent 0%, lighten($wix-dark, 5%) 80%;
+$grad1:transparent 0%, #000 80%;
 
 
 @mixin gradient($direction, $list) { 
