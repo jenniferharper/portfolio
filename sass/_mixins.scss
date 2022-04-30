@@ -22,7 +22,7 @@
 
 
 
-$grad1:transparent 0%, #000 80%;
+$grad1:transparent 0%, $agency-dark 80%;
 
 
 @mixin gradient($direction, $list) { 

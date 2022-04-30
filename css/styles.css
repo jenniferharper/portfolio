@@ -268,10 +268,10 @@ svg {
       position: absolute;
       width: 300px; }
   .career .row.wixbuilders {
-    background: -webkit-linear-gradient(bottom, transparent 0%, #000 80%);
-    background: -moz-linear-gradient(bottom, transparent 0%, #000 80%);
-    background: -o-linear-gradient(bottom, transparent 0%, #000 80%);
-    background: linear-gradient(bottom, transparent 0%, #000 80%);
+    background: -webkit-linear-gradient(bottom, transparent 0%, #040433 80%);
+    background: -moz-linear-gradient(bottom, transparent 0%, #040433 80%);
+    background: -o-linear-gradient(bottom, transparent 0%, #040433 80%);
+    background: linear-gradient(bottom, transparent 0%, #040433 80%);
     margin: 0 60px 60px; }
     .career .row.wixbuilders .branding {
       order: 2;
