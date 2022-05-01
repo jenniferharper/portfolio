@@ -173,23 +173,27 @@ svg {
   left: -5%;
   z-index: 0; }
 
-.btn-svg {
-  fill: #e6e1d9;
-  transition-property: all;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in; }
-  .btn-svg text {
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase; }
-  .btn-svg:hover {
+.special {
+  transform-origin: bottom left; }
+
+.portfolio-btn {
+  font-family: "Montagu Slab", serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5em;
+  margin: 20px 0 40px; }
+  .portfolio-btn svg {
+    width: 60px;
     fill: #e49806;
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease-in; }
-
-.special {
-  transform-origin: bottom left; }
+  .portfolio-btn:hover svg {
+    fill: #e9e4de;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
 
 .jh .my-logo {
   top: 10px;
@@ -221,23 +225,6 @@ svg {
   .hero .row .social {
     flex-direction: column; }
 
-.section-intro.work {
-  background-color: #011147;
-  margin: 0 66px; }
-  .section-intro.work .row {
-    padding: 8% 0 0; }
-    .section-intro.work .row h2 {
-      font-size: 7.5vw;
-      letter-spacing: 4px;
-      line-height: 1em; }
-      .section-intro.work .row h2 span {
-        font-family: "Manrope", sans-serif;
-        letter-spacing: 1px;
-        font-size: 6vw; }
-    .section-intro.work .row p {
-      max-width: 700px;
-      margin: 20px auto; }
-
 .career {
   background-color: #011147;
   margin: 0 66px;
@@ -246,8 +233,22 @@ svg {
     padding: 8% 4% 4%; }
     .career .row div[class^="col"] {
       position: relative; }
+  .career .row.career-intro {
+    padding: 8% 0 0; }
+    .career .row.career-intro h2 {
+      font-size: 7.5vw;
+      letter-spacing: 4px;
+      line-height: 1em; }
+      .career .row.career-intro h2 span {
+        font-family: "Manrope", sans-serif;
+        letter-spacing: 1px;
+        font-size: 6vw; }
+    .career .row.career-intro p {
+      max-width: 700px;
+      margin: 20px auto; }
   .career .row.spotzer-social {
-    align-items: flex-start; }
+    align-items: flex-start;
+    margin-bottom: 4%; }
     .career .row.spotzer-social figure {
       height: 60vh; }
     .career .row.spotzer-social img.logo {
@@ -256,23 +257,17 @@ svg {
     .career .row.spotzer-social div[class^="col"] {
       padding: 0; }
       .career .row.spotzer-social div[class^="col"].main {
-        padding: 0 8%;
-        margin-top: 60px; }
+        padding: 0 4%; }
     .career .row.spotzer-social .logo {
       margin-top: 40px; }
     .career .row.spotzer-social p {
       margin-top: 40px; }
-    .career .row.spotzer-social .btn-svg {
-      bottom: -38%;
-      left: -38%;
-      position: absolute;
-      width: 300px; }
   .career .row.wixbuilders {
     background: -webkit-linear-gradient(bottom, transparent 0%, #040433 80%);
     background: -moz-linear-gradient(bottom, transparent 0%, #040433 80%);
     background: -o-linear-gradient(bottom, transparent 0%, #040433 80%);
     background: linear-gradient(bottom, transparent 0%, #040433 80%);
-    margin: 0 60px 60px; }
+    margin: 0 40px 40px; }
     .career .row.wixbuilders .branding {
       order: 2;
       display: flex;
@@ -302,10 +297,10 @@ svg {
             line-height: 1.2em;
             font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-weight: 600;
-            color: #e6e1d9; }
+            color: #fff; }
           .career .row.wixbuilders .branding .wrap div p {
             font-family: "Raleway", sans-serif;
-            color: #e6e1d9;
+            color: #fff;
             margin: 10px 0;
             font-weight: 500; }
           .career .row.wixbuilders .branding .wrap div p:last-of-type {
@@ -347,7 +342,7 @@ svg {
       .career .row.wixbuilders .content p {
         font-family: "Raleway", sans-serif; }
       .career .row.wixbuilders .content a.wix-btn {
-        color: #e6e1d9;
+        color: #fff;
         margin-top: 40px;
         padding: 10px 20px;
         background-color: #0062aa;
@@ -374,7 +369,7 @@ svg {
       .career .spotzeragency .row figure.spotzer {
         margin-top: 8%; }
         .career .spotzeragency .row figure.spotzer svg {
-          fill: #e6e1d9; }
+          fill: #fff; }
       .career .spotzeragency .row figure.agency svg {
         fill: #011147; }
     .career .spotzeragency .blue-panel {
@@ -384,7 +379,8 @@ svg {
     .career .spotzeragency .content {
       align-items: flex-start; }
       .career .spotzeragency .content div[class^="col"] {
-        padding: 4%; }
+        padding: 4%;
+        align-items: flex-start; }
       .career .spotzeragency .content .cta-text {
         font-size: 30px;
         font-weight: 600;
@@ -392,48 +388,64 @@ svg {
         margin-bottom: 20px; }
       .career .spotzeragency .content p, .career .spotzeragency .content .cta-text {
         text-align: left; }
-
-.svg-btn {
-  width: 80%; }
-  .svg-btn text {
-    font-size: 6vw;
-    font-weight: 600;
-    text-transform: uppercase;
-    fill: #e6e1d9; }
-    @media (min-width: 768px) {
-      .svg-btn text {
-        font-size: 3vw; } }
-  .svg-btn .icon {
-    fill: #e6e1d9;
-    position: absolute; }
-  .svg-btn circle {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-    fill: #d14f27; }
-  .svg-btn .rotate {
-    animation-name: rotate;
-    -webkit-animation-duration: 8s;
-    -moz-animation-duration: 8s;
-    -ms-animation-duration: 8s;
-    -o-animation-duration: 8s;
-    animation-duration: 8s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear; }
-  .svg-btn a:hover circle {
-    fill: #011147;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-
+      .career .spotzeragency .content .spotBtn {
+        margin: 40px 0 0;
+        padding: 20px 40px;
+        text-decoration: none;
+        border: 2px solid #fff;
+        font-size: 26px;
+        font-weight: 800;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+        .career .spotzeragency .content .spotBtn i {
+          margin-left: 20px; }
+        .career .spotzeragency .content .spotBtn:hover {
+          color: #040433;
+          border: 2px solid #040433;
+          transition-property: all;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in; }
+    .career .spotzeragency .svg-btn {
+      width: 80%; }
+      .career .spotzeragency .svg-btn text {
+        font-size: 6vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        fill: #fff; }
+        @media (min-width: 768px) {
+          .career .spotzeragency .svg-btn text {
+            font-size: 3vw; } }
+      .career .spotzeragency .svg-btn .icon {
+        fill: #fff;
+        position: absolute; }
+      .career .spotzeragency .svg-btn circle {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        fill: #d14f27; }
+      .career .spotzeragency .svg-btn .rotate {
+        animation-name: rotate;
+        -webkit-animation-duration: 8s;
+        -moz-animation-duration: 8s;
+        -ms-animation-duration: 8s;
+        -o-animation-duration: 8s;
+        animation-duration: 8s;
+        -webkit-animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -ms-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+        -ms-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        animation-timing-function: linear; }
+      .career .spotzeragency .svg-btn a:hover circle {
+        fill: #011147;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(360deg); }

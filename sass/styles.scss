@@ -205,23 +205,31 @@ svg {
   z-index: 0;
 }
 
-.btn-svg{
-  fill: $white;
-  @include transition;
-  text{
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-  &:hover{
-    fill:$secondary;
-     @include transition;
-  }
-}
 
 .special{
   transform-origin: bottom left;
 }
+
+.portfolio-btn{
+  font-family: $header-font;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size:1.5em;
+  margin:20px 0 40px;
+  svg{
+    width: 60px;
+    fill:$secondary;
+    @include transition;
+  }
+  &:hover{
+    svg{
+      fill:$light;
+      @include transition;
+    }
+  }
+}
+
 
 .jh{
   .my-logo{
@@ -267,10 +275,18 @@ svg {
   }
 }
 
-.section-intro.work{
+
+.career{
   background-color:$dark;
   margin: 0 66px;
+  padding-bottom: 80px;
   .row{
+    padding: $md $sm $sm;
+    div[class^="col"]{
+      position: relative;
+    }
+  }
+  .row.career-intro{
     padding: $md 0 0;
     h2{
       font-size: 7.5vw;
@@ -287,20 +303,9 @@ svg {
       margin: 20px auto;
     }
   }
-}
-
-.career{
-  background-color:$dark;
-  margin: 0 66px;
-  padding-bottom: 80px;
-  .row{
-    padding: $md $sm $sm;
-    div[class^="col"]{
-      position: relative;
-    }
-  }
   .row.spotzer-social{
     align-items: flex-start;
+    margin-bottom:$sm;
     figure{
       height: 60vh;
     }
@@ -311,8 +316,7 @@ svg {
     div[class^="col"]{
       padding: 0;
       &.main{
-        padding: 0 $md;
-        margin-top: 60px;
+        padding: 0 $sm;
       }
     }
     .logo{
@@ -321,17 +325,11 @@ svg {
     p{
       margin-top: 40px;
     }
-    .btn-svg{
-      bottom: -38%;
-      left: -38%;
-      position: absolute;
-      width: 300px;
-    }
   }
 
   .row.wixbuilders{  
     @include gradient(bottom, $grad1);  
-    margin: 0 60px 60px;
+    margin: 0 40px 40px;
     .branding{     
       order: 2;      
       display: flex;
@@ -463,10 +461,11 @@ svg {
       }
     }
 
-    .content{
-      align-items: flex-start;
+    .content{  
+      align-items: flex-start;   
       div[class^="col"]{
         padding: $sm;
+        align-items: flex-start;
       }
       .cta-text{
         font-size:30px;
@@ -476,7 +475,91 @@ svg {
       }  
       p,.cta-text{
         text-align: left;
-      }  
+      } 
+      .spotBtn{
+        margin: 40px 0 0 ;
+        padding: 20px 40px;
+        text-decoration: none;
+        border:2px solid $white;
+        i{margin-left: 20px;}
+        font-size: 26px;
+        font-weight: 800;
+        @include transition;
+        &:hover{
+          color:$agency-dark;
+          border:2px solid $agency-dark;
+          @include transition;
+        }
+      }
+    }
+
+
+
+
+    .svg-btn { 
+      width: 80%;
+      text { 
+        font-size: 6vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        fill: $white;
+        @media (min-width:768px){
+          font-size: 3vw;
+        }
+      }
+    
+      .icon{
+        fill:$white;
+        position: absolute;
+      }
+      circle{
+        @include transition;
+        fill:$agency-contrast;
+      }
+      .rotate{
+        animation-name: rotate;
+        -webkit-animation-duration: 8s;
+           -moz-animation-duration: 8s;
+            -ms-animation-duration: 8s;
+             -o-animation-duration: 8s;
+                animation-duration: 8s;
+        -webkit-animation-iteration-count: infinite;
+           -moz-animation-iteration-count: infinite;
+            -ms-animation-iteration-count: infinite;
+             -o-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+           -moz-animation-timing-function: linear;
+            -ms-animation-timing-function: linear;
+             -o-animation-timing-function: linear;
+                animation-timing-function: linear;  
+      }
+      a:hover{
+        circle{
+          fill:$dark;
+          @include transition;
+        }
+      }
+    }
+    @-webkit-keyframes rotate {
+      from { -webkit-transform: rotate(360deg); }
+      to { -webkit-transform: rotate(0); }
+    }
+    @-moz-keyframes rotate {
+      from { -moz-transform: rotate(360deg); }
+      to { -moz-transform: rotate(0); }
+    }
+    @-ms-keyframes rotate {
+      from { -ms-transform: rotate(360deg); }
+      to { -ms-transform: rotate(0); }
+    }
+    @-o-keyframes rotate {
+      from { -o-transform: rotate(360deg); }
+      to { -o-transform: rotate(0); }
+    }
+    @keyframes rotate {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0); }
     }
   }
 }
@@ -486,71 +569,7 @@ svg {
 
 
 
-.svg-btn { 
-  width: 80%;
-  text { 
-    font-size: 6vw;
-    font-weight: 600;
-    text-transform: uppercase;
-    fill: $white;
-    @media (min-width:768px){
-      font-size: 3vw;
-    }
-  }
 
-  .icon{
-    fill:$white;
-    position: absolute;
-  }
-  circle{
-    @include transition;
-    fill:$agency-contrast;
-  }
-  .rotate{
-    animation-name: rotate;
-    -webkit-animation-duration: 8s;
-       -moz-animation-duration: 8s;
-        -ms-animation-duration: 8s;
-         -o-animation-duration: 8s;
-            animation-duration: 8s;
-    -webkit-animation-iteration-count: infinite;
-       -moz-animation-iteration-count: infinite;
-        -ms-animation-iteration-count: infinite;
-         -o-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-       -moz-animation-timing-function: linear;
-        -ms-animation-timing-function: linear;
-         -o-animation-timing-function: linear;
-            animation-timing-function: linear;  
-  }
-  a:hover{
-    circle{
-      fill:$dark;
-      @include transition;
-    }
-  }
-}
-@-webkit-keyframes rotate {
-  from { -webkit-transform: rotate(360deg); }
-  to { -webkit-transform: rotate(0); }
-}
-@-moz-keyframes rotate {
-  from { -moz-transform: rotate(360deg); }
-  to { -moz-transform: rotate(0); }
-}
-@-ms-keyframes rotate {
-  from { -ms-transform: rotate(360deg); }
-  to { -ms-transform: rotate(0); }
-}
-@-o-keyframes rotate {
-  from { -o-transform: rotate(360deg); }
-  to { -o-transform: rotate(0); }
-}
-@keyframes rotate {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0); }
-}
 
 
 .section-intro.personal-pro{
