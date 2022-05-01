@@ -1,7 +1,4 @@
 @import url("https://d2ta2fpo91apla.cloudfront.net/fontawesome-free-5.9.0-web/css/all.min.css");
-html {
-  overflow-x: hidden; }
-
 body {
   position: relative;
   height: 100%;
@@ -37,17 +34,20 @@ body {
     flex-direction: row;
     padding-left: 0px;
     padding-right: 0px;
-    margin: 0; }
-    .standard .row > div:not(.btn-wrap) {
+    margin: 0;
+    align-items: center; }
+    .standard .row div[class^="col"] {
       position: relative;
       display: flex;
       flex-direction: column;
-      overflow: visible; }
+      overflow: visible;
+      text-align: center; }
     .standard .row ul {
       list-style: none;
       margin-bottom: 0;
       padding-left: 40px;
-      padding-right: 0px; }
+      padding-right: 0px;
+      display: flex; }
       .standard .row ul li {
         margin-bottom: 10px;
         position: relative;
