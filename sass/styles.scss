@@ -326,11 +326,12 @@ svg {
     order: 2;      
     display: flex;
     align-items: center;
-    @media (min-width:992px){
+    @media (min-width:1200px){
       order: unset;
       padding: 0;
     }
     .wrap{
+      position: relative;
       max-width: 360px;
       display: flex;
       justify-content: center;
@@ -340,38 +341,55 @@ svg {
       box-shadow: $shadow2;
       height: 100%;      
       padding:$md;
-
       @media(min-width:768px){
-        padding:40px;
+        padding:20px;
+      }
+      @media(min-width:992px){
+        padding:$sm $md;
       }
 
       div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         .title{
           font-size: 42px;
           line-height: 1.2em;
           font-family: $header-wix;
           font-weight: 600;
-          color:$white
+          @media (min-width:1366px){
+            font-size: 46px;
+          }
         }
         p{
           font-family: $body-wix;
-          color:$white;
           margin: 10px 0;
           font-weight: 500;
         }
         p:last-of-type{
           color:$wix-contrast;
-          margin-bottom: 40px;
+          letter-spacing: 1.5px;
+        } 
+        img{
+          border-top-left-radius: 25%;
+          border-bottom-right-radius: 25%;
+          z-index: 2;
+          position: relative;
         }
+      }
+      figure.shapes{
+        position: absolute;
+        z-index: 0;
       }
     }    
   }
 
   .branding.one{ 
+    @media (min-width:768px) and (max-width:1200px){
+      padding-right: 10px;
+    }
     .wrap{
       figure.shapes{
-        position:absolute;
-        z-index: 0;
         &.one{
           width: 30%;
           top: 0;
@@ -390,21 +408,63 @@ svg {
           svg{fill:$wix-contrast}
         }
       }
-      div{ 
-        img{
-          border-top-left-radius: 25%;
-          border-bottom-right-radius: 25%;
-          z-index: 2;
-          position: relative;
-        }
+      div{
+        p:last-of-type{
+          margin-bottom: 40px;
+        } 
+
       }
     }
+  }
+
+  .branding.two{
+    @media (min-width:768px) and (max-width:1200px){
+      padding-left: 10px;
+    }
+    .wrap{
+      &::before{
+        background-color: $light;
+        content:'';
+        width: 100%;
+        bottom: 65%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 0;
+      }
+
+      div{
+        p:first-of-type{
+          color: $dark;
+        }
+        img{
+          margin-bottom: 20px;
+        }
+        figure.one{
+          max-width: 30%;
+          svg{
+            .st0{fill:$wix-contrast-2;}
+            .st1{fill:$dark;}
+            .st2{fill:#9EC6DB;}
+            .st3{fill:#0062AA;}
+          }
+        }
+      }
+
+      figure.two{
+        right: 0;
+        svg{
+          fill:$wix-light-3;
+        }
+      }
+    } 
   }
 
   div[class^="col"].text-intro{
     padding: $sm;
     order:1;
     align-items: center;
+    justify-content: center;
     margin-bottom: 40px;
     @media (min-width:992px){
       order: unset;
