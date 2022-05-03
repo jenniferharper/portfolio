@@ -314,11 +314,11 @@ svg {
 .wixbuilders{ 
   .row{
    @include gradient(bottom, $grad1);  
-   margin: 0 20px 20px;
+   margin: 0 20px ;
    align-items: stretch;
    padding: $md $sm;
    @media (min-width:768px){
-    margin: 0 40px 40px; 
+    margin: 0 40px; 
    }
   }
 
@@ -496,97 +496,36 @@ svg {
   }
 }
 
-
-
-
-
-
-
-
-.career{
-  background-color:$dark;
-  margin: 0 66px;
-  padding-bottom: 80px;
-  .row{
-    padding: $md $sm $sm;
+.spotagency{ 
+  .row{ 
+   margin: 0 20px;
+   align-items: stretch;
+   padding: 0 20px;
+   @media (min-width:768px){
+    margin: 0 40px; 
+   }
+  }
+  .spotzer{
+    svg{
+      fill:$white;
+    }
+  }
+  .agency{
+    background-color: $agency-contrast-2;
+    svg{
+      fill:$agency-dark;
+    }
+  }
+  .content-text{
+    background-color: $agency-contrast-2;
+    padding:$sm;
+    justify-content: center;
     div[class^="col"]{
-      position: relative;
-    }
-  }
-  .row.career-intro{
-    padding: $md 0 0;
-    h2{
-      font-size: 7.5vw;
-      letter-spacing: 4px;
-      line-height: 1em;
-      span{
-        font-family: $body-font;
-        letter-spacing: 1px;
-        font-size: 6vw;
-      }
-    }
-    p{
-      max-width: 700px;
-      margin: 20px auto;
-    }
-  }
-  .row.spotzer-social{
-    align-items: flex-start;
-    margin-bottom:$sm;
-    figure{
-      height: 60vh;
-    }
-    img.logo{
-      max-width: 70%;
-      margin: 40px auto;
-    }
-    div[class^="col"]{
-      padding: 0;
-      &.main{
-        padding: 0 $sm;
-      }
-    }
-    .logo{
-      margin-top: 40px;
-    }
-    p{
-      margin-top: 40px;
-    }
-  }
-
-
-
-  .spotzeragency{
-    padding: 0;
-    margin: 0 80px;
-    .row{
-      padding: 0;
-      figure.spotzer{
-        margin-top: $md;
-        svg{
-          fill:$white
-        }
-      }
-      figure.agency{
-        svg{
-          fill:$dark;
-        }
-      }
+      padding: $sm;
     }
 
-    .blue-panel{
-      background-color: $agency-contrast-2;
-      &.content{
-        padding-bottom: $sm;
-      }
-    }
-
-    .content{  
-      align-items: flex-start;   
-      div[class^="col"]{
-        padding: $sm;
-        align-items: flex-start;
-      }
+    .text{
+      align-items: center;
       .cta-text{
         font-size:30px;
         font-weight: 600;
@@ -612,77 +551,117 @@ svg {
         }
       }
     }
+  }
 
-
-
-
-    .svg-btn { 
-      width: 80%;
-      text { 
-        font-size: 6vw;
-        font-weight: 600;
-        text-transform: uppercase;
-        fill: $white;
-        @media (min-width:768px){
-          font-size: 3vw;
-        }
+  .svg-btn { 
+    width: 80%;
+    text { 
+      font-size: 6vw;
+      font-weight: 600;
+      text-transform: uppercase;
+      fill: $white;
+      @media (min-width:768px){
+        font-size: 3vw;
       }
-    
-      .icon{
-        fill:$white;
-        position: absolute;
-      }
+    }
+  
+    .icon{
+      fill:$white;
+      position: absolute;
+    }
+    circle{
+      @include transition;
+      fill:$agency-contrast;
+    }
+    .rotate{
+      animation-name: rotate;
+      -webkit-animation-duration: 8s;
+         -moz-animation-duration: 8s;
+          -ms-animation-duration: 8s;
+           -o-animation-duration: 8s;
+              animation-duration: 8s;
+      -webkit-animation-iteration-count: infinite;
+         -moz-animation-iteration-count: infinite;
+          -ms-animation-iteration-count: infinite;
+           -o-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+         -moz-animation-timing-function: linear;
+          -ms-animation-timing-function: linear;
+           -o-animation-timing-function: linear;
+              animation-timing-function: linear;  
+    }
+    a:hover{
       circle{
+        fill:$dark;
         @include transition;
-        fill:$agency-contrast;
       }
-      .rotate{
-        animation-name: rotate;
-        -webkit-animation-duration: 8s;
-           -moz-animation-duration: 8s;
-            -ms-animation-duration: 8s;
-             -o-animation-duration: 8s;
-                animation-duration: 8s;
-        -webkit-animation-iteration-count: infinite;
-           -moz-animation-iteration-count: infinite;
-            -ms-animation-iteration-count: infinite;
-             -o-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-           -moz-animation-timing-function: linear;
-            -ms-animation-timing-function: linear;
-             -o-animation-timing-function: linear;
-                animation-timing-function: linear;  
-      }
-      a:hover{
-        circle{
-          fill:$dark;
-          @include transition;
-        }
-      }
-    }
-    @-webkit-keyframes rotate {
-      from { -webkit-transform: rotate(360deg); }
-      to { -webkit-transform: rotate(0); }
-    }
-    @-moz-keyframes rotate {
-      from { -moz-transform: rotate(360deg); }
-      to { -moz-transform: rotate(0); }
-    }
-    @-ms-keyframes rotate {
-      from { -ms-transform: rotate(360deg); }
-      to { -ms-transform: rotate(0); }
-    }
-    @-o-keyframes rotate {
-      from { -o-transform: rotate(360deg); }
-      to { -o-transform: rotate(0); }
-    }
-    @keyframes rotate {
-      from { transform: rotate(360deg); }
-      to { transform: rotate(0); }
     }
   }
+  
+  @-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+  }
+  @-moz-keyframes rotate {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+  }
+  @-ms-keyframes rotate {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+  }
+  @-o-keyframes rotate {
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+  }
+  @keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+  }
+
 }
+
+.spotzer-social{
+  padding-bottom: $sm;
+  .row{    
+    margin: 0 20px ;
+    align-items: stretch;
+    padding: $md $sm $sm;
+    @media (min-width:768px){
+     margin: 0 40px; 
+    }
+   }
+   figure.left,
+   figure.right,
+   figure.center{
+     height: 50vh;
+   }
+
+   figure.icon{
+     max-width: 50px;
+     margin: 20px auto;
+     svg{
+      .st0{fill:url(#SVGID_1_);}
+      .st1{fill:#FFFFFF;}
+     }
+   }
+
+   div[class^="col"]{
+     justify-content: center;
+   }
+
+   div[class^="col"].main{
+     padding:0 $sm;
+   }
+}
+
+
+
+
+
+
+
 
 
 .section-intro.personal-pro{

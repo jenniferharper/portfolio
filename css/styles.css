@@ -250,16 +250,16 @@ svg {
     flex-direction: column; }
 
 .wixbuilders .row {
-  background: -webkit-linear-gradient(bottom, transparent 0%, #040433 80%);
-  background: -moz-linear-gradient(bottom, transparent 0%, #040433 80%);
-  background: -o-linear-gradient(bottom, transparent 0%, #040433 80%);
-  background: linear-gradient(bottom, transparent 0%, #040433 80%);
-  margin: 0 20px 20px;
+  background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: linear-gradient(bottom, transparent 15%, #040433 80%);
+  margin: 0 20px;
   align-items: stretch;
   padding: 8% 4%; }
   @media (min-width: 768px) {
     .wixbuilders .row {
-      margin: 0 40px 40px; } }
+      margin: 0 40px; } }
 .wixbuilders .branding {
   order: 2;
   display: flex;
@@ -400,128 +400,92 @@ svg {
     max-width: 140px;
     margin: 0 auto 20px; }
 
-.career {
-  background-color: #011147;
-  margin: 0 66px;
-  padding-bottom: 80px; }
-  .career .row {
-    padding: 8% 4% 4%; }
-    .career .row div[class^="col"] {
-      position: relative; }
-  .career .row.career-intro {
-    padding: 8% 0 0; }
-    .career .row.career-intro h2 {
-      font-size: 7.5vw;
-      letter-spacing: 4px;
-      line-height: 1em; }
-      .career .row.career-intro h2 span {
-        font-family: "Manrope", sans-serif;
-        letter-spacing: 1px;
-        font-size: 6vw; }
-    .career .row.career-intro p {
-      max-width: 700px;
-      margin: 20px auto; }
-  .career .row.spotzer-social {
-    align-items: flex-start;
-    margin-bottom: 4%; }
-    .career .row.spotzer-social figure {
-      height: 60vh; }
-    .career .row.spotzer-social img.logo {
-      max-width: 70%;
-      margin: 40px auto; }
-    .career .row.spotzer-social div[class^="col"] {
-      padding: 0; }
-      .career .row.spotzer-social div[class^="col"].main {
-        padding: 0 4%; }
-    .career .row.spotzer-social .logo {
-      margin-top: 40px; }
-    .career .row.spotzer-social p {
-      margin-top: 40px; }
-  .career .spotzeragency {
-    padding: 0;
-    margin: 0 80px; }
-    .career .spotzeragency .row {
-      padding: 0; }
-      .career .spotzeragency .row figure.spotzer {
-        margin-top: 8%; }
-        .career .spotzeragency .row figure.spotzer svg {
-          fill: #fff; }
-      .career .spotzeragency .row figure.agency svg {
-        fill: #011147; }
-    .career .spotzeragency .blue-panel {
-      background-color: #0000C4; }
-      .career .spotzeragency .blue-panel.content {
-        padding-bottom: 4%; }
-    .career .spotzeragency .content {
-      align-items: flex-start; }
-      .career .spotzeragency .content div[class^="col"] {
-        padding: 4%;
-        align-items: flex-start; }
-      .career .spotzeragency .content .cta-text {
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 1.3em;
-        margin-bottom: 20px; }
-      .career .spotzeragency .content p, .career .spotzeragency .content .cta-text {
-        text-align: left; }
-      .career .spotzeragency .content .spotBtn {
-        margin: 40px 0 0;
-        padding: 20px 40px;
-        text-decoration: none;
-        border: 2px solid #fff;
-        font-size: 26px;
-        font-weight: 800;
+.spotagency .row {
+  margin: 0 20px;
+  align-items: stretch;
+  padding: 0 20px; }
+  @media (min-width: 768px) {
+    .spotagency .row {
+      margin: 0 40px; } }
+.spotagency .spotzer svg {
+  fill: #fff; }
+.spotagency .agency {
+  background-color: #0000C4; }
+  .spotagency .agency svg {
+    fill: #040433; }
+.spotagency .content-text {
+  background-color: #0000C4;
+  padding: 4%;
+  justify-content: center; }
+  .spotagency .content-text div[class^="col"] {
+    padding: 4%; }
+  .spotagency .content-text .text {
+    align-items: center; }
+    .spotagency .content-text .text .cta-text {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.3em;
+      margin-bottom: 20px; }
+    .spotagency .content-text .text p, .spotagency .content-text .text .cta-text {
+      text-align: left; }
+    .spotagency .content-text .text .spotBtn {
+      margin: 40px 0 0;
+      padding: 20px 40px;
+      text-decoration: none;
+      border: 2px solid #fff;
+      font-size: 26px;
+      font-weight: 800;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+      .spotagency .content-text .text .spotBtn i {
+        margin-left: 20px; }
+      .spotagency .content-text .text .spotBtn:hover {
+        color: #040433;
+        border: 2px solid #040433;
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: ease-in; }
-        .career .spotzeragency .content .spotBtn i {
-          margin-left: 20px; }
-        .career .spotzeragency .content .spotBtn:hover {
-          color: #040433;
-          border: 2px solid #040433;
-          transition-property: all;
-          transition-duration: 0.3s;
-          transition-timing-function: ease-in; }
-    .career .spotzeragency .svg-btn {
-      width: 80%; }
-      .career .spotzeragency .svg-btn text {
-        font-size: 6vw;
-        font-weight: 600;
-        text-transform: uppercase;
-        fill: #fff; }
-        @media (min-width: 768px) {
-          .career .spotzeragency .svg-btn text {
-            font-size: 3vw; } }
-      .career .spotzeragency .svg-btn .icon {
-        fill: #fff;
-        position: absolute; }
-      .career .spotzeragency .svg-btn circle {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in;
-        fill: #d14f27; }
-      .career .spotzeragency .svg-btn .rotate {
-        animation-name: rotate;
-        -webkit-animation-duration: 8s;
-        -moz-animation-duration: 8s;
-        -ms-animation-duration: 8s;
-        -o-animation-duration: 8s;
-        animation-duration: 8s;
-        -webkit-animation-iteration-count: infinite;
-        -moz-animation-iteration-count: infinite;
-        -ms-animation-iteration-count: infinite;
-        -o-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
-        -ms-animation-timing-function: linear;
-        -o-animation-timing-function: linear;
-        animation-timing-function: linear; }
-      .career .spotzeragency .svg-btn a:hover circle {
-        fill: #011147;
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
+.spotagency .svg-btn {
+  width: 80%; }
+  .spotagency .svg-btn text {
+    font-size: 6vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    fill: #fff; }
+    @media (min-width: 768px) {
+      .spotagency .svg-btn text {
+        font-size: 3vw; } }
+  .spotagency .svg-btn .icon {
+    fill: #fff;
+    position: absolute; }
+  .spotagency .svg-btn circle {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    fill: #d14f27; }
+  .spotagency .svg-btn .rotate {
+    animation-name: rotate;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    -ms-animation-duration: 8s;
+    -o-animation-duration: 8s;
+    animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .spotagency .svg-btn a:hover circle {
+    fill: #011147;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(360deg); }
@@ -547,6 +511,31 @@ svg {
     transform: rotate(360deg); }
   to {
     transform: rotate(0); } }
+.spotzer-social {
+  padding-bottom: 4%; }
+  .spotzer-social .row {
+    margin: 0 20px;
+    align-items: stretch;
+    padding: 8% 4% 4%; }
+    @media (min-width: 768px) {
+      .spotzer-social .row {
+        margin: 0 40px; } }
+  .spotzer-social figure.left,
+  .spotzer-social figure.right,
+  .spotzer-social figure.center {
+    height: 50vh; }
+  .spotzer-social figure.icon {
+    max-width: 50px;
+    margin: 20px auto; }
+    .spotzer-social figure.icon svg .st0 {
+      fill: url(#SVGID_1_); }
+    .spotzer-social figure.icon svg .st1 {
+      fill: #FFFFFF; }
+  .spotzer-social div[class^="col"] {
+    justify-content: center; }
+  .spotzer-social div[class^="col"].main {
+    padding: 0 4%; }
+
 .section-intro.personal-pro {
   padding: 8% 0 4%; }
   .section-intro.personal-pro .row h2 {
