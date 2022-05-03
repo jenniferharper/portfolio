@@ -155,11 +155,20 @@ h2{
 
 } 
 
+
 figure {
   margin: 0;
   z-index: 1;
   width: 100%;
   position: relative;
+  a{
+    text-decoration:none;
+    svg{
+      .text{
+        text-decoration: none;
+      }
+    }
+  }
   svg{
     width: 100%;
     z-index: 1;
@@ -168,6 +177,7 @@ figure {
     }
   }
 }
+
 svg {
   overflow: visible !important;
 }

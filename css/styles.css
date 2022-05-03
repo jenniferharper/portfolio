@@ -130,6 +130,10 @@ figure {
   z-index: 1;
   width: 100%;
   position: relative; }
+  figure a {
+    text-decoration: none; }
+    figure a svg .text {
+      text-decoration: none; }
   figure svg {
     width: 100%;
     z-index: 1; }
