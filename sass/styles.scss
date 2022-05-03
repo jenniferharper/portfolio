@@ -338,7 +338,7 @@ svg {
       border-radius: 22px;
       margin-bottom: 20px;
       overflow: hidden;
-      box-shadow: $shadow2;
+      box-shadow: $wix-shadow;
       height: 100%;      
       padding:$md;
       @media(min-width:768px){
@@ -368,7 +368,8 @@ svg {
         }
         p:last-of-type{
           color:$wix-contrast;
-          letter-spacing: 1.5px;
+          letter-spacing: 1.2px;
+          font-weight: bold;
         } 
         img{
           border-top-left-radius: 25%;
@@ -408,12 +409,6 @@ svg {
           svg{fill:$wix-contrast}
         }
       }
-      div{
-        p:last-of-type{
-          margin-bottom: 40px;
-        } 
-
-      }
     }
   }
 
@@ -437,6 +432,10 @@ svg {
         p:first-of-type{
           color: $dark;
         }
+        p:last-of-type{
+          margin-bottom: 40px;
+          color:$wix-contrast-2;
+        }
         img{
           margin-bottom: 20px;
         }
@@ -445,8 +444,8 @@ svg {
           svg{
             .st0{fill:$wix-contrast-2;}
             .st1{fill:$dark;}
-            .st2{fill:#9EC6DB;}
-            .st3{fill:#0062AA;}
+            .st2{fill:$wix-light-2;}
+            .st3{fill:$wix-contrast-2;}
           }
         }
       }
@@ -478,7 +477,7 @@ svg {
     a.wix-btn{
       color:$white;
       margin-top: 40px;
-      padding: 10px 20px;
+      padding: 10px 40px;
       background-color: $wix-contrast-2;
       border-top-left-radius: 20px;
       border-bottom-right-radius: 20px;
