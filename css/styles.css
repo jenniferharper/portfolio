@@ -402,53 +402,30 @@ svg {
     fill: #f3a56d; }
 
 .spotagency .row {
+  background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: linear-gradient(bottom, transparent 15%, #040433 80%);
   margin: 0 20px;
-  align-items: stretch;
-  padding: 0 20px; }
+  padding: 8% 4%; }
   @media (min-width: 768px) {
     .spotagency .row {
       margin: 0 40px; } }
-.spotagency .spotzer svg {
-  fill: #fff; }
-.spotagency .agency {
-  background-color: #0000C4; }
-  .spotagency .agency svg {
-    fill: #040433; }
-.spotagency .content-text {
-  background-color: #0000C4;
-  padding: 4%;
-  justify-content: center; }
-  .spotagency .content-text div[class^="col"] {
-    padding: 4%; }
-  .spotagency .content-text .text {
+  .spotagency .row div[class^="col"] {
     align-items: center; }
-    .spotagency .content-text .text .cta-text {
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 1.3em;
-      margin-bottom: 20px; }
-    .spotagency .content-text .text p, .spotagency .content-text .text .cta-text {
-      text-align: left; }
-    .spotagency .content-text .text .spotBtn {
-      margin: 40px 0 0;
-      padding: 20px 40px;
-      text-decoration: none;
-      border: 2px solid #fff;
-      font-size: 26px;
-      font-weight: 800;
-      transition-property: all;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
-      .spotagency .content-text .text .spotBtn i {
-        margin-left: 20px; }
-      .spotagency .content-text .text .spotBtn:hover {
-        color: #040433;
-        border: 2px solid #040433;
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
+  .spotagency .row div[class^="col"].logos {
+    padding: 0 4%; }
+.spotagency .logos figure {
+  padding: 20px 10%; }
+.spotagency .logos .spotzer svg {
+  fill: #fff; }
+.spotagency .logos .agency {
+  background-color: #0000C4; }
+  .spotagency .logos .agency svg {
+    fill: #040433; }
 .spotagency .svg-btn {
-  width: 80%; }
+  width: 60%;
+  margin: 8% auto 0; }
   .spotagency .svg-btn text {
     font-size: 6vw;
     font-weight: 600;
@@ -515,9 +492,13 @@ svg {
 .spotzer-social {
   padding-bottom: 4%; }
   .spotzer-social .row {
+    background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
+    background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
+    background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
+    background: linear-gradient(bottom, transparent 15%, #040433 80%);
     margin: 0 20px;
     align-items: normal;
-    padding: 8% 0 4%; }
+    padding: 8% 4%; }
     @media (min-width: 768px) {
       .spotzer-social .row {
         margin: 0 40px; } }
@@ -542,7 +523,7 @@ svg {
     @media (min-width: 992px) {
       .spotzer-social figure.left,
       .spotzer-social figure.right {
-        min-height: 0; } }
+        min-height: 90%; } }
   .spotzer-social div[class^="col"].main {
     overflow: hidden;
     position: relative;

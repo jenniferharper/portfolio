@@ -366,7 +366,7 @@ svg {
    @media (min-width:768px){
     margin: 0 40px; 
    }
-    }
+}
 
   .branding{
     order: 2;      
@@ -508,103 +508,47 @@ svg {
       }
     } 
   }
-
-  // div[class^="col"].text-intro{
-  //   padding: $sm;
-  //   order:1;
-  //   align-items: center;
-  //   justify-content: center;
-  //   margin-bottom: 40px;
-  //   @media (min-width:992px){
-  //     order: unset;
-  //   }
-  //   h2{
-  //     font-family:$header-wix
-  //   }
-  //   p{
-  //     font-family: $body-wix;
-  //   }
-  //   a.wix-btn{
-  //     color:$white;
-  //     margin-top: 40px;
-  //     padding: 10px 40px;
-  //     background-color: $wix-contrast-2;
-  //     border-top-left-radius: 20px;
-  //     border-bottom-right-radius: 20px;
-  //     text-transform: uppercase;
-  //     letter-spacing: 1px;
-  //     @include transition;
-  //     &:hover{
-  //       background-color: $wix-contrast;
-  //       @include transition;
-  //     }
-  //   }
-  //   img{
-  //     max-width: 140px;
-  //     margin: 0 auto 20px;
-  //   }
-  // }
 }
 
 .spotagency{ 
-  .row{ 
-   margin: 0 20px;
-   align-items: stretch;
-   padding: 0 20px;
-   @media (min-width:768px){
-    margin: 0 40px; 
-   }
-  }
-  .spotzer{
-    svg{
-      fill:$white;
+  .row{
+    @include gradient(bottom, $grad1);  
+    margin: 0 20px ;
+    padding: $md $sm;
+    @media (min-width:768px){
+     margin: 0 40px; 
     }
-  }
-  .agency{
-    background-color: $agency-contrast-2;
-    svg{
-      fill:$agency-dark;
-    }
-  }
-  .content-text{
-    background-color: $agency-contrast-2;
-    padding:$sm;
-    justify-content: center;
     div[class^="col"]{
-      padding: $sm;
+      align-items: center;
+    } 
+    div[class^="col"].logos{
+      padding: 0 $sm;
+    } 
+  }
+
+  .logos{
+    figure{
+      padding: 20px $lg;
     }
 
-    .text{
-      align-items: center;
-      .cta-text{
-        font-size:30px;
-        font-weight: 600;
-        line-height: 1.3em;
-        margin-bottom: 20px;        
-      }  
-      p,.cta-text{
-        text-align: left;
-      } 
-      .spotBtn{
-        margin: 40px 0 0 ;
-        padding: 20px 40px;
-        text-decoration: none;
-        border:2px solid $white;
-        i{margin-left: 20px;}
-        font-size: 26px;
-        font-weight: 800;
-        @include transition;
-        &:hover{
-          color:$agency-dark;
-          border:2px solid $agency-dark;
-          @include transition;
-        }
+    .spotzer{
+      svg{
+        fill:$white;
+      }
+    }
+  
+    .agency{
+      background-color: $agency-contrast-2;
+      svg{
+        fill:$agency-dark;
       }
     }
   }
 
+
   .svg-btn { 
-    width: 80%;
+    width: 60%;
+    margin: $md auto 0;
     text { 
       font-size: 6vw;
       font-weight: 600;
@@ -674,14 +618,15 @@ svg {
 
 .spotzer-social{
   padding-bottom: $sm;
-  .row{    
+  .row{
+    @include gradient(bottom, $grad1);  
     margin: 0 20px ;
     align-items: normal;
-    padding: $md 0 $sm;
+    padding: $md $sm;
     @media (min-width:768px){
      margin: 0 40px; 
     }
-   }
+ }
 
 
    figure.icon{
@@ -709,7 +654,7 @@ svg {
     height: 40%;
     min-height: 30vh;
     @media (min-width:992px){
-      min-height:0
+      min-height:90%
     }
    }
 
@@ -722,9 +667,6 @@ svg {
      }
    }
 }
-
-
-
 
 
 
