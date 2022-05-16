@@ -235,7 +235,7 @@ svg {
   }
   svg{
     width: 60px;
-    fill:$secondary;
+    fill:$secondary-light;
     @include transition;
   }
   &:hover{
@@ -252,7 +252,10 @@ svg {
     top:10px;
     left:10px;
     position: fixed;
-    svg{max-width:50px;}
+    svg{
+      max-width:50px;
+      fill:$secondary-dark;
+    }
   }
 }
 
@@ -321,43 +324,159 @@ svg {
   }
 }
 
+.svg-btn-wrap{
+  width:100%;
+  position: relative;
+  .svg-btn { 
+    position: absolute;
+    max-width: 200px;
+    text { 
+      font-size: 6vw;
+      font-weight: 600;
+      text-transform: uppercase;
+      fill: $white;
+      @media (min-width:768px){
+        font-size: 3vw;
+      }
+    }
+    g{transform-origin: 50% 50%;}
+  
+    .icon{
+      fill:$white;
+      position: absolute;
+    }
+    circle{
+      @include transition;
+      fill:$agency-contrast;
+    }
+    .rotate{
+      animation-name: rotate;
+      -webkit-animation-duration: 8s;
+         -moz-animation-duration: 8s;
+          -ms-animation-duration: 8s;
+           -o-animation-duration: 8s;
+              animation-duration: 8s;
+      -webkit-animation-iteration-count: infinite;
+         -moz-animation-iteration-count: infinite;
+          -ms-animation-iteration-count: infinite;
+           -o-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+         -moz-animation-timing-function: linear;
+          -ms-animation-timing-function: linear;
+           -o-animation-timing-function: linear;
+              animation-timing-function: linear;  
+    }
+    a:hover{
+      circle{
+        fill:$light;
+        @include transition;
+      }
+    }
+
+}
+}
+
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+  from { -ms-transform: rotate(360deg); }
+  to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+  from { -o-transform: rotate(360deg); }
+  to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
+
 /////////////////////////////////
 
 .hero{
   .row{
     min-height: 100vh;
     .vert{
-      text-orientation: mixed;
-      writing-mode: vertical-rl; 
-      transform: rotate(180deg);
-      letter-spacing: 2px;
+    text-orientation: mixed;
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg);
+    letter-spacing: 2px;
+      a{
+        font-size:14px;
+        @include transition;
+        &:hover{
+          @include transition;
+          font-size:16px;
+          color:$secondary-dark;
+        }
+      }
     }
-
-   h1{
-      font-size: 8.5vw;
-      overflow:hidden;
-      .job{
-        font-weight: 300;
-        font-size: 7.5vw;
-      }
-      .name div:first-of-type div:first-of-type{
-        margin-right:-5px
-      }
-      .job div:first-of-type div:first-of-type{
-        margin-right:-10px
-      }
+    h1{
+    font-size: 8.5vw;
+    overflow:hidden;
+    .job{
+      font-weight: 300;
+      font-size: 7.5vw;
+    }
+    .name div:first-of-type div:first-of-type{
+      margin-right:-5px
+    }
+    .job div:first-of-type div:first-of-type{
+      margin-right:-10px
+    }
     }
     .about{
-      justify-content: space-evenly;
-      padding-left: 0;
+    justify-content: space-evenly;
+    padding-left: 0;
     }
     .social{
-      flex-direction: column;
+    flex-direction: column;
+    i{
+      @include transition; 
+    }
+    a:hover{
+      i{
+        transform:scale(1.5);
+        @include transition;  
+        color:$secondary-dark;
+      }
+    }
     }
   }
+  .svg-btn-wrap{
+      .svg-btn{
+        width: 180px;
+        top:-90px;
+        left: 80%;
+        a{
+          text{fill:$secondary-light}
+          .initials{fill:$light;}
+          .bg{fill:$secondary-dark}
+          .initials,.bg{
+            @include transition;
+          }
+
+          &:hover{
+            .initials,.bg{
+              @include transition;
+            }
+            .initials{fill:$secondary-dark;}
+            .bg{ fill:$light}
+          }
+        }
+      }
+    }
 }
 
-.wixbuilders{ 
+.standard.wixbuilders{ 
   .row{
    @include gradient(bottom, $grad1);  
    margin: 0 20px ;
@@ -366,7 +485,8 @@ svg {
    @media (min-width:768px){
     margin: 0 40px; 
    }
-}
+
+  }
 
   .branding{
     order: 2;      
@@ -374,7 +494,7 @@ svg {
     align-items: center;
     @media (min-width:1200px){
       order: unset;
-      padding: 0;
+      padding:0 20px;
     }
     .wrap{
       position: relative;
@@ -527,17 +647,15 @@ svg {
   }
 
   .logos{
-    figure{
-      padding: 20px $lg;
-    }
-
     .spotzer{
+      padding: 20px $lg;
       svg{
         fill:$white;
       }
     }
   
     .agency{
+      padding: 20px $lg;
       background-color: $agency-contrast-2;
       svg{
         fill:$agency-dark;
@@ -546,73 +664,31 @@ svg {
   }
 
 
-  .svg-btn { 
-    width: 60%;
-    margin: $md auto 0;
-    text { 
-      font-size: 6vw;
-      font-weight: 600;
-      text-transform: uppercase;
-      fill: $white;
-      @media (min-width:768px){
-        font-size: 3vw;
-      }
-    }
-  
-    .icon{
-      fill:$white;
-      position: absolute;
-    }
-    circle{
-      @include transition;
-      fill:$agency-contrast;
-    }
-    .rotate{
-      animation-name: rotate;
-      -webkit-animation-duration: 8s;
-         -moz-animation-duration: 8s;
-          -ms-animation-duration: 8s;
-           -o-animation-duration: 8s;
-              animation-duration: 8s;
-      -webkit-animation-iteration-count: infinite;
-         -moz-animation-iteration-count: infinite;
-          -ms-animation-iteration-count: infinite;
-           -o-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-         -moz-animation-timing-function: linear;
-          -ms-animation-timing-function: linear;
-           -o-animation-timing-function: linear;
-              animation-timing-function: linear;  
-    }
-    a:hover{
-      circle{
-        fill:$dark;
-        @include transition;
+
+  .svg-btn-wrap{
+    .svg-btn{
+      width: 160px;
+      top:-100px;
+      left: 100%;
+      a{
+        text{fill:$light}
+        .initials{fill:$light;}
+        .bg{fill:$secondary-dark}
+        .initials,.bg{
+          @include transition;
+        }
+
+        &:hover{
+          .initials,.bg{
+            @include transition;
+          }
+          .initials{fill:$secondary-dark;}
+          .bg{ fill:$light}
+        }
       }
     }
   }
-  
-  @-webkit-keyframes rotate {
-    from { -webkit-transform: rotate(360deg); }
-    to { -webkit-transform: rotate(0); }
-  }
-  @-moz-keyframes rotate {
-    from { -moz-transform: rotate(360deg); }
-    to { -moz-transform: rotate(0); }
-  }
-  @-ms-keyframes rotate {
-    from { -ms-transform: rotate(360deg); }
-    to { -ms-transform: rotate(0); }
-  }
-  @-o-keyframes rotate {
-    from { -o-transform: rotate(360deg); }
-    to { -o-transform: rotate(0); }
-  }
-  @keyframes rotate {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0); }
-  }
+
 
 }
 
@@ -627,16 +703,6 @@ svg {
      margin: 0 40px; 
     }
  }
-
-
-   figure.icon{
-     max-width: 150px;
-     margin: 20px auto;
-     svg{
-      .st0{fill:url(#SVGID_1_);}
-      .st1{fill:#FFFFFF;}
-     }
-   }
 
    div[class^="col"]{
     @media (min-width:576px){
@@ -666,6 +732,44 @@ svg {
       padding:0 $sm;
      }
    }
+
+   .center{
+    svg{
+      position: absolute;
+      left:0;
+      fill:transparent;
+      @include transition;
+      &:hover{
+        @include transition;
+        fill:$white
+      }
+    }
+  }
+
+   .svg-btn-wrap{
+     z-index: 10;
+    .svg-btn{
+      width: 160px;
+      top:-80px;
+      left: 90%;
+      a{
+        text{fill:$light}
+        .initials{fill:$light;}
+        .bg{fill:$secondary-dark}
+        .initials,.bg{
+          @include transition;
+        }
+
+        &:hover{
+          .initials,.bg{
+            @include transition;
+          }
+          .initials{fill:$secondary-dark;}
+          .bg{ fill:$light}
+        }
+      }
+    }
+  }
 }
 
 

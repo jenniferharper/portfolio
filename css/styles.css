@@ -194,7 +194,7 @@ svg {
       flex-direction: row; } }
   .portfolio-btn svg {
     width: 60px;
-    fill: #e49806;
+    fill: #c75033;
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease-in; }
@@ -209,7 +209,8 @@ svg {
   left: 10px;
   position: fixed; }
   .jh .my-logo svg {
-    max-width: 50px; }
+    max-width: 50px;
+    fill: #c52800; }
 
 .intro-heading .row {
   padding: 8% 4%; }
@@ -260,210 +261,53 @@ svg {
   .dark-bg .row {
     padding: 8%; }
 
-.hero .row {
-  min-height: 100vh; }
-  .hero .row .vert {
-    text-orientation: mixed;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    letter-spacing: 2px; }
-  .hero .row h1 {
-    font-size: 8.5vw;
-    overflow: hidden; }
-    .hero .row h1 .job {
-      font-weight: 300;
-      font-size: 7.5vw; }
-    .hero .row h1 .name div:first-of-type div:first-of-type {
-      margin-right: -5px; }
-    .hero .row h1 .job div:first-of-type div:first-of-type {
-      margin-right: -10px; }
-  .hero .row .about {
-    justify-content: space-evenly;
-    padding-left: 0; }
-  .hero .row .social {
-    flex-direction: column; }
-
-.wixbuilders .row {
-  background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
-  background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
-  background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
-  background: linear-gradient(bottom, transparent 15%, #040433 80%);
-  margin: 0 20px;
-  align-items: stretch;
-  padding: 8% 4%; }
-  @media (min-width: 768px) {
-    .wixbuilders .row {
-      margin: 0 40px; } }
-.wixbuilders .branding {
-  order: 2;
-  display: flex;
-  align-items: center; }
-  @media (min-width: 1200px) {
-    .wixbuilders .branding {
-      order: unset;
-      padding: 0; } }
-  .wixbuilders .branding .wrap {
-    position: relative;
-    max-width: 360px;
-    display: flex;
-    justify-content: center;
-    border-radius: 22px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: 0 0px 20px black;
-    height: 100%;
-    padding: 8%; }
-    @media (min-width: 768px) {
-      .wixbuilders .branding .wrap {
-        padding: 20px; } }
-    @media (min-width: 992px) {
-      .wixbuilders .branding .wrap {
-        padding: 4% 8%; } }
-    .wixbuilders .branding .wrap div {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly; }
-      .wixbuilders .branding .wrap div .title {
-        font-size: 42px;
-        line-height: 1.2em;
-        font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 600; }
-        @media (min-width: 1366px) {
-          .wixbuilders .branding .wrap div .title {
-            font-size: 46px; } }
-      .wixbuilders .branding .wrap div p {
-        font-family: "Raleway", sans-serif;
-        margin: 10px 0;
-        font-weight: 500; }
-      .wixbuilders .branding .wrap div p:last-of-type {
-        color: #dc5c00;
-        letter-spacing: 1.2px;
-        font-weight: bold; }
-      .wixbuilders .branding .wrap div img {
-        border-top-left-radius: 25%;
-        border-bottom-right-radius: 25%;
-        z-index: 2;
-        position: relative; }
-    .wixbuilders .branding .wrap figure.shapes {
-      position: absolute;
-      z-index: 0; }
-@media (min-width: 768px) and (max-width: 1200px) {
-  .wixbuilders .branding.one {
-    padding-right: 10px; } }
-.wixbuilders .branding.one .wrap figure.shapes.one {
-  width: 30%;
-  top: 0;
-  left: 0; }
-  .wixbuilders .branding.one .wrap figure.shapes.one svg {
-    fill: #dc5c00; }
-.wixbuilders .branding.one .wrap figure.shapes.two {
-  top: 25%;
-  right: 0; }
-  .wixbuilders .branding.one .wrap figure.shapes.two svg {
-    fill: #0062aa; }
-.wixbuilders .branding.one .wrap figure.shapes.three {
-  bottom: 0;
-  left: 0;
-  width: 50%; }
-  .wixbuilders .branding.one .wrap figure.shapes.three svg {
-    fill: #dc5c00; }
-@media (min-width: 768px) and (max-width: 1200px) {
-  .wixbuilders .branding.two {
-    padding-left: 10px; } }
-.wixbuilders .branding.two .wrap::before {
-  background-color: #e9e4de;
-  content: '';
+.svg-btn-wrap {
   width: 100%;
-  bottom: 65%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 0; }
-.wixbuilders .branding.two .wrap div p:first-of-type {
-  color: #011147; }
-.wixbuilders .branding.two .wrap div p:last-of-type {
-  margin-bottom: 40px;
-  color: #0062aa; }
-.wixbuilders .branding.two .wrap div img {
-  margin-bottom: 20px; }
-.wixbuilders .branding.two .wrap div figure.one {
-  max-width: 30%; }
-  .wixbuilders .branding.two .wrap div figure.one svg .st0 {
-    fill: #0062aa; }
-  .wixbuilders .branding.two .wrap div figure.one svg .st1 {
-    fill: #011147; }
-  .wixbuilders .branding.two .wrap div figure.one svg .st2 {
-    fill: #9EC6DB; }
-  .wixbuilders .branding.two .wrap div figure.one svg .st3 {
-    fill: #0062aa; }
-.wixbuilders .branding.two .wrap figure.two {
-  right: 0; }
-  .wixbuilders .branding.two .wrap figure.two svg {
-    fill: #f3a56d; }
+  position: relative; }
+  .svg-btn-wrap .svg-btn {
+    position: absolute;
+    max-width: 200px; }
+    .svg-btn-wrap .svg-btn text {
+      font-size: 6vw;
+      font-weight: 600;
+      text-transform: uppercase;
+      fill: #fff; }
+      @media (min-width: 768px) {
+        .svg-btn-wrap .svg-btn text {
+          font-size: 3vw; } }
+    .svg-btn-wrap .svg-btn g {
+      transform-origin: 50% 50%; }
+    .svg-btn-wrap .svg-btn .icon {
+      fill: #fff;
+      position: absolute; }
+    .svg-btn-wrap .svg-btn circle {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      fill: #d14f27; }
+    .svg-btn-wrap .svg-btn .rotate {
+      animation-name: rotate;
+      -webkit-animation-duration: 8s;
+      -moz-animation-duration: 8s;
+      -ms-animation-duration: 8s;
+      -o-animation-duration: 8s;
+      animation-duration: 8s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+      -o-animation-timing-function: linear;
+      animation-timing-function: linear; }
+    .svg-btn-wrap .svg-btn a:hover circle {
+      fill: #e9e4de;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
 
-.spotagency .row {
-  background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
-  background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
-  background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
-  background: linear-gradient(bottom, transparent 15%, #040433 80%);
-  margin: 0 20px;
-  padding: 8% 4%; }
-  @media (min-width: 768px) {
-    .spotagency .row {
-      margin: 0 40px; } }
-  .spotagency .row div[class^="col"] {
-    align-items: center; }
-  .spotagency .row div[class^="col"].logos {
-    padding: 0 4%; }
-.spotagency .logos figure {
-  padding: 20px 10%; }
-.spotagency .logos .spotzer svg {
-  fill: #fff; }
-.spotagency .logos .agency {
-  background-color: #0000C4; }
-  .spotagency .logos .agency svg {
-    fill: #040433; }
-.spotagency .svg-btn {
-  width: 60%;
-  margin: 8% auto 0; }
-  .spotagency .svg-btn text {
-    font-size: 6vw;
-    font-weight: 600;
-    text-transform: uppercase;
-    fill: #fff; }
-    @media (min-width: 768px) {
-      .spotagency .svg-btn text {
-        font-size: 3vw; } }
-  .spotagency .svg-btn .icon {
-    fill: #fff;
-    position: absolute; }
-  .spotagency .svg-btn circle {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-    fill: #d14f27; }
-  .spotagency .svg-btn .rotate {
-    animation-name: rotate;
-    -webkit-animation-duration: 8s;
-    -moz-animation-duration: 8s;
-    -ms-animation-duration: 8s;
-    -o-animation-duration: 8s;
-    animation-duration: 8s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear; }
-  .spotagency .svg-btn a:hover circle {
-    fill: #011147;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(360deg); }
@@ -489,6 +333,236 @@ svg {
     transform: rotate(360deg); }
   to {
     transform: rotate(0); } }
+.hero .row {
+  min-height: 100vh; }
+  .hero .row .vert {
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 2px; }
+    .hero .row .vert a {
+      font-size: 14px;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+      .hero .row .vert a:hover {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+        font-size: 16px;
+        color: #c52800; }
+  .hero .row h1 {
+    font-size: 8.5vw;
+    overflow: hidden; }
+    .hero .row h1 .job {
+      font-weight: 300;
+      font-size: 7.5vw; }
+    .hero .row h1 .name div:first-of-type div:first-of-type {
+      margin-right: -5px; }
+    .hero .row h1 .job div:first-of-type div:first-of-type {
+      margin-right: -10px; }
+  .hero .row .about {
+    justify-content: space-evenly;
+    padding-left: 0; }
+  .hero .row .social {
+    flex-direction: column; }
+    .hero .row .social i {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+    .hero .row .social a:hover i {
+      transform: scale(1.5);
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      color: #c52800; }
+.hero .svg-btn-wrap .svg-btn {
+  width: 180px;
+  top: -90px;
+  left: 80%; }
+  .hero .svg-btn-wrap .svg-btn a text {
+    fill: #c75033; }
+  .hero .svg-btn-wrap .svg-btn a .initials {
+    fill: #e9e4de; }
+  .hero .svg-btn-wrap .svg-btn a .bg {
+    fill: #c52800; }
+  .hero .svg-btn-wrap .svg-btn a .initials, .hero .svg-btn-wrap .svg-btn a .bg {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+  .hero .svg-btn-wrap .svg-btn a:hover .initials, .hero .svg-btn-wrap .svg-btn a:hover .bg {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+  .hero .svg-btn-wrap .svg-btn a:hover .initials {
+    fill: #c52800; }
+  .hero .svg-btn-wrap .svg-btn a:hover .bg {
+    fill: #e9e4de; }
+
+.standard.wixbuilders .row {
+  background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: linear-gradient(bottom, transparent 15%, #040433 80%);
+  margin: 0 20px;
+  align-items: stretch;
+  padding: 8% 4%; }
+  @media (min-width: 768px) {
+    .standard.wixbuilders .row {
+      margin: 0 40px; } }
+.standard.wixbuilders .branding {
+  order: 2;
+  display: flex;
+  align-items: center; }
+  @media (min-width: 1200px) {
+    .standard.wixbuilders .branding {
+      order: unset;
+      padding: 0 20px; } }
+  .standard.wixbuilders .branding .wrap {
+    position: relative;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    border-radius: 22px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 0px 20px black;
+    height: 100%;
+    padding: 8%; }
+    @media (min-width: 768px) {
+      .standard.wixbuilders .branding .wrap {
+        padding: 20px; } }
+    @media (min-width: 992px) {
+      .standard.wixbuilders .branding .wrap {
+        padding: 4% 8%; } }
+    .standard.wixbuilders .branding .wrap div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      .standard.wixbuilders .branding .wrap div .title {
+        font-size: 42px;
+        line-height: 1.2em;
+        font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 600; }
+        @media (min-width: 1366px) {
+          .standard.wixbuilders .branding .wrap div .title {
+            font-size: 46px; } }
+      .standard.wixbuilders .branding .wrap div p {
+        font-family: "Raleway", sans-serif;
+        margin: 10px 0;
+        font-weight: 500; }
+      .standard.wixbuilders .branding .wrap div p:last-of-type {
+        color: #dc5c00;
+        letter-spacing: 1.2px;
+        font-weight: bold; }
+      .standard.wixbuilders .branding .wrap div img {
+        border-top-left-radius: 25%;
+        border-bottom-right-radius: 25%;
+        z-index: 2;
+        position: relative; }
+    .standard.wixbuilders .branding .wrap figure.shapes {
+      position: absolute;
+      z-index: 0; }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .standard.wixbuilders .branding.one {
+    padding-right: 10px; } }
+.standard.wixbuilders .branding.one .wrap figure.shapes.one {
+  width: 30%;
+  top: 0;
+  left: 0; }
+  .standard.wixbuilders .branding.one .wrap figure.shapes.one svg {
+    fill: #dc5c00; }
+.standard.wixbuilders .branding.one .wrap figure.shapes.two {
+  top: 25%;
+  right: 0; }
+  .standard.wixbuilders .branding.one .wrap figure.shapes.two svg {
+    fill: #0062aa; }
+.standard.wixbuilders .branding.one .wrap figure.shapes.three {
+  bottom: 0;
+  left: 0;
+  width: 50%; }
+  .standard.wixbuilders .branding.one .wrap figure.shapes.three svg {
+    fill: #dc5c00; }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .standard.wixbuilders .branding.two {
+    padding-left: 10px; } }
+.standard.wixbuilders .branding.two .wrap::before {
+  background-color: #e9e4de;
+  content: '';
+  width: 100%;
+  bottom: 65%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0; }
+.standard.wixbuilders .branding.two .wrap div p:first-of-type {
+  color: #011147; }
+.standard.wixbuilders .branding.two .wrap div p:last-of-type {
+  margin-bottom: 40px;
+  color: #0062aa; }
+.standard.wixbuilders .branding.two .wrap div img {
+  margin-bottom: 20px; }
+.standard.wixbuilders .branding.two .wrap div figure.one {
+  max-width: 30%; }
+  .standard.wixbuilders .branding.two .wrap div figure.one svg .st0 {
+    fill: #0062aa; }
+  .standard.wixbuilders .branding.two .wrap div figure.one svg .st1 {
+    fill: #011147; }
+  .standard.wixbuilders .branding.two .wrap div figure.one svg .st2 {
+    fill: #9EC6DB; }
+  .standard.wixbuilders .branding.two .wrap div figure.one svg .st3 {
+    fill: #0062aa; }
+.standard.wixbuilders .branding.two .wrap figure.two {
+  right: 0; }
+  .standard.wixbuilders .branding.two .wrap figure.two svg {
+    fill: #f3a56d; }
+
+.spotagency .row {
+  background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -moz-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: -o-linear-gradient(bottom, transparent 15%, #040433 80%);
+  background: linear-gradient(bottom, transparent 15%, #040433 80%);
+  margin: 0 20px;
+  padding: 8% 4%; }
+  @media (min-width: 768px) {
+    .spotagency .row {
+      margin: 0 40px; } }
+  .spotagency .row div[class^="col"] {
+    align-items: center; }
+  .spotagency .row div[class^="col"].logos {
+    padding: 0 4%; }
+.spotagency .logos .spotzer {
+  padding: 20px 10%; }
+  .spotagency .logos .spotzer svg {
+    fill: #fff; }
+.spotagency .logos .agency {
+  padding: 20px 10%;
+  background-color: #0000C4; }
+  .spotagency .logos .agency svg {
+    fill: #040433; }
+.spotagency .svg-btn-wrap .svg-btn {
+  width: 160px;
+  top: -100px;
+  left: 100%; }
+  .spotagency .svg-btn-wrap .svg-btn a text {
+    fill: #e9e4de; }
+  .spotagency .svg-btn-wrap .svg-btn a .initials {
+    fill: #e9e4de; }
+  .spotagency .svg-btn-wrap .svg-btn a .bg {
+    fill: #c52800; }
+  .spotagency .svg-btn-wrap .svg-btn a .initials, .spotagency .svg-btn-wrap .svg-btn a .bg {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+  .spotagency .svg-btn-wrap .svg-btn a:hover .initials, .spotagency .svg-btn-wrap .svg-btn a:hover .bg {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+  .spotagency .svg-btn-wrap .svg-btn a:hover .initials {
+    fill: #c52800; }
+  .spotagency .svg-btn-wrap .svg-btn a:hover .bg {
+    fill: #e9e4de; }
+
 .spotzer-social {
   padding-bottom: 4%; }
   .spotzer-social .row {
@@ -502,13 +576,6 @@ svg {
     @media (min-width: 768px) {
       .spotzer-social .row {
         margin: 0 40px; } }
-  .spotzer-social figure.icon {
-    max-width: 150px;
-    margin: 20px auto; }
-    .spotzer-social figure.icon svg .st0 {
-      fill: url(#SVGID_1_); }
-    .spotzer-social figure.icon svg .st1 {
-      fill: #FFFFFF; }
   @media (min-width: 576px) {
     .spotzer-social div[class^="col"] {
       flex-direction: row; } }
@@ -531,6 +598,42 @@ svg {
     @media (min-width: 992px) {
       .spotzer-social div[class^="col"].main {
         padding: 0 4%; } }
+  .spotzer-social .center svg {
+    position: absolute;
+    left: 0;
+    fill: transparent;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+    .spotzer-social .center svg:hover {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      fill: #fff; }
+  .spotzer-social .svg-btn-wrap {
+    z-index: 10; }
+    .spotzer-social .svg-btn-wrap .svg-btn {
+      width: 160px;
+      top: -80px;
+      left: 90%; }
+      .spotzer-social .svg-btn-wrap .svg-btn a text {
+        fill: #e9e4de; }
+      .spotzer-social .svg-btn-wrap .svg-btn a .initials {
+        fill: #e9e4de; }
+      .spotzer-social .svg-btn-wrap .svg-btn a .bg {
+        fill: #c52800; }
+      .spotzer-social .svg-btn-wrap .svg-btn a .initials, .spotzer-social .svg-btn-wrap .svg-btn a .bg {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+      .spotzer-social .svg-btn-wrap .svg-btn a:hover .initials, .spotzer-social .svg-btn-wrap .svg-btn a:hover .bg {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+      .spotzer-social .svg-btn-wrap .svg-btn a:hover .initials {
+        fill: #c52800; }
+      .spotzer-social .svg-btn-wrap .svg-btn a:hover .bg {
+        fill: #e9e4de; }
 
 .section-intro.personal-pro {
   padding: 8% 0 4%; }
