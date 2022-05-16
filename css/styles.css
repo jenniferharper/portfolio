@@ -76,8 +76,10 @@ a, p, li {
   position: relative;
   z-index: 1;
   line-height: 1.7em;
-  font-size: 18px;
   margin-bottom: 0; }
+  @media (min-width: 992px) {
+    a, p, li {
+      font-size: 18px; } }
 
 a:hover {
   color: #011147;
@@ -212,22 +214,27 @@ svg {
     max-width: 50px;
     fill: #c52800; }
 
-.intro-heading .row {
-  padding: 8% 4%; }
-  .intro-heading .row h2 {
-    font-size: 9.5vw;
-    letter-spacing: 4px;
-    line-height: 1em; }
-    @media (min-width: 768px) {
-      .intro-heading .row h2 {
-        font-size: 7.5vw; } }
-    .intro-heading .row h2 span {
-      font-family: "Manrope", sans-serif;
-      letter-spacing: 1px;
-      font-size: 6vw; }
-  .intro-heading .row p {
-    max-width: 700px;
-    margin: 20px auto; }
+.intro-heading {
+  margin: 10% 0 0; }
+  .intro-heading .row {
+    padding: 8% 4%; }
+    .intro-heading .row h2 {
+      font-size: 9.5vw;
+      letter-spacing: 4px;
+      line-height: 1em; }
+      @media (min-width: 768px) {
+        .intro-heading .row h2 {
+          font-size: 7.5vw; } }
+      .intro-heading .row h2 span {
+        font-family: "Manrope", sans-serif;
+        letter-spacing: 1px;
+        font-size: 6vw; }
+    .intro-heading .row p {
+      max-width: 700px;
+      margin: 20px auto; }
+  @media (min-width: 1200px) {
+    .intro-heading {
+      margin: 4% 0 0; } }
 
 .project-focus {
   margin-bottom: 8%; }
@@ -240,7 +247,8 @@ svg {
     .project-focus h2 span {
       font-family: "Manrope", sans-serif;
       letter-spacing: 1px;
-      font-size: 6vw; }
+      font-size: 6vw;
+      display: block; }
     @media (min-width: 768px) {
       .project-focus h2 {
         font-size: 4.5vw; }
@@ -250,7 +258,9 @@ svg {
           font-size: 3vw; } }
     @media (min-width: 992px) {
       .project-focus h2 {
-        margin-top: 0; } }
+        margin-top: 0; }
+        .project-focus h2 span {
+          display: inline; } }
   .project-focus p {
     max-width: 700px;
     margin: 0 auto; }
@@ -432,7 +442,7 @@ button:focus {
   transform: rotate(-90deg); }
 
 .hero .row {
-  padding: 10% 0; }
+  padding: calc(12% + 50px) 0; }
   .hero .row h1 {
     font-size: 8.5vw;
     overflow: hidden; }
@@ -444,7 +454,7 @@ button:focus {
     .hero .row h1 .job div:first-of-type div:first-of-type {
       margin-right: -10px; }
   .hero .row .about {
-    justify-content: space-evenly;
+    display: block;
     padding-left: 0; }
   .hero .row .social {
     flex-direction: column; }
@@ -458,10 +468,19 @@ button:focus {
       transition-duration: 0.3s;
       transition-timing-function: ease-in;
       color: #c52800; }
+  @media (min-width: 992px) {
+    .hero .row {
+      padding: 16% 0; }
+      .hero .row .about {
+        display: flex;
+        justify-content: space-evenly; } }
+  @media (min-width: 1200px) {
+    .hero .row {
+      padding: 10% 0; } }
 .hero .svg-btn-wrap .svg-btn {
   width: 180px;
   top: -90px;
-  left: 80%; }
+  left: 55%; }
   .hero .svg-btn-wrap .svg-btn a text {
     fill: #c75033; }
   .hero .svg-btn-wrap .svg-btn a .initials {
@@ -480,6 +499,9 @@ button:focus {
     fill: #c52800; }
   .hero .svg-btn-wrap .svg-btn a:hover .bg {
     fill: #e9e4de; }
+  @media (min-width: 768px) {
+    .hero .svg-btn-wrap .svg-btn {
+      left: 80%; } }
 
 .standard.wixbuilders .row {
   background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
@@ -512,16 +534,14 @@ button:focus {
     overflow: hidden;
     box-shadow: 0 0px 20px black;
     height: 100%;
-    padding: 8%;
+    padding: 40px;
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease-in; }
-    @media (min-width: 768px) {
-      .standard.wixbuilders .branding .wrap {
-        padding: 20px; } }
     @media (min-width: 992px) {
       .standard.wixbuilders .branding .wrap {
-        padding: 4% 8%; } }
+        padding: 4% 8%;
+        margin-bottom: 0; } }
     .standard.wixbuilders .branding .wrap div {
       display: flex;
       flex-direction: column;
@@ -531,6 +551,9 @@ button:focus {
         line-height: 1.2em;
         font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: 600; }
+        @media (min-width: 992px) {
+          .standard.wixbuilders .branding .wrap div .title {
+            font-size: 33px; } }
         @media (min-width: 1366px) {
           .standard.wixbuilders .branding .wrap div .title {
             font-size: 46px; } }
@@ -555,9 +578,14 @@ button:focus {
       transition-property: all;
       transition-duration: 0.3s;
       transition-timing-function: ease-in; }
-@media (min-width: 768px) and (max-width: 1200px) {
+  .standard.wixbuilders .branding.one, .standard.wixbuilders .branding.three {
+    display: none; }
+    @media (min-width: 992px) {
+      .standard.wixbuilders .branding.one, .standard.wixbuilders .branding.three {
+        display: block; } }
+@media (min-width: 992px) and (max-width: 1200px) {
   .standard.wixbuilders .branding.one {
-    padding-left: 10px; } }
+    padding-right: 20px; } }
 .standard.wixbuilders .branding.one .wrap::before {
   background-color: #e9e4de;
   content: '';
@@ -595,9 +623,6 @@ button:focus {
     fill: #9EC6DB; }
   .standard.wixbuilders .branding.one .wrap figure.one svg .st3 {
     fill: #0062aa; }
-@media (min-width: 768px) and (max-width: 1200px) {
-  .standard.wixbuilders .branding.two {
-    padding-right: 10px; } }
 .standard.wixbuilders .branding.two .wrap a {
   display: flex;
   flex-direction: column;
@@ -627,9 +652,9 @@ button:focus {
   margin-bottom: 30px; }
 .standard.wixbuilders .branding.two .wrap .title {
   margin-bottom: 30px; }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .standard.wixbuilders .branding.three {
-    padding-left: 10px; } }
+    padding-left: 20px; } }
 .standard.wixbuilders .branding.three .wrap::before {
   background-color: #e9e4de;
   content: '';
@@ -676,36 +701,50 @@ button:focus {
   .spotagency .row div[class^="col"].logos {
     padding: 0 4%; }
 .spotagency .logos .spotzer {
-  padding: 20px 10%; }
+  padding: 0px 10%; }
+  @media (min-width: 992px) {
+    .spotagency .logos .spotzer {
+      padding: 20px 10%; } }
   .spotagency .logos .spotzer svg {
     fill: #fff; }
 .spotagency .logos .agency {
-  padding: 20px 10%;
-  background-color: #0000C4; }
+  padding: 10px 10%;
+  background-color: #0000C4;
+  display: flex;
+  flex-direction: column-reverse; }
+  @media (min-width: 992px) {
+    .spotagency .logos .agency {
+      display: block;
+      padding: 20px 10%; } }
   .spotagency .logos .agency svg {
     fill: #040433; }
-.spotagency .svg-btn-wrap .svg-btn {
-  width: 160px;
-  top: -100px;
-  left: 100%; }
-  .spotagency .svg-btn-wrap .svg-btn a text {
-    fill: #e9e4de; }
-  .spotagency .svg-btn-wrap .svg-btn a .initials {
-    fill: #e9e4de; }
-  .spotagency .svg-btn-wrap .svg-btn a .bg {
-    fill: #c52800; }
-  .spotagency .svg-btn-wrap .svg-btn a .initials, .spotagency .svg-btn-wrap .svg-btn a .bg {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-  .spotagency .svg-btn-wrap .svg-btn a:hover .initials, .spotagency .svg-btn-wrap .svg-btn a:hover .bg {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-  .spotagency .svg-btn-wrap .svg-btn a:hover .initials {
-    fill: #c52800; }
-  .spotagency .svg-btn-wrap .svg-btn a:hover .bg {
-    fill: #e9e4de; }
+  .spotagency .logos .agency .svg-btn-wrap .svg-btn {
+    width: 160px;
+    margin: 0 auto;
+    position: relative; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a text {
+      fill: #e9e4de; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a .initials {
+      fill: #e9e4de; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a .bg {
+      fill: #c52800; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a .initials, .spotagency .logos .agency .svg-btn-wrap .svg-btn a .bg {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .initials, .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .bg {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .initials {
+      fill: #c52800; }
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .bg {
+      fill: #e9e4de; }
+    @media (min-width: 992px) {
+      .spotagency .logos .agency .svg-btn-wrap .svg-btn {
+        position: absolute;
+        top: -100px;
+        left: 100%; } }
 
 .spotzer-social {
   padding-bottom: 4%; }
@@ -716,93 +755,97 @@ button:focus {
     background: linear-gradient(bottom, transparent 15%, #040433 80%);
     margin: 0 20px;
     align-items: normal;
-    padding: 8% 4%; }
+    padding: 8% 4% 0; }
     @media (min-width: 768px) {
       .spotzer-social .row {
         margin: 0 40px; } }
-  @media (min-width: 576px) {
-    .spotzer-social div[class^="col"] {
-      flex-direction: row; } }
-  @media (min-width: 992px) {
-    .spotzer-social div[class^="col"] {
-      flex-direction: column;
-      justify-content: space-evenly; } }
-  .spotzer-social figure.left,
-  .spotzer-social figure.right {
+    @media (min-width: 992px) {
+      .spotzer-social .row {
+        padding: 8% 4%; } }
+  .spotzer-social div[class^="col"] {
+    order: 1; }
+    .spotzer-social div[class^="col"].project-focus {
+      order: 1; }
+    .spotzer-social div[class^="col"].main {
+      order: 2; }
+    .spotzer-social div[class^="col"].left {
+      order: 4; }
+    .spotzer-social div[class^="col"].right {
+      order: 3; }
+    .spotzer-social div[class^="col"] figure:not(.svg-btn) {
+      margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      .spotzer-social div[class^="col"] {
+        flex-direction: column;
+        justify-content: space-evenly; }
+        .spotzer-social div[class^="col"].project-focus, .spotzer-social div[class^="col"].main, .spotzer-social div[class^="col"].left, .spotzer-social div[class^="col"].right {
+          order: 1; } }
+  .spotzer-social div.project-focus p {
+    margin-bottom: 20px; }
+  .spotzer-social div.left figure:not(.svg-btn),
+  .spotzer-social div.right figure:not(.svg-btn) {
     height: 40%;
     min-height: 30vh; }
     @media (min-width: 992px) {
-      .spotzer-social figure.left,
-      .spotzer-social figure.right {
+      .spotzer-social div.left figure:not(.svg-btn),
+      .spotzer-social div.right figure:not(.svg-btn) {
         min-height: 90%; } }
-  .spotzer-social div[class^="col"].main {
+  .spotzer-social div.left .svg-btn-wrap {
+    margin-top: 0px;
+    z-index: 10; }
+    .spotzer-social div.left .svg-btn-wrap .svg-btn {
+      width: 160px;
+      margin: 0 auto;
+      position: relative; }
+      @media (min-width: 992px) {
+        .spotzer-social div.left .svg-btn-wrap .svg-btn {
+          position: absolute;
+          top: -80px;
+          left: 90%; } }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a text {
+        fill: #e9e4de; }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a .initials {
+        fill: #e9e4de; }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a .bg {
+        fill: #c52800; }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a .initials, .spotzer-social div.left .svg-btn-wrap .svg-btn a .bg {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .initials, .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .bg {
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in; }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .initials {
+        fill: #c52800; }
+      .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .bg {
+        fill: #e9e4de; }
+  .spotzer-social div.main {
     overflow: hidden;
-    position: relative;
-    flex-direction: column; }
+    position: relative; }
     @media (min-width: 992px) {
-      .spotzer-social div[class^="col"].main {
+      .spotzer-social div.main {
         padding: 0 4%; } }
-  .spotzer-social .center svg {
-    position: absolute;
-    left: 0;
-    fill: transparent;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-    .spotzer-social .center svg:hover {
+    .spotzer-social div.main .center svg {
+      position: absolute;
+      left: 0;
+      fill: transparent;
       transition-property: all;
       transition-duration: 0.3s;
-      transition-timing-function: ease-in;
-      fill: #fff; }
-  .spotzer-social .svg-btn-wrap {
-    z-index: 10; }
-    .spotzer-social .svg-btn-wrap .svg-btn {
-      width: 160px;
-      top: -80px;
-      left: 90%; }
-      .spotzer-social .svg-btn-wrap .svg-btn a text {
-        fill: #e9e4de; }
-      .spotzer-social .svg-btn-wrap .svg-btn a .initials {
-        fill: #e9e4de; }
-      .spotzer-social .svg-btn-wrap .svg-btn a .bg {
-        fill: #c52800; }
-      .spotzer-social .svg-btn-wrap .svg-btn a .initials, .spotzer-social .svg-btn-wrap .svg-btn a .bg {
+      transition-timing-function: ease-in; }
+      .spotzer-social div.main .center svg:hover {
         transition-property: all;
         transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
-      .spotzer-social .svg-btn-wrap .svg-btn a:hover .initials, .spotzer-social .svg-btn-wrap .svg-btn a:hover .bg {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
-      .spotzer-social .svg-btn-wrap .svg-btn a:hover .initials {
-        fill: #c52800; }
-      .spotzer-social .svg-btn-wrap .svg-btn a:hover .bg {
-        fill: #e9e4de; }
-
-.section-intro.personal-pro {
-  padding: 8% 0 4%; }
-  .section-intro.personal-pro .row h2 {
-    font-size: 6vw;
-    letter-spacing: 4px;
-    line-height: 1em; }
-    .section-intro.personal-pro .row h2 span {
-      font-family: "Manrope", sans-serif;
-      letter-spacing: 1px;
-      font-size: 7.5vw; }
-  .section-intro.personal-pro .row p {
-    max-width: 700px;
-    margin: 20px auto; }
+        transition-timing-function: ease-in;
+        fill: #fff; }
 
 .personal {
-  padding: 4%; }
+  padding: 0 4% 4%; }
   .personal figure {
+    min-height: 50vh;
     height: 100%;
     width: calc(100% - 20px);
     margin: 0 auto; }
-    @media (min-width: 992px) {
-      .personal figure .media-box {
-        height: 100%;
-        min-height: 90vh; } }
   .personal section {
     margin-bottom: 20px; }
     .personal section div[class^="col"] {
@@ -835,7 +878,13 @@ button:focus {
   margin-left: -1px; }
 .educapps .bg-color figure div {
   background-color: #4A5BCF; }
-.educapps .other.media-box {
-  min-height: auto; }
+@media (min-width: 768px) {
+  .educapps figure {
+    height: 100%;
+    min-height: 0; } }
+
+@media (min-width: 1200px) {
+  .bsylvia figure {
+    min-height: 80vh; } }
 
 /*# sourceMappingURL=styles.css.map */
