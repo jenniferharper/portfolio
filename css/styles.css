@@ -396,6 +396,8 @@ button:focus {
     .navbar ul.navbar-nav .nav-item .btn {
       max-width: 160px;
       margin: 0 auto; }
+  .navbar a.nav-link {
+    font-size: 15px; }
   .navbar .navbar-collapse {
     justify-content: flex-end; }
     .navbar .navbar-collapse ul.navbar-nav {
@@ -416,11 +418,6 @@ button:focus {
       min-height: 1px; }
     .navbar .navbar-toggler {
       display: none; } }
-
-li.dd ul {
-  display: block; }
-  li.dd ul.xy {
-    display: none; }
 
 @media (min-width: 992px) {
   .nav--up {

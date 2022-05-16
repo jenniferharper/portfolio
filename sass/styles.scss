@@ -479,6 +479,9 @@ button:focus {
         margin: 0 auto;
       }
     }
+    a.nav-link{
+      font-size: 15px;
+    }
 
 
   // hamburger down
@@ -519,17 +522,7 @@ button:focus {
 
 }
 
-li.dd{
-  ul{
-    display:block; 
 
-
-    &.xy{
-      display:none;
-    }
-  }
-
-}
 
 
 // GSAP toggle css
