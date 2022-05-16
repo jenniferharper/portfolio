@@ -399,26 +399,169 @@ svg {
   to { transform: rotate(0); }
 }
 
+///////////////////////////////////////
+button:focus {
+  outline:none;
+}
+
+.navbar {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: transparent;
+  padding: 0;
+ top: 0;
+  @include transition;
+
+  .container-fluid {
+    align-items: center;
+    padding: 10px 0;
+    background-color:$light;
+  }
+
+  // logo
+  .navbar-brand {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    padding: 0;
+
+    svg {
+      // transform: scale(1);
+      transform-origin: 0 0;
+      fill: $secondary-dark;
+      margin-top: -1px;
+      position: fixed;
+      top: 10px;
+      left:5px;
+      width: 50px;
+      height: 50px;
+      @include transition;
+    }
+  }
+
+  // hamburger
+  .navbar-toggler {
+    padding: 0 10px;
+    font-size: 30px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    transition: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+    .navbar-toggler-icon {
+      color: $dark;
+      height: auto;
+    }
+
+    .navbar-collapse.show {
+      margin-top: -1px;
+      background-color: $light;
+    }
+
+
+    ul.navbar-nav {
+      padding: 0px 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      min-height: calc(100vh - 70px);
+      .nav-item .btn {
+        max-width: 160px;
+        margin: 0 auto;
+      }
+    }
+
+
+  // hamburger down
+  .navbar-collapse {
+    justify-content: flex-end;
+
+    ul.navbar-nav {
+      // padding-top: 25px;
+      padding-right:25px;
+      a.nav-link {
+        padding: 10px 14px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    height: 70px;
+    .container-fluid {
+      height: 70px;
+    }
+    .navbar-brand {
+      max-width: 220px;
+    }
+  }
+
+
+  @media (min-width: 992px) {
+    .container-fluid{
+      background-color:transparent;
+    }
+    ul.navbar-nav.mb-2.mb-lg-0 {
+      min-height: 1px;
+    }
+    .navbar-toggler{
+      display: none;
+    }
+  }
+
+}
+
+li.dd{
+  ul{
+    display:block; 
+
+
+    &.xy{
+      display:none;
+    }
+  }
+
+}
+
+
+// GSAP toggle css
+@media (min-width: 992px) {
+  .nav--up {
+    top: -100px;
+    @include transition;
+    
+    // .navbar-brand svg {
+    //   top: 110px;
+    //   @include transition;
+    // }
+ }
+ .nav--scrolled{
+   .container-fluid{
+    background-color: $light;
+   }
+ }
+}
+
+.open {
+  .navbar-toggler-icon i {
+    transform: rotate(-90deg);
+  }
+}
+
+
 /////////////////////////////////
 
 .hero{
   .row{
-    min-height: 100vh;
-    .vert{
-    text-orientation: mixed;
-    writing-mode: vertical-rl; 
-    transform: rotate(180deg);
-    letter-spacing: 2px;
-      a{
-        font-size:14px;
-        @include transition;
-        &:hover{
-          @include transition;
-          font-size:16px;
-          color:$secondary-dark;
-        }
-      }
-    }
+    padding: $lg 0;
     h1{
     font-size: 8.5vw;
     overflow:hidden;
@@ -451,6 +594,7 @@ svg {
     }
     }
   }
+
   .svg-btn-wrap{
       .svg-btn{
         width: 180px;
@@ -484,6 +628,9 @@ svg {
    padding: $md $sm;
    @media (min-width:768px){
     margin: 0 40px; 
+   }
+   .project-focus{
+    align-items: center;
    }
 
   }
@@ -532,7 +679,7 @@ svg {
           margin: 10px 0;
           font-weight: 500;
         }
-        p:last-of-type{
+        p.url{
           color:$wix-contrast;
           letter-spacing: 1.2px;
           font-weight: bold;
@@ -548,16 +695,83 @@ svg {
         position: absolute;
         z-index: 0;
       }
-    }    
+
+      @include transition;
+      &:hover{
+        transform:scale(0.95);
+        @include transition;
+      }
+    }  
+  
   }
 
-  .branding.one{ 
-    // padding-right: 20px;
-    // align-items: flex-end;
+  .branding.one{
+    @media (min-width:768px) and (max-width:1200px){
+      padding-left: 10px;
+    }
+    .wrap{      
+      &::before{
+        background-color: $light;
+        content:'';
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 0;
+        height: 35%;
+      }
+
+      div{
+        position: relative;
+        text-align: center;
+        p.title{
+          color:$white;
+        }
+        p.url{
+          margin-bottom: 40px;
+          color:$wix-contrast-2;
+        }
+        img{
+          margin-bottom: 20px;
+        }
+      }
+
+      figure.two{
+        right: 0;
+        top: 5%;
+        width: 150%;
+        svg{
+          fill:$wix-light-2;
+        }
+      }
+
+      figure.one{
+        left: 10%;
+        top: 10%;
+        width: 30%;
+        svg{
+          .st0{fill:$wix-contrast-2;}
+          .st1{fill:$dark;}
+          .st2{fill:$wix-light-2;}
+          .st3{fill:$wix-contrast-2;}
+        }
+      }
+    } 
+  }
+
+  .branding.two{ 
     @media (min-width:768px) and (max-width:1200px){
       padding-right: 10px;
     }
     .wrap{
+      a{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        div{
+          align-items: center;
+        }
+      }
       figure.shapes{
         &.one{
           width: 30%;
@@ -577,10 +791,18 @@ svg {
           svg{fill:$wix-contrast}
         }
       }
+      .logo{
+        max-width: 60px;
+        border-radius: 0;
+        margin-bottom: 30px;
+      }
+      .title{
+        margin-bottom: 30px;
+      }
     }
   }
 
-  .branding.two{
+  .branding.three{
     // align-items: flex-start;
     // padding-left: 20px;
     @media (min-width:768px) and (max-width:1200px){
@@ -599,10 +821,7 @@ svg {
       }
 
       div{
-        p:first-of-type{
-          color: $dark;
-        }
-        p:last-of-type{
+        p.url{
           margin-bottom: 40px;
           color:$wix-contrast-2;
         }
@@ -611,17 +830,19 @@ svg {
         }
         figure.one{
           max-width: 30%;
+          margin-left: auto;
           svg{
-            .st0{fill:$wix-contrast-2;}
+            .st0{fill:$wix-contrast;}
             .st1{fill:$dark;}
-            .st2{fill:$wix-light-2;}
-            .st3{fill:$wix-contrast-2;}
+            .st2{fill:$wix-light-3;}
+            .st3{fill:$wix-contrast;}
           }
         }
       }
 
       figure.two{
         right: 0;
+        transform:rotate(180deg);
         svg{
           fill:$wix-light-3;
         }

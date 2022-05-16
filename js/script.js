@@ -1,6 +1,50 @@
 console.clear();
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
+/////---------- Navigation
+//////hamburger and menu changes/////
+$('.navbar-toggler').click(function(){
+  $(this).toggleClass('open');
+});
+
+
+$('.nav-item a').click(function() {
+   $('.navbar-toggler').removeClass('open');
+});
+
+$('.nav-link').on('click',function() {
+  $('.navbar-collapse').collapse('hide');
+});
+
+
+
+
+
+
+
+//////scroll change nav/////
+var scrollUp = document.querySelector('.navbar');
+
+// adds bg color when start scrolling
+ScrollTrigger.create({
+id:'scrolling-down',
+start: 'top top-=50',
+toggleClass: {className: 'nav--scrolled', targets: scrollUp,
+}
+});
+
+
+ScrollTrigger.create({
+start: 'top top-=50',
+toggleClass: {className: 'nav--up', targets: scrollUp},
+onUpdate: ({direction}) => {
+  if (direction == -1) {
+  scrollUp.classList.remove('nav--up');
+  } else {
+  scrollUp.classList.add('nav--up');
+}}
+});
+
 
 ScrollTrigger.matchMedia({	
   // desktop

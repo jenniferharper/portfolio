@@ -333,24 +333,109 @@ svg {
     transform: rotate(360deg); }
   to {
     transform: rotate(0); } }
-.hero .row {
-  min-height: 100vh; }
-  .hero .row .vert {
-    text-orientation: mixed;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    letter-spacing: 2px; }
-    .hero .row .vert a {
-      font-size: 14px;
+button:focus {
+  outline: none; }
+
+.navbar {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  top: 0;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in; }
+  .navbar .container-fluid {
+    align-items: center;
+    padding: 10px 0;
+    background-color: #e9e4de; }
+  .navbar .navbar-brand {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    padding: 0; }
+    .navbar .navbar-brand svg {
+      transform-origin: 0 0;
+      fill: #c52800;
+      margin-top: -1px;
+      position: fixed;
+      top: 10px;
+      left: 5px;
+      width: 50px;
+      height: 50px;
       transition-property: all;
       transition-duration: 0.3s;
       transition-timing-function: ease-in; }
-      .hero .row .vert a:hover {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in;
-        font-size: 16px;
-        color: #c52800; }
+  .navbar .navbar-toggler {
+    padding: 0 10px;
+    font-size: 30px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    transition: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center; }
+    .navbar .navbar-toggler:focus {
+      box-shadow: none; }
+  .navbar .navbar-toggler-icon {
+    color: #011147;
+    height: auto; }
+  .navbar .navbar-collapse.show {
+    margin-top: -1px;
+    background-color: #e9e4de; }
+  .navbar ul.navbar-nav {
+    padding: 0px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 70px); }
+    .navbar ul.navbar-nav .nav-item .btn {
+      max-width: 160px;
+      margin: 0 auto; }
+  .navbar .navbar-collapse {
+    justify-content: flex-end; }
+    .navbar .navbar-collapse ul.navbar-nav {
+      padding-right: 25px; }
+      .navbar .navbar-collapse ul.navbar-nav a.nav-link {
+        padding: 10px 14px; }
+  @media (max-width: 576px) {
+    .navbar {
+      height: 70px; }
+      .navbar .container-fluid {
+        height: 70px; }
+      .navbar .navbar-brand {
+        max-width: 220px; } }
+  @media (min-width: 992px) {
+    .navbar .container-fluid {
+      background-color: transparent; }
+    .navbar ul.navbar-nav.mb-2.mb-lg-0 {
+      min-height: 1px; }
+    .navbar .navbar-toggler {
+      display: none; } }
+
+li.dd ul {
+  display: block; }
+  li.dd ul.xy {
+    display: none; }
+
+@media (min-width: 992px) {
+  .nav--up {
+    top: -100px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+
+  .nav--scrolled .container-fluid {
+    background-color: #e9e4de; } }
+.open .navbar-toggler-icon i {
+  transform: rotate(-90deg); }
+
+.hero .row {
+  padding: 10% 0; }
   .hero .row h1 {
     font-size: 8.5vw;
     overflow: hidden; }
@@ -410,6 +495,8 @@ svg {
   @media (min-width: 768px) {
     .standard.wixbuilders .row {
       margin: 0 40px; } }
+  .standard.wixbuilders .row .project-focus {
+    align-items: center; }
 .standard.wixbuilders .branding {
   order: 2;
   display: flex;
@@ -428,7 +515,10 @@ svg {
     overflow: hidden;
     box-shadow: 0 0px 20px black;
     height: 100%;
-    padding: 8%; }
+    padding: 8%;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
     @media (min-width: 768px) {
       .standard.wixbuilders .branding .wrap {
         padding: 20px; } }
@@ -451,7 +541,7 @@ svg {
         font-family: "Raleway", sans-serif;
         margin: 10px 0;
         font-weight: 500; }
-      .standard.wixbuilders .branding .wrap div p:last-of-type {
+      .standard.wixbuilders .branding .wrap div p.url {
         color: #dc5c00;
         letter-spacing: 1.2px;
         font-weight: bold; }
@@ -463,30 +553,87 @@ svg {
     .standard.wixbuilders .branding .wrap figure.shapes {
       position: absolute;
       z-index: 0; }
+    .standard.wixbuilders .branding .wrap:hover {
+      transform: scale(0.95);
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
 @media (min-width: 768px) and (max-width: 1200px) {
   .standard.wixbuilders .branding.one {
+    padding-left: 10px; } }
+.standard.wixbuilders .branding.one .wrap::before {
+  background-color: #e9e4de;
+  content: '';
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  height: 35%; }
+.standard.wixbuilders .branding.one .wrap div {
+  position: relative;
+  text-align: center; }
+  .standard.wixbuilders .branding.one .wrap div p.title {
+    color: #fff; }
+  .standard.wixbuilders .branding.one .wrap div p.url {
+    margin-bottom: 40px;
+    color: #0062aa; }
+  .standard.wixbuilders .branding.one .wrap div img {
+    margin-bottom: 20px; }
+.standard.wixbuilders .branding.one .wrap figure.two {
+  right: 0;
+  top: 5%;
+  width: 150%; }
+  .standard.wixbuilders .branding.one .wrap figure.two svg {
+    fill: #9EC6DB; }
+.standard.wixbuilders .branding.one .wrap figure.one {
+  left: 10%;
+  top: 10%;
+  width: 30%; }
+  .standard.wixbuilders .branding.one .wrap figure.one svg .st0 {
+    fill: #0062aa; }
+  .standard.wixbuilders .branding.one .wrap figure.one svg .st1 {
+    fill: #011147; }
+  .standard.wixbuilders .branding.one .wrap figure.one svg .st2 {
+    fill: #9EC6DB; }
+  .standard.wixbuilders .branding.one .wrap figure.one svg .st3 {
+    fill: #0062aa; }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .standard.wixbuilders .branding.two {
     padding-right: 10px; } }
-.standard.wixbuilders .branding.one .wrap figure.shapes.one {
+.standard.wixbuilders .branding.two .wrap a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
+  .standard.wixbuilders .branding.two .wrap a div {
+    align-items: center; }
+.standard.wixbuilders .branding.two .wrap figure.shapes.one {
   width: 30%;
   top: 0;
   left: 0; }
-  .standard.wixbuilders .branding.one .wrap figure.shapes.one svg {
+  .standard.wixbuilders .branding.two .wrap figure.shapes.one svg {
     fill: #dc5c00; }
-.standard.wixbuilders .branding.one .wrap figure.shapes.two {
+.standard.wixbuilders .branding.two .wrap figure.shapes.two {
   top: 25%;
   right: 0; }
-  .standard.wixbuilders .branding.one .wrap figure.shapes.two svg {
+  .standard.wixbuilders .branding.two .wrap figure.shapes.two svg {
     fill: #0062aa; }
-.standard.wixbuilders .branding.one .wrap figure.shapes.three {
+.standard.wixbuilders .branding.two .wrap figure.shapes.three {
   bottom: 0;
   left: 0;
   width: 50%; }
-  .standard.wixbuilders .branding.one .wrap figure.shapes.three svg {
+  .standard.wixbuilders .branding.two .wrap figure.shapes.three svg {
     fill: #dc5c00; }
+.standard.wixbuilders .branding.two .wrap .logo {
+  max-width: 60px;
+  border-radius: 0;
+  margin-bottom: 30px; }
+.standard.wixbuilders .branding.two .wrap .title {
+  margin-bottom: 30px; }
 @media (min-width: 768px) and (max-width: 1200px) {
-  .standard.wixbuilders .branding.two {
+  .standard.wixbuilders .branding.three {
     padding-left: 10px; } }
-.standard.wixbuilders .branding.two .wrap::before {
+.standard.wixbuilders .branding.three .wrap::before {
   background-color: #e9e4de;
   content: '';
   width: 100%;
@@ -495,26 +642,26 @@ svg {
   left: 0;
   position: absolute;
   z-index: 0; }
-.standard.wixbuilders .branding.two .wrap div p:first-of-type {
-  color: #011147; }
-.standard.wixbuilders .branding.two .wrap div p:last-of-type {
+.standard.wixbuilders .branding.three .wrap div p.url {
   margin-bottom: 40px;
   color: #0062aa; }
-.standard.wixbuilders .branding.two .wrap div img {
+.standard.wixbuilders .branding.three .wrap div img {
   margin-bottom: 20px; }
-.standard.wixbuilders .branding.two .wrap div figure.one {
-  max-width: 30%; }
-  .standard.wixbuilders .branding.two .wrap div figure.one svg .st0 {
-    fill: #0062aa; }
-  .standard.wixbuilders .branding.two .wrap div figure.one svg .st1 {
+.standard.wixbuilders .branding.three .wrap div figure.one {
+  max-width: 30%;
+  margin-left: auto; }
+  .standard.wixbuilders .branding.three .wrap div figure.one svg .st0 {
+    fill: #dc5c00; }
+  .standard.wixbuilders .branding.three .wrap div figure.one svg .st1 {
     fill: #011147; }
-  .standard.wixbuilders .branding.two .wrap div figure.one svg .st2 {
-    fill: #9EC6DB; }
-  .standard.wixbuilders .branding.two .wrap div figure.one svg .st3 {
-    fill: #0062aa; }
-.standard.wixbuilders .branding.two .wrap figure.two {
-  right: 0; }
-  .standard.wixbuilders .branding.two .wrap figure.two svg {
+  .standard.wixbuilders .branding.three .wrap div figure.one svg .st2 {
+    fill: #f3a56d; }
+  .standard.wixbuilders .branding.three .wrap div figure.one svg .st3 {
+    fill: #dc5c00; }
+.standard.wixbuilders .branding.three .wrap figure.two {
+  right: 0;
+  transform: rotate(180deg); }
+  .standard.wixbuilders .branding.three .wrap figure.two svg {
     fill: #f3a56d; }
 
 .spotagency .row {
