@@ -122,22 +122,4 @@ gsap.to(".rotate-svg-text",10,{rotate:-360,repeat:-1, ease:'none', transformOrig
     });
 
 
-    // const feature = document.querySelector(".feature .row");
-    // const featureImg = document.querySelector(".feature .animate-img");
-    // const featurePrem = document.querySelector(".feature .preamble");
 
-    // var featureTl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger:feature,
-    //     start: "top top",
-    //     end: "bottom center",
-    //     toggleActions: "play none none none",
-    //     scrub:true,
-    //     pin:true,
-    //     onLeave: () => gsap.to(featurePrem, {yPercent:-50,ease:Back.easeOut}), 
-    //   }
-    // });
-
-    // featureTl
-    // .from(featureImg,{scale:0.4, yPercent:'10'},0)
-    // .to(featurePrem,{ yPercent:'10',ease:Back.easeOut},0)
