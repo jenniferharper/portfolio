@@ -50,18 +50,6 @@ body {
     padding-right: 0px;
     margin: 0;
     align-items: center; }
-    .standard .row ul {
-      list-style: none;
-      margin-bottom: 0;
-      padding-left: 40px;
-      padding-right: 0px;
-      display: flex; }
-      .standard .row ul li {
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 10px; }
-        .standard .row ul li:last-of-type {
-          margin-bottom: 0; }
   .standard div[class^="col"] {
     position: relative;
     display: flex;
@@ -115,7 +103,8 @@ h2 {
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 50vh; }
   .media-box img {
     width: 100%;
     height: 100%;
@@ -126,6 +115,10 @@ h2 {
     object-fit: cover;
     -o-object-position: 50% 50%;
     object-position: 50% 50%; }
+  @media (min-width: 768px) {
+    .media-box {
+      min-height: 0;
+      height: 100%; } }
 
 figure {
   margin: 0;
@@ -206,14 +199,6 @@ svg {
     transition-duration: 0.3s;
     transition-timing-function: ease-in; }
 
-.jh .my-logo {
-  top: 10px;
-  left: 10px;
-  position: fixed; }
-  .jh .my-logo svg {
-    max-width: 50px;
-    fill: #c52800; }
-
 .intro-heading {
   margin: 10% 0 0; }
   .intro-heading .row {
@@ -275,8 +260,12 @@ svg {
   width: 100%;
   position: relative; }
   .svg-btn-wrap .svg-btn {
-    position: absolute;
-    max-width: 200px; }
+    width: 160px;
+    margin: 0 auto;
+    position: relative; }
+    @media (min-width: 992px) {
+      .svg-btn-wrap .svg-btn {
+        position: absolute; } }
     .svg-btn-wrap .svg-btn text {
       font-size: 6vw;
       font-weight: 600;
@@ -312,11 +301,25 @@ svg {
       -ms-animation-timing-function: linear;
       -o-animation-timing-function: linear;
       animation-timing-function: linear; }
-    .svg-btn-wrap .svg-btn a:hover circle {
-      fill: #e9e4de;
+    .svg-btn-wrap .svg-btn a text {
+      fill: #c75033; }
+    .svg-btn-wrap .svg-btn a .initials {
+      fill: #e9e4de; }
+    .svg-btn-wrap .svg-btn a .bg {
+      fill: #c52800; }
+    .svg-btn-wrap .svg-btn a .initials, .svg-btn-wrap .svg-btn a .bg {
       transition-property: all;
       transition-duration: 0.3s;
       transition-timing-function: ease-in; }
+    .svg-btn-wrap .svg-btn a:hover .initials, .svg-btn-wrap .svg-btn a:hover .bg {
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in; }
+    .svg-btn-wrap .svg-btn a:hover .initials {
+      fill: #c52800; }
+    .svg-btn-wrap .svg-btn a:hover .bg {
+      fill: #e9e4de;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1)); }
 
 @-webkit-keyframes rotate {
   from {
@@ -408,6 +411,8 @@ button:focus {
       margin: 0 auto; }
   .navbar a.nav-link {
     font-size: 15px; }
+    .navbar a.nav-link:hover {
+      color: #c52800; }
   .navbar .navbar-collapse {
     justify-content: flex-end; }
     .navbar .navbar-collapse ul.navbar-nav {
@@ -455,7 +460,8 @@ button:focus {
       margin-right: -10px; }
   .hero .row .about {
     display: block;
-    padding-left: 0; }
+    padding-left: 0;
+    list-style: none; }
   .hero .row .social {
     flex-direction: column; }
     .hero .row .social i {
@@ -480,25 +486,8 @@ button:focus {
 .hero .svg-btn-wrap .svg-btn {
   width: 180px;
   top: -90px;
-  left: 55%; }
-  .hero .svg-btn-wrap .svg-btn a text {
-    fill: #c75033; }
-  .hero .svg-btn-wrap .svg-btn a .initials {
-    fill: #e9e4de; }
-  .hero .svg-btn-wrap .svg-btn a .bg {
-    fill: #c52800; }
-  .hero .svg-btn-wrap .svg-btn a .initials, .hero .svg-btn-wrap .svg-btn a .bg {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-  .hero .svg-btn-wrap .svg-btn a:hover .initials, .hero .svg-btn-wrap .svg-btn a:hover .bg {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in; }
-  .hero .svg-btn-wrap .svg-btn a:hover .initials {
-    fill: #c52800; }
-  .hero .svg-btn-wrap .svg-btn a:hover .bg {
-    fill: #e9e4de; }
+  left: 55%;
+  position: absolute; }
   @media (min-width: 768px) {
     .hero .svg-btn-wrap .svg-btn {
       left: 80%; } }
@@ -510,14 +499,13 @@ button:focus {
   background: linear-gradient(bottom, transparent 15%, #040433 80%);
   margin: 0 20px;
   align-items: stretch;
-  padding: 8% 4%; }
+  padding: 8% 4% 4%; }
   @media (min-width: 768px) {
     .standard.wixbuilders .row {
       margin: 0 40px; } }
   .standard.wixbuilders .row .project-focus {
     align-items: center; }
 .standard.wixbuilders .branding {
-  order: 2;
   display: flex;
   align-items: center; }
   @media (min-width: 1200px) {
@@ -685,6 +673,12 @@ button:focus {
   transform: rotate(180deg); }
   .standard.wixbuilders .branding.three .wrap figure.two svg {
     fill: #f3a56d; }
+.standard.wixbuilders .svg-btn-wrap {
+  margin-top: 40px;
+  margin-bottom: 0; }
+  @media (min-width: 992px) {
+    .standard.wixbuilders .svg-btn-wrap .svg-btn {
+      position: relative; } }
 
 .spotagency .row {
   background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
@@ -718,33 +712,10 @@ button:focus {
       padding: 20px 10%; } }
   .spotagency .logos .agency svg {
     fill: #040433; }
-  .spotagency .logos .agency .svg-btn-wrap .svg-btn {
-    width: 160px;
-    margin: 0 auto;
-    position: relative; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a text {
-      fill: #e9e4de; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a .initials {
-      fill: #e9e4de; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a .bg {
-      fill: #c52800; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a .initials, .spotagency .logos .agency .svg-btn-wrap .svg-btn a .bg {
-      transition-property: all;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .initials, .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .bg {
-      transition-property: all;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .initials {
-      fill: #c52800; }
-    .spotagency .logos .agency .svg-btn-wrap .svg-btn a:hover .bg {
-      fill: #e9e4de; }
-    @media (min-width: 992px) {
-      .spotagency .logos .agency .svg-btn-wrap .svg-btn {
-        position: absolute;
-        top: -100px;
-        left: 100%; } }
+  @media (min-width: 992px) {
+    .spotagency .logos .agency .svg-btn-wrap .svg-btn {
+      top: -100px;
+      left: 100%; } }
 
 .spotzer-social {
   padding-bottom: 4%; }
@@ -793,33 +764,10 @@ button:focus {
   .spotzer-social div.left .svg-btn-wrap {
     margin-top: 0px;
     z-index: 10; }
-    .spotzer-social div.left .svg-btn-wrap .svg-btn {
-      width: 160px;
-      margin: 0 auto;
-      position: relative; }
-      @media (min-width: 992px) {
-        .spotzer-social div.left .svg-btn-wrap .svg-btn {
-          position: absolute;
-          top: -80px;
-          left: 90%; } }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a text {
-        fill: #e9e4de; }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a .initials {
-        fill: #e9e4de; }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a .bg {
-        fill: #c52800; }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a .initials, .spotzer-social div.left .svg-btn-wrap .svg-btn a .bg {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .initials, .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .bg {
-        transition-property: all;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in; }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .initials {
-        fill: #c52800; }
-      .spotzer-social div.left .svg-btn-wrap .svg-btn a:hover .bg {
-        fill: #e9e4de; }
+    @media (min-width: 992px) {
+      .spotzer-social div.left .svg-btn-wrap .svg-btn {
+        top: -80px;
+        left: 90%; } }
   .spotzer-social div.main {
     overflow: hidden;
     position: relative; }
@@ -841,50 +789,124 @@ button:focus {
 
 .personal {
   padding: 0 4% 4%; }
-  .personal figure {
-    min-height: 50vh;
-    height: 100%;
-    width: calc(100% - 20px);
-    margin: 0 auto; }
   .personal section {
     margin-bottom: 20px; }
     .personal section div[class^="col"] {
       padding: 0; }
+  .personal .svg-btn-wrap a text {
+    fill: #011147; }
+  .personal .svg-btn-wrap a .initials {
+    fill: #e9e4de; }
+  .personal .svg-btn-wrap a .bg {
+    fill: #011147; }
+  .personal .svg-btn-wrap a .initials, .personal .svg-btn-wrap a .bg {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+  .personal .svg-btn-wrap a:hover .initials, .personal .svg-btn-wrap a:hover .bg {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; }
+  .personal .svg-btn-wrap a:hover .initials {
+    fill: #011147; }
+  .personal .svg-btn-wrap a:hover .bg {
+    fill: #e9e4de; }
 
-.educapps .bg-color figure #audio {
+.educapps .svg-btn-wrap {
+  margin-top: 0px;
+  z-index: 10; }
+  @media (min-width: 768px) {
+    .educapps .svg-btn-wrap {
+      margin-bottom: -80px; } }
+  @media (min-width: 992px) {
+    .educapps .svg-btn-wrap {
+      margin-bottom: unset; } }
+  @media (min-width: 992px) {
+    .educapps .svg-btn-wrap .svg-btn {
+      bottom: unset;
+      top: -80px;
+      left: 85%; } }
+.educapps .row div[class^="col"].bg-color figure #audio {
   padding: 4%;
   padding-bottom: 0;
   width: 80%;
   margin-left: 10%; }
-  .educapps .bg-color figure #audio .st0 {
+  .educapps .row div[class^="col"].bg-color figure #audio .st0 {
     fill: #F59688; }
-  .educapps .bg-color figure #audio .st1 {
+  .educapps .row div[class^="col"].bg-color figure #audio .st1 {
     fill: #EF5152; }
-  .educapps .bg-color figure #audio .st2 {
+  .educapps .row div[class^="col"].bg-color figure #audio .st2 {
     fill: #54C0AA; }
-  .educapps .bg-color figure #audio .st3 {
+  .educapps .row div[class^="col"].bg-color figure #audio .st3 {
     fill: #9DD6C8; }
-  .educapps .bg-color figure #audio .st4 {
+  .educapps .row div[class^="col"].bg-color figure #audio .st4 {
     fill: #37469A; }
-  .educapps .bg-color figure #audio .st5 {
+  .educapps .row div[class^="col"].bg-color figure #audio .st5 {
     fill: #F5F1E9; }
-  .educapps .bg-color figure #audio .eye,
-  .educapps .bg-color figure #audio .head {
+  .educapps .row div[class^="col"].bg-color figure #audio .eye,
+  .educapps .row div[class^="col"].bg-color figure #audio .head {
     transform: translateY(-2px); }
-  .educapps .bg-color figure #audio .ear {
+  .educapps .row div[class^="col"].bg-color figure #audio .ear {
     transform: translateX(2px); }
-.educapps .bg-color figure #educapps {
+.educapps .row div[class^="col"].bg-color figure #educapps {
   fill: #e9e4de;
   margin-left: -1px; }
-.educapps .bg-color figure div {
+.educapps .row div[class^="col"].bg-color figure div {
   background-color: #4A5BCF; }
 @media (min-width: 768px) {
-  .educapps figure {
+  .educapps .row div[class^="col"] figure {
     height: 100%;
     min-height: 0; } }
 
-@media (min-width: 1200px) {
-  .bsylvia figure {
-    min-height: 80vh; } }
+.bsylvia .svg-btn-wrap {
+  margin-top: 0px;
+  z-index: 10; }
+  @media (min-width: 768px) {
+    .bsylvia .svg-btn-wrap {
+      margin-top: -80px; } }
+  @media (min-width: 992px) {
+    .bsylvia .svg-btn-wrap {
+      margin-top: unset; } }
+  @media (min-width: 992px) {
+    .bsylvia .svg-btn-wrap .svg-btn {
+      left: 0%;
+      top: -80px; } }
+.bsylvia .row figure {
+  height: 50vh; }
+  .bsylvia .row figure .media-box img {
+    min-height: 100%; }
+  @media (min-width: 992px) {
+    .bsylvia .row figure {
+      height: 70vh; } }
+  @media (min-width: 1200px) {
+    .bsylvia .row figure {
+      height: 90vh; } }
+
+footer {
+  margin: 0 4%; }
+  footer .row {
+    justify-content: center; }
+    footer .row ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0px;
+      padding-right: 0px; }
+      footer .row ul li {
+        margin-bottom: 10px;
+        position: relative;
+        text-align: center; }
+        footer .row ul li ul {
+          display: flex;
+          align-items: center; }
+          footer .row ul li ul li {
+            margin: 0; }
+      footer .row ul a:hover {
+        color: #c52800; }
+    @media (min-width: 992px) {
+      footer .row {
+        justify-content: flex-end; }
+        footer .row ul {
+          display: flex;
+          align-items: center; } }
 
 /*# sourceMappingURL=styles.css.map */

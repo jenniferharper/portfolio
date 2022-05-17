@@ -61,22 +61,6 @@ body {
     padding-right: 0px;
     margin:0;
     align-items: center;
-    ul {
-      list-style: none;
-      margin-bottom: 0;
-      padding-left: 40px;
-      padding-right: 0px;
-      display: flex;
-  
-      li {
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 10px;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-      }
-    }
   }
 
   div[class^="col"] {
@@ -88,6 +72,8 @@ body {
     padding: 0;
   }
 }
+
+
 
 a, p, li{ 
   font-family:$body-font; 
@@ -143,6 +129,7 @@ h2{
   height: 100%;
   width: 100%;
   overflow: hidden;
+  min-height:50vh;
   img {
     width:100%;
     height:100%;
@@ -154,8 +141,11 @@ h2{
     -o-object-position: 50% 50%; 
     object-position: 50% 50%;
   } 
-
-} 
+  @media (min-width:768px){
+    min-height:0;
+    height:100%;
+  }
+}
 
 
 figure {
@@ -249,18 +239,6 @@ svg {
 }
 
 
-.jh{
-  .my-logo{
-    top:10px;
-    left:10px;
-    position: fixed;
-    svg{
-      max-width:50px;
-      fill:$secondary-dark;
-    }
-  }
-}
-
 
 .intro-heading{
   margin:$lg 0 0;
@@ -334,12 +312,19 @@ svg {
   }
 }
 
+
+
 .svg-btn-wrap{
   width:100%;
   position: relative;
   .svg-btn { 
-    position: absolute;
-    max-width: 200px;
+    width: 160px;
+    margin: 0 auto;
+    position: relative;
+    @media (min-width:992px){
+      position: absolute;
+    }
+
     text { 
       font-size: 6vw;
       font-weight: 600;
@@ -377,13 +362,23 @@ svg {
            -o-animation-timing-function: linear;
               animation-timing-function: linear;  
     }
-    a:hover{
-      circle{
-        fill:$light;
+
+    a{
+      text{fill:$secondary-light}
+      .initials{fill:$light;}
+      .bg{fill:$secondary-dark}
+      .initials,.bg{
         @include transition;
       }
-    }
 
+      &:hover{
+        .initials,.bg{
+          @include transition;
+        }
+        .initials{fill:$secondary-dark;}
+        .bg{ fill:$light; filter:$drop-shadow}
+      }
+    }
 }
 }
 
@@ -491,6 +486,9 @@ button:focus {
     }
     a.nav-link{
       font-size: 15px;
+      &:hover{
+        color:$secondary-dark;
+      }
     }
 
 
@@ -582,6 +580,7 @@ button:focus {
     .about{
     display:block;
     padding-left: 0;
+    list-style: none;
     }
     .social{
     flex-direction: column;
@@ -615,22 +614,7 @@ button:focus {
         width: 180px;
         top:-90px;
         left: 55%;
-        a{
-          text{fill:$secondary-light}
-          .initials{fill:$light;}
-          .bg{fill:$secondary-dark}
-          .initials,.bg{
-            @include transition;
-          }
-
-          &:hover{
-            .initials,.bg{
-              @include transition;
-            }
-            .initials{fill:$secondary-dark;}
-            .bg{ fill:$light}
-          }
-        }
+        position: absolute;
         @media (min-width:768px){
           left: 80%;
         }
@@ -643,7 +627,7 @@ button:focus {
    @include gradient(bottom, $grad1);  
    margin: 0 20px ;
    align-items: stretch;
-   padding: $md $sm;
+   padding: $md $sm $sm;
    @media (min-width:768px){
     margin: 0 40px; 
    }
@@ -654,7 +638,7 @@ button:focus {
   }
 
   .branding{
-    order: 2;      
+    // order: 2;      
     display: flex;
     align-items: center;
     @media (min-width:1200px){
@@ -722,7 +706,8 @@ button:focus {
         transform:scale(0.95);
         @include transition;
       }
-    }  
+    } 
+
     &.one, &.three{
       display: none;
       @media (min-width:992px){
@@ -871,6 +856,17 @@ button:focus {
       }
     } 
   }
+
+  .svg-btn-wrap{
+    margin-top: 40px;
+    margin-bottom: 0;
+    .svg-btn{
+      @media (min-width:992px){
+        position: relative;
+      }
+    }
+  }
+
 }
 
 
@@ -919,27 +915,7 @@ button:focus {
 
       .svg-btn-wrap{
         .svg-btn{
-          width: 160px;
-          margin: 0 auto;
-          position: relative;
-          a{
-            text{fill:$light}
-            .initials{fill:$light;}
-            .bg{fill:$secondary-dark}
-            .initials,.bg{
-              @include transition;
-            }
-    
-            &:hover{
-              .initials,.bg{
-                @include transition;
-              }
-              .initials{fill:$secondary-dark;}
-              .bg{ fill:$light}
-            }
-          }
           @media (min-width:992px){
-            position: absolute;
             top:-100px;
             left: 100%;
           }
@@ -1015,29 +991,9 @@ button:focus {
       margin-top: 0px;
       z-index: 10;
      .svg-btn{
-       width: 160px;
-       margin: 0 auto;
-       position: relative;
        @media (min-width:992px){
-         position: absolute;
          top:-80px;
          left: 90%;
-       }
-       a{
-         text{fill:$light}
-         .initials{fill:$light;}
-         .bg{fill:$secondary-dark}
-         .initials,.bg{
-           @include transition;
-         }
- 
-         &:hover{
-           .initials,.bg{
-             @include transition;
-           }
-           .initials{fill:$secondary-dark;}
-           .bg{ fill:$light}
-         }
        }
      }
    }
@@ -1073,68 +1029,167 @@ button:focus {
 
 .personal{
   padding:0 $sm $sm;
-  figure{
-    min-height: 50vh;
-    height: 100%;
-    width: calc(100% - 20px);
-    margin: 0 auto;
-  }
   section{
     div[class^="col"]{
       padding: 0;
     }
     margin-bottom: 20px;
   }
+  .svg-btn-wrap{
+  a{
+    text{fill:$dark}
+    .initials{fill:$light;}
+    .bg{fill:$dark}
+    .initials,.bg{
+      @include transition;
+    }
+
+    &:hover{
+      .initials,.bg{
+        @include transition;
+      }
+      .initials{fill:$dark}
+      .bg{ fill:$light}
+    }
+  }
+}
 }
 
 .educapps{
-  .bg-color{
-    figure{
-      #audio{
-        padding:$sm;
-        padding-bottom:0;
-        width: 80%;
-        margin-left: 10%;
-        .st0{fill:#F59688;}
-        .st1{fill:#EF5152;}
-        .st2{fill:#54C0AA;}
-        .st3{fill:#9DD6C8;}
-        .st4{fill:#37469A;}
-        .st5{fill:#F5F1E9;}
-        .eye,
-        .head{
-          transform: translateY(-2px);
-        }
-        .ear{
-          transform: translateX(2px);
-        }
-      }
-      #educapps{
-        fill:$light;
-        margin-left: -1px;
-      }
-      div{
-        background-color: #4A5BCF;
-      }
-    }
-  }
-  figure{
+  .svg-btn-wrap{
+    margin-top: 0px;
+    z-index: 10;
     @media (min-width:768px){
-      height:100%;
-      min-height: 0;
+      margin-bottom:-80px;
+    }
+    @media (min-width:992px){
+      margin-bottom:unset;
+    }
+
+   .svg-btn{
+     @media (min-width:992px){
+       bottom: unset;
+       top:-80px;
+       left:85%;
+     }
+   }
+ }
+
+.row{
+  div[class^="col"]{
+    
+    &.bg-color{
+      figure{
+        #audio{
+          padding:$sm;
+          padding-bottom:0;
+          width: 80%;
+          margin-left: 10%;
+          .st0{fill:#F59688;}
+          .st1{fill:#EF5152;}
+          .st2{fill:#54C0AA;}
+          .st3{fill:#9DD6C8;}
+          .st4{fill:#37469A;}
+          .st5{fill:#F5F1E9;}
+          .eye,
+          .head{
+            transform: translateY(-2px);
+          }
+          .ear{
+            transform: translateX(2px);
+          }
+        }
+        #educapps{
+          fill:$light;
+          margin-left: -1px;
+        }
+        div{
+          background-color: #4A5BCF;
+        }
+      }
+    }
+
+    figure{
+      @media (min-width:768px){
+        height:100%;
+        min-height: 0;
+      }
     }
   }
+}
 }
 
 .bsylvia{
-  figure{
-    @media (min-width:1200px){
-      min-height: 80vh;
+  .svg-btn-wrap{
+    margin-top: 0px;
+    z-index: 10;
+    @media (min-width:768px){
+      margin-top:-80px;
+    }
+    @media (min-width:992px){
+      margin-top:unset;
+    }
+
+   .svg-btn{
+     @media (min-width:992px){
+       left: 0%;
+       top:-80px;
+     }
+   }
+ }
+  .row{
+    figure{
+      height: 50vh;
+      .media-box img{
+        min-height: 100%;
+       }
+      @media (min-width:992px){
+        height: 70vh;
+      }
+      @media (min-width:1200px){
+        height: 90vh;
+      }
     }
   }
+
 }
 
 
+footer{
+  margin: 0 $sm;
+  .row{  
+    justify-content: center;  
+    ul{
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0px;
+      padding-right: 0px;
 
+      li {
+        margin-bottom: 10px;
+        position: relative;
+        text-align: center;
+        ul{
+          display: flex;
+          align-items: center;
+          li{
+            margin: 0;
+          }
+        }
+      }
+      a:hover{
+        color:$secondary-dark;
+      }
+    }
+    @media (min-width:992px){
+      justify-content: flex-end;
+      ul{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+}
 ///////////////////////////
 
