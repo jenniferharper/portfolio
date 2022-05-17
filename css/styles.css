@@ -267,10 +267,9 @@ svg {
       .svg-btn-wrap .svg-btn {
         position: absolute; } }
     .svg-btn-wrap .svg-btn text {
-      font-size: 6vw;
+      font-size: 11.5vw;
       font-weight: 600;
-      text-transform: uppercase;
-      fill: #fff; }
+      text-transform: uppercase; }
       @media (min-width: 768px) {
         .svg-btn-wrap .svg-btn text {
           font-size: 3vw; } }
@@ -302,7 +301,7 @@ svg {
       -o-animation-timing-function: linear;
       animation-timing-function: linear; }
     .svg-btn-wrap .svg-btn a text {
-      fill: #c75033; }
+      fill: #e9e4de; }
     .svg-btn-wrap .svg-btn a .initials {
       fill: #e9e4de; }
     .svg-btn-wrap .svg-btn a .bg {
@@ -491,6 +490,8 @@ button:focus {
   @media (min-width: 768px) {
     .hero .svg-btn-wrap .svg-btn {
       left: 80%; } }
+  .hero .svg-btn-wrap .svg-btn a text {
+    fill: #c75033; }
 
 .standard.wixbuilders .row {
   background: -webkit-linear-gradient(bottom, transparent 15%, #040433 80%);
@@ -755,7 +756,6 @@ button:focus {
     margin-bottom: 20px; }
   .spotzer-social div.left figure:not(.svg-btn),
   .spotzer-social div.right figure:not(.svg-btn) {
-    height: 40%;
     min-height: 30vh; }
     @media (min-width: 992px) {
       .spotzer-social div.left figure:not(.svg-btn),

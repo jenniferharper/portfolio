@@ -326,10 +326,9 @@ svg {
     }
 
     text { 
-      font-size: 6vw;
+      font-size: 11.5vw;
       font-weight: 600;
       text-transform: uppercase;
-      fill: $white;
       @media (min-width:768px){
         font-size: 3vw;
       }
@@ -364,7 +363,7 @@ svg {
     }
 
     a{
-      text{fill:$secondary-light}
+      text{fill:$light}
       .initials{fill:$light;}
       .bg{fill:$secondary-dark}
       .initials,.bg{
@@ -617,6 +616,9 @@ button:focus {
         position: absolute;
         @media (min-width:768px){
           left: 80%;
+        }
+        a{
+          text{fill:$secondary-light}
         }
       }
     }
@@ -978,7 +980,7 @@ button:focus {
   div.left,
   div.right{
     figure:not(.svg-btn){
-      height: 40%;
+      // height: 40%;
       min-height: 30vh;
       @media (min-width:992px){
         min-height:90%
