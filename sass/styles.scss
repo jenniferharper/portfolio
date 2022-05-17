@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Montagu+Slab:wght@300;500;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@500&display=swap');
-
+///////////////general code///////////////////////
 html{
   overflow-x:hidden;
 }
@@ -210,200 +210,8 @@ svg {
 }
 
 
-.special{
-  transform-origin: bottom left;
-}
 
-.portfolio-btn{
-  font-family: $header-font;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size:1.5em;
-  margin:20px 0 40px;
-  flex-direction: column;
-  @media (min-width:576px){
-    flex-direction: row;
-  }
-  svg{
-    width: 60px;
-    fill:$secondary-light;
-    @include transition;
-  }
-  &:hover{
-    svg{
-      fill:$light;
-      @include transition;
-    }
-  }
-}
-
-
-
-.intro-heading{
-  margin:$lg 0 0;
-  .row{
-    padding: $md $sm;
-    h2{
-      font-size: 9.5vw;
-      letter-spacing: 4px;
-      line-height: 1em;
-      @media (min-width:768px){
-        font-size: 7.5vw;        
-      }
-      span{
-        font-family: $body-font;
-        letter-spacing: 1px;
-        font-size: 6vw;
-      }
-    }
-    p{
-      max-width: 700px;
-      margin: 20px auto;
-    }
-  }
-  @media (min-width:1200px){
-    margin:$sm 0 0;
-  }
-}
-
-.project-focus{
-  h2{
-    margin-top: 40px;
-    font-size: 8.5vw;
-    letter-spacing: 4px;
-    line-height: 1em;
-    margin-bottom: 40px;
-    span{
-      font-family: $body-font;
-      letter-spacing: 1px;
-      font-size: 6vw;
-      display: block;
-    }
-    
-    @media (min-width:768px){
-      font-size: 4.5vw;  
-      span{
-       font-family: $body-font;
-       letter-spacing: 1px;
-       font-size: 3vw;
-     }      
-    }
-   
-    @media (min-width:992px){
-      margin-top: 0;  
-      span{
-        display: inline;
-      }   
-    }
-  }
-  p{
-    max-width: 700px;
-    margin: 0 auto ;
-  }
-  margin-bottom: $md;
-}
-
-.dark-bg{
-  margin: 0 $sm;
-  background-color:$dark;
-  .row{
-    padding: $md;
-  }
-}
-
-
-
-.svg-btn-wrap{
-  width:100%;
-  position: relative;
-  .svg-btn { 
-    width: 160px;
-    margin: 0 auto;
-    position: relative;
-    @media (min-width:992px){
-      position: absolute;
-    }
-
-    text { 
-      font-size: 11.5vw;
-      font-weight: 600;
-      text-transform: uppercase;
-      @media (min-width:768px){
-        font-size: 3vw;
-      }
-    }
-    g{transform-origin: 50% 50%;}
-  
-    .icon{
-      fill:$white;
-      position: absolute;
-    }
-    circle{
-      @include transition;
-      fill:$agency-contrast;
-    }
-    .rotate{
-      animation-name: rotate;
-      -webkit-animation-duration: 8s;
-         -moz-animation-duration: 8s;
-          -ms-animation-duration: 8s;
-           -o-animation-duration: 8s;
-              animation-duration: 8s;
-      -webkit-animation-iteration-count: infinite;
-         -moz-animation-iteration-count: infinite;
-          -ms-animation-iteration-count: infinite;
-           -o-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-         -moz-animation-timing-function: linear;
-          -ms-animation-timing-function: linear;
-           -o-animation-timing-function: linear;
-              animation-timing-function: linear;  
-    }
-
-    a{
-      text{fill:$light}
-      .initials{fill:$light;}
-      .bg{fill:$secondary-dark}
-      .initials,.bg{
-        @include transition;
-      }
-
-      &:hover{
-        .initials,.bg{
-          @include transition;
-        }
-        .initials{fill:$secondary-dark;}
-        .bg{ fill:$light; filter:$drop-shadow}
-      }
-    }
-}
-}
-
-
-@-webkit-keyframes rotate {
-  from { -webkit-transform: rotate(360deg); }
-  to { -webkit-transform: rotate(0); }
-}
-@-moz-keyframes rotate {
-  from { -moz-transform: rotate(360deg); }
-  to { -moz-transform: rotate(0); }
-}
-@-ms-keyframes rotate {
-  from { -ms-transform: rotate(360deg); }
-  to { -ms-transform: rotate(0); }
-}
-@-o-keyframes rotate {
-  from { -o-transform: rotate(360deg); }
-  to { -o-transform: rotate(0); }
-}
-@keyframes rotate {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0); }
-}
-
-///////////////////////////////////////
+///////////////navigation///////////////////////
 button:focus {
   outline:none;
 }
@@ -529,19 +337,11 @@ button:focus {
 
 }
 
-
-
-
 // GSAP toggle css
 @media (min-width: 992px) {
   .nav--up {
     top: -100px;
     @include transition;
-    
-    // .navbar-brand svg {
-    //   top: 110px;
-    //   @include transition;
-    // }
  }
  .nav--scrolled{
    .container-fluid{
@@ -549,16 +349,213 @@ button:focus {
    }
  }
 }
-
 .open {
   .navbar-toggler-icon i {
     transform: rotate(-90deg);
   }
 }
+///////////////navigation ends//////////////////
+///////////////general code ends///////////////////////
 
 
-/////////////////////////////////
 
+
+
+
+///////////////site style buttons///////////////////////
+////text button with asterisk///
+.portfolio-btn{
+  font-family: $header-font;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size:1.5em;
+  margin:20px 0 40px;
+  flex-direction: column;
+  @media (min-width:576px){
+    flex-direction: row;
+  }
+  svg{
+    width: 60px;
+    fill:$secondary-light;
+    @include transition;
+  }
+  &:hover{
+    svg{
+      fill:$light;
+      @include transition;
+    }
+  }
+}
+/////// rotating circle button///////
+.svg-btn-wrap{
+  width:100%;
+  position: relative;
+  .svg-btn { 
+    width: 160px;
+    margin: 0 auto;
+    position: relative;
+    @media (min-width:992px){
+      position: absolute;
+    }
+
+    text { 
+      font-size: 11.5vw;
+      font-weight: 600;
+      text-transform: uppercase;
+      @media (min-width:768px){
+        font-size: 3vw;
+      }
+    }
+    g{transform-origin: 50% 50%;}
+  
+    .icon{
+      fill:$white;
+      position: absolute;
+    }
+    circle{
+      @include transition;
+      fill:$agency-contrast;
+    }
+    .rotate{
+      animation-name: rotate;
+      -webkit-animation-duration: 8s;
+         -moz-animation-duration: 8s;
+          -ms-animation-duration: 8s;
+           -o-animation-duration: 8s;
+              animation-duration: 8s;
+      -webkit-animation-iteration-count: infinite;
+         -moz-animation-iteration-count: infinite;
+          -ms-animation-iteration-count: infinite;
+           -o-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+         -moz-animation-timing-function: linear;
+          -ms-animation-timing-function: linear;
+           -o-animation-timing-function: linear;
+              animation-timing-function: linear;  
+    }
+
+    a{
+      text{fill:$light}
+      .initials{fill:$light;}
+      .bg{fill:$secondary-dark}
+      .initials,.bg{
+        @include transition;
+      }
+
+      &:hover{
+        .initials,.bg{
+          @include transition;
+        }
+        .initials{fill:$secondary-dark;}
+        .bg{ fill:$light; filter:$drop-shadow}
+      }
+    }
+}
+}
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+  from { -ms-transform: rotate(360deg); }
+  to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+  from { -o-transform: rotate(360deg); }
+  to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
+///////////////site buttons ends///////////////////////
+
+
+
+///////site style, heading styles///////
+////main headings///
+.intro-heading{
+  margin:$lg 0 0;
+  .row{
+    padding: $md $sm;
+    h2{
+      font-size: 9.5vw;
+      letter-spacing: 4px;
+      line-height: 1em;
+      @media (min-width:768px){
+        font-size: 7.5vw;        
+      }
+      span{
+        font-family: $body-font;
+        letter-spacing: 1px;
+        font-size: 6vw;
+      }
+    }
+    p{
+      max-width: 700px;
+      margin: 20px auto;
+    }
+  }
+  @media (min-width:1200px){
+    margin:$sm 0 0;
+  }
+}
+////smaller sub headings///
+.project-focus{
+  h2{
+    margin-top: 40px;
+    font-size: 8.5vw;
+    letter-spacing: 4px;
+    line-height: 1em;
+    margin-bottom: 40px;
+    span{
+      font-family: $body-font;
+      letter-spacing: 1px;
+      font-size: 6vw;
+      display: block;
+    }
+    
+    @media (min-width:768px){
+      font-size: 4.5vw;  
+      span{
+       font-family: $body-font;
+       letter-spacing: 1px;
+       font-size: 3vw;
+     }      
+    }
+   
+    @media (min-width:992px){
+      margin-top: 0;  
+      span{
+        display: inline;
+      }   
+    }
+  }
+  p{
+    max-width: 700px;
+    margin: 0 auto ;
+  }
+  margin-bottom: $md;
+}
+////headings with dark background///
+.dark-bg{
+  margin: 0 $sm;
+  background-color:$dark;
+  .row{
+    padding: $md;
+  }
+}
+///////site style, heading styles ends///////
+
+
+///////site sections///////
 .hero{
   .row{
     padding: calc(12% + 50px) 0 ;
@@ -653,15 +650,15 @@ button:focus {
       display: flex;
       justify-content: center;
       border-radius: 22px;
-      margin-bottom: 20px;
       overflow: hidden;
       box-shadow: $wix-shadow;
       height: 100%;      
-      padding:40px;
-
-      @media(min-width:992px){
-        padding:$sm $md;
-        margin-bottom: 0;
+      a{
+        padding:40px;
+        @media(min-width:992px){
+          padding:$sm $md;
+          margin-bottom: 0;
+        }
       }
 
       div{
@@ -761,7 +758,7 @@ button:focus {
 
       figure.one{
         left: 10%;
-        top: 10%;
+        top: 10px;
         width: 30%;
         svg{
           .st0{fill:$wix-contrast-2;}
@@ -870,10 +867,6 @@ button:focus {
   }
 
 }
-
-
-
-
 
 .spotagency{ 
   .row{
@@ -1101,7 +1094,7 @@ button:focus {
             transform: translateX(2px);
           }
         }
-        #educapps{
+        #educapps-fig{
           fill:$light;
           margin-left: -1px;
         }
@@ -1193,5 +1186,5 @@ footer{
   }
 
 }
-///////////////////////////
+//////////site sections ends/////////////////
 
