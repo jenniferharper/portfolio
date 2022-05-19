@@ -812,6 +812,7 @@ button:focus {
 
 .educapps .svg-btn-wrap {
   margin-top: 0px;
+  margin-bottom: 40px;
   z-index: 10; }
   @media (min-width: 768px) {
     .educapps .svg-btn-wrap {
@@ -857,7 +858,7 @@ button:focus {
     min-height: 0; } }
 
 .bsylvia .svg-btn-wrap {
-  margin-top: 0px;
+  margin-top: 40px;
   z-index: 10; }
   @media (min-width: 768px) {
     .bsylvia .svg-btn-wrap {
