@@ -512,7 +512,8 @@ button:focus {
       padding: 0 20px; } }
   .standard.wixbuilders .branding .wrap {
     position: relative;
-    max-width: 360px;
+    max-width: 300px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     border-radius: 22px;
@@ -571,7 +572,7 @@ button:focus {
         display: block; } }
 @media (min-width: 992px) and (max-width: 1200px) {
   .standard.wixbuilders .branding.one {
-    padding-right: 20px; } }
+    padding-left: 20px; } }
 .standard.wixbuilders .branding.one .wrap::before {
   background-color: #e9e4de;
   content: '';
@@ -640,7 +641,7 @@ button:focus {
   margin-bottom: 30px; }
 @media (min-width: 992px) and (max-width: 1200px) {
   .standard.wixbuilders .branding.three {
-    padding-left: 20px; } }
+    padding-right: 20px; } }
 .standard.wixbuilders .branding.three .wrap::before {
   background-color: #e9e4de;
   content: '';

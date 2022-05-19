@@ -130,7 +130,7 @@ ScrollTrigger.matchMedia({
         var splitTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: el,
-            start: "top bottom-=200",
+            start: "top bottom",
             toggleActions: "play none none none",
           }
         });
