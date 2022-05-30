@@ -518,7 +518,7 @@ button:focus {
     justify-content: center;
     border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 0px 20px black;
+    box-shadow: 0 0px 200px black;
     height: 100%;
     transition-property: all;
     transition-duration: 0.3s;
@@ -556,7 +556,14 @@ button:focus {
         border-top-left-radius: 25%;
         border-bottom-right-radius: 25%;
         z-index: 2;
-        position: relative; }
+        position: relative;
+        box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1); }
+      .standard.wixbuilders .branding .wrap div .logo {
+        max-width: 60px;
+        border-radius: 0;
+        margin-bottom: 30px;
+        margin: 20px auto 0;
+        box-shadow: none; }
     .standard.wixbuilders .branding .wrap figure.shapes {
       position: absolute;
       z-index: 0; }
@@ -594,14 +601,15 @@ button:focus {
     margin-bottom: 20px; }
 .standard.wixbuilders .branding.one .wrap figure.two {
   right: 0;
-  top: 5%;
+  top: -15%;
   width: 150%; }
   .standard.wixbuilders .branding.one .wrap figure.two svg {
     fill: #9EC6DB; }
 .standard.wixbuilders .branding.one .wrap figure.one {
   left: 10%;
   top: 10px;
-  width: 30%; }
+  width: 30%;
+  transform: rotate(-30deg); }
   .standard.wixbuilders .branding.one .wrap figure.one svg .st0 {
     fill: #0062aa; }
   .standard.wixbuilders .branding.one .wrap figure.one svg .st1 {
@@ -633,10 +641,6 @@ button:focus {
   width: 50%; }
   .standard.wixbuilders .branding.two .wrap figure.shapes.three svg {
     fill: #dc5c00; }
-.standard.wixbuilders .branding.two .wrap .logo {
-  max-width: 60px;
-  border-radius: 0;
-  margin-bottom: 30px; }
 .standard.wixbuilders .branding.two .wrap .title {
   margin-bottom: 30px; }
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -668,8 +672,10 @@ button:focus {
   .standard.wixbuilders .branding.three .wrap div figure.one svg .st3 {
     fill: #dc5c00; }
 .standard.wixbuilders .branding.three .wrap figure.two {
-  right: 0;
-  transform: rotate(180deg); }
+  left: 0;
+  transform: rotate(180deg);
+  top: 0;
+  width: 130%; }
   .standard.wixbuilders .branding.three .wrap figure.two svg {
     fill: #f3a56d; }
 .standard.wixbuilders .svg-btn-wrap {
@@ -907,5 +913,9 @@ footer {
         footer .row ul {
           display: flex;
           align-items: center; } }
+
+img.logo-text {
+  max-width: 200px;
+  margin: 0 auto 20px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -694,6 +694,14 @@ button:focus {
           border-bottom-right-radius: 25%;
           z-index: 2;
           position: relative;
+          box-shadow: $shadow3;
+        }
+        .logo{
+          max-width: 60px;
+          border-radius: 0;
+          margin-bottom: 30px;
+          margin: 20px auto 0;
+          box-shadow: none;
         }
       }
       figure.shapes{
@@ -714,6 +722,8 @@ button:focus {
         display: block;
       }
     }
+
+
   
   }
 
@@ -750,7 +760,7 @@ button:focus {
 
       figure.two{
         right: 0;
-        top: 5%;
+        top: -15%;
         width: 150%;
         svg{
           fill:$wix-light-2;
@@ -761,6 +771,7 @@ button:focus {
         left: 10%;
         top: 10px;
         width: 30%;
+        transform: rotate(-30deg);
         svg{
           .st0{fill:$wix-contrast-2;}
           .st1{fill:$dark;}
@@ -800,11 +811,7 @@ button:focus {
           svg{fill:$wix-contrast}
         }
       }
-      .logo{
-        max-width: 60px;
-        border-radius: 0;
-        margin-bottom: 30px;
-      }
+
       .title{
         margin-bottom: 30px;
       }
@@ -848,8 +855,10 @@ button:focus {
       }
 
       figure.two{
-        right: 0;
-        transform:rotate(180deg);
+        left: 0;
+        transform: rotate(180deg);
+        top: 0;
+        width: 130%;
         svg{
           fill:$wix-light-3;
         }
@@ -1190,3 +1199,7 @@ footer{
 }
 //////////site sections ends/////////////////
 
+img.logo-text{
+  max-width: 200px;
+  margin: 0 auto 20px;
+}
